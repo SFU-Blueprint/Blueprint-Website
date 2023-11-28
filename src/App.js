@@ -1,9 +1,9 @@
-import './App.css';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <div className="App">
-      <h1>BluePrint</h1>
+    <div>
+      <HomePage/>
     </div>
   );
 }
