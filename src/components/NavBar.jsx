@@ -1,25 +1,34 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = () => (
-  <nav className="flex justify-center"> 
+  <nav className="flex justify-center">
     <div className="flex justify-between items-center h-16 w-[80rem] px-20">
-      <div className="flex space-x-1">
+      <Link
+        to="/"
+        className="flex space-x-1 hover:opacity-80 hover:cursor-pointer"
+      >
         <Logo />
         <span className="text-blue-500 font-poppins text-lg font-semibold">
           blueprint
         </span>
-      </div>
-      <ul className="flex list-none space-x-[4.5rem] text-gray-600 font-poppins">
+      </Link>
+      <div className="flex space-x-[4.5rem] text-gray-600 font-poppins">
         {[
-          ["About Us", ""],
-          ["Projects", ""],
-          ["For Students", ""],
-          ["For Nonprofits", ""],
-          ["Sponsor Us", ""],
-        ].map(([text, url]) => (
-          <li className="hover:text-blue-500 hover:underline hover:font-semibold hover:cursor-pointer">{text}</li>
+          ["About Us", "/about"],
+          ["Projects", "/projects"],
+          ["For Students", "/students"],
+          ["For Nonprofits", "/nonprofits"],
+          ["Sponsor Us", "sponsors"],
+        ].map(([text, path]) => (
+          <Link
+            to={path}
+            className="hover:text-blue-500 hover:underline hover:font-semibold hover:cursor-pointer"
+          >
+            {text}
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   </nav>
 );
@@ -58,4 +67,5 @@ const Logo = () => (
     />
   </svg>
 );
+
 export default NavBar;
