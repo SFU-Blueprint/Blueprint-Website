@@ -1,28 +1,80 @@
-import React from "react";
+import React, {useState} from "react";
+import barIcon from "../assets/icons/barIcon.svg";
+import xIcon from "../assets/icons/xIcon.svg";
 
-const NavBar = () => (
-  <nav className="flex justify-center"> 
+const navLinks = [
+  {
+    title: "About Us",
+    path: "#aboutus",
+  },
+  {
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "For Students",
+    path: "#forstudents",
+  },
+  {
+    title: "For Nonprofits",
+    path: "#fornonprofits",
+  },
+  {
+    title: "Sponsor Us",
+    path: "#sponsorus",
+  },
+];
+const NavBar = () => {
+  const [navbarOpen,setNavbarOpen] = useState(false);
+  return (
+  <nav className="flex flex-wrap justify-center"> 
     <div className="flex justify-between items-center h-16 w-[80rem] px-20">
       <div className="flex space-x-1">
         <Logo />
-        <span className="text-blue-500 font-poppins text-lg font-semibold">
+        <span className="text-blue-500 font-poppins text-xl font-semibold">
           blueprint
         </span>
       </div>
-      <ul className="flex list-none space-x-[4.5rem] text-gray-600 font-poppins">
-        {[
-          ["About Us", ""],
-          ["Projects", ""],
-          ["For Students", ""],
-          ["For Nonprofits", ""],
-          ["Sponsor Us", ""],
-        ].map(([text, url]) => (
-          <li className="hover:text-blue-500 hover:underline hover:font-semibold hover:cursor-pointer">{text}</li>
+      <div className="mobile-menu block md:hidden">
+        {
+          !navbarOpen ? (
+            <button
+              onClick={() => setNavbarOpen(true)}
+              
+            >
+            <img src={barIcon} alt="Open" className="" />
+            </button>
+          ) : (
+            <button
+              onClick={() => setNavbarOpen(false)}
+              
+            >
+            <img src={xIcon} alt="Close" className="" /> 
+            </button>
+          )
+        }
+
+      </div>
+      <ul
+          className={`$            
+           md:flex hidden md:list-none md:space-x-[4.5rem] md:text-gray-600 md:font-poppins `}
+        >
+        {navLinks.map((link,index) => (
+          <li key={index} className="hover:text-blue-500 hover:underline hover:font-semibold hover:cursor-pointer"><a href={link.path}>{link.title}</a></li>
         ))}
       </ul>
     </div>
+    {navbarOpen ? (<ul className="w-full ">
+      {navLinks.map((link,index) => (
+          <div className="hover:bg-blue-500 rounded w-full justify-center">
+            <li key={index} className="text-center py-3 hover:font-semibold hover:cursor-pointer"><a href={link.path}>{link.title}</a></li>
+          </div>
+        ))}
+    </ul>)
+    :null}
   </nav>
-);
+  );
+};
 
 const Logo = () => (
   <svg
@@ -59,3 +111,4 @@ const Logo = () => (
   </svg>
 );
 export default NavBar;
+
