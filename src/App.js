@@ -1,9 +1,17 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+// other imports...
 import './App.css';
-
+import Navbar from './pages/Navbar';
 function App() {
   return (
     <div className="App">
-      <h1>BluePrint</h1>
+    <Navbar/>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
     </div>
   );
 }
