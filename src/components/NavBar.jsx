@@ -42,7 +42,7 @@ const NavBar = () => {
 function MenuButton({ isMenuOpened, toggleMenu, visibility }) {
   return (
     <button className={visibility} onClick={toggleMenu}>
-      {{ isMenuOpened } ? <MenuHamburgerIcon /> : <MenuXIcon />}
+      { isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon /> }
     </button>
   );
 }
