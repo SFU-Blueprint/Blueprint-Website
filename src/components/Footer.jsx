@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { ReactComponent as LogoIcon } from "../assets/icons/logo.svg";
 
 const Footer = () => {
   return (
@@ -9,10 +9,10 @@ const Footer = () => {
     <footer className="absolute inset-x-0 bottom-0 h-50 bg-white dark:bg-blue-600">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="grid grid-cols-6 gap-8 sm:gap-6 sm:grid-cols-6">
+          <div className="grid grid-cols-6 gap-10 sm:gap-10 sm:grid-cols-6">
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-white">About Us</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 className="mb-6 text-base font-bold text-gray-900 dark:text-white">About Us</h2>
+                  <ul className="text-gray-500 dark:text-white font-normal">
                       <li className="mb-4">
                           <a href="#" className="hover:underline">Who we are</a>
                       </li>
@@ -25,8 +25,8 @@ const Footer = () => {
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-white">Projects</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 className="mb-6 text-base font-bold text-gray-900 dark:text-white">Projects</h2>
+                  <ul className="text-gray-500 dark:text-white font-normal">
                       <li className="mb-4">
                           <a href="#" className="hover:underline">Ongoing</a>
                       </li>
@@ -36,8 +36,8 @@ const Footer = () => {
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-white">For Students</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 className="mb-6 text-base font-bold text-gray-900 dark:text-white">For Students</h2>
+                  <ul className="text-gray-500 dark:text-white font-normal">
                       <li className="mb-4">
                           <a href="#" className="hover:underline">Why join us?</a>
                       </li>
@@ -47,8 +47,8 @@ const Footer = () => {
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-white">For Non-Profits</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 className="mb-6 text-base font-bold text-gray-900 dark:text-white">For Non-Profits</h2>
+                  <ul className="text-gray-500 dark:text-white font-normal">
                       <li className="mb-4">
                           <a href="#" className="hover:underline">Why choose us?</a>
                       </li>
@@ -61,8 +61,8 @@ const Footer = () => {
                   </ul>
               </div>
               <div>
-                  <h2 className="mb-6 text-sm font-semibold text-gray-900 dark:text-white">Sponsor Us</h2>
-                  <ul className="text-gray-500 dark:text-gray-400 font-medium">
+                  <h2 className="mb-6 text-base font-bold text-gray-900 dark:text-white">Sponsor Us</h2>
+                  <ul className="text-gray-500 dark:text-white font-normal">
                       <li className="mb-4">
                           <a href="#" className="hover:underline">Why choose us?</a>
                       </li>
@@ -70,6 +70,13 @@ const Footer = () => {
                           <a href="#" className="hover:underline">Another header</a>
                       </li>
                   </ul>
+              </div>
+              <div>
+                  <h2 className="mb-6 text-base font-bold text-gray-900 dark:text-white">Contact Us</h2>
+                  <form>
+                    <textarea className="rounded-lg" id="email-address" rows="1" cols="24" placeholder="Email Address"></textarea>
+                    <textarea className="rounded-lg" id="message" rows="4" cols="24" placeholder="Message"></textarea>
+                  </form>
               </div>
           </div>
       </div>
@@ -80,7 +87,7 @@ const Footer = () => {
       
       <hr className="my-6 border-gray-200 sm:mx-auto dark:white lg:my-8" />
       <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
+          <span className="text-base text-gray-500 sm:text-center dark:text-white">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
               <a href="#" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
