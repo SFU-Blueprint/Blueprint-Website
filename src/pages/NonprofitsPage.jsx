@@ -29,101 +29,137 @@ const NonprofitsPage = () => {
       "User Testing":
         "Once the MVP is built and released to an initial group of end users, we conduct rigorous testing to ensure no critical problems remain. Additionally, we will take note of any bugs, UX issues, and feature requests during this time.",
       "Product Polish and Hands Off":
-        "This phase involves intensive development and design work. Our team will execute improvements on the product based on feedback received from the user testing phase.\n\n The objective of this final phase is to ensure the quality and completeness of the finished product. Upon product completion, our team will meet with the nonprofit to walk through maintenance best practices before hand off."
+        "This phase involves intensive development and design work. Our team will execute improvements on the product based on feedback received from the user testing phase.\n\n The objective of this final phase is to ensure the quality and completeness of the finished product. Upon product completion, our team will meet with the nonprofit to walk through maintenance best practices before hand off.",
     }[title],
   });
-  
+
   return (
-    <div className="flex flex-col gap-5">
-      <div className="w-full h-[500px] px-[5%] md:px-[25%] pt-[200px] bg-gray-300">
-        <HeaderText className="text-6xl font-semibold">
-          For Non-Profits
-        </HeaderText>
-        <p className="text-black font-poppins text-lg font-medium leading-relaxed tracking-wide uppercase my-2">
+    <div className="flex flex-col">
+      <div className="w-full h-[500px] px-[5%] md:px-[15%] pt-[200px] bg-gray-300">
+        <Heading className="!text-6xl">For Non-Profits</Heading>
+        <Subheading className="!text-black !tracking-wide leading-relaxed uppercase mt-2 mb-4">
           We can turn your technological vision into reality - for free
-        </p>
-        <button className="flex justify-center items-center w-[200px] p-4 mt-6 rounded-md border-2 border-gray-800 text-gray-800 font-poppins font-bold tracking-tight">
-          Propose a Project
-        </button>
+        </Subheading>
+        <ProposeButton className="!border-gray-800 !text-gray-800" />
       </div>
-      <div className="w-full px-[5%] md:px-[25%]">
-        <HeaderText className="mb-5 pt-5">Why collaborate with us?</HeaderText>
-        <p className="w-[720px] text-gray-800 font-poppins text-base font-normal tracking-tighter mb-5">
+      <div className="w-full px-[5%] md:px-[15%]">
+        <Heading className="mt-8 mb-5">Why collaborate with us?</Heading>
+        <Body className="w-[720px]">
           Our members are highly dedicated and have great expertise in
           technology and design. By working with us, your organization will gain
           fresh perspectives of your business, increase community engagement
           with local students, and bring your vision for social good to live
           through innovative ways, free of charge.
-        </p>
-        <HeaderText className="mb-5 pt-5">
-          Can your idea become a project?
-        </HeaderText>
-        <p className="w-[720px] text-gray-800 font-poppins text-base font-normal tracking-tighter">
+        </Body>
+        <Heading className="mt-8 mb-5">Can your idea become a project?</Heading>
+        <Body>
           We consider the following aspects when evaluating potential projects:
-        </p>
-        <div className="flex gap-16 my-5">
+        </Body>
+        <div className="flex flex-col gap-16 mt-5 mb-10">
           <ContentCard>{content("Organizational Need")}</ContentCard>
           <ContentCard>{content("Technical Feasibility")}</ContentCard>
         </div>
-        <div className="flex gap-16 my-5">
+        <div className="flex flex-col gap-16">
           <ContentCard>{content("Community Impact")}</ContentCard>
           <ContentCard>{content("Project Scope")}</ContentCard>
         </div>
-        <HeaderText className="mb-5 pt-5">Our Process</HeaderText>
-        <div className="flex gap-16 my-5">
+        <Heading className="mt-16 mb-5">Our Process</Heading>
+        <div className="flex gap-16">
           <div className="flex flex-col w-[420px] gap-2">
             {phases.map((phase, index) => (
               <button
                 key={index}
-                className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 pl-10 rounded-md shadow-md transition duration-300 ease-in-out transform hover:shadow-2xl ${index === activePhase ? 'bg-blue-500' : 'bg-white'}`}
+                className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
+                  index === activePhase && "bg-blue-500"
+                }`}
                 onClick={() => setActivePhase(index)}
               >
-                <p className={`${index === activePhase ? 'text-white' : 'text-blue-500'} font-poppins text-2xl font-medium uppercase`}>
+                <Subheading
+                  className={`${
+                    index === activePhase && "text-white"
+                  } !text-2xl`}
+                >
                   Phase {index + 1}
-                </p>
-                <p className={`${index === activePhase ? 'text-white' : 'text-black'} font-poppins text-base font-normal`}>
+                </Subheading>
+                <Body
+                  className={`${
+                    index === activePhase && "text-white"
+                  } !tracking-normal`}
+                >
                   {phase}
-                </p>
+                </Body>
               </button>
             ))}
           </div>
-          <div className="pt-32">
-            <ContentCard>{content(phases[activePhase])}</ContentCard>
-          </div>
+          <ContentCard className="pt-32">
+            {content(phases[activePhase])}
+          </ContentCard>
         </div>
       </div>
-      <div className="w-full h-[500px] px-[5%] md:px-[25%] pt-[200px] bg-gray-300">
-        <HeaderText className="text-6xl font-semibold">
-          For Non-Profits
-        </HeaderText>
-        <p className="text-black font-poppins text-lg font-medium leading-relaxed tracking-wide uppercase my-2">
-          We can turn your technological vision into reality - for free
-        </p>
-        <button className="flex justify-center items-center w-[200px] p-4 mt-6 rounded-md border-2 border-gray-800 text-gray-800 font-poppins font-bold tracking-tight">
-          Propose a Project
-        </button>
+      <div className="flex flex-col items-center justify-center w-full h-[500px] bg-gray-200 mt-16  ">
+        <Heading className="my-5">Send your ideas to us now</Heading>
+        <Body className="!tracking-wide text-center whitespace-pre-line">
+          {
+            "Interested in working with us? Submit your initial project proposal below!\n We will get back to you shortly."
+          }
+        </Body>
+        <ProposeButton className="my-5 border-blue-500 text-blue-500" />
+        <Body className="my-10 !tracking-wide text-center">
+          Have a question? Feel free to shoot us an email at{" "}
+          <a
+            href="mailto:sfublueprint@gmail.com"
+            className="text-blue-500 hover:underline hover:font-bold"
+          >
+            sfublueprint@gmail.com
+          </a>
+          .
+        </Body>
       </div>
     </div>
   );
 };
 
-function ContentCard({ children }) {
+function ContentCard({ children, className }) {
   const { title, text } = children;
   return (
-    <div className="flex flex-col w-[420px]">
-      <p className="text-blue-500 font-poppins text-lg font-medium uppercase mb-1">
-        {title}
-      </p>
-      <p className="text-gray-800 font-poppins text-base font-normal tracking-tighter">
-        {text}
-      </p>
+    <div className={`${className} flex flex-col w-[420px] gap-1`}>
+      <Subheading>{title}</Subheading>
+      <Body>{text}</Body>
     </div>
   );
 }
 
-function HeaderText({ children, className }) {
+function ProposeButton({ className }) {
   return (
-    <p className={`${className} text-black font-anek text-5xl font-medium`}>
+    <button
+      className={`${className} flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+    >
+      Propose a Project
+    </button>
+  );
+}
+
+function Heading({ children, className }) {
+  return (
+    <p className={`${className} font-anek text-5xl font-semibold`}>
+      {children}
+    </p>
+  );
+}
+
+function Subheading({ children, className }) {
+  return (
+    <p
+      className={`${className} text-blue-500 font-poppins text-lg font-medium uppercase`}
+    >
+      {children}
+    </p>
+  );
+}
+
+function Body({ children, className }) {
+  return (
+    <p className={`${className} text-gray-800 font-poppins tracking-tighter`}>
       {children}
     </p>
   );
