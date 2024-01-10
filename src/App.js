@@ -1,19 +1,25 @@
 import './App.css';
-import GearTrain from "./components/gearTrain";
-
-const gearsData = [
-    { imageURL: '/gears/gear-4.svg', diameter: 254 },
-    { imageURL: '/gears/gear-1.svg', diameter: 424, angleToPrevious: 225 },
-    { imageURL: '/gears/gear-2.svg', diameter: 325, angleToPrevious: 315, initialAngle: 50 },
-    { imageURL: '/gears/gear-3.svg', diameter: 333, angleToPrevious: 225, initialAngle: 100 },
-    { imageURL: '/gears/gear-5.svg', diameter: 256, angleToPrevious: 315 },
-];
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import SponsorPage from "./pages/SponsorPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import StudentsPage from "./pages/StudentsPage";
+import NonprofitsPage from "./pages/NonprofitsPage";
 
 function App() {
   return (
     <div className="App">
-      <h1>BluePrint</h1>
-      <GearTrain gears={gearsData}></GearTrain>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/students" element={<StudentsPage />} />
+        <Route path="/nonprofits" element={<NonprofitsPage />} />
+        <Route path="/sponsors" element={<SponsorPage />} />
+      </Routes>
     </div>
   );
 }
