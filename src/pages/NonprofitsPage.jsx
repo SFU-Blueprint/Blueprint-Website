@@ -44,7 +44,7 @@ const NonprofitsPage = () => {
       </div>
       <div className="w-full px-[5%] md:px-[15%]">
         <Heading className="mt-8 mb-5">Why collaborate with us?</Heading>
-        <Body className="w-[720px]">
+        <Body className="w-full md:w-[720px]">
           Our members are highly dedicated and have great expertise in
           technology and design. By working with us, your organization will gain
           fresh perspectives of your business, increase community engagement
@@ -55,49 +55,57 @@ const NonprofitsPage = () => {
         <Body>
           We consider the following aspects when evaluating potential projects:
         </Body>
-        <div className="flex flex-col gap-16 mt-5 mb-10">
+        <div className="flex max-md:flex-col gap-8 mb-8 md:gap-16 md:mb-10 mt-5">
           <ContentCard>{content("Organizational Need")}</ContentCard>
           <ContentCard>{content("Technical Feasibility")}</ContentCard>
         </div>
-        <div className="flex flex-col gap-16">
+        <div className="flex max-md:flex-col gap-8 mb-8 md:gap-16">
           <ContentCard>{content("Community Impact")}</ContentCard>
           <ContentCard>{content("Project Scope")}</ContentCard>
         </div>
         <Heading className="mt-16 mb-5">Our Process</Heading>
-        <div className="flex gap-16">
-          <div className="flex flex-col w-[420px] gap-2">
+        <div className="flex max-md:flex-col gap-16">
+          <div className="flex flex-col w-full md:w-[420px] gap-2">
             {phases.map((phase, index) => (
-              <button
-                key={index}
-                className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
-                  index === activePhase && "bg-blue-500"
-                }`}
-                onClick={() => setActivePhase(index)}
-              >
-                <Subheading
-                  className={`${
-                    index === activePhase && "text-white"
-                  } !text-2xl`}
+              <div key={index}>
+                <button
+                  className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
+                    index === activePhase && "bg-blue-500"
+                  }`}
+                  onClick={() => setActivePhase(index)}
                 >
-                  Phase {index + 1}
-                </Subheading>
-                <Body
+                  <Subheading
+                    className={`${
+                      index === activePhase && "text-white"
+                    } !text-2xl`}
+                  >
+                    Phase {index + 1}
+                  </Subheading>
+                  <Body
+                    className={`${
+                      index === activePhase && "text-white"
+                    } !tracking-normal`}
+                  >
+                    {phase}
+                  </Body>
+                </button>
+                <ContentCard
                   className={`${
-                    index === activePhase && "text-white"
-                  } !tracking-normal`}
+                    index !== activePhase && "hidden"
+                  } md:hidden w-full py-8`}
                 >
-                  {phase}
-                </Body>
-              </button>
+                  {content(phases[activePhase])}
+                </ContentCard>
+              </div>
             ))}
           </div>
-          <ContentCard className="pt-32">
+          <ContentCard className="max-md:hidden pt-32">
             {content(phases[activePhase])}
           </ContentCard>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full h-[500px] bg-gray-200 mt-16  ">
-        <Heading className="my-5">Send your ideas to us now</Heading>
+        <Heading className="my-5 text-center">Send your ideas to us now</Heading>
         <Body className="!tracking-wide text-center whitespace-pre-line">
           {
             "Interested in working with us? Submit your initial project proposal below!\n We will get back to you shortly."
@@ -122,7 +130,7 @@ const NonprofitsPage = () => {
 function ContentCard({ children, className }) {
   const { title, text } = children;
   return (
-    <div className={`${className} flex flex-col w-[420px] gap-1`}>
+    <div className={`${className} flex flex-col w-full md:w-[420px] gap-1`}>
       <Subheading>{title}</Subheading>
       <Body>{text}</Body>
     </div>
@@ -141,7 +149,7 @@ function ProposeButton({ className }) {
 
 function Heading({ children, className }) {
   return (
-    <p className={`${className} font-anek text-5xl font-semibold`}>
+    <p className={`${className} font-anek text-4xl md:text-5xl font-semibold`}>
       {children}
     </p>
   );
@@ -150,7 +158,7 @@ function Heading({ children, className }) {
 function Subheading({ children, className }) {
   return (
     <p
-      className={`${className} text-blue-500 font-poppins text-lg font-medium uppercase`}
+      className={`${className} text-blue-500 font-poppins md:text-lg font-medium uppercase`}
     >
       {children}
     </p>
@@ -159,7 +167,7 @@ function Subheading({ children, className }) {
 
 function Body({ children, className }) {
   return (
-    <p className={`${className} text-gray-800 font-poppins tracking-tighter`}>
+    <p className={`${className} max-md:text-sm text-gray-800 font-poppins tracking-tighter`}>
       {children}
     </p>
   );
