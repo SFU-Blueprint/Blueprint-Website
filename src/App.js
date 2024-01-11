@@ -12,8 +12,9 @@ import NonprofitsPage from "./pages/NonprofitsPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col min-h-screen">
       <NavBar />
+      <main className="flex-grow">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -22,9 +23,8 @@ function App() {
         <Route path="/nonprofits" element={<NonprofitsPage />} />
         <Route path="/sponsors" element={<SponsorPage />} />
       </Routes>
-      <Footer>
-        Footer
-      </Footer>
+      </main>
+      <Footer />
     </div>
   );
 }

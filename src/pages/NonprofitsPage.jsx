@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Footer from "../components/Footer"
 const NonprofitsPage = () => {
   const [activePhase, setActivePhase] = useState(0);
   const phases = [
@@ -122,7 +122,9 @@ const NonprofitsPage = () => {
           </a>
           .
         </Body>
+      
       </div>
+      
     </div>
   );
 };
