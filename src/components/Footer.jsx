@@ -6,7 +6,8 @@ const Footer = () => {
     // <footer classNameName="absolute inset-x-0 bottom-0 h-16">
     //   {<div>1</div>/* Footer content goes here */}
     // </footer>
-    <footer className="absolute inset-x-0 bottom-0 h-50 bg-white dark:bg-blue-600">
+  
+    <footer className="inset-x-0 bottom-0 h-50 bg-white dark:bg-blue-600">
     <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="grid grid-cols-6 gap-10 sm:gap-10 sm:grid-cols-6">
