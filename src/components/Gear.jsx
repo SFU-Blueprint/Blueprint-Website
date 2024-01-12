@@ -1,5 +1,5 @@
 import  React, { useEffect, useState } from 'react';
-
+import './Gear.css'
 
 /**
  * Represents a gear in the gear train.
@@ -15,14 +15,13 @@ import  React, { useEffect, useState } from 'react';
  */
 
 
-function Gear(Gear) {
-    const { imageURL, top, left, initialAngle = 0, ratio, direction } = Gear;
-
+function Gear(props) {
+    const { imageURL, top, left, initialAngle = 0, ratio, direction, diameter, rotationSpeed, xOffset, yOffset } = props.gear;
     const [rotation, setRotation] = useState(initialAngle);
 
     const handleScroll = () => {
         const scrollY = window.scrollY;
-        const rotationAmount = (direction === 'left' ? -1 : 1) * scrollY * 0.1 / ratio;
+        const rotationAmount = (direction === 'left' ? -1 : 1) * scrollY * 40 / diameter * (rotationSpeed??1);
         setRotation(initialAngle + rotationAmount);
     };
 
@@ -31,16 +30,21 @@ function Gear(Gear) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [initialAngle, direction, ratio, handleScroll]);
 
-    const style = {
-        position: 'absolute',
-        top: `${top}px`,
-        left: `${left}px`,
-        transform: `rotate(${rotation}deg)`,
+    const gearPosition = {
+        top: `${yOffset}px`,
+        left: `${left??xOffset}px`,
     };
 
+    const imageRotation = {
+        transform: `rotate(${rotation}deg)`,
+    }
+
     return (
-        <div style={style}>
-            <img src={imageURL} alt="Gear Image" />
+        <div>
+            <div className="gear" style={gearPosition}>
+                <img style={imageRotation} src={imageURL} alt="Gear Image" />
+                {/*<div className="text">Inner Text</div>*/}
+            </div>
         </div>
     );
 }

@@ -1,0 +1,8 @@
+.gear{
+    @apply relative w-fit h-fit flex;
+    .text{
+        @apply text-blue-700 absolute top-0.5 left-0.5;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
