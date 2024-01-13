@@ -1,0 +1,7 @@
+.gear-section{
+    @apply flex flex-col;
+}
+
+.gear-section .text-field{
+    @apply max-w-[400px];
+}

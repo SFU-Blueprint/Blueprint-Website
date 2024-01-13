@@ -1,5 +1,5 @@
 import React from "react";
-import GearSection from "../components/GearSection";
+import GearSection from "../components/Gears/GearSection";
 
 const AboutPage = () => {
   return (
