@@ -4,10 +4,10 @@ import './GearSection.css'
 
 const gearsData = [
     { imageURL: '/gears/gear-4.svg', diameter: 254 },
-    { imageURL: '/gears/gear-1.svg', diameter: 424, angleToPrevious: 225, initialAngle: 10, rotationSpeed: 0.85 },
-    { imageURL: '/gears/gear-2.svg', diameter: 325, angleToPrevious: 315, initialAngle: 58 },
-    { imageURL: '/gears/gear-3.svg', diameter: 333, angleToPrevious: 225, initialAngle: 20 },
-    { imageURL: '/gears/gear-5.svg', diameter: 256, angleToPrevious: 315, initialAngle: 3},
+    { imageURL: '/gears/gear-1.svg', yOffset: -110, diameter: 424, angleToPrevious: 225, initialAngle: 16, rotationSpeed: 0.82 },
+    { imageURL: '/gears/gear-2.svg', yOffset: -260, diameter: 325, angleToPrevious: 315, initialAngle: 20, rotationSpeed: 0.95 },
+    { imageURL: '/gears/gear-3.svg', yOffset: -410, diameter: 333, angleToPrevious: 225, initialAngle: 23},
+    { imageURL: '/gears/gear-5.svg', yOffset: -560, diameter: 256, angleToPrevious: 315, initialAngle: 30},
 ];
 
 const GearSection = () => {

@@ -16,7 +16,7 @@ import './Gear.css'
 
 
 function Gear(props) {
-    const { imageURL, top, left, initialAngle = 0, ratio, direction, diameter, rotationSpeed, xOffset, yOffset } = props.gear;
+    const { imageURL, initialAngle = 0, ratio, direction, diameter, rotationSpeed, xOffset, yOffset } = props.gear;
     const [rotation, setRotation] = useState(initialAngle);
 
     const handleScroll = () => {
@@ -32,7 +32,7 @@ function Gear(props) {
 
     const gearPosition = {
         top: `${yOffset}px`,
-        left: `${left??xOffset}px`,
+        left: `${xOffset}px`,
     };
 
     const imageRotation = {
@@ -43,7 +43,7 @@ function Gear(props) {
         <div>
             <div className="gear" style={gearPosition}>
                 <img style={imageRotation} src={imageURL} alt="Gear Image" />
-                {/*<div className="text">Inner Text</div>*/}
+                <div className="text">Inner Text</div>
             </div>
         </div>
     );
