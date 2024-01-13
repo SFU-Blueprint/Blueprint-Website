@@ -1,6 +1,9 @@
 import React from "react";
+import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
 
 const AboutPage = () => {
+
+
   return (
     <div>
       {/* About us */}
@@ -54,12 +57,106 @@ const AboutPage = () => {
           <p className="basis-2/6 font-sketch pl-[10%]">A design sprint is the best way to get ideas flowing</p>
         </div>
       </div>
+    
+    <div>
 
+        <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-20">Our Team</h1>
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">EXECUTIVES</p>
+        <div class="flex justify-start flex-col sm:flex-row mb-20">
+
+        {Executives.map((items, key) => (
+                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60" key={key}>
+                    <img class= ""
+                    src={items.img}
+                    alt=""
+                    />
+                   
+                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                      {items.title}
+                    </h4>
+
+                    <a href="/" class="font-poppins flex items-center justify-center">         
+                      {items.linkedin}
+                    </a>
+                </div>
+           ))}
+
+        </div>
+
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">PROJECT LEADS</p>
+        <div class="flex justify-start flex-col sm:flex-row mb-20">
+
+        {ProjectLeads.map((items, key) => (
+                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60" key={key}>
+                    <img class= ""
+                    src={items.img}
+                    alt=""
+                    />
+                
+                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    {items.title}
+                    </h4>
+
+                    <a href="/" class="font-poppins flex items-center justify-center">         
+                      {items.linkedin}
+                    </a>
+                </div>
+        ))}
+
+        </div>
+
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DESIGNERS</p>
+        <div class="flex justify-start flex-col sm:flex-row mb-20">
+
+        {Designers.map((items, key) => (
+                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60" key={key}>
+                    <img class= ""
+                    src={items.img}
+                    alt=""
+                    />
+                
+                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    {items.title}
+                    </h4>
+
+                    <a href="/" class="font-poppins flex items-center justify-center">         
+                      {items.linkedin}
+                    </a>
+                </div>
+        ))}
+
+        </div>
+
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DEVELOPERS</p>
+        <div class="flex justify-start flex-col sm:flex-row mb-25">
+
+        {Developers.map((items, key) => (
+                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60" key={key}>
+                    <img class= ""
+                    src={items.img}
+                    alt=""
+                    />
+                
+                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    {items.title}
+                    </h4>
+
+                    <a href="/" class="font-poppins flex items-center justify-center">         
+                      {items.linkedin}
+                    </a>
+                </div>
+        ))}
+
+        </div>
+
+        
+    
+    </div>
       
-
       
 
     </div>
+    
   );
 };
 
