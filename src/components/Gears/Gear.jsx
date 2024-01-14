@@ -39,12 +39,17 @@ function Gear(props) {
         transform: `rotate(${rotation}deg)`,
     }
 
+    const lineWidth = {
+        width: `${Math.round(200 - xOffset - diameter/2)}px`,
+    };
+
+    console.log("Gear line width:", lineWidth);
+
     return (
-        <div>
-            <div className="gear" style={gearPosition}>
-                <img style={imageRotation} src={imageURL} alt="Gear Image" />
-                <div className="text">{innerText}</div>
-            </div>
+        <div className="gear" style={gearPosition}>
+            <img style={imageRotation} src={imageURL} alt="Gear Image" />
+            <div className="text">{innerText}</div>
+            <div className="line" style={lineWidth}></div>
         </div>
     );
 }

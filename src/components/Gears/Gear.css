@@ -3,9 +3,19 @@
 }
 
 .gear .text {
-    @apply text-blueprint-blue absolute;
+    @apply text-blueprint-blue text-2xl font-poppins absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    word-spacing: 9999999px;
+}
+
+.gear .line{
+    content: '';
+    position: absolute;
+    height: 1px;
+    top: 50%;
+    left: 100%;
+    background-color: black;
 }

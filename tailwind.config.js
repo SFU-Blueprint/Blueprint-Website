@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blueprint-blue': '#0078e8',
+        'blueprint-blue': '#0178E7',
         'blueprint-secondaryBlue': '#E0F0FF',
         'blueprint-sky': '#93C9FE',
         'blueprint-black': '#CCCCCC'
