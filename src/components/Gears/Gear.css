@@ -12,10 +12,9 @@
 }
 
 .gear .line{
+    @apply bg-blueprint-blue absolute;
     content: '';
-    position: absolute;
-    height: 1px;
+    height: 3px;
     top: 50%;
     left: 100%;
-    background-color: black;
 }

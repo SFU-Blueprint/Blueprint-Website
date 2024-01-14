@@ -40,7 +40,7 @@ function Gear(props) {
     }
 
     const lineWidth = {
-        width: `${Math.round(200 - xOffset - diameter/2)}px`,
+        width: `${Math.round(400 - (diameter??0) - (xOffset??0))}px`,
     };
 
     console.log("Gear line width:", lineWidth);

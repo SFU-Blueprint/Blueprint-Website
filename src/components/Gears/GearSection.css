@@ -3,5 +3,5 @@
 }
 
 .gear-section .text-field{
-    @apply max-w-[400px];
+    @apply max-w-[400px] text-base font-poppins relative;
 }
