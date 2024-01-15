@@ -12,21 +12,12 @@ const gearsData = [
 
 const GearSection = () => {
     return (
-        <div style={{
-            position: 'relative',
-            width: '100%',
-            height: 'fit-content',
-            justifyContent: 'center',
-            display: 'flex'
-        }}>
-            <div style={{
-                position: 'relative',
-                height: 'fit-content',
-                display: 'inline-block'
-            }}>
+        <div className="gear-section">
+            <div className="gear-train">
+                <img src={`${process.env.PUBLIC_URL}/gear_bg.png`} className="gear-background"/>
                 <GearTrain gears={gearsData}></GearTrain>
             </div>
-            <div className="gear-section">
+            <div className="text-column">
                 <div className="text-field" style={{top: '92px'}}>
                     We prioritize the interests of the people we serve over our own interest. Our success is measured by the positive impact we generate.
                 </div>

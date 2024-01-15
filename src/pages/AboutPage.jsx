@@ -1,5 +1,7 @@
 import React from "react";
 import GearSection from "../components/Gears/GearSection";
+import Gear from "../components/Gears/Gear";
+import MobileGearSection from "../components/Gears/MobileGearSection";
 
 const AboutPage = () => {
   return (
@@ -55,9 +57,7 @@ const AboutPage = () => {
           <p className="basis-2/6 font-sketch pl-[10%]">A design sprint is the best way to get ideas flowing</p>
         </div>
       </div>
-
       <GearSection></GearSection>
-
     </div>
   );
 };

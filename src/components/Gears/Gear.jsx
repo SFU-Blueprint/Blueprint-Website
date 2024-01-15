@@ -19,16 +19,16 @@ function Gear(props) {
     const { imageURL, initialAngle = 0, direction, diameter, rotationSpeed, xOffset, yOffset, innerText } = props.gear;
     const [rotation, setRotation] = useState(initialAngle);
 
-    const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const rotationAmount = (direction === 'left' ? -1 : 1) * scrollY * 40 / diameter * (rotationSpeed??1);
-        setRotation(initialAngle + rotationAmount);
-    };
-
     useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const rotationAmount = (direction === 'left' ? -1 : 1) * scrollY * 40 / diameter * (rotationSpeed ?? 1);
+            setRotation(initialAngle + rotationAmount);
+        };
+
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [initialAngle, direction, handleScroll]);
+    }, [initialAngle, direction, diameter, rotationSpeed]);
 
     const gearPosition = {
         top: `${yOffset}px`,
@@ -47,7 +47,7 @@ function Gear(props) {
 
     return (
         <div className="gear" style={gearPosition}>
-            <img style={imageRotation} src={imageURL} alt="Gear Image" />
+            <img style={imageRotation} src={imageURL} alt="Gear" />
             <div className="text">{innerText}</div>
             <div className="line" style={lineWidth}></div>
         </div>
