@@ -1,6 +1,7 @@
 .gear-section{
-    @apply relative h-fit justify-center flex;
+    @apply relative justify-center flex;
     width: 100%;
+    height: 1000px;
 }
 
 .gear-section .gear-train{
