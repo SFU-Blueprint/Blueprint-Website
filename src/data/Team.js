@@ -42,6 +42,11 @@ export const ProjectLeads = [
         img: "/blueprint.jpg",
         linkedin: "linkedin"
     },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
 
 ];
 
@@ -66,10 +71,70 @@ export const Designers = [
         img: "/blueprint.jpg",
         linkedin: "linkedin"
     },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
 
 ];
 
 export const Developers = [
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
+    {
+        title: "FirstName LastName",
+        img: "/blueprint.jpg",
+        linkedin: "linkedin"
+    },
     {
         title: "FirstName LastName",
         img: "/blueprint.jpg",
