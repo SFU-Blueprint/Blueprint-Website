@@ -14,7 +14,7 @@ const GearSection = () => {
     return (
         <div className="gear-section">
             <div className="gear-train">
-                <img src={`${process.env.PUBLIC_URL}/gear_bg.png`} className="gear-background" alt="gear background"/>
+                <img src={`${process.env.PUBLIC_URL}/gears/gear_bg.png`} className="gear-background" alt="gear background"/>
                 <GearTrain gears={gearsData}></GearTrain>
             </div>
             <div className="text-column">
