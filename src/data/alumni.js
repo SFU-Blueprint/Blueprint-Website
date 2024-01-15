@@ -24,8 +24,8 @@ export const Alumni = [
         linkedin: "linkedin"
     },
         {
-        title: "Yang Liu",
-        position: "Tech Lead",
+        title: "Andy",
+        position: "VP of ",
         img: "/blueprint.jpg",
         linkedin: "linkedin"
     },

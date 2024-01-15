@@ -85,7 +85,6 @@ const AboutPage = () => {
           </div>
           
         </div>
-        {/* <p className="font-poppins underline text-xs font-bold mt-20 md:mt-[10%] md:ml-[11%] md:text-base">See all Blueprint chapters here</p> */}
        </div>
       <div className="block mt-12 flex flex-col items-center md:hidden">
         <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
@@ -94,59 +93,7 @@ const AboutPage = () => {
           <p className="basis-2/6 font-sketch pl-[10%] h-fit">A design sprint is the best way to get ideas flowing</p>
         </div>
       </div>
-
-      <div>
-        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl md:gap-36  md:ml-16 xl:ml-36">Alumni</h1>
-        <div className="ml-[5%]">
-          <h1 className="font-poppins text-[24px]">2023</h1>
-          <div className="flex flex-row flex-wrap justify-start mt-[0.5%]">
-            {Alumni.map((items, key) => (
-                  <div class="border-1 m-2 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
-                      <div className="ml-5 mt-3 mr-5">
-                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
-                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
-                      </div>
-                      <div className="flex flex-row ml-5 mb-3 mr-5">
-                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
-                        <img className="ml-[5%]" src="/share.svg" alt="" />
-                      </div>
-                  </div>
-            ))}
-          </div>
-
-
-        </div>
-
-
-      </div>
-
-
-
-      <div>
-        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl md:gap-36  md:ml-16 xl:ml-36">Alumni</h1>
-        <div className="ml-[5%]">
-          <h1 className="font-poppins text-[24px]">2023</h1>
-          <div className="flex flex-row flex-wrap justify-start mt-[0.5%]">
-            {Alumni.map((items, key) => (
-                  <div class="border-1 m-2 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
-                      <div className="ml-5 mt-3 mr-5">
-                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
-                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
-                      </div>
-                      <div className="flex flex-row ml-5 mb-3 mr-5">
-                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
-                        <img className="ml-[5%]" src="/share.svg" alt="" />
-                      </div>
-                  </div>
-            ))}
-          </div>
-
-
-        </div>
-
-
-      </div>
-
+      {/* End of Description */}
 
 
       {/*Gear Section*/}
@@ -155,6 +102,30 @@ const AboutPage = () => {
         {gearSectionHtml.content}
       </div>
       {/*End of Gear Section*/}
+
+
+    {/*Alumni Section*/}
+      <div>
+        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl">Alumni</h1>
+        <div className="md:ml-[5%]">
+          <h1 className="ml-[5%] md:ml-[0%] font-poppins text-[24px]">2023</h1>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max justify-start mt-[0.5%]">
+            {Alumni.map((items, key) => (
+                  <div class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
+                      <div className="ml-5 mt-3 mr-5">
+                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
+                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
+                      </div>
+                      <div className="flex flex-row ml-5 mb-3 mr-5">
+                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
+                        <img className="ml-[5%]" src="/share.svg" alt="" />
+                      </div>
+                  </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/*End of Alumni Section*/}
 
 
     </div>
