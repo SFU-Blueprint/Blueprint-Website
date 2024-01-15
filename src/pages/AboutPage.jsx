@@ -62,20 +62,20 @@ const AboutPage = () => {
 
         <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-20">Our Team</h1>
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">EXECUTIVES</p>
-        <div class="flex flex-wrap justify-start flex-col sm:flex-row mb-20">
+        <div class="flex flex-wrap justify-start flex-row mb-20">
 
         {Executives.map((items, key) => (
-                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60 mb-20" key={key}>
+                <div class="flex flex-col h-20 w-20 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
                     <img class= ""
                     src={items.img}
                     alt=""
                     />
                    
-                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    <p class="font-poppins font-bold flex items-center justify-center text-[7px] sm:text-base">         
                       {items.title}
-                    </h4>
+                    </p>
 
-                    <a href="/" class="font-poppins flex items-center justify-center">         
+                    <a href="/" class="font-poppins flex items-center justify-center text-[7px] sm:text-base">         
                       {items.linkedin}
                     </a>
                 </div>
@@ -84,20 +84,20 @@ const AboutPage = () => {
         </div>
 
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">PROJECT LEADS</p>
-        <div class="flex flex-wrap justify-start flex-col sm:flex-row mb-20">
+        <div class="flex flex-wrap justify-start flex-row mb-20">
 
         {ProjectLeads.map((items, key) => (
-                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60 mb-20" key={key}>
+                <div class="flex flex-col h-20 w-20 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
                     <img class= ""
                     src={items.img}
                     alt=""
                     />
                 
-                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    <h4 class="font-poppins font-bold flex items-center justify-center text-[7px] sm:text-base">         
                     {items.title}
                     </h4>
 
-                    <a href="/" class="font-poppins flex items-center justify-center">         
+                    <a href="/" class="font-poppins flex items-center justify-center text-[7px] sm:text-base">         
                       {items.linkedin}
                     </a>
                 </div>
@@ -106,20 +106,20 @@ const AboutPage = () => {
         </div>
 
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DESIGNERS</p>
-        <div class="flex flex-wrap justify-start flex-col sm:flex-row mb-20">
+        <div class="flex flex-wrap justify-start flex-row mb-20">
 
         {Designers.map((items, key) => (
-                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60 mb-20" key={key}>
+                <div class="flex flex-col h-20 w-20 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
                     <img class= ""
                     src={items.img}
                     alt=""
                     />
                 
-                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    <h4 class="font-poppins font-bold flex items-center justify-center text-[7px] sm:text-base">         
                     {items.title}
                     </h4>
 
-                    <a href="/" class="font-poppins flex items-center justify-center">         
+                    <a href="/" class="font-poppins flex items-center justify-center text-[7px] sm:text-base">         
                       {items.linkedin}
                     </a>
                 </div>
@@ -128,20 +128,20 @@ const AboutPage = () => {
         </div>
 
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DEVELOPERS</p>
-        <div class="flex flex-wrap justify-start flex-col sm:flex-row mb-25">
+        <div class="flex flex-wrap justify-start flex-row mb-25">
 
         {Developers.map((items, key) => (
-                <div class="flex flex-col h-full w-full m-6 sm:h-48 sm:w-60 mb-20" key={key}>
+                <div class="flex flex-col h-20 w-20 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
                     <img class= ""
                     src={items.img}
                     alt=""
                     />
                 
-                    <h4 class="font-poppins font-bold flex items-center justify-center">         
+                    <h4 class="font-poppins font-bold flex items-center justify-center text-[7px] sm:text-base">         
                     {items.title}
                     </h4>
 
-                    <a href="/" class="font-poppins flex items-center justify-center">         
+                    <a href="/" class="font-poppins flex items-center justify-center text-[7px] sm:text-base">         
                       {items.linkedin}
                     </a>
                 </div>
