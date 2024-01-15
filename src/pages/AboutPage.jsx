@@ -1,11 +1,13 @@
 import React from "react";
+import {Alumni} from "../data/alumni";
+// import shareIcon from "../assets/icons/share.svg" 
 
 const AboutPage = () => {
   return (
     <div>
       {/* About us */}
       <div className="relative">
-        <img className="md:h-80 md:w-full" src="/testImage.jpg" alt="Your"/>
+        <img className="h-46 w-full md:h-80 md:w-full" src="/testImage.jpg" alt="Your"/>
         <div className="absolute bottom-5 md:my-10">
           <p className="font-anek text-black text-4xl my-2 font-bold ml-10 md:ml-16 md:text-6xl xl:ml-36 ">About Us</p>
           <p className="font-poppins font-bold md:text-2xl ml-10 md:ml-16 xl:ml-36">TECH-DRIVEN ADVOCATED FOR SOCIAL GOOD</p>
@@ -52,6 +54,33 @@ const AboutPage = () => {
           <p className="basis-2/6 font-sketch pl-[10%]">A design sprint is the best way to get ideas flowing</p>
         </div>
       </div>
+
+      <div>
+        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl md:gap-36  md:ml-16 xl:ml-36">Alumni</h1>
+        <div className="ml-[5%]">
+          <h1 className="font-poppins text-[24px]">2023</h1>
+          <div className="flex flex-row flex-wrap justify-start mt-[0.5%]">
+            {Alumni.map((items, key) => (
+                  <div class="border-1 m-2 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
+                      <div className="ml-5 mt-3 mr-5">
+                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
+                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
+                      </div>
+                      <div className="flex flex-row ml-5 mb-3 mr-5">
+                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
+                        <img className="ml-[5%]" src="/share.svg" alt="" />
+                      </div>
+                  </div>
+            ))}
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
 
       
 
