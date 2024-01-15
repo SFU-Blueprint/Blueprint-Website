@@ -4,7 +4,7 @@ import './MobileGearSection.css'
 const MobileGearSection = () => {
     return (
         <div className="gear-section">
-            <img src={`${process.env.PUBLIC_URL}/gears/mobile_gear_bg.png`} className="mobile-gear-image"/>
+            <img src={`${process.env.PUBLIC_URL}/gears/mobile_gear_bg.png`} className="mobile-gear-image" alt="mobile version geartrain"/>
             <div className="mobile-value-title mt-3">PEOPLE FIRST</div>
             <div className="mobile-value-body">We prioritize the interests of the people we serve over our own interest. Our success is measured by the positive impact we generate.</div>
             <div className="mobile-value-title">PERPETUAL GROWTH</div>
@@ -16,7 +16,6 @@ const MobileGearSection = () => {
             <div className="mobile-value-title">BE HUMBLE</div>
             <div className="mobile-value-body">Embracing imperfections, we value feedback and approach challenges with humility. We recognize that anyone, regardless of knowledge or skill level, can contribute to social good.</div>
         </div>
-
     );
 };
 
