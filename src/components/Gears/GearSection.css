@@ -1,8 +1,6 @@
 .gear-section{
     @apply relative h-fit justify-center flex;
     width: 100%;
-    /*background: url('/public/gear_bg.png');*/
-    /*background-repeat: no-repeat;*/
 }
 
 .gear-section .gear-train{
