@@ -1,8 +1,48 @@
-import React from "react";
+import React, {useState, useEffect, useCallback } from "react";
+import GearSection from "../components/Gears/GearSection";
+import MobileGearSection from "../components/Gears/MobileGearSection";
 import {Alumni} from "../data/alumni";
 // import shareIcon from "../assets/icons/share.svg" 
 
+/**
+ * React functional component representing the About Us page.
+ *
+ * @component
+ */
 const AboutPage = () => {
+  //State used to hold the current gear section JSX (can either be the mobile or desktop version)
+  const [gearSectionHtml, setGearSectionHtml] = useState({
+    content: <GearSection></GearSection>
+  });
+
+  //Memoize the resize function (cache it) so we don't recreate the function when the effects use it
+  const resize = useCallback(() => {
+    const windowWidth = window.innerWidth;
+    const GEAR_SECTION_WIDTH_BREAKPOINT = 1000;
+
+    setGearSectionHtml({
+      content: windowWidth > GEAR_SECTION_WIDTH_BREAKPOINT
+          ? <GearSection></GearSection>
+          : <MobileGearSection></MobileGearSection>
+    });
+  }, [setGearSectionHtml]);
+
+  useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
+  }, [resize]);
+
+  useEffect(() => {
+    // Initial resize when component mounts
+    resize();
+  }, [resize]);
+
+  /**
+   * JSX for rendering the About page.
+   *
+   * @returns {JSX.Element} The About page component.
+   */
+
   return (
     <div>
       {/* About us */}
@@ -51,7 +91,7 @@ const AboutPage = () => {
         <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm "></div>
-          <p className="basis-2/6 font-sketch pl-[10%]">A design sprint is the best way to get ideas flowing</p>
+          <p className="basis-2/6 font-sketch pl-[10%] h-fit">A design sprint is the best way to get ideas flowing</p>
         </div>
       </div>
 
@@ -82,9 +122,40 @@ const AboutPage = () => {
 
 
 
-      
+      <div>
+        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl md:gap-36  md:ml-16 xl:ml-36">Alumni</h1>
+        <div className="ml-[5%]">
+          <h1 className="font-poppins text-[24px]">2023</h1>
+          <div className="flex flex-row flex-wrap justify-start mt-[0.5%]">
+            {Alumni.map((items, key) => (
+                  <div class="border-1 m-2 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
+                      <div className="ml-5 mt-3 mr-5">
+                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
+                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
+                      </div>
+                      <div className="flex flex-row ml-5 mb-3 mr-5">
+                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
+                        <img className="ml-[5%]" src="/share.svg" alt="" />
+                      </div>
+                  </div>
+            ))}
+          </div>
 
-      
+
+        </div>
+
+
+      </div>
+
+
+
+      {/*Gear Section*/}
+      <div className="mt-36">
+        <div className="mx-6 md:mx-20 font-anek text-black text-4xl md:text-5xl font-[550]">Our Values</div>
+        {gearSectionHtml.content}
+      </div>
+      {/*End of Gear Section*/}
+
 
     </div>
   );

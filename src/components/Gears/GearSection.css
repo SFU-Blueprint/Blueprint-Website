@@ -1,0 +1,22 @@
+.gear-section{
+    @apply relative h-fit justify-center flex;
+    width: 100%;
+}
+
+.gear-section .gear-train{
+    @apply h-fit inline-block pl-[150px];
+}
+
+.gear-section .gear-background {
+    @apply w-2/3 absolute left-0;
+    height: 1200px;
+    top: -100px;
+}
+
+.gear-section .text-column{
+    @apply flex flex-col;
+}
+
+.gear-section .text-field{
+    @apply max-w-[400px] text-base font-poppins relative;
+}
