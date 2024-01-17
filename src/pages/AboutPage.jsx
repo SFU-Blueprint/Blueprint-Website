@@ -2,8 +2,7 @@ import React, {useState, useEffect, useCallback } from "react";
 import GearSection from "../components/Gears/GearSection";
 import MobileGearSection from "../components/Gears/MobileGearSection";
 import {Alumni} from "../data/alumni";
-
-// import shareIcon from "../assets/icons/share.svg"
+import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
 
 const AboutPage = () => {
 
@@ -113,6 +112,103 @@ const AboutPage = () => {
                     </div>
                 </div>
             </div>
+          <div>
+
+            <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-20">Our Team</h1>
+            <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">EXECUTIVES</p>
+            <div
+                className="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+
+              {Executives.map((items, key) => (
+                  <div className="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
+                    <img className=""
+                         src={items.img}
+                         alt=""
+                    />
+
+                    <p className="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">
+                      {items.title}
+                    </p>
+
+                    <a href="/" className="font-poppins flex items-center justify-center text-[12px] sm:text-base">
+                      {items.linkedin}
+                    </a>
+                  </div>
+              ))}
+
+            </div>
+
+            <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">PROJECT LEADS</p>
+            <div
+                className="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+
+              {ProjectLeads.map((items, key) => (
+                  <div className="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
+                    <img className=""
+                         src={items.img}
+                         alt=""
+                    />
+
+                    <h4 className="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">
+                      {items.title}
+                    </h4>
+
+                    <a href="/" className="font-poppins flex items-center justify-center text-[12px] sm:text-base">
+                      {items.linkedin}
+                    </a>
+                  </div>
+              ))}
+
+            </div>
+
+            <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DESIGNERS</p>
+            <div
+                className="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+
+              {Designers.map((items, key) => (
+                  <div className="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
+                    <img className=""
+                         src={items.img}
+                         alt=""
+                    />
+
+                    <h4 className="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">
+                      {items.title}
+                    </h4>
+
+                    <a href="/" className="font-poppins flex items-center justify-center text-[12px] sm:text-base">
+                      {items.linkedin}
+                    </a>
+                  </div>
+              ))}
+
+            </div>
+
+            <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DEVELOPERS</p>
+            <div
+                className="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+
+              {Developers.map((items, key) => (
+                  <div className="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
+                    <img className=""
+                         src={items.img}
+                         alt=""
+                    />
+
+                    <h4 className="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">
+                      {items.title}
+                    </h4>
+
+                    <a href="/" className="font-poppins flex items-center justify-center text-[12px] sm:text-base">
+                      {items.linkedin}
+                    </a>
+                  </div>
+              ))}
+
+            </div>
+
+
+          </div>
         </div>
     );
 };
