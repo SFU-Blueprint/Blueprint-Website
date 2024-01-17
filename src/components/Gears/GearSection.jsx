@@ -13,8 +13,14 @@ const gearsData = [
 const GearSection = () => {
     return (
         <div className="gear-section">
+            {/*<div className="gear-background">*/}
+            {/*    <img src={`${process.env.PUBLIC_URL}/gears/gear_bg_ellipse.png`} className="ellipse"/>*/}
+            {/*</div>*/}
             <div className="gear-train">
-                <img src={`${process.env.PUBLIC_URL}/gears/gear_bg.png`} className="gear-background" alt="gear background"/>
+                <img src={`${process.env.PUBLIC_URL}/gears/gear_bg.png`}
+                     className="gear-background"
+                     alt="gear background"
+                />
                 <GearTrain gears={gearsData}></GearTrain>
             </div>
             <div className="text-column">
