@@ -26,3 +26,8 @@
 .gear-section .text-field{
     @apply max-w-[400px] text-base font-poppins relative;
 }
+
+.gear-section .curly-text{
+    @apply font-sketch text-xl absolute w-36 xl:w-52 left-0 xl:left-[-30px];
+    top: 560px;
+}
