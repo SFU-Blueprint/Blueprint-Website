@@ -1,59 +1,66 @@
 import React from "react";
-import Footer from "../components/Footer";
+
 const ProjectsPage = () => {
   const content = (title) => ({
     title: title,
-    tags: {
-      "SMART ASSISTANT": ["Immigration", "AI/Product"],
-      "ML FOR HEALTH": ["Health", "Machine Learning"],
-      "DATA TRACKING": ["Sustainability", "Data"],
-    }[title],
-    description: {
-      "SMART ASSISTANT": "Aiding New Comers to Canada",
-      "ML FOR HEALTH": "Physio Therapy Outside the Clinic",
-      "DATA TRACKING": "Volunteer Hour Tracking Platform",
-    }[title],
-    img_path: {
-      "SMART ASSISTANT": "placeholder.png",
-      "ML FOR HEALTH": "placeholder.png",
-      "DATA TRACKING": "placeholder.png",
+    ...{
+      "Smart Assistant": {
+        tags: ["Immigration", "AI/Product"],
+        description: "Aiding New Comers to Canada",
+        image: "placeholder.png",
+      },
+      "ML for Health": {
+        tags: ["Health", "Machine Learning"],
+        description: "Physio Therapy Outside the Clinic",
+        image: "placeholder.png",
+      },
+      "Data Tracking": {
+        tags: ["Sustainability", "Data"],
+        description: "Volunteer Hour Tracking Platform",
+        image: "placeholder.png",
+      },
     }[title],
   });
   return (
-    <body>
-      <div className="flex flex-col px-[2%] pt-10 gap-y-4 justify-center">
-        {/* Heading */}
-        <div>
-          <Heading className="!text-5xl h-16 font-[550]">Our Projects</Heading>
-        </div>
-
-        {/* ONGOING */}
-        <div>
-          <h1 className="text-black font-poppins font-[388] text-2xl">
-            ONGOING
-          </h1>
-        </div>
-
-        {/* Rows */}
-        <div className="flex flex-row gap-x-6 place-items-stretch">
-          <div className=" basis-1/3 ">
-            <ProjectCard>{content("SMART ASSISTANT")}</ProjectCard>
-          </div>
-          <div className="basis-1/3">
-            <ProjectCard>{content("ML FOR HEALTH")}</ProjectCard>
-          </div>
-          <div className="basis-1/3">
-            <ProjectCard>{content("DATA TRACKING")}</ProjectCard>
-          </div>
-        </div>
-
-        <div className=" my-[7%] place-self-center text-black text-xl font-normal font-['Poppins']">
-          More coming soon!
-        </div>
+    <div className="flex flex-col px-3 md:px-[15%] pt-10 gap-4">
+      <Heading className="my-5">Our Projects</Heading>
+      <Subheading>Ongoing</Subheading>
+      <div className="flex flex-col md:flex-row gap-6">
+        {["Smart Assistant", "ML for Health", "Data Tracking"].map(
+          (project, index) => (
+            <div key={index} className="flex-grow">
+              <ProjectCard>{content(project)}</ProjectCard>
+            </div>
+          )
+        )}
       </div>
-    </body>
+      <Body className="my-[10%] md:my-[8%] text-center !text-xl">More coming soon!</Body>
+    </div>
   );
 };
+
+function ProjectCard({ children, className }) {
+  const { title, tags, description, image } = children;
+  return (
+    <div className={`${className} shadow-md`}>
+      <img src={image} className="w-full" alt={title} />
+      <div className="px-3 pb-3">
+        <div className="flex gap-3 -translate-y-1/2">
+          {tags.map((tag, index) => (
+            <Body
+              key={index}
+              className="bg-blue-500 text-white px-3 rounded-md shadow-md"
+            >
+              {tag}
+            </Body>
+          ))}
+        </div>
+        <Subheading>{title} → </Subheading>
+        <Body className="w-2/3">{description}</Body>
+      </div>
+    </div>
+  );
+}
 
 function Heading({ children, className }) {
   return (
@@ -63,23 +70,19 @@ function Heading({ children, className }) {
   );
 }
 
-function ProjectCard({ children, className }) {
-  const { title, tags, description, img_path } = children;
+function Subheading({ children, className }) {
   return (
-    <div className={" ${className} shadow-md font-['Poppins']"}>
-      <div className="">
-        <img src={img_path} className="w-full object-cover" alt={title} />
-      </div>
-      {/* <div className="flex flex-row px-[5%]">
-        <div className="bg-sky-500 rounded-md p-[2%]">c1</div>
-        <div>c2</div>
-        <div>c3</div>
-      </div> */}
-      <div className="p-3">
-        <p className=" text-1xl font-medium  ">{title} → </p>
-        <p className=" text-sm leading-5 w-2/3 ">{description}</p>
-      </div>
-    </div>
+    <p
+      className={`${className} font-poppins text-xl md:text-2xl font-medium uppercase`}
+    >
+      {children}
+    </p>
+  );
+}
+
+function Body({ children, className }) {
+  return (
+    <p className={`${className} max-md:text-sm font-poppins`}>{children}</p>
   );
 }
 
