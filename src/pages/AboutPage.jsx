@@ -1,6 +1,6 @@
 import React from "react";
 import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
-
+import CardItem from "../components/CardItem";
 const AboutPage = () => {
 
 
@@ -61,100 +61,59 @@ const AboutPage = () => {
     <div>
 
         <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-20">Our Team</h1>
+        
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">EXECUTIVES</p>
         <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-
-        {Executives.map((items, key) => (
-                <div class="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
-                    <img class= ""
-                    src={items.img}
-                    alt=""
-                    />
-                   
-                    <p class="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">         
-                      {items.title}
-                    </p>
-
-                    <a href="/" class="font-poppins flex items-center justify-center text-[12px] sm:text-base">         
-                      {items.linkedin}
-                    </a>
-                </div>
-           ))}
-
+            {Executives.map((card, index) => (
+                <CardItem
+                    key={index}
+                    img={card.img} 
+                    title={card.title} 
+                    linkedin={card.linkedin} 
+                />
+            ))}
         </div>
 
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">PROJECT LEADS</p>
         <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-
-        {ProjectLeads.map((items, key) => (
-                <div class="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
-                    <img class= ""
-                    src={items.img}
-                    alt=""
-                    />
-                
-                    <h4 class="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">         
-                    {items.title}
-                    </h4>
-
-                    <a href="/" class="font-poppins flex items-center justify-center text-[12px] sm:text-base">         
-                      {items.linkedin}
-                    </a>
-                </div>
-        ))}
-
+            {ProjectLeads.map((card, index) => (
+                    <CardItem
+                    key={index}
+                    img={card.img} 
+                    title={card.title} 
+                    linkedin={card.linkedin} 
+                />
+            ))}
         </div>
 
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DESIGNERS</p>
         <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-
-        {Designers.map((items, key) => (
-                <div class="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
-                    <img class= ""
-                    src={items.img}
-                    alt=""
-                    />
-                
-                    <h4 class="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">         
-                    {items.title}
-                    </h4>
-
-                    <a href="/" class="font-poppins flex items-center justify-center text-[12px] sm:text-base">         
-                      {items.linkedin}
-                    </a>
-                </div>
-        ))}
-
+            {Designers.map((card, index) => (
+                <CardItem
+                key={index}
+                img={card.img} 
+                title={card.title} 
+                linkedin={card.linkedin} 
+            />
+            ))}
         </div>
 
         <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DEVELOPERS</p>
         <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-
-        {Developers.map((items, key) => (
-                <div class="flex flex-col h-21 w-21 m-6 sm:h-48 sm:w-60 mb-5 sm:mb-20" key={key}>
-                    <img class= ""
-                    src={items.img}
-                    alt=""
-                    />
-                
-                    <h4 class="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">         
-                    {items.title}
-                    </h4>
-
-                    <a href="/" class="font-poppins flex items-center justify-center text-[12px] sm:text-base">         
-                      {items.linkedin}
-                    </a>
-                </div>
-        ))}
-
+            {Developers.map((card, index) => (
+                    <CardItem
+                    key={index}
+                    img={card.img} 
+                    title={card.title} 
+                    linkedin={card.linkedin} 
+                />
+            ))}
         </div>
 
         
-    
     </div>
       
-      
-
+    
     </div>
     
   );
