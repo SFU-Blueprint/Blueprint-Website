@@ -21,7 +21,6 @@ function GearTrain(props) {
         const xAng = Math.cos(ConvertToRadians(gear.angleToPrevious ?? 270));
 
         if(index > 0){
-            console.log(gear)
             gears[index] = {
                 ...gear,
                 xOffset: xCenter - gear.diameter / 2 + xAng * radius,

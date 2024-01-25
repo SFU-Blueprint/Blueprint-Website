@@ -6,38 +6,33 @@ import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
 import CardItem from "../components/CardItem";
 // import shareIcon from "../assets/icons/share.svg" 
 
-/**
- * React functional component representing the About Us page.
- *
- * @component
- */
 const AboutPage = () => {
-  //State used to hold the current gear section JSX (can either be the mobile or desktop version)
-  const [gearSectionHtml, setGearSectionHtml] = useState({
-    content: <GearSection></GearSection>
-  });
 
-  //Memoize the resize function (cache it) so we don't recreate the function when the effects use it
-  const resize = useCallback(() => {
-    const windowWidth = window.innerWidth;
-    const GEAR_SECTION_WIDTH_BREAKPOINT = 1000;
-
-    setGearSectionHtml({
-      content: windowWidth > GEAR_SECTION_WIDTH_BREAKPOINT
-          ? <GearSection></GearSection>
-          : <MobileGearSection></MobileGearSection>
+    const [gearSectionHtml, setGearSectionHtml] = useState({
+        content: <GearSection></GearSection>
     });
-  }, [setGearSectionHtml]);
 
-  useEffect(() => {
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  }, [resize]);
+    //Memoize the resize function (cache it) so we don't recreate the function when the effects use it
+    const resize = useCallback(() => {
+        const windowWidth = window.innerWidth;
+        const GEAR_SECTION_WIDTH_BREAKPOINT = 1000;
 
-  useEffect(() => {
-    // Initial resize when component mounts
-    resize();
-  }, [resize]);
+        setGearSectionHtml({
+            content: windowWidth > GEAR_SECTION_WIDTH_BREAKPOINT
+                ? <GearSection></GearSection>
+                : <MobileGearSection></MobileGearSection>
+        });
+    }, [setGearSectionHtml]);
+
+    useEffect(() => {
+        window.addEventListener('resize', resize);
+        return () => window.removeEventListener('resize', resize);
+    }, [resize]);
+
+    useEffect(() => {
+        // Initial resize when component mounts
+        resize();
+    }, [resize]);
 
   /**
    * JSX for rendering the About page.

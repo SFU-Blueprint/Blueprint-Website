@@ -14,9 +14,16 @@ const GearSection = () => {
     return (
         <div className="gear-section">
             <div className="gear-train">
-                <img src={`${process.env.PUBLIC_URL}/gears/gear_bg.png`} className="gear-background" alt="gear background"/>
+                <img src={`${process.env.PUBLIC_URL}/gears/gear_bg.png`}
+                     className="gear-background"
+                     alt="gear background"
+                />
                 <GearTrain gears={gearsData}></GearTrain>
+                <div className="curly-text">
+                    Our interlocking values work together to propel us forward.
+                </div>
             </div>
+
             <div className="text-column">
                 <div className="text-field" style={{top: '92px'}}>
                     We prioritize the interests of the people we serve over our own interest. Our success is measured by the positive impact we generate.
