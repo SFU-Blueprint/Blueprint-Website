@@ -1,47 +1,8 @@
-import React, {useState, useEffect, useCallback } from "react";
-import GearSection from "../components/Gears/GearSection";
-import MobileGearSection from "../components/Gears/MobileGearSection";
-import {Alumni} from "../data/alumni";
-// import shareIcon from "../assets/icons/share.svg" 
-
-/**
- * React functional component representing the About Us page.
- *
- * @component
- */
+import React from "react";
+import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
+import CardItem from "../components/CardItem";
 const AboutPage = () => {
-  //State used to hold the current gear section JSX (can either be the mobile or desktop version)
-  const [gearSectionHtml, setGearSectionHtml] = useState({
-    content: <GearSection></GearSection>
-  });
 
-  //Memoize the resize function (cache it) so we don't recreate the function when the effects use it
-  const resize = useCallback(() => {
-    const windowWidth = window.innerWidth;
-    const GEAR_SECTION_WIDTH_BREAKPOINT = 1000;
-
-    setGearSectionHtml({
-      content: windowWidth > GEAR_SECTION_WIDTH_BREAKPOINT
-          ? <GearSection></GearSection>
-          : <MobileGearSection></MobileGearSection>
-    });
-  }, [setGearSectionHtml]);
-
-  useEffect(() => {
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  }, [resize]);
-
-  useEffect(() => {
-    // Initial resize when component mounts
-    resize();
-  }, [resize]);
-
-  /**
-   * JSX for rendering the About page.
-   *
-   * @returns {JSX.Element} The About page component.
-   */
 
   return (
     <div>
@@ -93,42 +54,65 @@ const AboutPage = () => {
           <p className="basis-2/6 font-sketch pl-[10%] h-fit">A design sprint is the best way to get ideas flowing</p>
         </div>
       </div>
-      {/* End of Description */}
+    
+    <div>
 
-
-      {/*Gear Section*/}
-      <div className="mt-36">
-        <div className="mx-6 md:mx-20 font-anek text-black text-4xl md:text-5xl font-[550]">Our Values</div>
-        {gearSectionHtml.content}
-      </div>
-      {/*End of Gear Section*/}
-
-
-    {/*Alumni Section*/}
-      <div>
-        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl">Alumni</h1>
-        <div className="md:ml-[5%]">
-          <h1 className="ml-[5%] md:ml-[0%] font-poppins text-[24px]">2023</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max justify-start mt-[0.5%]">
-            {Alumni.map((items, key) => (
-                  <div class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
-                      <div className="ml-5 mt-3 mr-5">
-                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
-                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
-                      </div>
-                      <div className="flex flex-row ml-5 mb-3 mr-5">
-                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
-                        <img className="ml-[5%]" src="/share.svg" alt="" />
-                      </div>
-                  </div>
+        <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-20">Our Team</h1>
+        
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">EXECUTIVES</p>
+        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+            {Executives.map((card, index) => (
+                <CardItem
+                    key={index}
+                    img={card.img} 
+                    title={card.title} 
+                    linkedin={card.linkedin} 
+                />
             ))}
-          </div>
         </div>
-      </div>
-      {/*End of Alumni Section*/}
 
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">PROJECT LEADS</p>
+        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+            {ProjectLeads.map((card, index) => (
+                    <CardItem
+                    key={index}
+                    img={card.img} 
+                    title={card.title} 
+                    linkedin={card.linkedin} 
+                />
+            ))}
+        </div>
 
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DESIGNERS</p>
+        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+            {Designers.map((card, index) => (
+                <CardItem
+                key={index}
+                img={card.img} 
+                title={card.title} 
+                linkedin={card.linkedin} 
+            />
+            ))}
+        </div>
+
+        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DEVELOPERS</p>
+        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
+            {Developers.map((card, index) => (
+                    <CardItem
+                    key={index}
+                    img={card.img} 
+                    title={card.title} 
+                    linkedin={card.linkedin} 
+                />
+            ))}
+        </div>
+
+        
     </div>
+      
+    
+    </div>
+    
   );
 };
 
