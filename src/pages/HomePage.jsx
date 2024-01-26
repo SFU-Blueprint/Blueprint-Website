@@ -1,9 +1,10 @@
 import React from "react";
 import Footer from "../components/Footer"
+import OutlineButton from "../components/Shared/OutlineButton"
 const HomePage = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <OutlineButton></OutlineButton>
     </div>
   );
 };
