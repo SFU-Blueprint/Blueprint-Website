@@ -122,7 +122,9 @@ const NonprofitsPage = () => {
           </a>
           .
         </Body>
+      
       </div>
+      
     </div>
   );
 };
