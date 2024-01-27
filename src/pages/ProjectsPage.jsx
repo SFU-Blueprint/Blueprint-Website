@@ -9,8 +9,8 @@ const ProjectsPage = () => {
         description: "Aiding New Comers to Canada",
         image: "placeholder.png",
       },
-      "ML for Health": {
-        tags: ["Health", "Machine Learning"],
+      "AI for Health": {
+        tags: ["Health", "AI"],
         description: "Physio Therapy Outside the Clinic",
         image: "placeholder.png",
       },
@@ -25,10 +25,10 @@ const ProjectsPage = () => {
     <div className="flex flex-col px-3 md:px-[15%] pt-10 gap-4">
       <Heading className="my-5">Our Projects</Heading>
       <Subheading>Ongoing</Subheading>
-      <div className="flex flex-col md:flex-row gap-6">
-        {["Smart Assistant", "ML for Health", "Data Tracking"].map(
+      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
+        {["Smart Assistant", "AI for Health", "Data Tracking"].map(
           (project, index) => (
-            <div key={index} className="flex-grow">
+            <div key={index} className="">
               <ProjectCard>{content(project)}</ProjectCard>
             </div>
           )
@@ -42,21 +42,21 @@ const ProjectsPage = () => {
 function ProjectCard({ children, className }) {
   const { title, tags, description, image } = children;
   return (
-    <div className={`${className} shadow-md`}>
+    <div className={`${className} shadow-md w-70 min-h-full`}>
       <img src={image} className="w-full" alt={title} />
-      <div className="px-3 pb-3">
-        <div className="flex gap-3 -translate-y-1/2">
+      <div className="px-[5%] pb-3">
+        <div className="flex flex-row place-items-center -translate-y-1/2">
           {tags.map((tag, index) => (
             <Body
               key={index}
-              className="bg-blue-500 text-white px-3 rounded-md shadow-md"
+              className="bg-blue-500 text-white mr-[2%] px-[6%] rounded-md shadow-md text-[0.9rem]"
             >
               {tag}
             </Body>
           ))}
         </div>
-        <Subheading>{title} → </Subheading>
-        <Body className="w-2/3">{description}</Body>
+        <Subheading className="text-[1.25rem]" >{title} → </Subheading>
+        <Body className="text-[1rem] w-4/5">{description}</Body>
       </div>
     </div>
   );
