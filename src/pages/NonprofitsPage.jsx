@@ -41,7 +41,7 @@ const NonprofitsPage = () => {
         <BodyHeader className="mt-2 mb-4">
           We can turn your technological vision into reality - for free
         </BodyHeader>
-        <ProposeButton className="!border-gray-800 !text-gray-800" />
+        <ProposeButton />
       </div>
       <div className="w-full px-[5%] md:px-[15%]">
         <SectionHeader className="mt-8 mb-5">Why collaborate with us?</SectionHeader>
@@ -71,20 +71,20 @@ const NonprofitsPage = () => {
               <div key={index}>
                 <button
                   className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
-                    index === activePhase && "bg-blue-500"
+                    index === activePhase && "bg-blueprint-blue"
                   }`}
                   onClick={() => setActivePhase(index)}
                 >
                   <BodyHeader
                     className={`${
-                      index === activePhase && "text-white"
+                      index === activePhase && "text-blueprint-white"
                     } !text-2xl`}
                   >
                     Phase {index + 1}
                   </BodyHeader>
                   <Body
                     className={`${
-                      index === activePhase && "text-white"
+                      index === activePhase && "text-blueprint-white"
                     } !tracking-normal`}
                   >
                     {phase}
@@ -112,12 +112,12 @@ const NonprofitsPage = () => {
             "Interested in working with us? Submit your initial project proposal below!\n We will get back to you shortly."
           }
         </Body>
-        <ProposeButton className="my-5 border-blue-500 text-blue-500" />
+        <ProposeButton className="my-5 border-blueprint-blue text-blueprint-blue" />
         <Body className="my-10 !tracking-wide text-center">
           Have a question? Feel free to shoot us an email at{" "}
           <a
             href="mailto:sfublueprint@gmail.com"
-            className="text-blue-500 hover:underline hover:font-bold"
+            className="text-blueprint-blue hover:underline hover:font-bold"
           >
             sfublueprint@gmail.com
           </a>
@@ -143,7 +143,7 @@ function ContentCard({ children, className }) {
 function ProposeButton({ className }) {
   return (
     <button
-      className={`${className} text-blueprint-black flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+      className={`${className} text-blueprint-black border-blueprint-black flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
     >
       Propose a Project
     </button>
