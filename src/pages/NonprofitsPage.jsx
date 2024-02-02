@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BodyHeader, PageHeader, SectionHeader, Body } from "../components/Common";
 
 const NonprofitsPage = () => {
   const [activePhase, setActivePhase] = useState(0);
@@ -35,15 +36,15 @@ const NonprofitsPage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="w-full h-[500px] px-[5%] md:px-[15%] pt-[200px] bg-gray-300">
-        <Heading className="!text-6xl">For Non-Profits</Heading>
-        <Subheading className="!text-black !tracking-wide leading-relaxed uppercase mt-2 mb-4">
+      <div className="w-full h-[500px] px-[5%] md:px-[15%] pt-[200px] bg-blueprint-gray-light">
+        <PageHeader>For Non-Profits</PageHeader>
+        <BodyHeader className="mt-2 mb-4">
           We can turn your technological vision into reality - for free
-        </Subheading>
+        </BodyHeader>
         <ProposeButton className="!border-gray-800 !text-gray-800" />
       </div>
       <div className="w-full px-[5%] md:px-[15%]">
-        <Heading className="mt-8 mb-5">Why collaborate with us?</Heading>
+        <SectionHeader className="mt-8 mb-5">Why collaborate with us?</SectionHeader>
         <Body className="w-full md:w-[720px]">
           Our members are highly dedicated and have great expertise in
           technology and design. By working with us, your organization will gain
@@ -51,7 +52,7 @@ const NonprofitsPage = () => {
           with local students, and bring your vision for social good to live
           through innovative ways, free of charge.
         </Body>
-        <Heading className="mt-8 mb-5">Can your idea become a project?</Heading>
+        <SectionHeader className="mt-8 mb-5">Can your idea become a project?</SectionHeader>
         <Body>
           We consider the following aspects when evaluating potential projects:
         </Body>
@@ -63,7 +64,7 @@ const NonprofitsPage = () => {
           <ContentCard>{content("Community Impact")}</ContentCard>
           <ContentCard>{content("Project Scope")}</ContentCard>
         </div>
-        <Heading className="mt-16 mb-5">Our Process</Heading>
+        <SectionHeader className="mt-16 mb-5">Our Process</SectionHeader>
         <div className="flex max-md:flex-col gap-16">
           <div className="flex flex-col w-full md:w-[420px] gap-2">
             {phases.map((phase, index) => (
@@ -74,13 +75,13 @@ const NonprofitsPage = () => {
                   }`}
                   onClick={() => setActivePhase(index)}
                 >
-                  <Subheading
+                  <BodyHeader
                     className={`${
                       index === activePhase && "text-white"
                     } !text-2xl`}
                   >
                     Phase {index + 1}
-                  </Subheading>
+                  </BodyHeader>
                   <Body
                     className={`${
                       index === activePhase && "text-white"
@@ -105,7 +106,7 @@ const NonprofitsPage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full h-[500px] bg-gray-200 mt-16  ">
-        <Heading className="my-5 text-center">Send your ideas to us now</Heading>
+        <SectionHeader className="my-5 text-center">Send your ideas to us now</SectionHeader>
         <Body className="!tracking-wide text-center whitespace-pre-line">
           {
             "Interested in working with us? Submit your initial project proposal below!\n We will get back to you shortly."
@@ -122,18 +123,18 @@ const NonprofitsPage = () => {
           </a>
           .
         </Body>
-      
       </div>
-      
     </div>
   );
 };
+
+
 
 function ContentCard({ children, className }) {
   const { title, text } = children;
   return (
     <div className={`${className} flex flex-col w-full md:w-[420px] gap-1`}>
-      <Subheading>{title}</Subheading>
+      <BodyHeader>{title}</BodyHeader>
       <Body>{text}</Body>
     </div>
   );
@@ -142,36 +143,10 @@ function ContentCard({ children, className }) {
 function ProposeButton({ className }) {
   return (
     <button
-      className={`${className} flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+      className={`${className} text-blueprint-black flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
     >
       Propose a Project
     </button>
-  );
-}
-
-function Heading({ children, className }) {
-  return (
-    <p className={`${className} font-anek text-4xl md:text-5xl font-semibold`}>
-      {children}
-    </p>
-  );
-}
-
-function Subheading({ children, className }) {
-  return (
-    <p
-      className={`${className} text-blue-500 font-poppins md:text-lg font-medium uppercase`}
-    >
-      {children}
-    </p>
-  );
-}
-
-function Body({ children, className }) {
-  return (
-    <p className={`${className} max-md:text-sm text-gray-800 font-poppins tracking-tighter`}>
-      {children}
-    </p>
   );
 }
 
