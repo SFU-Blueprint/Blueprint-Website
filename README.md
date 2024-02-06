@@ -4,7 +4,7 @@
 (Add requirements for npm and node versions, as well as other versions here. For me, node@20.10.0 and npm@10.2.4, which is the latest LTS.)
 
 ### Setup
-(Run `npm i`?)
+Run `npm ci`
 
 ## Available Scripts
 
