@@ -49,7 +49,7 @@ const AboutPage = () => {
     <div className="pb-48">
       {/* About us */}
       <div className="relative">
-        <img className="h-46 w-full md:h-80 md:w-full" src="/testImage.jpg" alt="Your"/>
+        <img className="h-46 w-full md:h-80 md:w-full" src="/images/testImage.jpg" alt="Your"/>
         <div className="absolute bottom-5 md:my-10">
           <p className="font-anek text-black text-4xl my-2 font-bold ml-10 md:ml-16 md:text-6xl xl:ml-36 ">About Us</p>
           <p className="font-poppins font-bold md:text-2xl ml-10 md:ml-16 xl:ml-36">TECH-DRIVEN ADVOCATED FOR SOCIAL GOOD</p>
@@ -132,7 +132,7 @@ const AboutPage = () => {
                       </div>
                       <div className="flex flex-row ml-5 mb-3 mr-5">
                         <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
-                        <img className="ml-[5%]" src="/share.svg" alt="" />
+                        <img className="ml-[5%]" src="/svgs/share.svg" alt="" />
                       </div>
                   </div>
             ))}
