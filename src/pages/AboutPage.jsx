@@ -5,6 +5,7 @@ import {Alumni} from "../data/alumni";
 import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
 import CardItem from "../components/about-page/CardItem";
 import CardGrid from "../components/about-page/CardGrid";
+import AlumniGrid from "../components/about-page/AlumniGrid";
 // import shareIcon from "../assets/icons/share.svg" 
 
 const AboutPage = () => {
@@ -101,45 +102,29 @@ const AboutPage = () => {
       </div>
       {/* End of Description */}
 
+    <div className="mx-10 md:mx-16 xl:mx-36">
+        {/*Gear Section*/}
+        <div className="mt-36">
+            <div className="font-anek text-black text-4xl md:text-5xl font-[550]">Our Values</div>
+            {gearSectionHtml.content}
+        </div>
+        {/*End of Gear Section*/}
 
-      {/*Gear Section*/}
-      <div className="mt-36">
-        <div className="mx-6 md:mx-20 font-anek text-black text-4xl md:text-5xl font-[550]">Our Values</div>
-        {gearSectionHtml.content}
-      </div>
-      {/*End of Gear Section*/}
-
-
-
-    <div className="px-6 md:px-20">
+        {/*Start of Team section   */}
         <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-4">Our Team</h1>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
         <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
         <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
         <CardGrid cardList={Developers} gridName="DEVELOPERS"></CardGrid>
-    </div>
+        {/*End of team section*/}
+
         {/*Alumni Section*/}
-      <div>
-        <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl">Alumni</h1>
-        <div className="md:ml-[5%]">
-          <h1 className="ml-[5%] md:ml-[0%] font-poppins text-[24px]">2023</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
-            {Alumni.map((items, key) => (
-                  <div class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
-                      <div className="ml-5 mt-3 mr-5">
-                        <h1 className="flex flex-wrap flex-row font-poppins font-bold text-[16px]">{items.title}</h1>
-                        <h1 className="font-poppins text-[14px] text-[#6C6B7A]">{items.position}</h1>
-                      </div>
-                      <div className="flex flex-row ml-5 mb-3 mr-5">
-                        <a className="font-poppins text-blueprint-blue text-[14px] underline" href="">LinkedIn </a>
-                        <img className="ml-[5%]" src="/share.svg" alt="" />
-                      </div>
-                  </div>
-            ))}
-          </div>
+        <div>
+            <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl">Alumni</h1>
+            <AlumniGrid alumniList={Alumni} year="2023"></AlumniGrid>
         </div>
-      </div>
-      {/*End of Alumni Section*/}
+        {/*End of Alumni Section*/}
+    </div>
 
 
     </div>
