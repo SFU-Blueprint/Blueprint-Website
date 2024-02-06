@@ -1,0 +1,33 @@
+.gear-section{
+    @apply relative justify-center h-fit flex md:h-[1100px];
+    width: 100%;
+}
+
+.gear-section .gear-train{
+    @apply h-fit inline-block pl-[150px] relative;
+}
+
+.gear-section .gear-background {
+    @apply absolute;
+    right: -200px;
+    clip-path: ellipse(50% 30% at 50% 50%);
+    min-width: 1311px;
+    min-height: 1311px;
+    max-width: 1311px;
+    max-height: 1311px;
+    top: -100px;
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 60%);
+}
+
+.gear-section .text-column{
+    @apply flex flex-col;
+}
+
+.gear-section .text-field{
+    @apply max-w-[400px] text-base font-poppins relative;
+}
+
+.gear-section .curly-text{
+    @apply font-sketch text-xl absolute w-36 xl:w-52 left-0 xl:left-[-30px];
+    top: 560px;
+}
