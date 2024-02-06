@@ -9,7 +9,7 @@ import React from 'react'
 const AlumniGrid = (props) => {
     return (
         <>
-            <h1 className="ml-[5%] md:ml-[0%] font-poppins text-[24px]">{props.year}</h1>
+            <h1 className="ml-[5%] font-medium md:ml-[0%] font-poppins text-[24px]">{props.year}</h1>
             <div
                 className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
                 {props.alumniList.map((items, key) => (

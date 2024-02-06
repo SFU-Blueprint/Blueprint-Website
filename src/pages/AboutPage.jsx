@@ -57,10 +57,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div>
-
-      </div>
-      <h1 className="mt-[4%] font-anek text-xl leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36">Building innovative, tech-based solutions for communities and public welfare is the mission that brings us together. </h1>
+      <h1 className="mt-[4%] font-[550] font-anek text-xl leading-relaxed mr-10 md:gap-36 md:leading-10 md:text-5xl mx-10 md:mx-16 xl:mx-36">Building innovative, tech-based solutions for communities and public welfare is the mission that brings us together. </h1>
       {/* Description */}
       <div className="md:mt-[4%] md:flex md:flex-row">
         {/* Desc 1 */}
@@ -111,7 +108,7 @@ const AboutPage = () => {
         {/*End of Gear Section*/}
 
         {/*Start of Team section   */}
-        <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-4">Our Team</h1>
+        <h1 className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">Our Team</h1>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
         <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
         <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
@@ -120,7 +117,7 @@ const AboutPage = () => {
 
         {/*Alumni Section*/}
         <div>
-            <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl">Alumni</h1>
+            <h1 className="flex justify-center mt-[8%] font-[550] text-3xl font-anek md:text-5xl">Alumni</h1>
             <AlumniGrid alumniList={Alumni} year="2023"></AlumniGrid>
         </div>
         {/*End of Alumni Section*/}
