@@ -1,5 +1,5 @@
 .gear-section{
-    @apply relative justify-center h-fit flex md:h-[1000px];
+    @apply relative justify-center h-fit flex md:h-[1100px];
     width: 100%;
 }
 

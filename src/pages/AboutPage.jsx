@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useCallback } from "react";
-import GearSection from "../components/Gears/GearSection";
-import MobileGearSection from "../components/Gears/MobileGearSection";
+import GearSection from "../components/about-page/Gears/GearSection";
+import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
 import {Alumni} from "../data/alumni";
 import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
-import CardItem from "../components/CardItem";
+import CardItem from "../components/about-page/CardItem";
+import CardGrid from "../components/about-page/CardGrid";
 // import shareIcon from "../assets/icons/share.svg" 
 
 const AboutPage = () => {
@@ -45,7 +46,7 @@ const AboutPage = () => {
 
 
   return (
-    <div>
+    <div className="pb-48">
       {/* About us */}
       <div className="relative">
         <img className="h-46 w-full md:h-80 md:w-full" src="/testImage.jpg" alt="Your"/>
@@ -53,6 +54,10 @@ const AboutPage = () => {
           <p className="font-anek text-black text-4xl my-2 font-bold ml-10 md:ml-16 md:text-6xl xl:ml-36 ">About Us</p>
           <p className="font-poppins font-bold md:text-2xl ml-10 md:ml-16 xl:ml-36">TECH-DRIVEN ADVOCATED FOR SOCIAL GOOD</p>
         </div>
+      </div>
+
+      <div>
+
       </div>
       <h1 className="mt-[4%] font-anek text-xl leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36">Building innovative, tech-based solutions for communities and public welfare is the mission that brings us together. </h1>
       {/* Description */}
@@ -73,7 +78,7 @@ const AboutPage = () => {
               </p>
               <p className="font-poppins underline text-xs font-bold mt-[10%] md:text-base">See all Blueprint chapters here</p>
             </div>
-          
+
         </div>
         {/* Desc 2 */}
         <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40x] md:w-4/5 md:justify-start">
@@ -84,7 +89,7 @@ const AboutPage = () => {
               <p className="pl-[10%] hidden md:block font-sketch text-xl leading-none tracking-tight">A design sprint is the best way to get ideas flowing</p>
             </div>
           </div>
-          
+
         </div>
        </div>
       <div className="block mt-12 flex flex-col items-center md:hidden">
@@ -105,67 +110,20 @@ const AboutPage = () => {
       {/*End of Gear Section*/}
 
 
-    
-    <div>
 
-        <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-20">Our Team</h1>
-        
-        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">EXECUTIVES</p>
-        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-            {Executives.map((card, index) => (
-                <CardItem
-                    key={index}
-                    img={card.img} 
-                    title={card.title} 
-                    linkedin={card.linkedin} 
-                />
-            ))}
-        </div>
-
-        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">PROJECT LEADS</p>
-        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-            {ProjectLeads.map((card, index) => (
-                    <CardItem
-                    key={index}
-                    img={card.img} 
-                    title={card.title} 
-                    linkedin={card.linkedin} 
-                />
-            ))}
-        </div>
-
-        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DESIGNERS</p>
-        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-            {Designers.map((card, index) => (
-                <CardItem
-                key={index}
-                img={card.img} 
-                title={card.title} 
-                linkedin={card.linkedin} 
-            />
-            ))}
-        </div>
-
-        <p className="font-poppins font-bold ml-6 md:text-2xl mb-2">DEVELOPERS</p>
-        <div class="flex flex-wrap justify-start flex-row mb-20 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max">
-            {Developers.map((card, index) => (
-                    <CardItem
-                    key={index}
-                    img={card.img} 
-                    title={card.title} 
-                    linkedin={card.linkedin} 
-                />
-            ))}
-        </div>
-
-        
+    <div className="px-6 md:px-20">
+        <h1 className="font-anek text-xl flex items-center justify-center md:text-5xl mb-4">Our Team</h1>
+        <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
+        <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
+        <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
+        <CardGrid cardList={Developers} gridName="DEVELOPERS"></CardGrid>
     </div>
         {/*Alumni Section*/}
       <div>
         <h1 className="flex justify-center mt-[8%] text-3xl font-anek md:text-5xl">Alumni</h1>
         <div className="md:ml-[5%]">
           <h1 className="ml-[5%] md:ml-[0%] font-poppins text-[24px]">2023</h1>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 auto-cols-max justify-start mt-[0.5%]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
             {Alumni.map((items, key) => (
                   <div class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between" key={key}>
                       <div className="ml-5 mt-3 mr-5">
@@ -182,8 +140,8 @@ const AboutPage = () => {
         </div>
       </div>
       {/*End of Alumni Section*/}
-      
-    
+
+
     </div>
     
   );

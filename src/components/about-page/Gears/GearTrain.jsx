@@ -1,5 +1,5 @@
 import Gear from './Gear.jsx'; // If the Gear component is in a separate file with a .jsx extension
-import { ConvertToRadians } from "../../utils/convertToRadians";
+import { ConvertToRadians } from "../../../utils/convertToRadians";
 import React from "react";
 
 /**
