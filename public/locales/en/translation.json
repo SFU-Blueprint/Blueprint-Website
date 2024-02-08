@@ -1,5 +1,28 @@
 {
   "home": {
     "title": "Title Header"
+  },
+  "projects": {
+    "title": "Our Projects",
+    "ongoing": "Ongoing",
+    "moreComingSoon": "More Coming Soon!",
+    "smartAssistant" : {
+      "name": "Smart Assistant",
+      "description": "Aiding New Comers to Canada",
+      "tags": ["Immigration", "AI/Product"],
+      "image": "placeholder.png"
+    },
+    "aiForHealth": {
+      "name": "AI for Health",
+      "description": "Physio Therapy Outside the Clinic",
+      "tags": ["Health", "AI"],
+      "image": "placeholder.png"
+    },
+    "dataTracking": {
+      "name": "Data Tracking",
+      "description": "Volunteer Hour Tracking Platform",
+      "tags": ["Sustainability", "Data"],
+      "image": "placeholder.png"
+    }
   }
 }

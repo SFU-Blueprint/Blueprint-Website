@@ -9,7 +9,8 @@ i18n
     .use(initReactI18next)
     .init({
         debug: true,
-        fallbackLang: 'en'
+        fallbackLang: 'en',
+        returnObjects: true,
     });
 
 export default i18n
