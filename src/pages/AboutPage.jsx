@@ -1,11 +1,9 @@
 import React, {useState, useEffect, useCallback } from "react";
 import GearSection from "../components/about-page/Gears/GearSection";
 import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
-import {Alumni} from "../data/alumni";
-import { Executives, ProjectLeads, Designers, Developers} from "../data/Team";
-import CardItem from "../components/about-page/CardItem";
+import {Alumni} from "../constants/alumni";
+import { Executives, ProjectLeads, Designers, Developers} from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
-// import shareIcon from "../assets/icons/share.svg" 
 
 const AboutPage = () => {
 
@@ -34,16 +32,6 @@ const AboutPage = () => {
         // Initial resize when component mounts
         resize();
     }, [resize]);
-
-  /**
-   * JSX for rendering the About page.
-   *
-   * @returns {JSX.Element} The About page component.
-   */
-
-
-
-
 
   return (
     <div className="pb-48">

@@ -25,4 +25,4 @@ const CardGrid = (props) => {
     )
 }
 
-export default CardGrid
+export default CardGrid;
