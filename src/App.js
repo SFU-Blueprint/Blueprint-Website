@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
+import {Suspense} from "react";
 
-// other imports...
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
@@ -29,4 +29,10 @@ function App() {
   );
 }
 
-export default App;
+export default function WrappedApp(){
+  return (
+    <Suspense fallback="...loading">
+      <App/>
+    </Suspense>
+  )
+}

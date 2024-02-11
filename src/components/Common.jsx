@@ -16,8 +16,13 @@ const BodyHeader = ({ children, className }) => {
 };
 
 const Body = ({ children, className }) => {
-  const styles = `${className} text-blueprint-gray font-poppins text-sm md:text-xl`;
+  const styles = `text-blueprint-gray font-poppins text-sm md:text-xl ${className}`;
   return <p className={styles}>{children}</p>;
 };
 
-export { PageHeader, SectionHeader, BodyHeader, Body };
+const BodySm = ({ children, className }) => {
+  const styles = `text-blueprint-gray font-poppins text-sm ${className}`;
+  return <p className={styles}>{children}</p>;
+};
+
+export { PageHeader, SectionHeader, BodyHeader, Body, BodySm };
