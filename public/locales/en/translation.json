@@ -23,74 +23,64 @@
       "description": "Volunteer Hour Tracking Platform",
       "tags": ["Sustainability", "Data"],
       "image": "placeholder.png"
-    },
-    "student-page-phrases": [
-      "Application Open",
-      "Info Session",
-      "Applications Due",
-      "Interviews"
-    ],
-    "non-profits": {
-      "sub-headers": [
-        "Why collaborate with us?",
-        "Can you idea become a project",
-        "Our process"
-      ],
-      "Why collaborate with us?": {
-        "description": "Our members are highly dedicated and have great expertise in technology and design. By working with us, your organization will gain fresh perspectives of your business, increase community engagement with local students, and bring your vision for social good to live through innovative ways, free of charge."
-      },
-      "Can you idea become a project": {
-        "description": "We consider the following aspects when evaluating potential projects:"
-      },
-      "aspects": [
-        "Organizational Need",
-        "Community Impact",
-        "Technical Feasibility",
-        "Project Scope"
-      ],
-      "phases": [
-        "Initial Consulting",
-        "Product Research and Scoping",
-        "Building the Minimum Viable Product",
-        "User Testing",
-        "Product Polish and Hands Off"
-      ],
-      "Organizational Need": {
-        "description": "How does this product improve current business processes (% efficiency, $ saved etc.)? How does it align with long-term organizational vision? How urgently does this product need to be built to address existing concerns?"
-      },
-      "Community Impact": {
-        "description": "How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in need and how this solution aligns with solving these problems?"
-      },
-      "Technical Feasibility": {
-        "description": "Are the desired features commonly built-in software products or near the frontiers of what can be built? Some examples of solutions we can achieve include: Mobile apps, Websites, In-browser games, Information databases, & AI/machine learning solutions."
-      },
-      "Project Scope": {
-        "description": "Can the product be realistically completed in a 4/8/12 month timeline? Are there any external factors such as user interviews and third-party services that could prolong the project?"
-      },
-      "Initial Consulting": {
-        "description": "After initial outreach, our executive team will meet with the NPO to learn about their request. After the first meeting, our VP scoping will consult members with expertise to understand how Blueprint can take on the project and get back to the NPO with description of possible projects. Once we have agreed on the high-level direction of the project, Blueprint will assemble the project team and start the project in the next semester."
-      },
-      "Product Research and Scoping": {
-        "description": "To kickstart the collaboration process, our teams will work closely with the nonprofit to gain a greater understanding of project needs and priorities as well as scope out the minimum viable product (MVP). From this point, the product manager will curate a statement of work (SOW) that defines project scope capturing the discussion with the nonprofit."
-      },
-      "Building the Minimum Viable Product": {
-        "description": "This third phase is where the magic begins! Our teams work hard to get the MVP up and running. Throughout this phase, we will stay in touch with the nonprofit to ensure smooth development and consistent alignment."
-      },
-      "User Testing": {
-        "description": "Once the MVP is built and released to an initial group of end users, we conduct rigorous testing to ensure no critical problems remain. Additionally, we will take note of any bugs, UX issues, and feature requests during this time."
-      },
-      "Product Polish and Hands Off": {
-        "description": "This phase involves intensive development and design work. Our team will execute improvements on the product based on feedback received from the user testing phase. The objective of this final phase is to ensure the quality and completeness of the finished product. Upon product completion, our team will meet with the nonprofit to walk through maintenance best practices before hand off."
-      },
-      "Send your ideas to us now": {
-        "description": "Interested in working with us? Submit your initial project proposal below! We will get back to you shortly.",
-        "button-text": "Propose a project",
-        "contact-details": "Have a question? Feel free to shoot us an email at sfublueprint@gmail.com."
-      },
-      "For Non-profits": {
-        "description": "We can help you achieve your vision with technology - for free",
-        "button-text": "Propose a project"
-      }
     }
+  },
+  "nonProfits": {
+    "header": "For Non-Profits",
+    "whyCollaborateWithUs": "Our members are highly dedicated and have great expertise in technology and design. By working with us, your organization will gain fresh perspectives of your business, increase community engagement with local students, and bring your vision for social good to live through innovative ways, free of charge.",
+    "canYourIdeaBecomeAProject": "We consider the following aspects when evaluating potential projects:",
+    "forNonProfits": "We can help you achieve your vision with technology - for free",
+    "aspects": [
+      "organizationalNeed",
+      "communityImpact",
+      "technicalFeasibility",
+      "projectScope"
+    ],
+    "phases": [
+      "initialConsulting",
+      "productResearchAndScoping",
+      "buildingTheMinimumViableProduct",
+      "userTesting",
+      "productPolishAndHandsOff"
+    ],
+
+    "organizationalNeed": {
+      "name": "Organizational Need",
+      "description": "How does this product improve current business processes (% efficiency, $ saved etc.)? How does it align with long-term organizational vision? How urgently does this product need to be built to address existing concerns?"
+    },
+    "communityImpact": {
+      "name": "Community Impact",
+      "description": "How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in need and how this solution aligns with solving these problems?"
+    },
+    "technicalFeasibility": {
+      "name": "Technical Feasibility",
+      "description": "Are the desired features commonly built-in software products or near the frontiers of what can be built? Some examples of solutions we can achieve include: Mobile apps, Websites, In-browser games, Information databases, & AI/machine learning solutions."
+    },
+    "projectScope": {
+      "name": "Project Scope",
+      "description": "Can the product be realistically completed in a 4/8/12 month timeline? Are there any external factors such as user interviews and third-party services that could prolong the project?"
+    },
+    "initialConsulting": {
+      "name": "Initial Consulting",
+      "description": "After initial outreach, our executive team will meet with the NPO to learn about their request. After the first meeting, our VP scoping will consult members with expertise to understand how Blueprint can take on the project and get back to the NPO with description of possible projects. Once we have agreed on the high-level direction of the project, Blueprint will assemble the project team and start the project in the next semester."
+    },
+    "productResearchAndScoping": {
+      "name": "Product Research And Scoping",
+      "description": "To kickstart the collaboration process, our teams will work closely with the nonprofit to gain a greater understanding of project needs and priorities as well as scope out the minimum viable product (MVP). From this point, the product manager will curate a statement of work (SOW) that defines project scope capturing the discussion with the nonprofit."
+    },
+    "buildingTheMinimumViableProduct": {
+      "name": "Building The Minimum Viable Product",
+      "description": "This third phase is where the magic begins! Our teams work hard to get the MVP up and running. Throughout this phase, we will stay in touch with the nonprofit to ensure smooth development and consistent alignment."
+    },
+    "userTesting": {
+      "name": "User Testing",
+      "description": "Once the MVP is built and released to an initial group of end users, we conduct rigorous testing to ensure no critical problems remain. Additionally, we will take note of any bugs, UX issues, and feature requests during this time."
+    },
+    "productPolishAndHandsOff": {
+      "name": "Product Polish And Hands Off",
+      "description": "This phase involves intensive development and design work. Our team will execute improvements on the product based on feedback received from the user testing phase. The objective of this final phase is to ensure the quality and completeness of the finished product. Upon product completion, our team will meet with the nonprofit to walk through maintenance best practices before hand off."
+    },
+    "sendYourIdeasToUsNow": "Interested in working with us? Submit your initial project proposal below! We will get back to you shortly.",
+    "callToContact": "Have a question? Feel free to shoot us an email at "
   }
 }
