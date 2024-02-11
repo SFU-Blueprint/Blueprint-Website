@@ -1,12 +1,5 @@
 @import "GearSection.css";
 
-@media screen and (max-width: 1000px) {
-    .gear-section {
-        /* Mobile-specific styles */
-        @apply justify-normal flex-col mx-6 md:mx-20;
-    }
-}
-
 .gear-section .mobile-value-title{
     @apply font-poppins font-medium text-xl text-blueprint-blue mt-6;
 }
