@@ -76,12 +76,12 @@ const NonprofitsPage = () => {
         </ParagraphText>
         <ProposeButton className="border-blueprint-blue text-blueprint-blue mb-3 md:mb-6" />
         <ParagraphText className="text-center mb-3 md:mb-6">
-          Have a question? Feel free to shoot us an email at{" "}
+          {t(`nonProfits.CTA`)}{" "}
           <a
             href="mailto:sfublueprint@gmail.com"
             className="text-blueprint-blue hover:underline hover:font-bold"
           >
-            sfublueprint@gmail.com
+            {t(`nonProfits.email`)}
           </a>
           .
         </ParagraphText>
