@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ReactComponent as LogoIcon } from "../assets/icons/logo.svg";
 import { ReactComponent as MenuHamburgerIcon } from "../assets/icons/hamburger.svg";
 import { ReactComponent as MenuXIcon } from "../assets/icons/x.svg";
+import Logo from "./Shared/Logo";
 
 const NavBar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -44,20 +44,6 @@ function MenuButton({ isMenuOpened, toggleMenu, visibility }) {
     <button className={visibility} onClick={toggleMenu}>
       { isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon /> }
     </button>
-  );
-}
-
-function Logo() {
-  return (
-    <Link
-      to="/"
-      className="flex space-x-2 hover:opacity-80 hover:cursor-pointer"
-    >
-      <LogoIcon />
-      <span className="text-blue-500 font-poppins text-lg font-semibold">
-        blueprint
-      </span>
-    </Link>
   );
 }
 
