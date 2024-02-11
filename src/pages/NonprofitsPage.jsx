@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import {
-  BodyHeader,
+  ParagraphTitle,
   PageHeader,
   SectionHeader,
-  Body,
+  ParagraphText,
 } from "../components/Common";
-import { useTranslation } from "react-i18next";
 
 const NonprofitsPage = () => {
   const { t, i18n } = useTranslation();
@@ -37,62 +36,50 @@ const NonprofitsPage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="w-full h-[500px] px-[5%] md:px-[15%] pt-[200px] bg-blueprint-gray-light">
-        <PageHeader>{t("nonProfits.header")}</PageHeader>
-        <BodyHeader className="mt-2 mb-4">
-          {t("nonProfits.forNonProfits")}
-        </BodyHeader>
+      <div className="w-full bg-blueprint-gray-dark px-5 pt-[116px] pb-14 mb-9 md:px-[120px] md:pt-[174px] md:pb-[88px] md:mb-20">
+        <PageHeader className="max-md:mb-[6px]">For Non-Profits</PageHeader>
+        <ParagraphTitle className="mb-3 md:mb-10 !text-blueprint-black">
+          We can turn your technological vision into reality - for free
+        </ParagraphTitle>
         <ProposeButton />
       </div>
-      <div className="w-full px-[5%] md:px-[15%]">
-        <SectionHeader className="mt-8 mb-5">
+      <div className="w-full px-5 md:px-[120px]">
+        <SectionHeader className="mb-3 md:mb-6">
           Why collaborate with us?
         </SectionHeader>
-        <Body className="w-full md:w-[720px]">
-          {t("nonProfits.whyCollaborateWithUs")}
-        </Body>
-        <SectionHeader className="mt-8 mb-5">
+        <ParagraphText className="mb-6 md:mb-16 max-md:ml-6">
+          Our members are highly dedicated and have great expertise in
+          technology and design. By working with us, your organization will gain
+          fresh perspectives of your business, increase community engagement
+          with local students, and bring your vision for social good to live
+          through innovative ways, free of charge.
+        </ParagraphText>
+        <SectionHeader className="mb-3 md:mb-6">
           Can your idea become a project?
         </SectionHeader>
-        <Body>{t("nonProfits.canYourIdeaBecomeAProject")}</Body>
-        <div className="flex max-md:flex-col gap-8 mb-8 md:gap-16 md:mb-10 mt-5">
-          <ContentCard>{"organizationalNeed"}</ContentCard>
-          <ContentCard>{"technicalFeasibility"}</ContentCard>
+        <ParagraphText className="mb-3 md:mb-6 max-md:ml-6">
+          We consider the following aspects when evaluating potential projects:
+        </ParagraphText>
+        <div className="flex max-md:flex-col gap-3 mb-3 md:gap-[108px] md:mb-12 max-md:ml-6">
+          <ContentCard>{content("Organizational Need")}</ContentCard>
+          <ContentCard>{content("Technical Feasibility")}</ContentCard>
         </div>
-        <div className="flex max-md:flex-col gap-8 mb-8 md:gap-16">
-          <ContentCard>{"communityImpact"}</ContentCard>
-          <ContentCard>{"projectScope"}</ContentCard>
+        <div className="flex max-md:flex-col gap-3 mb-3 md:gap-[108px] max-md:ml-6">
+          <ContentCard>{content("Community Impact")}</ContentCard>
+          <ContentCard>{content("Project Scope")}</ContentCard>
         </div>
-        <SectionHeader className="mt-16 mb-5">Our Process</SectionHeader>
-        <div className="flex max-md:flex-col gap-16">
-          <div className="flex flex-col w-full md:w-[420px] gap-2">
+        <SectionHeader className="mt-6 md:mt-16 mb-3 md:mb-6">
+          Our Process
+        </SectionHeader>
+        <div className="flex max-md:flex-col md:gap-[108px]">
+          <div className="flex flex-col w-full md:w-[420px] gap-3">
             {phases.map((phase, index) => (
               <div key={index}>
-                <button
-                  className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
-                    index === activePhase && "bg-blueprint-blue"
-                  }`}
-                  onClick={() => setActivePhase(index)}
-                >
-                  <BodyHeader
-                    className={`${
-                      index === activePhase && "text-blueprint-white"
-                    } !text-2xl`}
-                  >
-                    Phase {index + 1}
-                  </BodyHeader>
-                  <Body
-                    className={`${
-                      index === activePhase && "text-blueprint-white"
-                    } !tracking-normal`}
-                  >
-                    {t(`nonProfits.${phase}.name`)}
-                  </Body>
-                </button>
+                {PhaseButton(index, activePhase, setActivePhase, phase)}
                 <ContentCard
                   className={`${
                     index !== activePhase && "hidden"
-                  } md:hidden w-full py-8`}
+                  } md:hidden w-full py-6 max-md:ml-6`}
                 >
                   {phase}
                 </ContentCard>
@@ -102,18 +89,23 @@ const NonprofitsPage = () => {
               </div>
             ))}
           </div>
+          <ContentCard className="max-md:hidden pt-36">
+            {content(phases[activePhase])}
+          </ContentCard>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center w-full h-[500px] bg-gray-200 mt-16  ">
-        <SectionHeader className="my-5 text-center">
+      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full my-9 md:mb-20">
+        <SectionHeader className="text-center my-3 md:my-6">
           Send your ideas to us now
         </SectionHeader>
-        <Body className="!tracking-wide text-center whitespace-pre-line">
-          {t("nonProfits.sendYourIdeasToUsNow")}
-        </Body>
-        <ProposeButton className="my-5 border-blueprint-blue text-blueprint-blue" />
-        <Body className="my-10 !tracking-wide text-center">
-          {t("nonProfits.callToContact")}{" "}
+        <ParagraphText className="text-center whitespace-pre-line mb-3 md:mb-6">
+          {
+            "Interested in working with us?\n Submit your initial project proposal below!\n We will get back to you shortly."
+          }
+        </ParagraphText>
+        <ProposeButton className="border-blueprint-blue text-blueprint-blue mb-3 md:mb-6" />
+        <ParagraphText className="text-center mb-3 md:mb-6">
+          Have a question? Feel free to shoot us an email at{" "}
           <a
             href="mailto:sfublueprint@gmail.com"
             className="text-blueprint-blue hover:underline hover:font-bold"
@@ -121,21 +113,41 @@ const NonprofitsPage = () => {
             sfublueprint@gmail.com
           </a>
           .
-        </Body>
+        </ParagraphText>
       </div>
     </div>
   );
 };
 
+function PhaseButton(index, activePhase, setActivePhase, phase) {
+  return (
+    <button
+      className={`flex flex-col justify-center items-start w-full h-[72px] md:h-[105px] px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
+        index === activePhase && "bg-blueprint-blue"
+      }`}
+      onClick={() => setActivePhase(index)}
+    >
+      <ParagraphTitle
+        className={`${index === activePhase && "text-blueprint-white"} mb-3`}
+      >
+        Phase {index + 1}
+      </ParagraphTitle>
+      <ParagraphText
+        className={`${index === activePhase && "text-blueprint-white"}`}
+      >
+        {phase}
+      </ParagraphText>
+    </button>
+  );
+}
+
 function ContentCard({ children, className }) {
   const { t, i18n } = useTranslation();
   const title = children;
   return (
-    <div className={`${className} flex flex-col w-full md:w-[420px] gap-1`}>
-      <BodyHeader className="text-blueprint-blue">
-        {t(`nonProfits.${title}.name`)}
-      </BodyHeader>
-      <Body>{t(`nonProfits.${title}.description`)}</Body>
+    <div className={`${className} flex flex-col w-full md:w-[420px] gap-3`}>
+      <ParagraphTitle>{title}</ParagraphTitle>
+      <ParagraphText>{text}</ParagraphText>
     </div>
   );
 }
