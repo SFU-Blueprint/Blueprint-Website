@@ -1,6 +1,16 @@
-.gear-section{
-    @apply relative justify-center h-fit flex md:h-[1100px];
-    width: 100%;
+@media screen and (min-width: 1000px) {
+    .gear-section {
+        /* Desktop-specific styles */
+        @apply relative justify-center flex flex-row md:h-[1100px];
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .gear-section {
+        /* Mobile-specific styles */
+        @apply relative h-fit justify-normal flex-col mx-6 md:mx-20;
+    }
 }
 
 .gear-section .gear-train{
