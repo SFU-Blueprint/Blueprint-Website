@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BodyHeader, PageHeader, SectionHeader, Body } from "../components/Common";
+import { ParagraphTitle, PageHeader, SectionHeader, ParagraphText } from "../components/Common";
 
 const NonprofitsPage = () => {
   const [activePhase, setActivePhase] = useState(0);
@@ -38,24 +38,24 @@ const NonprofitsPage = () => {
     <div className="flex flex-col">
       <div className="w-full h-[500px] px-[5%] md:px-[15%] pt-[200px] bg-blueprint-gray-light">
         <PageHeader>For Non-Profits</PageHeader>
-        <BodyHeader className="mt-2 mb-4">
+        <ParagraphTitle className="mt-2 mb-4">
           We can turn your technological vision into reality - for free
-        </BodyHeader>
+        </ParagraphTitle>
         <ProposeButton />
       </div>
       <div className="w-full px-[5%] md:px-[15%]">
         <SectionHeader className="mt-8 mb-5">Why collaborate with us?</SectionHeader>
-        <Body className="w-full md:w-[720px]">
+        <ParagraphText className="w-full md:w-[720px]">
           Our members are highly dedicated and have great expertise in
           technology and design. By working with us, your organization will gain
           fresh perspectives of your business, increase community engagement
           with local students, and bring your vision for social good to live
           through innovative ways, free of charge.
-        </Body>
+        </ParagraphText>
         <SectionHeader className="mt-8 mb-5">Can your idea become a project?</SectionHeader>
-        <Body>
+        <ParagraphText>
           We consider the following aspects when evaluating potential projects:
-        </Body>
+        </ParagraphText>
         <div className="flex max-md:flex-col gap-8 mb-8 md:gap-16 md:mb-10 mt-5">
           <ContentCard>{content("Organizational Need")}</ContentCard>
           <ContentCard>{content("Technical Feasibility")}</ContentCard>
@@ -75,20 +75,20 @@ const NonprofitsPage = () => {
                   }`}
                   onClick={() => setActivePhase(index)}
                 >
-                  <BodyHeader
+                  <ParagraphTitle
                     className={`${
                       index === activePhase && "text-blueprint-white"
                     } !text-2xl`}
                   >
                     Phase {index + 1}
-                  </BodyHeader>
-                  <Body
+                  </ParagraphTitle>
+                  <ParagraphText
                     className={`${
                       index === activePhase && "text-blueprint-white"
                     } !tracking-normal`}
                   >
                     {phase}
-                  </Body>
+                  </ParagraphText>
                 </button>
                 <ContentCard
                   className={`${
@@ -107,13 +107,13 @@ const NonprofitsPage = () => {
       </div>
       <div className="flex flex-col items-center justify-center w-full h-[500px] bg-gray-200 mt-16  ">
         <SectionHeader className="my-5 text-center">Send your ideas to us now</SectionHeader>
-        <Body className="!tracking-wide text-center whitespace-pre-line">
+        <ParagraphText className="!tracking-wide text-center whitespace-pre-line">
           {
             "Interested in working with us? Submit your initial project proposal below!\n We will get back to you shortly."
           }
-        </Body>
+        </ParagraphText>
         <ProposeButton className="my-5 border-blueprint-blue text-blueprint-blue" />
-        <Body className="my-10 !tracking-wide text-center">
+        <ParagraphText className="my-10 !tracking-wide text-center">
           Have a question? Feel free to shoot us an email at{" "}
           <a
             href="mailto:sfublueprint@gmail.com"
@@ -122,7 +122,7 @@ const NonprofitsPage = () => {
             sfublueprint@gmail.com
           </a>
           .
-        </Body>
+        </ParagraphText>
       </div>
     </div>
   );
@@ -134,8 +134,8 @@ function ContentCard({ children, className }) {
   const { title, text } = children;
   return (
     <div className={`${className} flex flex-col w-full md:w-[420px] gap-1`}>
-      <BodyHeader>{title}</BodyHeader>
-      <Body>{text}</Body>
+      <ParagraphTitle>{title}</ParagraphTitle>
+      <ParagraphText>{text}</ParagraphText>
     </div>
   );
 }

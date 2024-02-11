@@ -1,5 +1,5 @@
 import React from "react";
-import {BodySm, Body, BodyHeader} from "../Common";
+import {ParagraphTitle, ParagraphText} from "../Common";
 import {useTranslation} from "react-i18next";
 
 /**
@@ -16,16 +16,16 @@ const ProjectCard = ({project, className}) => {
             <div className="px-[5%] pb-3">
                 <div className="flex flex-row place-items-center -translate-y-1/2">
                     {t(`projects.${project}.tags`).map((tag, index) => (
-                        <BodySm
+                        <ParagraphText
                             key={index}
-                            className="bg-blue-500 text-white mr-[2%] px-[6%] rounded-md shadow-md md:text-sm"
+                            className="bg-blue-500 text-white mr-[2%] px-[6%] rounded-md shadow-md !md:text-sm"
                         >
                             {tag}
-                        </BodySm>
+                        </ParagraphText>
                     ))}
                 </div>
-                <BodyHeader className="text-[1.25rem]" >{t(`projects.${project}.name`)} → </BodyHeader>
-                <Body className="md:text-sm">{t(`projects.${project}.description`)}</Body>
+                <ParagraphTitle className="text-[1.25rem]" >{t(`projects.${project}.name`)} → </ParagraphTitle>
+                <ParagraphText className="md:text-sm">{t(`projects.${project}.description`)}</ParagraphText>
             </div>
         </div>
     );

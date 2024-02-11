@@ -1,28 +1,67 @@
 import React from "react";
 
-const PageHeader = ({ children, className }) => {
-  const styles = `${className} text-blueprint-black font-anek text-[2rem] md:text-[4rem] font-semibold tracking-wide`;
-  return <p className={styles}>{children}</p>;
+const PageHeader = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={`${props.className} text-blueprint-black font-anek text-[2rem] md:text-[4rem] leading-tight font-semibold`}
+    />
+  );
 };
 
-const SectionHeader = ({ children, className }) => {
-  const styles = `${className} text-blueprint-black font-anek text-2xl md:text-5xl font-[550] tracking-wide`;
-  return <p className={styles}>{children}</p>;
+const SectionHeader = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={`${props.className} text-blueprint-black font-anek text-[21px] md:text-[3rem] leading-tight font-[550]`}
+    />
+  );
 };
 
-const BodyHeader = ({ children, className }) => {
-  const styles = `${className} text-blueprint-black font-poppins text-lg md:text-2xl font-medium uppercase max-md:tracking-wide`;
-  return <p className={styles}>{children}</p>;
+const ParagraphTitle = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={`${props.className} text-blueprint-blue font-poppins text-[1rem] md:text-[1.5rem] font-medium leading-tight uppercase`}
+    />
+  );
 };
 
-const Body = ({ children, className }) => {
-  const styles = `text-blueprint-gray font-poppins text-sm md:text-xl ${className}`;
-  return <p className={styles}>{children}</p>;
+const ParagraphText = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={` ${props.className} text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal`}
+    />
+  );
 };
 
-const BodySm = ({ children, className }) => {
-  const styles = `text-blueprint-gray font-poppins text-sm ${className}`;
-  return <p className={styles}>{children}</p>;
+const ButtonText = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={` ${props.className} text-blueprint-blue font-poppins text-[0.75rem] md:text-[1rem] font-semibold leading-normal`}
+    />
+  );
 };
 
-export { PageHeader, SectionHeader, BodyHeader, Body, BodySm };
+const Annotation = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={` ${props.className} text-blueprint-black font-sketch text-[0.75rem] md:text-[1rem] leading-tight`}
+    />
+  );
+};
+
+
+const Landing = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={` ${props.className} text-blueprint-blue font-anek text-[62px] md:text-[122px] tracking-tight`}
+    />
+  );
+};
+
+export { PageHeader, SectionHeader, ParagraphTitle, ParagraphText, ButtonText, Annotation, Landing };
