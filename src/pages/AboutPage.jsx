@@ -175,6 +175,7 @@ const AboutPage = () => {
             ))}
           </div>
         </div>
+        {/*End of Alumni Section*/}
       </div>
       {/*End of Alumni Section*/}
     </div>
