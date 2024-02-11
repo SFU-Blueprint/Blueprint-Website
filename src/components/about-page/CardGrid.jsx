@@ -10,7 +10,7 @@ import CardItem from "./CardItem";
 const CardGrid = (props) => {
     return (
         <>
-            <p className="font-poppins font-bold md:text-2xl mb-2">{props.gridName}</p>
+            <p className="font-poppins font-medium md:text-2xl mb-2">{props.gridName}</p>
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
                 {props.cardList.map((card, index) => (
                     <CardItem
