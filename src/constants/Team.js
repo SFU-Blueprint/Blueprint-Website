@@ -1,22 +1,22 @@
 export const Executives = [
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
 ];
@@ -24,27 +24,27 @@ export const Executives = [
 export const ProjectLeads = [
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
 
@@ -53,52 +53,52 @@ export const ProjectLeads = [
 export const Designers = [
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
 
@@ -107,53 +107,52 @@ export const Designers = [
 export const Developers = [
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
     {
         title: "FirstName LastName",
-        img: "/blueprint.jpg",
+        img: "/images/blueprint.jpg",
         linkedin: "linkedin"
     },
-
 ];

@@ -1,9 +1,12 @@
 import React from "react";
-import Footer from "../components/Footer"
+import {useTranslation} from "react-i18next";
+import {PageHeader} from "../components/Common";
+
 const HomePage = () => {
+  const {t, i18n} = useTranslation()
   return (
     <div>
-      <h1>Home Page</h1>
+      <PageHeader>{t('home.title')}</PageHeader>
     </div>
   );
 };

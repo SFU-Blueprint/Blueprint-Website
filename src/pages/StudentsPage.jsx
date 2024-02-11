@@ -7,26 +7,21 @@ const StudentsPage = () => {
     "Applications Due",
     "Interviews",
   ];
-  const content = (title) => ({
-    title: title,
-    ...{
-      "Smart Assistant": {
+  const content = [
+      {
+        title:"Project Manager (3)",
         tags: ["Immigration", "AI/Product"],
-        description: "Aiding New Comers to Canada",
-        image: "placeholder.png",
+        description: "The Project Manager will be responsible for overseeing the successful completion of projects with our NPO partern.",
+        deadline: "Jan 10th, 2024",
       },
-      "ML for Health": {
+      {
+        title:"Product Designer (3)",
         tags: ["Health", "Machine Learning"],
-        description: "Physio Therapy Outside the Clinic",
-        image: "placeholder.png",
-      },
-      "Data Tracking": {
-        tags: ["Sustainability", "Data"],
-        description: "Volunteer Hour Tracking Platform",
-        image: "placeholder.png",
-      },
-    }[title],
-  });
+        description: "Product Designers are responsible for delivering high-quality UI/UX work for the non-profit projects we build.",
+        deadline: "Jan 10th, 2024",
+      }
+  
+  ];
 
   return (
     <div className="flex flex-col">
@@ -39,100 +34,64 @@ const StudentsPage = () => {
           View Open Positions
         </PositionsButton>
       </div>
-      <div className="w-2/3 px-[5%] md:pl-[15%] md:pr-[10%]">
-        <Heading className="mt-16 mb-10">
-          We are a community of students with passion for tech and social good.
-        </Heading>
-        <div className="flex pl-[1/30] pr-[1/15] justify-between mb-10">
-          <Body className="flex flex-col w-2/5 gap-4">
-            <p>Blueprint is the right place for you if you are:</p>
-            <ul className="list-disc ml-6 gap-2">
-              <li>
-                a post-secondary student based in the greater Vancouver area
-              </li>
-              <li>
-                interested in helping non-profit organizations with your passion
-                for social good and expertise in technology, design, and project
-                management
-              </li>
-            </ul>
-          </Body>
-          <div className="px-40 bg-gray-100"></div>
+
+      <Heading className="mt-16 mb-10 px-[5%] md:px-[15%]">
+        Why Join us?
+      </Heading>
+
+      <div className="grid grid-cols-3 w-full px-[2%] md:px-[15%]">
+        {/* left */}
+        <div className="col-span-2">
+          <Body className="">Blueprint is the right place for you if you are:</Body>
+          <ul className="list-disc ml-[10%] mt-[5%] mb-[5%]">
+            <li> <span className="font-semibold">a post secondary-student</span> based in the greater vancouver area</li>
+            <li> interested in helping nonprofit organizations with your <span className="font-semibold">passion for social good</span> and expertise in <span className="font-semibold">technology, design, and project management</span></li>
+          
+          </ul>
+          <Body className="">Besides real-world experience, we also provide you with support on personal growth and opportunities to meet like-minded new friends!</Body>
         </div>
-        <div className="flex pl-[1/30] pr-[1/15] justify-between mb-10">
-          <div className="flex flex-col w-2/5 gap-4">
-            <Subheading>What's in it for you</Subheading>
-            <Body>
-              Besides real-world project experience, we also provide you with
-              support on your personal growth and opportunities to meet
-              like-minded new friends!
-            </Body>
-          </div>
-          <div className="px-40 bg-gray-100"></div>
-        </div>
-        <Heading className="text-center py-10">Our Application Process</Heading>
-        <div className="flex justify-center mb-10">
-          <div className="flex flex-col w-full md:w-[420px] gap-5">
-            {phases.map((phase, index) => (
-              <div key={index}>
-                <div className="flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-md border-blue-400 border-2">
-                  <Subheading className="!text-2xl">
-                    Phase {index + 1}
-                  </Subheading>
-                  <Body className="tracking-normal">{phase}</Body>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <Heading className="text-center py-10">
-          Projects Students Have Done
-        </Heading>
-        <div className="flex flex-col px-3 gap-4">
-          <div className="flex flex-col md:flex-row gap-6">
-            {["Smart Assistant", "ML for Health", "Data Tracking"].map(
-              (project, index) => (
-                <div key={index} className="flex-grow">
-                  <ProjectCard>{content(project)}</ProjectCard>
-                </div>
-              )
-            )}
-          </div>
+        {/* right */}
+        <div className="col-span-1 justify-self-center">
+          <img className="h-[80%]" src="Group 3672.png"></img>
         </div>
       </div>
-      <div className="flex flex-col px-[15%] justify-center w-full h-[500px] bg-gray-200 mt-16  ">
-        <Heading className="my-5">
-          Interest in joining us?
-        </Heading>
-        <Body className="!tracking-wide whitespace-pre-line">
-          {
-            "Fill out our Application form and we will get back with you as soon as possible!\n \n For questions, email us here: email@email.com"
-          }
-        </Body>
-      <PositionsButton className="mt-10">Application Form</PositionsButton>
+
+      <Heading className="mt-16 mb-10 px-[5%] md:px-[15%] text-4xl">
+        Open Positions
+      </Heading>
+      <div className="mb-10 px-[5%] md:pl-[15%]">
+        <div className="flex flex-col lg:flex lg:flex-row gap-16">
+
+          {content.map(
+            (position, index) => (
+                <PositionCard                     
+                    key={index}
+                    title={position.title} 
+                    tags={position.tags}
+                    description={position.description}
+                    deadline={position.deadline} 
+
+                    />
+ 
+            ))}
+        </div>
+        
+
       </div>
     </div>
   );
 };
 
-function ProjectCard({ children, className }) {
-  const { title, tags, description, image } = children;
+const PositionCard = (props) => {
   return (
-    <div className={`${className} shadow-md`}>
-      <div src={image} className="w-full px-[50%] h-[120px] bg-gray-100" />
-      <div className="px-3 pb-3">
-        <div className="flex gap-3 -translate-y-1/2">
-          {tags.map((tag, index) => (
-            <Body
-              key={index}
-              className="bg-blue-500 text-white px-3 rounded-md shadow-md text-sm"
-            >
-              {tag}
-            </Body>
-          ))}
+    <div className="shadow-md w-2/6">
+      <div className="py-[10%] px-[5%]">
+        <h1 className="text-blue-500font-medium font-poppins text-2xl font-medium uppercase">{props.title}</h1>
+        <Body className="mt-[4%] mb-[6%] ">{props.description} <span className="text-blue-500">Read More</span></Body>
+        <Body className="font-semibold mb-[7%] ">Application Deadline: {props.deadline}</Body>
+        <div className="py-[3%] border-blue-600 w-3/5 rounded-md border-2 border-blue-500 flex justify-center items-center">
+          <p className="px-[3%] text-blue-600 font-poppins font-medium">View Details and Apply</p>
         </div>
-        <Subheading>{title} → </Subheading>
-        <Body>{description}</Body>
       </div>
     </div>
   );

@@ -1,20 +1,24 @@
 module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        'blueprint-blue': '#0178E7',
-        'blueprint-secondaryBlue': '#E0F0FF',
-        'blueprint-sky': '#93C9FE',
-        'blueprint-black': '#CCCCCC'
+        blueprint: {
+          blue: "#0177E8",
+          black: "#292A3B",
+          gray: {
+            dark: "#B8B8B8",
+            light: "#F3F3F3",
+          },
+          white: "#FFFFFF",
+          offwhite: "FCFCFC",
+        },
       },
-      fontFamily:{
-        poppins:["Poppins","sans-serif"],
-        anek:["Anek Bangla","sans-serif"],
-        sketch:["Just Me Again Down Here", "sans-serif"]
-      }
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        anek: ["Anek Bangla", "sans-serif"],
+        sketch: ["Just Me Again Down Here", "sans-serif"],
+      },
     },
   },
   plugins: [],
