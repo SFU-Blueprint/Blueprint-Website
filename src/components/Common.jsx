@@ -1,28 +1,39 @@
 import React from "react";
 
-const PageHeader = ({ children, className }) => {
-  const styles = `${className} text-blueprint-black font-anek text-[2rem] md:text-[4rem] font-semibold tracking-wide`;
-  return <p className={styles}>{children}</p>;
+const PageHeader = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={`${props.className} text-blueprint-black font-anek text-[2rem] md:text-[4rem] font-semibold tracking-wide`}
+    />
+  );
 };
 
-const SectionHeader = ({ children, className }) => {
-  const styles = `${className} text-blueprint-black font-anek text-2xl md:text-5xl font-[550] tracking-wide`;
-  return <p className={styles}>{children}</p>;
+const SectionHeader = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={`${props.className} text-blueprint-black font-anek text-2xl md:text-5xl font-[550] tracking-wide`}
+    />
+  );
 };
 
-const BodyHeader = ({ children, className }) => {
-  const styles = `${className} text-blueprint-black font-poppins text-lg md:text-2xl font-medium uppercase max-md:tracking-wide`;
-  return <p className={styles}>{children}</p>;
+const ParagraphTitle = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={`${props.className} text-blueprint-black font-poppins text-lg md:text-2xl font-medium uppercase max-md:tracking-wide`}
+    />
+  );
 };
 
-const Body = ({ children, className }) => {
-  const styles = `text-blueprint-gray font-poppins text-sm md:text-xl ${className}`;
-  return <p className={styles}>{children}</p>;
+const ParagraphText = ({ ...props }) => {
+  return (
+    <p
+      {...props}
+      className={` ${props.className} text-blueprint-gray font-poppins text-sm md:text-xl`}
+    />
+  );
 };
 
-const BodySm = ({ children, className }) => {
-  const styles = `text-blueprint-gray font-poppins text-sm ${className}`;
-  return <p className={styles}>{children}</p>;
-};
-
-export { PageHeader, SectionHeader, BodyHeader, Body, BodySm };
+export { PageHeader, SectionHeader, ParagraphTitle, ParagraphText };
