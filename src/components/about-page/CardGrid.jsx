@@ -1,5 +1,6 @@
-import React from 'react'
+import React from "react";
 import CardItem from "./CardItem";
+import { ParagraphTitle } from "../Common";
 /**
  * CardGrid component to display a grid of cards.
  * @param {Object} props - The props object.
@@ -8,21 +9,23 @@ import CardItem from "./CardItem";
  * @returns {JSX.Element} JSX representation of the CardGrid component.
  */
 const CardGrid = (props) => {
-    return (
-        <>
-            <p className="font-poppins font-bold md:text-2xl mb-2">{props.gridName}</p>
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
-                {props.cardList.map((card, index) => (
-                    <CardItem
-                        key={index}
-                        img={card.img}
-                        title={card.title}
-                        linkedin={card.linkedin}
-                    />
-                ))}
-            </div>
-        </>
-    )
-}
+  return (
+    <>
+      <ParagraphTitle className="!text-blueprint-black !font-bold mb-2">
+        {props.gridName}
+      </ParagraphTitle>
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
+        {props.cardList.map((card, index) => (
+          <CardItem
+            key={index}
+            img={card.img}
+            title={card.title}
+            linkedin={card.linkedin}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
 export default CardGrid;
