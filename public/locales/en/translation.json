@@ -1,11 +1,22 @@
 {
-  "pages": ["home", "projects", "students", "nonprofits"],
+  "pages": ["home", "about-us", "projects", "students", "nonprofits"],
+  "common": {
+    "blueprint": "SFU Blueprint 2024",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
   "home": {
     "name": "Home",
     "title": "Title Header"
   },
+  "about-us": {
+    "name": "About Us",
+    "anchors": ["Who we are", "Our values", "Our team"]
+  },
   "projects": {
     "name": "Projects",
+    "anchors": ["Past", "Ongoing"],
     "title": "Our Projects",
     "ongoing": "Ongoing",
     "moreComingSoon": "More Coming Soon!",
@@ -29,9 +40,40 @@
     }
   },
   "students": {
-    "name": "For Students"
+    "name": "For Students",
+    "anchors": ["Who we are", "Our values", "Our team"]
   },
   "nonprofits": {
-    "name": "For Nonprofits"
+    "name": "For Nonprofits",
+    "anchors": ["Why choose us", "Our criteria", "Our process", "Proposal"]
+  },
+  "connect": {
+    "name": "Connect",
+    "links": [
+      "email",
+      "linkedin",
+      "medium",
+      "github",
+      "discord"
+    ]
+  },
+  "email": {
+    "name": "Email",
+    "link": ""
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "link": ""
+  },
+  "medium": {
+    "name": "Medium",
+    "link": ""
+  },
+  "github": {
+    "name": "Github",
+    "link": ""
+  },"discord": {
+    "name": "Discord",
+    "link": ""
   }
 }

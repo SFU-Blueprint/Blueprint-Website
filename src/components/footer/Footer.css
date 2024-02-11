@@ -1,0 +1,27 @@
+@media screen and (min-width: 1000px) {
+    .page-links {
+        @apply flex justify-between;
+    }
+
+    .connect-container{
+        @apply flex flex-col;
+    }
+}
+
+/* Media query for screens smaller than the breakpoint */
+@media screen and (max-width: 1000px) {
+    .page-links {
+        @apply grid grid-cols-2 gap-4;
+    }
+
+    .connect-container{
+        @apply col-span-2;
+    }
+
+    .icons-container{
+        @apply flex justify-between col-span-2;
+    }
+}
+
+
+
