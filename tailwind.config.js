@@ -4,10 +4,17 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        anek: ["Anek Bangla", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"]
+      colors: {
+        'blueprint-blue': '#0178E7',
+        'blueprint-secondaryBlue': '#E0F0FF',
+        'blueprint-sky': '#93C9FE',
+        'blueprint-black': '#CCCCCC'
       },
+      fontFamily:{
+        poppins:["Poppins","sans-serif"],
+        anek:["Anek Bangla","sans-serif"],
+        sketch:["Just Me Again Down Here", "sans-serif"]
+      }
     },
   },
   plugins: [],

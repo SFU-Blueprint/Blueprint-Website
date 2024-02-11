@@ -1,17 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-
-// other imports...
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SponsorPage from "./pages/SponsorPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import StudentsPage from "./pages/StudentsPage";
 import NonprofitsPage from "./pages/NonprofitsPage";
+
 function App() {
   return (
-    <div className="App">
+    <div className="App flex flex-col min-h-screen">
       <NavBar />
+      <main className="flex-grow">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -20,6 +21,8 @@ function App() {
         <Route path="/nonprofits" element={<NonprofitsPage />} />
         <Route path="/sponsors" element={<SponsorPage />} />
       </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }
