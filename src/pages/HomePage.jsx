@@ -1,10 +1,12 @@
 import React from "react";
-import Footer from "../components/Footer"
-import OutlineButton from "../components/Shared/OutlineButton"
+import {useTranslation} from "react-i18next";
+import {PageHeader} from "../components/Common";
+
 const HomePage = () => {
+  const {t, i18n} = useTranslation()
   return (
     <div>
-      <OutlineButton></OutlineButton>
+      <PageHeader>{t('home.title')}</PageHeader>
     </div>
   );
 };

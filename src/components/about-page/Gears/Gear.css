@@ -1,0 +1,20 @@
+.gear {
+    @apply relative w-fit h-fit flex;
+}
+
+.gear .text {
+    @apply text-blueprint-blue text-2xl font-poppins absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    word-spacing: 9999999px;
+}
+
+.gear .line{
+    @apply bg-blueprint-blue absolute;
+    content: '';
+    height: 3px;
+    top: 50%;
+    left: 100%;
+}

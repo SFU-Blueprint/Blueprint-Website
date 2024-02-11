@@ -1,0 +1,15 @@
+@import "GearSection.css";
+
+.gear-section .mobile-value-title{
+    @apply font-poppins font-medium text-xl text-blueprint-blue mt-6;
+}
+
+.gear-section .mobile-value-body{
+    @apply my-2 font-poppins text-xs tracking-tight md:tracking-wide w-96 md:text-base md:font-normal h-fit;
+}
+
+.gear-section .mobile-gear-image{
+    @apply absolute right-0 w-2/3;
+    z-index: -1;
+    top: -80px;
+}
