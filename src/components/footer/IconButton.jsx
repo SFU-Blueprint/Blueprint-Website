@@ -1,4 +1,5 @@
 import {useTranslation} from "react-i18next";
+import React, {Suspense} from "react";
 
 /**
  * React component representing a list of links to different anchor points in a page
@@ -7,12 +8,16 @@ import {useTranslation} from "react-i18next";
 const IconButton = (props) => {
     const {t} = useTranslation()
 
-    return (
-        <div className="flex flex-col">
+    const ImportedSVG = React.lazy(() => import(`../assets/${props.id}.svg`));
 
-            <div className="text-sm">{t(`${props.id}.name`)}</div>
+    return (
+        <div>
+            {/* Use the dynamically imported SVG component */}
+            <Suspense fallback={<div>Loading...</div>}>
+                <ImportedSVG />
+            </Suspense>
         </div>
-    )
+    );
 }
 
 export default IconButton;
