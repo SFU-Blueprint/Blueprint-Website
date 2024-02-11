@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { ParagraphTitle, PageHeader, SectionHeader, ParagraphText } from "../components/Common";
+import {
+  ParagraphTitle,
+  PageHeader,
+  SectionHeader,
+  ParagraphText,
+} from "../components/Common";
 
 const NonprofitsPage = () => {
   const [activePhase, setActivePhase] = useState(0);
@@ -44,7 +49,9 @@ const NonprofitsPage = () => {
         <ProposeButton />
       </div>
       <div className="w-full px-[5%] md:px-[15%]">
-        <SectionHeader className="mt-8 mb-5">Why collaborate with us?</SectionHeader>
+        <SectionHeader className="mt-8 mb-5">
+          Why collaborate with us?
+        </SectionHeader>
         <ParagraphText className="w-full md:w-[720px]">
           Our members are highly dedicated and have great expertise in
           technology and design. By working with us, your organization will gain
@@ -52,7 +59,9 @@ const NonprofitsPage = () => {
           with local students, and bring your vision for social good to live
           through innovative ways, free of charge.
         </ParagraphText>
-        <SectionHeader className="mt-8 mb-5">Can your idea become a project?</SectionHeader>
+        <SectionHeader className="mt-8 mb-5">
+          Can your idea become a project?
+        </SectionHeader>
         <ParagraphText>
           We consider the following aspects when evaluating potential projects:
         </ParagraphText>
@@ -106,7 +115,9 @@ const NonprofitsPage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center justify-center w-full h-[500px] bg-gray-200 mt-16  ">
-        <SectionHeader className="my-5 text-center">Send your ideas to us now</SectionHeader>
+        <SectionHeader className="my-5 text-center">
+          Send your ideas to us now
+        </SectionHeader>
         <ParagraphText className="!tracking-wide text-center whitespace-pre-line">
           {
             "Interested in working with us? Submit your initial project proposal below!\n We will get back to you shortly."
@@ -127,8 +138,6 @@ const NonprofitsPage = () => {
     </div>
   );
 };
-
-
 
 function ContentCard({ children, className }) {
   const { title, text } = children;
