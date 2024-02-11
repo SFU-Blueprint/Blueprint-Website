@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import {useTranslation} from "react-i18next";
 import {Suspense} from "react";
 
 import NavBar from "./components/NavBar";
