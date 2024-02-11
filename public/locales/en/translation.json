@@ -1,8 +1,11 @@
 {
+  "pages": ["home", "projects", "students", "nonprofits"],
   "home": {
+    "name": "Home",
     "title": "Title Header"
   },
   "projects": {
+    "name": "Projects",
     "title": "Our Projects",
     "ongoing": "Ongoing",
     "moreComingSoon": "More Coming Soon!",
@@ -24,5 +27,11 @@
       "tags": ["Sustainability", "Data"],
       "image": "placeholder.png"
     }
+  },
+  "students": {
+    "name": "For Students"
+  },
+  "nonprofits": {
+    "name": "For Nonprofits"
   }
 }
