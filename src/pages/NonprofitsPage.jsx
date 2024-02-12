@@ -49,7 +49,9 @@ const NonprofitsPage = () => {
         <ProposeButton />
       </div>
       <div className="w-full px-5 md:px-[120px]">
+
         <SectionHeader id="Why-choose-us" className="mb-3 md:mb-6">
+
           Why collaborate with us?
         </SectionHeader>
         <ParagraphText className="mb-6 md:mb-16 max-md:ml-6">
@@ -59,7 +61,9 @@ const NonprofitsPage = () => {
           with local students, and bring your vision for social good to live
           through innovative ways, free of charge.
         </ParagraphText>
+
         <SectionHeader id="Our-criteria" className="mb-3 md:mb-6">
+
           Can your idea become a project?
         </SectionHeader>
         <ParagraphText className="mb-3 md:mb-6 max-md:ml-6">
@@ -73,7 +77,9 @@ const NonprofitsPage = () => {
           <ContentCard>{content("Community Impact")}</ContentCard>
           <ContentCard>{content("Project Scope")}</ContentCard>
         </div>
+
         <SectionHeader id="Our-process" className="mt-6 md:mt-16 mb-3 md:mb-6">
+
           Our Process
         </SectionHeader>
         <div className="flex max-md:flex-col md:gap-[108px]">
@@ -97,7 +103,9 @@ const NonprofitsPage = () => {
         </div>
       </div>
       <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full my-9 md:mb-20">
+
         <SectionHeader id="Proposal" className="text-center my-3 md:my-6">
+
           Send your ideas to us now
         </SectionHeader>
         <ParagraphText className="text-center whitespace-pre-line mb-3 md:mb-6">

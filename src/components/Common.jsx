@@ -59,7 +59,7 @@ const Landing = ({ ...props }) => {
   return (
     <p
       {...props}
-      className={` ${props.className} text-blueprint-blue font-anek text-[62px] md:text-[122px] tracking-tight`}
+      className={` ${props.className} text-blueprint-blue font-anek text-[62px] md:text-[122px] tracking-tight leading-none`}
     />
   );
 };

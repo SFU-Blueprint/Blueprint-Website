@@ -9,8 +9,18 @@ import {
   Developers,
 } from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
+
+import {
+  Annotation,
+  PageHeader,
+  ParagraphText,
+  ParagraphTitle,
+  SectionHeader,
+} from "../components/Common";
+
 import AlumniGrid from "../components/about-page/AlumniGrid";
 import ScrollToHashElement from "../components/Shared/ScrollToHash";
+
 
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
@@ -52,50 +62,51 @@ const AboutPage = () => {
           alt="Your"
         />
         <div className="absolute bottom-5 md:my-10">
-          <p className="font-anek text-black text-4xl my-2 font-bold ml-10 md:ml-16 md:text-6xl xl:ml-36 ">
+          <PageHeader className="font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36 ">
             About Us
-          </p>
-          <p className="font-poppins font-bold md:text-2xl ml-10 md:ml-16 xl:ml-36">
+          </PageHeader>
+          <ParagraphTitle className="!text-blueprint-black ml-10 md:ml-16 xl:ml-36">
             TECH-DRIVEN ADVOCATED FOR SOCIAL GOOD
-          </p>
+          </ParagraphTitle>
         </div>
       </div>
 
-      <h1 className="mt-[4%] font-[550] font-anek text-xl leading-relaxed mr-10 md:gap-36 md:leading-10 md:text-5xl mx-10 md:mx-16 xl:mx-36">
+      <div></div>
+      <SectionHeader className="mt-[4%] leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36">
         Building innovative, tech-based solutions for communities and public
         welfare is the mission that brings us together.{" "}
-      </h1>
+      </SectionHeader>
       {/* Description */}
       <div className="md:mt-[4%] md:flex md:flex-row">
         {/* Desc 1 */}
         <div className="flex flex-col ml-[20%] md:w-4/5 md:ml-[11%] md:flex-col mt-[24px] md:mt-[40px] md:justify-between ">
-          <p className="w-4/5 md:w-4/5 text-xs font-poppins tracking-tight md:tracking-wide md:text-base md:font-normal">
+          <ParagraphText className="w-4/5 md:w-4/5">
             Our talented members come from diverse cultures, professions, and
             social backgrounds. With a passion for social good and dedication to
             creating beautiful technology, our project teams work alongside
             nonprofits to help them better serve their communities.
-          </p>
-          <h1 className="font-poppins text-base font-medium text-xl text-blueprint-blue mt-5 md:mt-10 mb-2 md:text-2xl">
+          </ParagraphText>
+          <ParagraphTitle className="mt-5 md:mt-10 mb-2 md:text-2xl">
             {" "}
             SFU BLUEPRINT
-          </h1>
+          </ParagraphTitle>
           <div>
-            <p className="font-poppins w-4/5 text-xs tracking-tight md:tracking-wide md:w-4/5 md:text-base md:font-normal">
+            <ParagraphText className="w-4/5 md:w-4/5">
               Blueprint is a multinational community with chapters run by
               students from different universities. As the third established
               chapter in Canada, our team is based at{" "}
               <span>
                 <a
                   href="https://www.sfu.ca"
-                  className="underline font-poppins w-72 text-xs tracking-tight md:tracking-wide md:w-96 md:h-36 md:text-base md:font-normal"
+                  className="underline w-72 md:w-96 md:h-36"
                 >
                   Simon Fraser University.
                 </a>
               </span>
-            </p>
-            <p className="font-poppins underline text-xs font-bold mt-[10%] md:text-base">
+            </ParagraphText>
+            <ParagraphText className="underline font-bold mt-[10%]">
               See all Blueprint chapters here
-            </p>
+            </ParagraphText>
           </div>
         </div>
         {/* Desc 2 */}
@@ -104,23 +115,24 @@ const AboutPage = () => {
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm"></div>
-              <p className="pl-[10%] hidden md:block font-sketch text-xl leading-none tracking-tight">
+              <Annotation className="pl-[10%]">
                 A design sprint is the best way to get ideas flowing
-              </p>
+              </Annotation>
             </div>
           </div>
         </div>
       </div>
-      <div className="block mt-12 flex flex-col items-center md:hidden">
+      <div className="mt-12 flex flex-col items-center md:hidden">
         <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm "></div>
-          <p className="basis-2/6 font-sketch pl-[10%] h-fit">
+          <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit">
             A design sprint is the best way to get ideas flowing
-          </p>
+          </Annotation>
         </div>
       </div>
       {/* End of Description */}
+
 
       <div className="mx-10 md:mx-16 xl:mx-36">
         {/*Gear Section*/}
@@ -134,24 +146,48 @@ const AboutPage = () => {
 
         {/*Start of Team section   */}
         <h1 id="Our-team" className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
+
           Our Team
-        </h1>
+        </SectionHeader>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
         <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
         <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
         <CardGrid cardList={Developers} gridName="DEVELOPERS"></CardGrid>
-        {/*End of team section*/}
-
-        {/*Alumni Section*/}
-
-        <div>
-          <h1 className="flex justify-center mt-[8%] font-[550] text-3xl font-anek md:text-5xl">
-            Alumni
-          </h1>
-          <AlumniGrid alumniList={Alumni} year="2023"></AlumniGrid>
+      </div>
+      {/*Alumni Section*/}
+      <div>
+        <SectionHeader className="flex justify-center mt-[8%]">
+          Alumni
+        </SectionHeader>
+        <div className="md:ml-[5%]">
+          <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">2023</ParagraphTitle>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
+            {Alumni.map((items, key) => (
+              <div
+                class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between"
+                key={key}
+              >
+                <div className="ml-5 mt-3 mr-5">
+                  <ParagraphText className="flex flex-wrap flex-row font-bold">
+                    {items.title}
+                  </ParagraphText>
+                  <ParagraphText className="font-poppins text-blueprint-gray-dark">
+                    {items.position}
+                  </ParagraphText>
+                </div>
+                <ParagraphText className="!text-blueprint-blue underline flex flex-row ml-5 mb-3 mr-5">
+                  <a>
+                    LinkedIn{" "}
+                  </a>
+                  <img className="ml-[5%]" src="/svgs/share.svg" alt="" />
+                </ParagraphText>
+              </div>
+            ))}
+          </div>
         </div>
         {/*End of Alumni Section*/}
       </div>
+      {/*End of Alumni Section*/}
     </div>
   );
 };

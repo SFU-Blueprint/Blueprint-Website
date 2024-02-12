@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { ParagraphText } from "../Common";
 
 /**
  * CardItem component to display an individual card item.
@@ -22,11 +23,17 @@ const CardItem = (props) => {
                 {props.title}
             </p>
 
-            <a href="/" className="font-poppins flex items-center justify-center text-[12px] sm:text-base">
-                {props.linkedin}
-            </a>
-        </div>
-    )
-  }
-  
-  export default CardItem
+      <ParagraphText className="!font-bold flex items-center justify-center">
+        {props.title}
+      </ParagraphText>
+
+      <a href="/">
+        <ParagraphText className="flex items-center justify-center">
+          {props.linkedin}
+        </ParagraphText>
+      </a>
+    </div>
+  );
+};
+
+export default CardItem;
