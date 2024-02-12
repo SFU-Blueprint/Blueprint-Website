@@ -145,10 +145,9 @@ const AboutPage = () => {
         {/*End of Gear Section*/}
 
         {/*Start of Team section   */}
-        <h1 id="Our-team" className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
-        
+        <SectionHeader id="Our-team" className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
           Our Team
-        </h1>
+        </SectionHeader>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
         <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
         <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
