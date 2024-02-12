@@ -10,7 +10,7 @@ const ProjectsPage = () => {
     <div className="flex flex-col px-3 md:px-[15%] pt-10 gap-4">
       <PageHeader className="my-5">{t('projects.title')}</PageHeader>
       <ParagraphTitle>{t('projects.ongoing')}</ParagraphTitle>
-      <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
+      <div id="Ongoing" className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
         {PROJECT_KEYS.map(
           (project, index) => (
             <ProjectCard key={index} project={project}></ProjectCard>

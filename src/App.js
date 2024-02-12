@@ -9,10 +9,12 @@ import ProjectsPage from "./pages/ProjectsPage";
 import StudentsPage from "./pages/StudentsPage";
 import NonprofitsPage from "./pages/NonprofitsPage";
 import Footer from "./components/footer/Footer";
+import ScrollToHashElement from "./components/Shared/ScrollToHash";
 
 function App() {
   return (
     <div className="App flex flex-col min-h-screen">
+      <ScrollToHashElement />
       <NavBar />
       <main className="flex-grow">
       <Routes>

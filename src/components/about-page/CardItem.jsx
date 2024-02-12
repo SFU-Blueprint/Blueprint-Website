@@ -14,7 +14,7 @@ const CardItem = (props) => {
             <img
                 className="h-48 w-48"
                 src={props.img}
-                style={{'min-width':'12rem'}}
+                style={{'minWidth':'12rem'}}
                 alt=""
             />
        

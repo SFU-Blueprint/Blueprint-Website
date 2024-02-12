@@ -6,6 +6,19 @@
     .connect-container{
         @apply flex flex-col;
     }
+
+    .icons-container{
+        @apply flex flex-col gap-2;
+    }
+
+    .icon-name {
+        display: block; /* Hide by default */
+    }
+
+    .icon-hover:hover{
+        @apply cursor-pointer;
+        text-decoration: underline;
+    }
 }
 
 /* Media query for screens smaller than the breakpoint */
@@ -21,6 +34,20 @@
     .icons-container{
         @apply flex justify-between col-span-2;
     }
+
+    .icon-name {
+        display: none;
+    }
+
+    .icon-hover:hover{
+        @apply cursor-pointer;
+        transform: scale(1.2);
+    }
+}
+
+.text-hover:hover{
+    @apply cursor-pointer;
+    text-decoration: underline;
 }
 
 
