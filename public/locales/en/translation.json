@@ -20,7 +20,7 @@
     "title": "Our Projects",
     "ongoing": "Ongoing",
     "moreComingSoon": "More Coming Soon!",
-    "smartAssistant" : {
+    "smartAssistant": {
       "name": "Smart Assistant",
       "description": "Aiding New Comers to Canada",
       "tags": ["Immigration", "AI/Product"],
@@ -45,17 +45,12 @@
   },
   "nonprofits": {
     "name": "For Nonprofits",
-    "anchors": ["Why choose us", "Our criteria", "Our process", "Proposal"]
+    "anchors": ["Why choose us", "Our criteria", "Our process", "Proposal"],
+    "applyingLink": "https://docs.google.com/forms/d/e/1FAIpQLSe14iQaH4mQ0ILUZ99Ck-_KQdDOCBuFQlYh_fLBoQDQC8L9Bw/viewform"
   },
   "connect": {
     "name": "Connect",
-    "links": [
-      "email",
-      "linkedin",
-      "medium",
-      "github",
-      "discord"
-    ]
+    "links": ["email", "linkedin", "medium", "github", "discord"]
   },
   "email": {
     "name": "Email",
@@ -72,7 +67,8 @@
   "github": {
     "name": "Github",
     "link": ""
-  },"discord": {
+  },
+  "discord": {
     "name": "Discord",
     "link": ""
   }
