@@ -48,7 +48,7 @@ const StudentsPage = () => {
         "Application forms for new  members are posted at the start of each semester. Resume review and interview usually take 1-2 weeks. One can apply for multiple roles and choose a preferred role if they are qualified for more than one role. Project members from the previous semester do not need to apply if they are staying at the same team.",
       "Working on a Project":
         "Project members meet weekly to collaborate and discuss as a team. Product manager and tech lead make key decisions that move the team forward, while project manager keeps team members on the same page and ensure action items for design and development are completed in time.",
-      "Mingling with Bleuprinters":
+      "Mingling with Blueprinters":
         "There will be one to two club-wise activities each semester for members to meet, have fun, and make new friends. We also encourage project teams to get together outside of project. ",
       "Exams and Semesters End":
         "Workload  will be adjusted during exam periods for members to prioritize their academic studying. At the end of the semester, project members will inform the leads whether they will continue on the project for the next semester. If a project is completed, we will set up celebration and showcase within our community. Members from the project can apply for roles in new projects afterwards. ",
