@@ -1,6 +1,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    darkMode: "false",
     extend: {
       colors: {
         blueprint: {
@@ -21,7 +22,9 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("daisyui")
-  ],
+  plugins: [require("daisyui")],
+  daisyui: {
+    // Disable dark mode
+    themes: [],
+  },
 };
