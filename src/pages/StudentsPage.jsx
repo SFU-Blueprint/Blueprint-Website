@@ -21,7 +21,7 @@ const StudentsPage = () => {
       title: "Project Manager (3)",
       tags: ["Immigration", "AI/Product"],
       description:
-        "The Project Manager will be responsible for overseeing the successful completion of projects with our NPO partern.",
+        "The Project Manager will be responsible for overseeing the successful completion of projects with our NPO partner.",
       deadline: "Jan 10th, 2024",
     },
     {
