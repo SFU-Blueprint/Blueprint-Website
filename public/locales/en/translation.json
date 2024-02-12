@@ -54,7 +54,7 @@
   },
   "nonprofits": {
     "name": "For Nonprofits",
-    "anchors": ["Why-choose-us", "Our-criteria", "Our-process", "Proposal"]
+    "anchors": ["Why-choose-us", "Our-criteria", "Our-process", "Proposal"],
     "applyingLink": "https://docs.google.com/forms/d/e/1FAIpQLSe14iQaH4mQ0ILUZ99Ck-_KQdDOCBuFQlYh_fLBoQDQC8L9Bw/viewform"
   },
   "connect": {
