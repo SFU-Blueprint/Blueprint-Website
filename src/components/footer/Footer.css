@@ -1,0 +1,54 @@
+@media screen and (min-width: 1000px) {
+    .page-links {
+        @apply flex justify-between;
+    }
+
+    .connect-container{
+        @apply flex flex-col;
+    }
+
+    .icons-container{
+        @apply flex flex-col gap-2;
+    }
+
+    .icon-name {
+        display: block; /* Hide by default */
+    }
+
+    .icon-hover:hover{
+        @apply cursor-pointer;
+        text-decoration: underline;
+    }
+}
+
+/* Media query for screens smaller than the breakpoint */
+@media screen and (max-width: 1000px) {
+    .page-links {
+        @apply grid grid-cols-2 gap-4;
+    }
+
+    .connect-container{
+        @apply col-span-2;
+    }
+
+    .icons-container{
+        @apply flex justify-between col-span-2;
+    }
+
+    .icon-name {
+        display: none;
+    }
+
+    .icon-hover:hover{
+        @apply cursor-pointer;
+        transform: scale(1.2);
+    }
+}
+
+.text-hover:hover{
+    @apply cursor-pointer;
+    text-decoration: underline;
+}
+
+
+

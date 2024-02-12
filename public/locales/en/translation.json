@@ -1,4 +1,11 @@
 {
+  "pages": ["home", "about", "projects", "students", "nonprofits"],
+  "common": {
+    "blueprint": "SFU Blueprint 2024",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
   "home": {
     "header": {
       "title": "Tech for Social Good",
@@ -10,8 +17,15 @@
       "text": "We are a team of students based at Simon Fraser University. Our members serve as product managers, developers, designers and other specialists to collaboratively build tech-based solutions for nonprofit organizations. We value community, innovation, and the social impact of our work.",
       "button": "Meet the Team"
     }
+
+  },
+  "about": {
+    "name": "About Us",
+    "anchors": ["Who-we-are", "Our-values", "Our-team"]
   },
   "projects": {
+    "name": "Projects",
+    "anchors": ["Past", "Ongoing"],
     "title": "Our Projects",
     "ongoing": "Ongoing",
     "moreComingSoon": "More Coming Soon!",
@@ -33,5 +47,47 @@
       "tags": ["Sustainability", "Data"],
       "image": "placeholder.png"
     }
+  },
+  "students": {
+    "name": "For Students",
+    "anchors": ["Who-we-are", "Our-values", "Our-team"]
+  },
+  "nonprofits": {
+    "name": "For Nonprofits",
+    "anchors": ["Why-choose-us", "Our-criteria", "Our-process", "Proposal"]
+  },
+  "connect": {
+    "name": "Connect",
+    "links": [
+      "email",
+      "instagram",
+      "linkedin",
+      "medium",
+      "github",
+      "discord"
+    ]
+  },
+  "email": {
+    "name": "Email",
+    "link": "sfublueprint@gmail.com"
+  },
+  "instagram": {
+    "name": "Instagram",
+    "link": "https://www.instagram.com/sfublueprint/"
+  },
+  "linkedin": {
+    "name": "LinkedIn",
+    "link": "https://www.linkedin.com/company/sfu-blueprint/mycompany/?viewAsMember=true"
+  },
+  "medium": {
+    "name": "Medium"
+  },
+  "github": {
+    "name": "Github",
+    "link": "https://github.com/SFU-Blueprint"
+  },
+  "discord": {
+    "name": "Discord",
+    "link": "https://discord.com/invite/WTBYv8HrHE"
   }
 }
