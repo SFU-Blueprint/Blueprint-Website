@@ -9,11 +9,8 @@ import {
   Developers,
 } from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
-// <<<<<<< staging
-// =======
 import AlumniGrid from "../components/about-page/AlumniGrid";
-// import shareIcon from "../assets/icons/share.svg"
-// >>>>>>> main
+import ScrollToHashElement from "../components/Shared/ScrollToHash";
 
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
@@ -51,7 +48,7 @@ const AboutPage = () => {
       <div className="relative">
         <img
           className="h-46 w-full md:h-80 md:w-full"
-          src="/images/testImage.jpg"
+          src="/src/assets/images/testImage.jpg"
           alt="Your"
         />
         <div className="absolute bottom-5 md:my-10">
@@ -128,7 +125,7 @@ const AboutPage = () => {
       <div className="mx-10 md:mx-16 xl:mx-36">
         {/*Gear Section*/}
         <div className="mt-36">
-          <div className="font-anek text-black text-4xl md:text-5xl font-[550]">
+          <div id="Our-values" className="font-anek text-black text-4xl md:text-5xl font-[550]">
             Our Values
           </div>
           {gearSectionHtml.content}
@@ -136,7 +133,7 @@ const AboutPage = () => {
         {/*End of Gear Section*/}
 
         {/*Start of Team section   */}
-        <h1 className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
+        <h1 id="Our-team" className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
           Our Team
         </h1>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
