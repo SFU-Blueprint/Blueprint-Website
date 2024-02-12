@@ -146,9 +146,9 @@ const AboutPage = () => {
 
         {/*Start of Team section   */}
         <h1 id="Our-team" className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
-
+        
           Our Team
-        </SectionHeader>
+        </h1>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
         <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
         <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
