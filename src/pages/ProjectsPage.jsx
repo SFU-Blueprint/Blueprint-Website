@@ -35,8 +35,6 @@ const ProjectsPage = () => {
         <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">
           More coming soon!
         </ParagraphText>
-
-        
       </div>
     </div>
   );

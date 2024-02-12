@@ -10,14 +10,18 @@ import { ParagraphText } from "../Common";
  * @returns {JSX.Element} - Returns the JSX for the CardItem component.
  */
 const CardItem = (props) => {
-  return (
-    <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20">
-      <img
-        class="h-48 w-48"
-        src={props.img}
-        style={{ "min-width": "12rem" }}
-        alt=""
-      />
+    return (
+        <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20">
+            <img
+                className="h-48 w-48"
+                src={props.img}
+                style={{'minWidth':'12rem'}}
+                alt=""
+            />
+       
+            <p className="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">
+                {props.title}
+            </p>
 
       <ParagraphText className="!font-bold flex items-center justify-center">
         {props.title}

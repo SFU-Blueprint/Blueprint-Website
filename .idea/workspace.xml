@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="142690d7-e5fc-410a-a469-c068126c711b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Shared/ScrollToHash.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/blueprint.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/blueprint.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/placeholder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about-page/CardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about-page/CardItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/AnchorList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/AnchorList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Team.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/AboutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/NonprofitsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NonprofitsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ProjectsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectsPage.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2c3oGWiaOGYxPEkeMvFh7aZaeFj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "general-refactoring",
+    "last_opened_file_path": "/Users/cwr/WebstormProjects/Blueprint/Blueprint-Website",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/components/Shared" />
+      <recent name="$PROJECT_DIR$/src/assets" />
+      <recent name="$PROJECT_DIR$/public/images" />
+      <recent name="$PROJECT_DIR$/src/constants" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="142690d7-e5fc-410a-a469-c068126c711b" name="Changes" comment="" />
+      <created>1707349527808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707349527808</updated>
+      <workItem from="1707349528917" duration="3056000" />
+      <workItem from="1707679050398" duration="4214000" />
+      <workItem from="1707684822210" duration="7454000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

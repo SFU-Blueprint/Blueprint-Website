@@ -2,17 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import {Suspense} from "react";
 
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import SponsorPage from "./pages/SponsorPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import StudentsPage from "./pages/StudentsPage";
 import NonprofitsPage from "./pages/NonprofitsPage";
+import Footer from "./components/footer/Footer";
+import ScrollToHashElement from "./components/Shared/ScrollToHash";
 
 function App() {
   return (
     <div className="App flex flex-col min-h-screen">
+      <ScrollToHashElement />
       <NavBar />
       <main className="flex-grow">
       <Routes>
@@ -24,7 +26,7 @@ function App() {
         <Route path="/sponsors" element={<SponsorPage />} />
       </Routes>
       </main>
-      <Footer />
+      <Footer></Footer>
     </div>
   );
 }
