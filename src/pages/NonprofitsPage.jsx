@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
   PageHeader,
   SectionHeader,
   ParagraphText,
 } from "../components/Common";
+
+const reroute = () => {
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLSe14iQaH4mQ0ILUZ99Ck-_KQdDOCBuFQlYh_fLBoQDQC8L9Bw/viewform"
+  );
+};
 
 const NonprofitsPage = () => {
   const [activePhase, setActivePhase] = useState(0);
@@ -138,16 +145,12 @@ function PhaseButton(index, activePhase, setActivePhase, phase) {
       onClick={() => setActivePhase(index)}
     >
       <ParagraphTitle
-        className={`${
-          index === activePhase && "text-blueprint-white"
-        } mb-3`}
+        className={`${index === activePhase && "text-blueprint-white"} mb-3`}
       >
         Phase {index + 1}
       </ParagraphTitle>
       <ParagraphText
-        className={`${
-          index === activePhase && "text-blueprint-white"
-        }`}
+        className={`${index === activePhase && "text-blueprint-white"}`}
       >
         {phase}
       </ParagraphText>
@@ -166,9 +169,11 @@ function ContentCard({ children, className }) {
 }
 
 function ProposeButton({ className }) {
+  const { t, i18n } = useTranslation();
   return (
     <button
       className={`${className} text-blueprint-black border-blueprint-black flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+      onClick={() => reroute()}
     >
       Propose a Project
     </button>
