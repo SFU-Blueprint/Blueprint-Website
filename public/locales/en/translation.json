@@ -1,5 +1,12 @@
 {
-  "pages": ["home", "about", "projects", "students", "nonprofits"],
+  "pages": ["home", "about-us", "projects", "students", "nonprofits"],
+  "blueprintPositions": [
+    "developer",
+    "product-designer",
+    "project-manager",
+    "tech-lead",
+    "operational"
+  ],
   "common": {
     "blueprint": "SFU Blueprint 2024",
     "terms": "Terms",
@@ -17,7 +24,6 @@
       "text": "We are a team of students based at Simon Fraser University. Our members serve as product managers, developers, designers and other specialists to collaboratively build tech-based solutions for nonprofit organizations. We value community, innovation, and the social impact of our work.",
       "button": "Meet the Team"
     }
-
   },
   "about": {
     "name": "About Us",
@@ -59,7 +65,7 @@
   },
   "connect": {
     "name": "Connect",
-    "links": ["email", "instagram", "linkedin", "medium", "github", "discord"]
+    "links": ["email", "linkedin", "medium", "github", "discord"]
   },
   "email": {
     "name": "Email",
@@ -78,10 +84,27 @@
   },
   "github": {
     "name": "Github",
-    "link": "https://github.com/SFU-Blueprint"
+    "link": ""
   },
   "discord": {
     "name": "Discord",
-    "link": "https://discord.com/invite/WTBYv8HrHE"
+    "link": ""
+  },
+  "positions": {
+    "developer": {
+      "desc": ["hello", "<strong>helloagain</strong>"]
+    },
+    "product-desinger": {
+      "desc": []
+    },
+    "project-manager": {
+      "desc": []
+    },
+    "tech-lead": {
+      "desc": []
+    },
+    "operational": {
+      "desc": []
+    }
   }
 }
