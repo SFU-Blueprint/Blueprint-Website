@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import Footer from "../components/Footer";
+import React, { useState, useRef } from "react";
+// import Footer from "../components/Footer";
 // import { PROJECT_KEYS } from "../constants/projects";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 import {
   PageHeader,
@@ -69,23 +69,103 @@ const StudentsPage = () => {
   const rolesContent = [
     {
       title: "Developer",
-      desc: "",
+      desc: (
+        <ul className="list-disc">
+          <li>
+            Project Developers are responsible for the development of the
+            project, bringing designs and product specifications to life.
+          </li>
+          <li>
+            Depending on the scope of the project, each team can have 5-8
+            developers.
+          </li>
+          <li>
+            They work closely with the project lead, the product manager, and
+            designers to deliver top quality code!{" "}
+          </li>
+        </ul>
+      ),
+      hiring: false,
     },
     {
-      title: "Product Desinger",
+      title: "Product Designer",
+      desc: (
+        <ul className="list-disc">
+          <li>
+            Product Designers are responsible for delivering high-quality UI/UX
+            work for the non-profit projects we build
+          </li>
+          <li>There are 2-3 designers in each team.</li>
+          <li>
+            They work closely with various stakeholders including the product
+            manager, the developers on their team, and other designers.
+          </li>
+        </ul>
+      ),
+      hiring: false,
     },
     {
       title: "Project Manager",
+      desc: (
+        <ul class="list-disc">
+          <li>
+            The Project Manager of the team will be responsible for overseeing
+            the successful completion of projects with our NPO partner.
+          </li>
+          <li>
+            This includes coordinating project activities, managing timelines
+            and resources, and ensuring that project goals align with the needs
+            of the NPO.
+          </li>
+        </ul>
+      ),
+      hiring: true,
     },
     {
       title: "Tech Lead / Specialist",
+      desc: (
+        <ul className="list-disc">
+          <li>
+            The Tech Lead for the team is responsible for leading the team and
+            driving the technical direction of the project.
+          </li>
+          <li>
+            They provide support and mentorship to developers on the team and
+            work with the product manager to run the team effectively
+          </li>
+        </ul>
+      ),
+      hiring: false,
     },
     {
       title: "Operational",
+      desc: (
+        <ul className="list-disc">
+          <li>
+            Operational roles such as executives and content specialist are
+            responsible for sustaining Blueprint as a community.
+          </li>
+          <li>
+            They work to recruit new members, plan activities for members,
+            expand outreach to sponsors and NPOs, and provide extra support to
+            projects teams.
+          </li>
+        </ul>
+      ),
+      hiring: false,
     },
   ];
 
   const { t } = useTranslation();
+
+  const positionsRef = useRef(null);
+  // Scroll to a specific section
+  const navigateToAnchor = (page, section) => {
+    console.log("sfgdfgfgddfg");
+    // Construct the URL with the page path and the anchor point
+    const url = `/${page}#${section}`;
+    window.location.href = url;
+  };
 
   return (
     <div className="flex flex-col">
@@ -94,20 +174,24 @@ const StudentsPage = () => {
         <ParagraphTitle className="!text-black mt-[6px] mb-[12px]">
           Join us and make your impact as a student
         </ParagraphTitle>
-        <PositionsButton>View Open Positions</PositionsButton>
+        <PositionsButton
+          onClick={() => navigateToAnchor("students", "positions")}
+        >
+          View Open Positions
+        </PositionsButton>
       </div>
 
       <SectionHeader className="mt-[36px] ml-[6%]">Why Join us?</SectionHeader>
 
-      <div className="ml-[12%] mt-[12px]">
-        <ParagraphText className="">
+      <div className=" mt-[12px]">
+        <ParagraphText className="ml-[12%]">
           Blueprint is the right place for you if you are:
         </ParagraphText>
-        <ParagraphText className="list-disc ml-[5%] mt-[12px]">
+        <ParagraphText className="list-disc mt-[12px] ml-[21%] pr-[20%]">
           <li>
             {" "}
             <span className="font-semibold">a post secondary-student</span>{" "}
-            based in the greater vancouver area
+            based in the greater Vancouver area
           </li>
           <li>
             {" "}
@@ -119,17 +203,20 @@ const StudentsPage = () => {
             </span>
           </li>
         </ParagraphText>
-        <ParagraphText className="mt-[12px]">
+        <ParagraphText className="mt-[12px] ml-[12%] pr-[20%]">
           Besides real-world experience, we also provide you with support on
           personal growth and opportunities to meet like-minded new friends!
         </ParagraphText>
       </div>
 
-      <SectionHeader className="mt-[36px] ml-[6%]">
+      <SectionHeader
+        id="positions"
+        className="mt-[36px] ml-[6%] flex flex-row justify-start"
+      >
         Open Positions
       </SectionHeader>
-      <div className="mb-[24px] px-[5%] md:pl-[15%]">
-        <div className="flex flex-col lg:flex lg:flex-row gap-16">
+      <div className="mb-[24px] px-[5%]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16">
           {openPositions.map((position, index) => (
             <PositionCard
               key={index}
@@ -141,7 +228,7 @@ const StudentsPage = () => {
           ))}
         </div>
       </div>
-      <ParagraphText className="mt-[24px] mx-[24px]">
+      <ParagraphText className="mt-[24px] mx-[24px] flex flex-row justify-center">
         Join our Discord or follow us on Instagram to get the latest updates on
         hiring and opportunity posting.
       </ParagraphText>
@@ -149,7 +236,7 @@ const StudentsPage = () => {
         A Typical Semester
       </SectionHeader>
       {/* <SectionHeader className="mt-16 mb-5">Our Process</SectionHeader> */}
-      <div className="flex max-md:flex-col gap-16 mx-[12px]">
+      <div className="flex max-md:flex-col gap-24 mx-[12px] ml-[6%]">
         <div className="flex flex-col w-full md:w-[420px] gap-2">
           {phases.map((phase, index) => (
             <div key={index}>
@@ -188,12 +275,23 @@ const StudentsPage = () => {
           {content(phasesDesc[activePhase])}
         </ContentCard>
       </div>
-      <SectionHeader className="my-[36px] ml-[24px]">Roles</SectionHeader>
-      {phases.map((phase, index) => (
-        <div key={index}>
-          <RolesCard>{content(phasesDesc)}</RolesCard>
+      <SectionHeader className="mt-[10%] mb-[2%] ml-[6%]">Roles</SectionHeader>
+      {rolesContent.map((pos, index) => (
+        <div className="px-[3%] md:px-[5%]" key={index}>
+          <RolesCard children={pos}></RolesCard>
         </div>
       ))}
+      <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%]  flex flex-col items-center justify-center px-[15%] ">
+        <PageHeader>Stay in Touch</PageHeader>
+        <ParagraphText className=" mb-[12px] text-center mt-[3%]">
+          Are you a student interested in Blueprint, and would like to stay up
+          to date with announcements, position openings, or just interact with
+          our community?
+        </ParagraphText>
+        <PositionsButton className="!border-blueprint-blue !text-blueprint-blue font-semibold rounded-sm mt-[4%]">
+          Join the Discord
+        </PositionsButton>
+      </div>
     </div>
   );
 };
@@ -232,50 +330,64 @@ function ContentCard({ children, className }) {
 }
 
 function RolesCard({ children, className }) {
-  const { title, text } = children;
+  const { title, desc, hiring } = children;
   return (
-    <div className={`${className} flex flex-col w-full md:w-[420px] gap-1`}>
-      <ParagraphTitle>{title}</ParagraphTitle>
-      <ParagraphText>{text}</ParagraphText>
+    <div
+      className={`${className} flex flex-col w-full gap-1 border-black shadow-lg mt-[5%]`}
+    >
+      <ParagraphTitle className="mx-[8%] mt-[8%] mb-[3%]">
+        {" "}
+        {title}
+      </ParagraphTitle>
+      <div className="text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal mx-[10%] mb-[10%] flex justify-between">
+        <ParagraphText className="w-3/5">{desc}</ParagraphText>
+        <ParagraphTitle
+          className={`block max-md:hidden text-center ${
+            hiring
+              ? "text-blueprint-blue flex justify-center mb-[8%]"
+              : "!text-blueprint-gray-dark mb-[8%] ml-[20%]"
+          }`}
+        >
+          {hiring ? (
+            <div className="py-[3%] px-[10%] ml-[25%] border-blueprint-blue rounded-sm border-2 border-blueprint-blue flex justify-center items-center">
+              <p className=" text-blueprint-blue font-poppins font-medium">
+                View Details and Apply
+              </p>
+            </div>
+          ) : (
+            "Applications Closed"
+          )}
+        </ParagraphTitle>
+      </div>
+      <ParagraphTitle
+        className={`hidden max-md:block text-center ${
+          hiring
+            ? "text-blueprint-blue flex flex-row justify-center items-center mb-[8%]"
+            : "!text-blueprint-gray-dark mb-[8%]"
+        }`}
+      >
+        {hiring ? (
+          <div className="py-[3%] border-blueprint-blue mx-[20%] rounded-sm border-2 border-blueprint-blue">
+            <p className="px-[3%] text-blueprint-blue font-poppins font-medium">
+              View Details and Apply
+            </p>
+          </div>
+        ) : (
+          "Applications Closed"
+        )}
+      </ParagraphTitle>
     </div>
   );
 }
 
-function PositionsButton({ className, children }) {
+function PositionsButton({ className, onClick, children }) {
   return (
     <button
       className={`${className} border-gray-800 text-gray-800 flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+      onClick={onClick}
     >
       {children}
     </button>
-  );
-}
-
-function Heading({ children, className }) {
-  return (
-    <p className={`${className} font-anek text-4xl md:text-5xl font-semibold`}>
-      {children}
-    </p>
-  );
-}
-
-function Subheading({ children, className }) {
-  return (
-    <p
-      className={`${className} text-blue-500 font-poppins md:text-lg font-medium uppercase`}
-    >
-      {children}
-    </p>
-  );
-}
-
-function Body({ children, className }) {
-  return (
-    <p
-      className={`${className} max-md:text-sm text-gray-800 font-poppins tracking-tighter`}
-    >
-      {children}
-    </p>
   );
 }
 

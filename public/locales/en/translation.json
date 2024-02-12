@@ -1,5 +1,12 @@
 {
   "pages": ["home", "about-us", "projects", "students", "nonprofits"],
+  "blueprintPositions": [
+    "developer",
+    "product-designer",
+    "project-manager",
+    "tech-lead",
+    "operational"
+  ],
   "common": {
     "blueprint": "SFU Blueprint 2024",
     "terms": "Terms",
@@ -49,13 +56,7 @@
   },
   "connect": {
     "name": "Connect",
-    "links": [
-      "email",
-      "linkedin",
-      "medium",
-      "github",
-      "discord"
-    ]
+    "links": ["email", "linkedin", "medium", "github", "discord"]
   },
   "email": {
     "name": "Email",
@@ -72,8 +73,26 @@
   "github": {
     "name": "Github",
     "link": ""
-  },"discord": {
+  },
+  "discord": {
     "name": "Discord",
     "link": ""
+  },
+  "positions": {
+    "developer": {
+      "desc": ["hello", "<strong>helloagain</strong>"]
+    },
+    "product-desinger": {
+      "desc": []
+    },
+    "project-manager": {
+      "desc": []
+    },
+    "tech-lead": {
+      "desc": []
+    },
+    "operational": {
+      "desc": []
+    }
   }
 }
