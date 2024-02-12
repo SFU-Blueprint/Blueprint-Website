@@ -51,7 +51,7 @@ const AboutPage = () => {
       <div className="relative">
         <img
           className="h-46 w-full md:h-80 md:w-full"
-          src="/images/testImage.jpg"
+          src="/src/assets/images/testImage.jpg"
           alt="Your"
         />
         <div className="absolute bottom-5 md:my-10">

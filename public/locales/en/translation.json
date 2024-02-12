@@ -1,5 +1,5 @@
 {
-  "pages": ["home", "about-us", "projects", "students", "nonprofits"],
+  "pages": ["home", "about", "projects", "students", "nonprofits"],
   "common": {
     "blueprint": "SFU Blueprint 2024",
     "terms": "Terms",
@@ -10,9 +10,9 @@
     "name": "Home",
     "title": "Title Header"
   },
-  "about-us": {
+  "about": {
     "name": "About Us",
-    "anchors": ["Who we are", "Our values", "Our team"]
+    "anchors": ["Who-we-are", "Our-values", "Our-team"]
   },
   "projects": {
     "name": "Projects",
@@ -41,16 +41,17 @@
   },
   "students": {
     "name": "For Students",
-    "anchors": ["Who we are", "Our values", "Our team"]
+    "anchors": ["Who-we-are", "Our-values", "Our-team"]
   },
   "nonprofits": {
     "name": "For Nonprofits",
-    "anchors": ["Why choose us", "Our criteria", "Our process", "Proposal"]
+    "anchors": ["Why-choose-us", "Our-criteria", "Our-process", "Proposal"]
   },
   "connect": {
     "name": "Connect",
     "links": [
       "email",
+      "instagram",
       "linkedin",
       "medium",
       "github",
@@ -59,21 +60,25 @@
   },
   "email": {
     "name": "Email",
-    "link": ""
+    "link": "sfublueprint@gmail.com"
+  },
+  "instagram": {
+    "name": "Instagram",
+    "link": "https://www.instagram.com/sfublueprint/"
   },
   "linkedin": {
     "name": "LinkedIn",
-    "link": ""
+    "link": "https://www.linkedin.com/company/sfu-blueprint/mycompany/?viewAsMember=true"
   },
   "medium": {
-    "name": "Medium",
-    "link": ""
+    "name": "Medium"
   },
   "github": {
     "name": "Github",
-    "link": ""
-  },"discord": {
+    "link": "https://github.com/SFU-Blueprint"
+  },
+  "discord": {
     "name": "Discord",
-    "link": ""
+    "link": "https://discord.com/invite/WTBYv8HrHE"
   }
 }

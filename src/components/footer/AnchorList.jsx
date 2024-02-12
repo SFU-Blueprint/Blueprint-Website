@@ -8,18 +8,24 @@ import {useTranslation} from "react-i18next";
 const AnchorList = (props) => {
     const {t} = useTranslation()
 
-    const navigateToAnchorPoint = (anchor) => {
-        console.log("Navigate to: ",anchor);
-    }
+    const navigateToAnchor = (page, section) => {
+        // Construct the URL with the page path and the anchor point
+        const url = `/${page}#${section}`;
+        // Navigate to the constructed URL
+        window.location.href = url;
+    };
+
+    const replaceDashesWithSpaces = (str) => str.replace(/-/g, ' ');
 
     return (
         <div className="flex flex-col gap-2">
             <div className="text-xl mb-6 font-semibold">{t(`${props.page}.name`)}</div>
             {t(`${props.page}.anchors`).map((anchor)=>
                 <div
-                    className="text-sm"
-                    onClick={navigateToAnchorPoint(anchor)}
-                >{anchor}</div>
+                    className="text-sm text-hover w-fit"
+                    key={anchor}
+                    onClick={(e) => navigateToAnchor(props.page,anchor)}
+                >{replaceDashesWithSpaces(anchor)}</div>
             )}
         </div>
     )

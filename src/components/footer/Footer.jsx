@@ -22,7 +22,7 @@ const Footer = () => {
                     <div className="text-xl mb-6 font-semibold">{t('connect.name')}</div>
                     <div className="icons-container">
                         {
-                            t('connect.links').map((id)=><IconButton id={id}></IconButton>)
+                            t('connect.links').map((id)=><IconButton id={id} key={id}></IconButton>)
                         }
                     </div>
                 </div>
@@ -32,9 +32,9 @@ const Footer = () => {
                 <Logo colour="white"></Logo>
                 <div>{t('common.blueprint')}</div>
                 <div className="flex gap-4">
-                    <div>{t('common.terms')}</div>
-                    <div>{t('common.privacy')}</div>
-                    <div>{t('common.cookies')}</div>
+                    <div className="text-hover">{t('common.terms')}</div>
+                    <div className="text-hover">{t('common.privacy')}</div>
+                    <div className="text-hover">{t('common.cookies')}</div>
                 </div>
             </div>
         </footer>
