@@ -23,15 +23,28 @@ const HomePage = () => {
   };
 
   return (
-
     <div className="flex flex-col px-3 md:px-[15%] pt-10 gap-4">
-      <Landing className="mb-4">
-        {t('home.title')}
-      </Landing>
+      <div className="mb-[100px]">
+        <Landing className="!font-semibold md:w-[600px]">
+          {t("home.header.title")}
+        </Landing>
+        <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
+          {t("home.header.text")}
+        </ParagraphText>
+        <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
+          {t("home.header.button")}
+        </button>
+      </div>
+      <div>
+        <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
+        <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
+          {t("home.aboutUs.text")}
+        </ParagraphText>
+        <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
+          {t("home.aboutUs.button")}
+        </button>
+      </div>
 
-      <SectionHeader>
-        {t('sectionHeader.title')}
-      </SectionHeader>
       <div className="flex justify-center items-center px-16 py-12 mt-16 w-full bg-zinc-100 max-md:px-5 max-md:mt-10 max-md:max-w-full">
         <div className="mt-1.5 mb-9 w-full max-w-[999px] max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
@@ -45,7 +58,8 @@ const HomePage = () => {
                 </div>
                 <div className="mt-7 tracking-wide">
                   Contribute to building technology for social good. Make new
-                  friends and harness your professional skillsets along the away!
+                  friends and harness your professional skillsets along the
+                  away!
                 </div>
                 <div className="flex gap-2 justify-between px-16 py-5 mt-7 font-bold text-sky-600 rounded border-2 border-sky-600 border-solid max-md:px-5">
                   <div className="flex-auto">Join Us</div>
@@ -63,8 +77,9 @@ const HomePage = () => {
                   NON-PROFITS
                 </div>
                 <div className="mt-7 tracking-wide text-gray-800">
-                  Collaborate with us to advance your mission for public welfare.
-                  Tackle your challenges with fresh and innovative solutions!
+                  Collaborate with us to advance your mission for public
+                  welfare. Tackle your challenges with fresh and innovative
+                  solutions!
                 </div>
                 <div className="flex gap-2 justify-between px-7 py-5 mt-8 font-bold rounded border-2 border-sky-600 border-solid max-md:px-5">
                   <div className="flex-auto">Collaborate with Us</div>

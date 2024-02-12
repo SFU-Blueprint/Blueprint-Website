@@ -1,5 +1,6 @@
 {
   "home": {
+<<<<<<< HEAD
     "title": "Tech for Social Good",
     "projects-section-title": "Our Projects",
     "ongoing": "Ongoing",
@@ -9,13 +10,24 @@
       "description": "Aiding New Comers to Canada",
       "tags": ["Immigration", "AI/Product"],
       "image": "placeholder.png"
+=======
+    "header": {
+      "title": "Tech for Social Good",
+      "text": "We are a team of students committed to developing software pro bono for nonprofits and promoting public welfare.",
+      "button": "Work with us"
+    },
+    "aboutUs": {
+      "title": "About Us",
+      "text": "We are a team of students based at Simon Fraser University. Our members serve as product managers, developers, designers and other specialists to collaboratively build tech-based solutions for nonprofit organizations. We value community, innovation, and the social impact of our work.",
+      "button": "Meet the Team"
+>>>>>>> 0924499d0aa7b750c863a63f4b629d0d89b0f14f
     }
   },
   "projects": {
     "title": "Our Projects",
     "ongoing": "Ongoing",
     "moreComingSoon": "More Coming Soon!",
-    "smartAssistant" : {
+    "smartAssistant": {
       "name": "Smart Assistant",
       "description": "Aiding New Comers to Canada",
       "tags": ["Immigration", "AI/Product"],
