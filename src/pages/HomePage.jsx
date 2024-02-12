@@ -1,6 +1,6 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
-import { ParagraphTitle, ButtonText, Landing, Annotation, PageHeader, SectionHeader, ParagraphText } from "../components/Common";
+import { ParagraphTitle, Landing, PageHeader, SectionHeader, ParagraphText } from "../components/Common";
 import ProjectCard from "../components/projects-page/ProjectCard";
 
 const HomePage = () => {
@@ -85,9 +85,9 @@ const HomePage = () => {
         <PageHeader className="my-5">Our Projects</PageHeader>
         <SectionHeader>Ongoing</SectionHeader>
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-        {Object.keys(projects).map((projectKey, index) => (
-            <div key={index} className="">
-              <ProjectCard project={projects[projectKey]} className="your-class-name" />
+        {projects.map((projectKey, index) => (
+            <div key={index}>
+              <ProjectCard project={projectKey}/>
             </div>
         ))}
         </div>
