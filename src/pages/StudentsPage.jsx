@@ -37,7 +37,7 @@ const StudentsPage = () => {
   const phasesDesc = [
     "Applying for a Position",
     "Working on a Project",
-    "Mingling with Bleuprinters",
+    "Mingling with Blueprinters",
     "Exams and Semesters End",
   ];
   const phases = ["Begin", "Contribute", "Socialize", "Scheduling"];
