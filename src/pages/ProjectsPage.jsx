@@ -1,26 +1,12 @@
 import React from "react";
+import ProjectCard from "../components/projects-page/ProjectCard";
+import {PageHeader, SectionHeader, ParagraphTitle, ParagraphText} from "../components/Common";
+import {useTranslation} from "react-i18next";
 
 const ProjectsPage = () => {
-  const content = (title) => ({
-    title: title,
-    ...{
-      "Smart Assistant": {
-        tags: ["Immigration", "AI/Product"],
-        description: "Aiding New Comers to Canada",
-        image: "placeholder.png",
-      },
-      "AI for Health": {
-        tags: ["Health", "AI"],
-        description: "Physio Therapy Outside the Clinic",
-        image: "placeholder.png",
-      },
-      "Data Tracking": {
-        tags: ["Sustainability", "Data"],
-        description: "Volunteer Hour Tracking Platform",
-        image: "placeholder.png",
-      },
-    }[title],
-  });
+  const {t, i18n} = useTranslation()
+  // Assuming this is your projects object
+  const projects = ["smartAssistant", "aiForHealth", "dataTracking"];//TODO Put key in a separate file
   const backgroundStyle = {
     position: "absolute",
     zIndex: -1,
@@ -37,70 +23,26 @@ const ProjectsPage = () => {
     <div>
       <div style={backgroundStyle}></div>
       <div className="flex flex-col px-3 md:px-[15%] pt-10 gap-4">
-        <Heading className="my-5">Our Projects</Heading>
-        <Subheading>Ongoing</Subheading>
+        <PageHeader className="my-5">Our Projects</PageHeader>
+        <SectionHeader>Ongoing</SectionHeader>
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-          {["Smart Assistant", "AI for Health", "Data Tracking"].map(
-            (project, index) => (
-              <div key={index} className="">
-                <ProjectCard>{content(project)}</ProjectCard>
-              </div>
-            )
-          )}
+        {Object.keys(projects).map((projectKey, index) => (
+            <div key={index} className="">
+              <ProjectCard project={projects[projectKey]} className="your-class-name" />
+            </div>
+        ))}
         </div>
-        <Body className="my-[10%] md:my-[8%] text-center !text-xl">
+        <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">
           More coming soon!
-        </Body>
+        </ParagraphText>
+
+        
       </div>
     </div>
   );
 };
 
-function ProjectCard({ children, className }) {
-  const { title, tags, description, image } = children;
-  return (
-    <div className={`${className} shadow-md w-70 min-h-full bg-white`}>
-      <img src={image} className="w-full" alt={title} />
-      <div className="px-[5%] pb-3">
-        <div className="flex flex-row place-items-center -translate-y-1/2">
-          {tags.map((tag, index) => (
-            <Body
-              key={index}
-              className="bg-blue-500 text-white mr-[2%] px-[6%] rounded-md shadow-md text-[0.9rem]"
-            >
-              {tag}
-            </Body>
-          ))}
-        </div>
-        <Subheading className="text-[1.25rem]">{title} → </Subheading>
-        <Body className="text-[1rem] w-4/5">{description}</Body>
-      </div>
-    </div>
-  );
-}
 
-function Heading({ children, className }) {
-  return (
-    <p className={`${className} font-anek text-4xl md:text-5xl font-semibold`}>
-      {children}
-    </p>
-  );
-}
 
-function Subheading({ children, className }) {
-  return (
-    <p
-      className={`${className} font-poppins text-xl md:text-2xl font-medium uppercase`}
-    >
-      {children}
-    </p>
-  );
-}
-
-function Body({ children, className }) {
-  return (
-    <p className={`${className} max-md:text-sm font-poppins`}>{children}</p>
-  );
-}
 
 export default ProjectsPage;
