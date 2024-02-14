@@ -1,23 +1,28 @@
 import React from "react";
 import ProjectCard from "../components/projects-page/ProjectCard";
-import {PageHeader, SectionHeader, ParagraphTitle, ParagraphText} from "../components/Common";
-import {useTranslation} from "react-i18next";
+import {
+  PageHeader,
+  SectionHeader,
+  ParagraphTitle,
+  ParagraphText,
+} from "../components/Common";
+import { useTranslation } from "react-i18next";
 
 const ProjectsPage = () => {
-  const {t, i18n} = useTranslation()
+  const { t, i18n } = useTranslation();
   // Assuming this is your projects object
-  const projects = ["smartAssistant", "aiForHealth", "dataTracking"];//TODO Put key in a separate file
+  const projects = ["smartAssistant", "aiForHealth", "dataTracking"]; //TODO Put key in a separate file
   const backgroundStyle = {
     position: "absolute",
     zIndex: -1,
     width: "100%",
-    height: "100%",
+    height: "50vmax",
     backgroundImage: 'url("grid.png")',
-    filter: "brightness(95%)",
+    filter: "brightness(210%)",
     backgroundSize: "3vmin",
     backgroundRepeat: "repeat repeat",
     maskImage:
-      "radial-gradient(ellipse at right 30% top 50%, black 1%, transparent 50%)",
+      "radial-gradient(ellipse at right 15% top 50%, black 1%, transparent 70%)",
   };
   return (
     <div>
@@ -26,11 +31,14 @@ const ProjectsPage = () => {
         <PageHeader className="my-5">Our Projects</PageHeader>
         <SectionHeader>Ongoing</SectionHeader>
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-        {Object.keys(projects).map((projectKey, index) => (
+          {Object.keys(projects).map((projectKey, index) => (
             <div key={index} className="">
-              <ProjectCard project={projects[projectKey]} className="your-class-name" />
+              <ProjectCard
+                project={projects[projectKey]}
+                className="your-class-name"
+              />
             </div>
-        ))}
+          ))}
         </div>
         <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">
           More coming soon!
@@ -39,8 +47,5 @@ const ProjectsPage = () => {
     </div>
   );
 };
-
-
-
 
 export default ProjectsPage;
