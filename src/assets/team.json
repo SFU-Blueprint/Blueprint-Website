@@ -1,0 +1,34 @@
+{
+    "execs": [
+        {
+        "name": "Jhon doe",
+        "role": "Test exec",
+        "headshotUrl": "images/jane_doe.jpg"
+        }
+    ],
+
+    "devs": [
+        {
+        "name": "Jane doe",
+        "role": "Test dev",
+        "headshotUrl": "images/jane_doe.jpg"
+        }
+    ],
+
+    "project leads": [
+        {
+        "name": "Jhon doe",
+        "role": "Test project lead",
+        "headshotUrl": "images/jane_doe.jpg"
+        }
+    ],
+
+    "designers": [
+        {
+        "name": "Jane doe",
+        "role": "Test designer",
+        "headshotUrl": "images/jane_doe.jpg"
+        }
+    ]
+
+}
