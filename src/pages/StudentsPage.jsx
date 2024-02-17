@@ -184,10 +184,10 @@ const StudentsPage = () => {
       <SectionHeader className="mt-[36px] ml-[6%]">Why Join us?</SectionHeader>
 
       <div className=" mt-[12px]">
-        <ParagraphText className="ml-[12%]">
+        <ParagraphText className="ml-[6%]">
           Blueprint is the right place for you if you are:
         </ParagraphText>
-        <ParagraphText className="list-disc mt-[12px] ml-[21%] pr-[20%]">
+        <ParagraphText className="list-disc mt-[12px] ml-[10%] pr-[20%]">
           <li>
             {" "}
             <span className="font-semibold">a post secondary-student</span>{" "}
@@ -203,7 +203,7 @@ const StudentsPage = () => {
             </span>
           </li>
         </ParagraphText>
-        <ParagraphText className="mt-[12px] ml-[12%] pr-[20%]">
+        <ParagraphText className="mt-[12px] ml-[6%] pr-[20%]">
           Besides real-world experience, we also provide you with support on
           personal growth and opportunities to meet like-minded new friends!
         </ParagraphText>
@@ -241,7 +241,7 @@ const StudentsPage = () => {
           {phases.map((phase, index) => (
             <div key={index}>
               <button
-                className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-md shadow-xl text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
+                className={`flex flex-col justify-center items-start w-full h-[100px] gap-2 px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
                   index === activePhase && "bg-blueprint-blue"
                 }`}
                 onClick={() => setActivePhase(index)}
@@ -298,7 +298,7 @@ const StudentsPage = () => {
 
 const PositionCard = (props) => {
   return (
-    <div className="shadow-lg">
+    <div className="shadow-md">
       <div className="py-[10%] px-[5%]">
         <ParagraphTitle className="text-blue-500font-medium font-poppins text-2xl font-medium uppercase">
           {props.title}
