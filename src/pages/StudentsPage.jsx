@@ -340,7 +340,7 @@ function RolesCard({ children, className }) {
         {title}
       </ParagraphTitle>
       <div className="text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal mx-[10%] mb-[10%] flex justify-between">
-        <ParagraphText className="w-3/5">{desc}</ParagraphText>
+        <ParagraphText className="w-4/5 md:w-3/5">{desc}</ParagraphText>
         <ParagraphTitle
           className={`block max-md:hidden text-center ${
             hiring
