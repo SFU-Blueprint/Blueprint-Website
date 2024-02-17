@@ -333,7 +333,7 @@ function RolesCard({ children, className }) {
   const { title, desc, hiring } = children;
   return (
     <div
-      className={`${className} flex flex-col w-full gap-1 border-black shadow-lg mt-[5%]`}
+      className={`${className} flex flex-col w-full gap-1 border-black shadow-lg`}
     >
       <ParagraphTitle className="mx-[8%] mt-[8%] mb-[3%]">
         {" "}
