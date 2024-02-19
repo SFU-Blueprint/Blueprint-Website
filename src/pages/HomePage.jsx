@@ -8,7 +8,7 @@ import {
   ParagraphText,
 } from "../components/Common";
 import ProjectCard from "../components/projects-page/ProjectCard";
-import { Event1, Event2 } from "../constants/Event";
+import { Event1, Event2, Event3 } from "../constants/Event";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -161,7 +161,7 @@ const HomePage = () => {
           <div className="relative block group">
             <img
               class="absolute inset-0 object-cover group-hover:opacity-50"
-              src={"./events/tech.jpg"}
+              src={Event3.img}
               // style={{ "min-width": "12rem" }}
               alt=""
             />
@@ -175,9 +175,7 @@ const HomePage = () => {
                                 group-hover:translate-y-0"
                 >
                   <div class="p-1">
-                    <p class="text-sm text-start text-black">
-                      November 23rd 2023
-                    </p>
+                    <p class="text-sm text-start text-black">{Event3.date}</p>
                   </div>
                 </div>
                 {/* End of hidden content */}

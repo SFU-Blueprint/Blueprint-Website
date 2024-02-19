@@ -39,3 +39,9 @@ export const Event2 = [
     date: "September 17th 2023",
   },
 ];
+
+export const Event3 = {
+  title: "Tech",
+  img: "/events/tech.jpg",
+  date: "November 23rd 2023",
+};
