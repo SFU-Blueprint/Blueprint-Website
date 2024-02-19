@@ -1,7 +1,7 @@
 export const Event1 = [
   {
     title: "Halloween",
-    img: "/events/halloween.jpeg",
+    img: "/events/halloween.JPEG",
     date: "October 29th 2023",
   },
   {
@@ -24,7 +24,7 @@ export const Event1 = [
 export const Event2 = [
   {
     title: "Halloween",
-    img: "/events/halloween.jpeg",
+    img: "/events/halloween.JPEG",
     date: "October 29th 2023",
   },
   {
