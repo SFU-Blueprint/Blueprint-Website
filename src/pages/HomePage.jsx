@@ -118,7 +118,7 @@ const HomePage = () => {
           {Event1.map((items, key) => (
             <div className="relative block group" key={key}>
               <img
-                class="absolute h-52 inset-0 object-cover group-hover:opacity-50"
+                class="absolute h-48 inset-0 object-cover group-hover:opacity-50"
                 src={items.img}
                 // style={{ "min-width": "12rem" }}
                 alt=""
@@ -132,8 +132,8 @@ const HomePage = () => {
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0"
                   >
-                    <div class="p-1">
-                      <p class="text-sm text-start text-black">{items.date}</p>
+                    <div class="pr-20">
+                      <p class="text-sm text-start text-black ">{items.date}</p>
                     </div>
                   </div>
                   {/* End of hidden content */}
