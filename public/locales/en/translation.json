@@ -38,7 +38,7 @@
     "smartAssistant": {
       "name": "Smart Assistant",
       "description": "Aiding New Comers to Canada",
-      "tags": ["Immigration", "AI / Product"],
+      "tags": ["Immigration", "AI"],
       "image": "placeholder.png"
     },
     "aiForHealth": {
