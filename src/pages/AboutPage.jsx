@@ -71,11 +71,13 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div></div>
+      <div>
       <SectionHeader className="mt-[4%] leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36">
         Building innovative, tech-based solutions for communities and public
         welfare is the mission that brings us together.{" "}
       </SectionHeader>
+      </div>
+
       {/* Description */}
       <div className="md:mt-[4%] md:flex md:flex-row">
         {/* Desc 1 */}
@@ -163,7 +165,7 @@ const AboutPage = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
             {Alumni.map((items, key) => (
               <div
-                class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between"
+                className="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between"
                 key={key}
               >
                 <div className="ml-5 mt-3 mr-5">

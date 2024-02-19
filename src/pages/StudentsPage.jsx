@@ -1,171 +1,29 @@
-import React, { useState, useRef } from "react";
+import React, {useState} from "react";
 // import Footer from "../components/Footer";
 // import { PROJECT_KEYS } from "../constants/projects";
-import { useTranslation, Trans } from "react-i18next";
+import {useTranslation} from "react-i18next";
 
-import {
-  PageHeader,
-  ParagraphText,
-  ParagraphTitle,
-  SectionHeader,
-} from "../components/Common";
+import {PageHeader, ParagraphText, ParagraphTitle, SectionHeader,} from "../components/Common";
+import {t} from "i18next";
+
 const StudentsPage = () => {
-  // const phases = [
-  //   "Application Open",
-  //   "Info Session",
-  //   "Applications Due",
-  //   "Interviews",
-  // ];
-  const openPositions = [
-    {
-      title: "Project Manager (3)",
-      tags: ["Immigration", "AI/Product"],
-      description:
-        "The Project Manager will be responsible for overseeing the successful completion of projects with our NPO partner.",
-      deadline: "Jan 10th, 2024",
-    },
-    {
-      title: "Product Designer (3)",
-      tags: ["Health", "Machine Learning"],
-      description:
-        "Product Designers are responsible for delivering high-quality UI/UX work for the non-profit projects we build.",
-      deadline: "Jan 10th, 2024",
-    },
-  ];
+  const [t] = useTranslation();
+  const phases = t("students.phases");
+  const openPositions = t("students.openPositions");
 
   const [activePhase, setActivePhase] = useState(0);
-  const phasesDesc = [
-    "Applying for a Position",
-    "Working on a Project",
-    "Mingling with Blueprinters",
-    "Exams and Semesters End",
-  ];
-  const phases = ["Begin", "Contribute", "Socialize", "Scheduling"];
-  const content = (title) => ({
-    title: title,
-    text: {
-      "Applying for a Position":
-        "Application forms for new  members are posted at the start of each semester. Resume review and interview usually take 1-2 weeks. One can apply for multiple roles and choose a preferred role if they are qualified for more than one role. Project members from the previous semester do not need to apply if they are staying at the same team.",
-      "Working on a Project":
-        "Project members meet weekly to collaborate and discuss as a team. Product manager and tech lead make key decisions that move the team forward, while project manager keeps team members on the same page and ensure action items for design and development are completed in time.",
-      "Mingling with Blueprinters":
-        "There will be one to two club-wise activities each semester for members to meet, have fun, and make new friends. We also encourage project teams to get together outside of project. ",
-      "Exams and Semesters End":
-        "Workload  will be adjusted during exam periods for members to prioritize their academic studying. At the end of the semester, project members will inform the leads whether they will continue on the project for the next semester. If a project is completed, we will set up celebration and showcase within our community. Members from the project can apply for roles in new projects afterwards. ",
-    }[title],
-  });
-  const rolesContet = (title) => ({
-    title: {
-      "Applying for a Position":
-        "Application forms for new  members are posted at the start of each semester. Resume review and interview usually take 1-2 weeks. One can apply for multiple roles and choose a preferred role if they are qualified for more than one role. Project members from the previous semester do not need to apply if they are staying at the same team.",
-      "Working on a Project":
-        "Project members meet weekly to collaborate and discuss as a team. Product manager and tech lead make key decisions that move the team forward, while project manager keeps team members on the same page and ensure action items for design and development are completed in time.",
-      "Mingling with Bleuprinters":
-        "There will be one to two club-wise activities each semester for members to meet, have fun, and make new friends. We also encourage project teams to get together outside of project. ",
-      "Exams and Semesters End":
-        "Workload  will be adjusted during exam periods for members to prioritize their academic studying. At the end of the semester, project members will inform the leads whether they will continue on the project for the next semester. If a project is completed, we will set up celebration and showcase within our community. Members from the project can apply for roles in new projects afterwards. ",
-    },
-  });
-  const rolesContent = [
-    {
-      title: "Developer",
-      desc: (
-        <ul className="list-disc">
-          <li>
-            Project Developers are responsible for the development of the
-            project, bringing designs and product specifications to life.
-          </li>
-          <li>
-            Depending on the scope of the project, each team can have 5-8
-            developers.
-          </li>
-          <li>
-            They work closely with the project lead, the product manager, and
-            designers to deliver top quality code!{" "}
-          </li>
-        </ul>
-      ),
-      hiring: false,
-    },
-    {
-      title: "Product Designer",
-      desc: (
-        <ul className="list-disc">
-          <li>
-            Product Designers are responsible for delivering high-quality UI/UX
-            work for the non-profit projects we build
-          </li>
-          <li>There are 2-3 designers in each team.</li>
-          <li>
-            They work closely with various stakeholders including the product
-            manager, the developers on their team, and other designers.
-          </li>
-        </ul>
-      ),
-      hiring: false,
-    },
-    {
-      title: "Project Manager",
-      desc: (
-        <ul class="list-disc">
-          <li>
-            The Project Manager of the team will be responsible for overseeing
-            the successful completion of projects with our NPO partner.
-          </li>
-          <li>
-            This includes coordinating project activities, managing timelines
-            and resources, and ensuring that project goals align with the needs
-            of the NPO.
-          </li>
-        </ul>
-      ),
-      hiring: true,
-    },
-    {
-      title: "Tech Lead / Specialist",
-      desc: (
-        <ul className="list-disc">
-          <li>
-            The Tech Lead for the team is responsible for leading the team and
-            driving the technical direction of the project.
-          </li>
-          <li>
-            They provide support and mentorship to developers on the team and
-            work with the product manager to run the team effectively
-          </li>
-        </ul>
-      ),
-      hiring: false,
-    },
-    {
-      title: "Operational",
-      desc: (
-        <ul className="list-disc">
-          <li>
-            Operational roles such as executives and content specialist are
-            responsible for sustaining Blueprint as a community.
-          </li>
-          <li>
-            They work to recruit new members, plan activities for members,
-            expand outreach to sponsors and NPOs, and provide extra support to
-            projects teams.
-          </li>
-        </ul>
-      ),
-      hiring: false,
-    },
-  ];
+  const phasesDesc = t("students.phasesDesc");
+  const content = t("content");
+  const roles = t("roles");
+  const rolesContent = t("rolesContent");
 
-  const { t } = useTranslation();
-
-  const positionsRef = useRef(null);
-  // Scroll to a specific section
   const navigateToAnchor = (page, section) => {
-    console.log("sfgdfgfgddfg");
     // Construct the URL with the page path and the anchor point
-    const url = `/${page}#${section}`;
-    window.location.href = url;
+    window.location.href = `/${page}#${section}`;
   };
+  function ToDiscord() {
+    window.open(t("discord.link"), "_blank");
+  }
 
   return (
     <div className="flex flex-col">
@@ -220,10 +78,10 @@ const StudentsPage = () => {
           {openPositions.map((position, index) => (
             <PositionCard
               key={index}
-              title={position.title}
-              tags={position.tags}
-              description={position.description}
-              deadline={position.deadline}
+              title={t(position + ".title")}
+              tags={t(position + ".tags")}
+              description={t(position + ".description")}
+              deadline={t(position + ".deadline")}
             />
           ))}
         </div>
@@ -232,6 +90,7 @@ const StudentsPage = () => {
         Join our Discord or follow us on Instagram to get the latest updates on
         hiring and opportunity posting.
       </ParagraphText>
+
       <SectionHeader className="my-[36px] ml-[6%]">
         A Typical Semester
       </SectionHeader>
@@ -266,29 +125,30 @@ const StudentsPage = () => {
                   index !== activePhase && "hidden"
                 } md:hidden w-full py-8`}
               >
-                {content(phasesDesc[activePhase])}
+                {content[phasesDesc[activePhase]]}
               </ContentCard>
             </div>
           ))}
         </div>
         <ContentCard className="max-md:hidden pt-32">
-          {content(phasesDesc[activePhase])}
+            {content[phasesDesc[activePhase]]}
         </ContentCard>
       </div>
       <SectionHeader className="mt-[10%] mb-[2%] ml-[6%]">Roles</SectionHeader>
-      {rolesContent.map((pos, index) => (
-        <div className="px-[3%] md:px-[5%]" key={index}>
-          <RolesCard children={pos}></RolesCard>
+      {roles.map((role) => (
+        <div className="px-[3%] md:px-[5%]">
+          <RolesCard children={rolesContent[role]} />
         </div>
       ))}
       <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%]  flex flex-col items-center justify-center px-[15%] ">
         <PageHeader>Stay in Touch</PageHeader>
-        <ParagraphText className=" mb-[12px] text-center mt-[3%]">
-          Are you a student interested in Blueprint, and would like to stay up
-          to date with announcements, position openings, or just interact with
-          our community?
+        <ParagraphText className="text-center whitespace-pre-line mb-3 md:mb-6">
+            {t('students.stayInTouch')}
         </ParagraphText>
-        <PositionsButton className="!border-blueprint-blue !text-blueprint-blue font-semibold rounded-sm mt-[4%]">
+        <PositionsButton
+            className="!border-blueprint-blue !text-blueprint-blue font-semibold rounded-sm mt-[4%]"
+            onClick={ToDiscord}
+        >
           Join the Discord
         </PositionsButton>
       </div>
@@ -309,15 +169,19 @@ const PositionCard = (props) => {
         <ParagraphText className="font-semibold mb-[7%] ">
           Application Deadline: {props.deadline}
         </ParagraphText>
-        <div className="py-[3%] border-blueprint-blue w-3/5 rounded-sm border-2 border-blueprint-blue flex justify-center items-center">
-          <p className="px-[3%] text-blueprint-blue font-poppins font-medium">
+        <div className="py-[3%] border-blueprint-blue w-3/5 rounded-sm border-2 flex justify-center items-center">
+          <button className="px-[3%] text-blueprint-blue font-poppins font-medium">
             View Details and Apply
-          </p>
+          </button>
         </div>
       </div>
     </div>
   );
 };
+
+function ToDiscord() {
+    window.open(t("discord.link"), "_blank");
+}
 
 function ContentCard({ children, className }) {
   const { title, text } = children;
@@ -340,7 +204,7 @@ function RolesCard({ children, className }) {
         {title}
       </ParagraphTitle>
       <div className="text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal mx-[10%] mb-[10%] flex justify-between">
-        <ParagraphText className="w-4/5 md:w-3/5">{desc}</ParagraphText>
+        <ParagraphText className="w-4/5 md:w-3/5">{arrayToUnorderedList(desc)}</ParagraphText>
         <ParagraphTitle
           className={`block max-md:hidden text-center ${
             hiring
@@ -349,10 +213,10 @@ function RolesCard({ children, className }) {
           }`}
         >
           {hiring ? (
-            <div className="py-[3%] px-[10%] ml-[25%] border-blueprint-blue rounded-sm border-2 border-blueprint-blue flex justify-center items-center">
-              <p className=" text-blueprint-blue font-poppins font-medium">
+            <div className="py-[3%] px-[10%] ml-[25%] border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
+              <button className=" text-blueprint-blue font-poppins font-medium">
                 View Details and Apply
-              </p>
+              </button>
             </div>
           ) : (
             "Applications Closed"
@@ -367,16 +231,26 @@ function RolesCard({ children, className }) {
         }`}
       >
         {hiring ? (
-          <div className="py-[3%] border-blueprint-blue mx-[20%] rounded-sm border-2 border-blueprint-blue">
-            <p className="px-[3%] text-blueprint-blue font-poppins font-medium">
+          <div className="py-[3%] border-blueprint-blue mx-[20%] rounded-sm border-2">
+            <button className="px-[3%] text-blueprint-blue font-poppins font-medium">
               View Details and Apply
-            </p>
+            </button>
           </div>
         ) : (
           "Applications Closed"
         )}
       </ParagraphTitle>
     </div>
+  );
+}
+
+function arrayToUnorderedList(array) {
+  return (
+    <ul className="list-disc">
+      {array.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
   );
 }
 
