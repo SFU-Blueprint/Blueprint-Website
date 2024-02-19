@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142690d7-e5fc-410a-a469-c068126c711b" name="Changes" comment="Add students page content to json and make npo page ready for a image">
+    <list default="true" id="142690d7-e5fc-410a-a469-c068126c711b" name="Changes" comment="Separate phase content into paragraphs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/locales/en/translation.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/locales/en/translation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/NonprofitsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NonprofitsPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/StudentsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/StudentsPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="b439b32ff85d59430c0d15d17b35aa003f6fb1bf" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubDefaultAccount">
@@ -79,8 +82,17 @@
       <workItem from="1707349528917" duration="3056000" />
       <workItem from="1707679050398" duration="4214000" />
       <workItem from="1707684822210" duration="7454000" />
-      <workItem from="1708314024160" duration="14510000" />
+      <workItem from="1708314024160" duration="17070000" />
     </task>
+    <task id="LOCAL-00001" summary="Add students page content to json and make npo page ready for an image">
+      <option name="closed" value="true" />
+      <created>1708330952377</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708330952377</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,7 +109,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/newStaging" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -111,6 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add students page content to json and make npo page ready for a image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add students page content to json and make npo page ready for a image" />
+    <MESSAGE value="Add students page content to json and make npo page ready for an image" />
+    <MESSAGE value="Separate phase content into paragraphs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate phase content into paragraphs" />
   </component>
 </project>

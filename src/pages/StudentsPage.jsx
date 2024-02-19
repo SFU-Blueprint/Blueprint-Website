@@ -4,10 +4,9 @@ import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
 
 import {PageHeader, ParagraphText, ParagraphTitle, SectionHeader,} from "../components/Common";
-import {t} from "i18next";
 
 const StudentsPage = () => {
-  const [t] = useTranslation();
+    const {t} = useTranslation();
   const phases = t("students.phases");
   const openPositions = t("students.openPositions");
 
@@ -43,27 +42,13 @@ const StudentsPage = () => {
 
       <div className=" mt-[12px]">
         <ParagraphText className="ml-[6%]">
-          Blueprint is the right place for you if you are:
+            {t("students.whyJoinUs1")}
         </ParagraphText>
         <ParagraphText className="list-disc mt-[12px] ml-[10%] pr-[20%]">
-          <li>
-            {" "}
-            <span className="font-semibold">a post secondary-student</span>{" "}
-            based in the greater Vancouver area
-          </li>
-          <li>
-            {" "}
-            interested in helping nonprofit organizations with your{" "}
-            <span className="font-semibold">passion for social good</span> and
-            expertise in{" "}
-            <span className="font-semibold">
-              technology, design, and project management
-            </span>
-          </li>
+            { arrayToUnorderedList(t("students.whyJoinUs2"))}
         </ParagraphText>
         <ParagraphText className="mt-[12px] ml-[6%] pr-[20%]">
-          Besides real-world experience, we also provide you with support on
-          personal growth and opportunities to meet like-minded new friends!
+            {t("students.whyJoinUs3")}
         </ParagraphText>
       </div>
 
@@ -130,7 +115,7 @@ const StudentsPage = () => {
             </div>
           ))}
         </div>
-        <ContentCard className="max-md:hidden pt-32">
+        <ContentCard className="max-md:hidden pt-32 whitespace-pre-line">
             {content[phasesDesc[activePhase]]}
         </ContentCard>
       </div>
@@ -178,10 +163,6 @@ const PositionCard = (props) => {
     </div>
   );
 };
-
-function ToDiscord() {
-    window.open(t("discord.link"), "_blank");
-}
 
 function ContentCard({ children, className }) {
   const { title, text } = children;
@@ -247,8 +228,8 @@ function RolesCard({ children, className }) {
 function arrayToUnorderedList(array) {
   return (
     <ul className="list-disc">
-      {array.map((item, index) => (
-        <li key={index}>{item}</li>
+      {array.map((str, index) => (
+        <li key={index} dangerouslySetInnerHTML={{ __html: str}}/>
       ))}
     </ul>
   );
