@@ -20,7 +20,6 @@ import {
 
 import AlumniGrid from "../components/about-page/AlumniGrid";
 import ScrollToHashElement from "../components/Shared/ScrollToHash";
-import { headshots } from "../index.js";
 
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
