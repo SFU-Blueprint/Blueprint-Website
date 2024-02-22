@@ -20,6 +20,7 @@ import {
 
 import AlumniGrid from "../components/about-page/AlumniGrid";
 import ScrollToHashElement from "../components/Shared/ScrollToHash";
+import { headshots } from "../index.js";
 
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
@@ -157,38 +158,16 @@ const AboutPage = () => {
         <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
         <CardGrid cardList={Developers} gridName="DEVELOPERS"></CardGrid>
       </div>
+
       {/*Alumni Section*/}
-      <div>
-        <SectionHeader className="flex justify-center mt-[8%]">
-          Alumni
-        </SectionHeader>
-        <div className="md:ml-[5%]">
-          <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
+      <div className="mt-[8%] mx-10 md:mx-16 xl:mx-36">
+        <SectionHeader className="flex justify-center ">Alumni</SectionHeader>
+        <div className="">
+          {/* <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
             2023
-          </ParagraphTitle>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
-            {Alumni.map((items, key) => (
-              <div
-                class="border-1 md:m-4 shadow-xl w-[191px] h-[112px] flex flex-col justify-between"
-                key={key}
-              >
-                <div className="ml-5 mt-3 mr-5">
-                  <ParagraphText className="flex flex-wrap flex-row font-bold">
-                    {items.title}
-                  </ParagraphText>
-                  <ParagraphText className="font-poppins text-blueprint-gray-dark">
-                    {items.position}
-                  </ParagraphText>
-                </div>
-                <ParagraphText className="!text-blueprint-blue underline flex flex-row ml-5 mb-3 mr-5">
-                  <a>LinkedIn </a>
-                  <img className="ml-[5%]" src="/svgs/share.svg" alt="" />
-                </ParagraphText>
-              </div>
-            ))}
-          </div>
+          </ParagraphTitle> */}
+          <CardGrid cardList={Alumni} gridName="2023"></CardGrid>
         </div>
-        {/*End of Alumni Section*/}
       </div>
       {/*End of Alumni Section*/}
     </div>
