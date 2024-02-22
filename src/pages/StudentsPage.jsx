@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import {useTranslation} from "react-i18next";
 
 import {PageHeader, ParagraphText, ParagraphTitle, SectionHeader,} from "../components/Common";
+import Header from "../assets/images/studentPage_header.png";
 
 const StudentsPage = () => {
   const {t} = useTranslation();
@@ -26,16 +27,26 @@ const StudentsPage = () => {
 
   return (
       <div className="flex flex-col">
-        <div className="w-full h-[500px] px-[5%] md:px-[15%] pt-[200px] bg-gray-300">
-          <PageHeader className="">Get Involved</PageHeader>
-          <ParagraphTitle className="!text-black mt-[6px] mb-[12px]">
-            Join us and make your impact as a student
-          </ParagraphTitle>
-          <PositionsButton
-              onClick={() => navigateToAnchor("students", "positions")}
-          >
-            View Open Positions
-          </PositionsButton>
+        <div className="relative">
+            <img
+                className="w-full"
+                src={Header}
+                alt="student header"
+            />
+            <div className="absolute bottom-5 md:my-10">
+                <PageHeader className="!text-blueprint-white xl:ml-36">
+                    Get Involved
+                </PageHeader>
+                <ParagraphTitle className="!text-blueprint-white mt-[6px] mb-[12px] xl:ml-36">
+                    Join us and make your impact as a student
+                </ParagraphTitle>
+                <PositionsButton
+                    className="!border-blueprint-white !text-blueprint-white font-semibold rounded-sm my-5 xl:ml-36"
+                    onClick={() => navigateToAnchor("students", "positions")}
+                >
+                    View Open Positions
+                </PositionsButton>
+            </div>
         </div>
 
         <SectionHeader className="mt-[36px] ml-[6%]">Why Join us?</SectionHeader>
