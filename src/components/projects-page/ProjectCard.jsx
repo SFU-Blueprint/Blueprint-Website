@@ -15,7 +15,7 @@ const ProjectCard = ({ project, className }) => {
       className={`${className} shadow-md w-70 min-h-full min-w-[240px] bg-white`}
     >
       <img
-        src={t(`projects.${project}.image`)}
+        src={require(`../../assets/images/projects/${project}.png`)}
         className="w-full"
         alt={t(`projects.${project}.name`)}
       />
