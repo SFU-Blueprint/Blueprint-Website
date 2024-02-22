@@ -9,7 +9,7 @@ export const Alumni = [
     title: "Tavleen Sihota",
     position: "Product Manager",
     img: "/blueprint.jpg",
-    linkedin: "linkedin",
+    linkedin: "https://www.linkedin.com/in/tavleen-sihota/",
   },
   {
     title: "Yang Liu",
@@ -21,7 +21,7 @@ export const Alumni = [
     title: "Brian Tsou",
     position: "Senior Developer",
     img: "/blueprint.jpg",
-    linkedin: "linkedin",
+    linkedin: "https://www.linkedin.com/in/brianthtsou/",
   },
   {
     title: "Mudit Mittal",
@@ -39,6 +39,6 @@ export const Alumni = [
     title: "Kumar Shivam",
     position: "Tech Lead",
     img: "/Shivam.jpg",
-    linkedin: "linkedin",
+    linkedin: "https://www.linkedin.com/in/kumarshivam0002/",
   },
 ];
