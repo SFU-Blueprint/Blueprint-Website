@@ -38,21 +38,20 @@
     "Mosaic": {
       "name": "Mosaic",
       "description": "Aiding New Comers to Canada",
-      "tags": ["Immigration", "AI / Product"]
+      "tags": ["Immigration", "AI / Product"],
+      "image": "Mosaic.png"
     },
     "Pedals": {
       "name": "Pedals",
       "description": "Physio Therapy Outside the Clinic",
       "tags": ["Community", "Full Stack"],
-      "image": "placeholder.png"
-
+      "image": "Pedals.png"
     },
     "Blueprint-Website": {
       "name": "Blueprint Website",
       "description": "Volunteer Hour Tracking Platform",
       "tags": ["Innovation", "Website"],
-      "image": "placeholder.png"
-
+      "image": "Blueprint.png"
     }
   },
   "students": {
