@@ -38,7 +38,7 @@ export const Alumni = [
   {
     title: "Kumar Shivam",
     position: "Tech Lead",
-    img: "/blueprint.jpg",
+    img: "/Shivam.jpg",
     linkedin: "linkedin",
   },
 ];

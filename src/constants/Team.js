@@ -1,27 +1,27 @@
 export const Executives = [
   {
     title: "Tyler D'silva",
-    img: "/blueprint.jpg",
+    img: "/Tyler.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Bhavya Singh",
-    img: "/blueprint.jpg",
+    img: "/Bhavya.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Rithik Agarwal",
-    img: "/blueprint.jpg",
+    img: "/Rithik.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Arthur Zhang",
-    img: "/blueprint.jpg",
+    img: "/Arthur.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Avni Kapoor",
-    img: "/blueprint.jpg",
+    img: "/Avni.jpg",
     linkedin: "linkedin",
   },
   {
@@ -31,7 +31,7 @@ export const Executives = [
   },
   {
     title: "Long Pham",
-    img: "/blueprint.jpg",
+    img: "/Long.jpg",
     linkedin: "linkedin",
   },
   {
@@ -41,7 +41,7 @@ export const Executives = [
   },
   {
     title: "Ronney Lok",
-    img: "/blueprint.jpg",
+    img: "/Ronney.jpg",
     linkedin: "linkedin",
   },
   {
@@ -59,12 +59,12 @@ export const ProjectLeads = [
   },
   {
     title: "Caitlin Syho",
-    img: "/blueprint.jpg",
+    img: "/Caitlin.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Colwyn Ralph",
-    img: "/blueprint.jpg",
+    img: "/Colwyn.jpg",
     linkedin: "linkedin",
   },
   {
@@ -107,7 +107,7 @@ export const Designers = [
   },
   {
     title: "Alison Lu",
-    img: "/blueprint.jpg",
+    img: "/Alison.jpg",
     linkedin: "linkedin",
   },
   {
@@ -140,17 +140,17 @@ export const Developers = [
   },
   {
     title: "Terry Kwok",
-    img: "/blueprint.jpg",
+    img: "/Terry.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Supriya Dua",
-    img: "/blueprint.jpg",
+    img: "/Supriya.jpg",
     linkedin: "linkedin",
   },
   {
     title: "Peiman Zhiani",
-    img: "/blueprint.jpg",
+    img: "/Peiman.jpg",
     linkedin: "linkedin",
   },
   {
