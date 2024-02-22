@@ -38,20 +38,17 @@
     "smartAssistant": {
       "name": "Smart Assistant",
       "description": "Aiding New Comers to Canada",
-      "tags": ["Immigration", "AI / Product"],
-      "image": "placeholder.png"
+      "tags": ["Immigration", "AI / Product"]
     },
     "aiForHealth": {
       "name": "AI for Health",
       "description": "Physio Therapy Outside the Clinic",
-      "tags": ["Health", "AI"],
-      "image": "placeholder.png"
+      "tags": ["Health", "AI"]
     },
     "dataTracking": {
       "name": "Data Tracking",
       "description": "Volunteer Hour Tracking Platform",
-      "tags": ["Sustainability", "Data"],
-      "image": "placeholder.png"
+      "tags": ["Sustainability", "Data"]
     }
   },
   "students": {
