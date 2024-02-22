@@ -9,9 +9,9 @@ import {
   Developers,
 } from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
-import header from "../assets/pictures/aboutus_header.png";
-import image1 from "../assets/pictures/aboutus_image_one.png"
-import image2 from "../assets/pictures/aboutus_image_two.png"
+import Header from"../assets/images/aboutus_header.png";
+import Image_1 from "../assets/images/aboutus_image_one.png";
+import Image_2 from "../assets/images/aboutus_image_two.png";
 
 
 import {
@@ -62,7 +62,7 @@ const AboutPage = () => {
       <div className="relative">
         <img
           className="w-full"
-          src={header}
+          src={Header}
           alt="about us header"
         />
         <div className="absolute bottom-5 md:my-10">
@@ -116,12 +116,12 @@ const AboutPage = () => {
         {/* Desc 2 */}
         <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40x] md:w-4/5 md:justify-start">
           <div className="hidden md:block ml-[10%] w-96 h-53 bg-zinc-300 rounded-sm">
-            <img src={image1} alt="" />
+            <img src={Image_1} alt="about us image 1" />
           </div>
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
-                <img src={image2} alt="" />
+                <img src={Image_2} alt="about us image 2" />
               </div>
               <Annotation className="pl-[10%]">
                 A design sprint is the best way to get ideas flowing
