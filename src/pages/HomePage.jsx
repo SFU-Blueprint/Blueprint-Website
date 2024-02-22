@@ -13,8 +13,8 @@ import { Event1, Event2, Event3 } from "../constants/Event";
 const HomePage = () => {
   const { t, i18n } = useTranslation();
 
-  //Favorite projects for home page
-  const projects = ["smartAssistant", "aiForHealth", "dataTracking"];
+  const projects = t('projects', { returnObjects: true }); //TODO Put key in a separate file
+
 
   const backgroundStyle = {
     position: "absolute",
@@ -98,11 +98,13 @@ const HomePage = () => {
             Our Projects
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
-          <div className="flex flex-col lg:grid lg:grid-cols-3 gap-9">
-            {projects.map((projectKey, index) => (
-              <div key={index}>
-                <ProjectCard project={projectKey} />
-              </div>
+          <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
+            {Object.keys(projects).filter(key => key !== 'name' && key !== 'anchors' && key !== 'title' && key !== 'ongoing' && key !== 'moreComingSoon').map((projectKey, index) => (
+              <ProjectCard
+                key={index}
+                project={projectKey}
+                className="your-class-name"
+              />
             ))}
           </div>
           <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">

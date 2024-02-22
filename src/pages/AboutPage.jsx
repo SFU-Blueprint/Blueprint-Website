@@ -25,7 +25,6 @@ import {
 import AlumniGrid from "../components/about-page/AlumniGrid";
 import ScrollToHashElement from "../components/Shared/ScrollToHash";
 
-
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
     content: <GearSection></GearSection>,
@@ -120,10 +119,12 @@ const AboutPage = () => {
           </div>
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
+
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
                 <img src={Image_2} alt="about us image 2" />
               </div>
               <Annotation className="pl-[10%]">
+
                 A design sprint is the best way to get ideas flowing
               </Annotation>
             </div>
@@ -135,21 +136,22 @@ const AboutPage = () => {
 
         </div>
         <div className="m-[10%] flex flex-row">
-          <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm ">
 
-          </div>
-          <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit">
+          <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm "></div>
+          <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit block sm:hidden">
             A design sprint is the best way to get ideas flowing
           </Annotation>
         </div>
       </div>
       {/* End of Description */}
 
-
       <div className="mx-10 md:mx-16 xl:mx-36">
         {/*Gear Section*/}
         <div className="mt-36">
-          <div id="Our-values" className="font-anek text-black text-4xl md:text-5xl font-[550]">
+          <div
+            id="Our-values"
+            className="font-anek text-black text-4xl md:text-5xl font-[550]"
+          >
             Our Values
           </div>
           {gearSectionHtml.content}
@@ -157,7 +159,10 @@ const AboutPage = () => {
         {/*End of Gear Section*/}
 
         {/*Start of Team section   */}
-        <SectionHeader id="Our-team" className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4">
+        <SectionHeader
+          id="Our-team"
+          className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4"
+        >
           Our Team
         </SectionHeader>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
@@ -171,7 +176,9 @@ const AboutPage = () => {
           Alumni
         </SectionHeader>
         <div className="md:ml-[5%]">
-          <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">2023</ParagraphTitle>
+          <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
+            2023
+          </ParagraphTitle>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-4 lg:grid-cols-5 xl:grid-cols-6 auto-cols-max justify-start mt-[0.5%]">
             {Alumni.map((items, key) => (
               <div
@@ -187,9 +194,7 @@ const AboutPage = () => {
                   </ParagraphText>
                 </div>
                 <ParagraphText className="!text-blueprint-blue underline flex flex-row ml-5 mb-3 mr-5">
-                  <a>
-                    LinkedIn{" "}
-                  </a>
+                  <a>LinkedIn </a>
                   <img className="ml-[5%]" src="/svgs/share.svg" alt="" />
                 </ParagraphText>
               </div>

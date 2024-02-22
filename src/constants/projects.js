@@ -1,1 +1,1 @@
-export const PROJECT_KEYS = ["smartAssistant", "aiForHealth", "dataTracking"];
+export const PROJECT_KEYS = ["Mosaic", "aiForHealth", "dataTracking"];

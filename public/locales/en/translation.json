@@ -35,20 +35,24 @@
     "title": "Our Projects",
     "ongoing": "Ongoing",
     "moreComingSoon": "More Coming Soon!",
-    "smartAssistant": {
-      "name": "Smart Assistant",
+    "Mosaic": {
+      "name": "Mosaic",
       "description": "Aiding New Comers to Canada",
       "tags": ["Immigration", "AI / Product"]
     },
-    "aiForHealth": {
-      "name": "AI for Health",
+    "Pedals": {
+      "name": "Pedals",
       "description": "Physio Therapy Outside the Clinic",
-      "tags": ["Health", "AI"]
+      "tags": ["Community", "Full Stack"],
+      "image": "placeholder.png"
+
     },
-    "dataTracking": {
-      "name": "Data Tracking",
+    "Blueprint-Website": {
+      "name": "Blueprint Website",
       "description": "Volunteer Hour Tracking Platform",
-      "tags": ["Sustainability", "Data"]
+      "tags": ["Innovation", "Website"],
+      "image": "placeholder.png"
+
     }
   },
   "students": {
