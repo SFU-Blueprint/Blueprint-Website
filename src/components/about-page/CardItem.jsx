@@ -11,7 +11,7 @@ import { headshots } from "../../index.js";
  * @returns {JSX.Element} - Returns the JSX for the CardItem component.
  */
 const CardItem = (props) => {
-  console.log(props);
+
   return (
     <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20">
       {/* Member's Headshot */}

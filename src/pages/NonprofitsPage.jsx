@@ -6,6 +6,7 @@ import {
   SectionHeader,
   ParagraphText,
 } from "../components/Common";
+import Header from "../assets/images/nonprofits_header.png";
 
 const reroute = () => {
   window.open(
@@ -20,12 +21,21 @@ const NonprofitsPage = () => {
 
   return (
     <div className="flex flex-col">
-      <div className="w-full bg-blueprint-gray-dark px-5 pt-[116px] pb-14 mb-9 md:px-[120px] md:pt-[174px] md:pb-[88px] md:mb-20">
-        <PageHeader className="max-md:mb-[6px]">For Non-Profits</PageHeader>
-        <ParagraphTitle className="mb-3 md:mb-10 !text-blueprint-black">
-          {t("nonprofits.forNonProfits")}
-        </ParagraphTitle>
-        <ProposeButton />
+      <div className="relative">
+        <img
+            className="w-full"
+            src={Header}
+            alt="nonprofits header"
+        />
+        <div className="absolute bottom-5 md:my-10">
+          <PageHeader className="!text-blueprint-black my-2 md:text-6xl xl:ml-36">
+            For Non-Profits
+          </PageHeader>
+          <ParagraphTitle className="!text-blueprint-black my-3 xl:ml-36">
+            {t("nonprofits.forNonProfits")}
+          </ParagraphTitle>
+          <ProposeButton className="my-5 xl:ml-36" />
+        </div>
       </div>
       <div className="w-full px-5 md:px-[120px]">
         <SectionHeader id="Why-choose-us" className="mb-3 md:mb-6">

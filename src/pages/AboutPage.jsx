@@ -9,6 +9,10 @@ import {
   Developers,
 } from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
+import Header from"../assets/images/aboutus_header.png";
+import Image_1 from "../assets/images/aboutus_image_one.png";
+import Image_2 from "../assets/images/aboutus_image_two.png";
+
 
 import {
   Annotation,
@@ -56,15 +60,15 @@ const AboutPage = () => {
       {/* About us */}
       <div className="relative">
         <img
-          className="h-46 w-full md:h-80 md:w-full"
-          src="/src/assets/images/testImage.jpg"
-          alt="Your"
+          className="w-full"
+          src={Header}
+          alt="about us header"
         />
         <div className="absolute bottom-5 md:my-10">
-          <PageHeader className="font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36 ">
+          <PageHeader className="!text-blueprint-white font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36">
             About Us
           </PageHeader>
-          <ParagraphTitle className="!text-blueprint-black ml-10 md:ml-16 xl:ml-36">
+          <ParagraphTitle className="!text-blueprint-white ml-10 md:ml-16 xl:ml-36">
             TECH-DRIVEN ADVOCATED FOR SOCIAL GOOD
           </ParagraphTitle>
         </div>
@@ -110,11 +114,17 @@ const AboutPage = () => {
         </div>
         {/* Desc 2 */}
         <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40x] md:w-4/5 md:justify-start">
-          <div className="hidden md:block ml-[10%] w-96 h-56 bg-zinc-300 rounded-sm"></div>
+          <div className="hidden md:block ml-[10%] w-96 h-53 bg-zinc-300 rounded-sm">
+            <img src={Image_1} alt="about us image 1" />
+          </div>
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
-              <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm"></div>
-              <Annotation className=" pl-[10%] hidden sm:block ">
+
+              <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
+                <img src={Image_2} alt="about us image 2" />
+              </div>
+              <Annotation className="pl-[10%]">
+
                 A design sprint is the best way to get ideas flowing
               </Annotation>
             </div>
@@ -122,8 +132,11 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="mt-12 flex flex-col items-center md:hidden">
-        <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
+        <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm ">
+
+        </div>
         <div className="m-[10%] flex flex-row">
+
           <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm "></div>
           <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit block sm:hidden">
             A design sprint is the best way to get ideas flowing
@@ -164,8 +177,10 @@ const AboutPage = () => {
         <div className="">
           {/* <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
             2023
+
           </ParagraphTitle> */}
           <CardGrid cardList={Alumni} gridName="2023"></CardGrid>
+
         </div>
       </div>
       {/*End of Alumni Section*/}

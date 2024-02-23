@@ -24,7 +24,7 @@ export const Executives = [
     lastPosition: "",
   },
   {
-    title: "Avni Kapoor",
+    title: "Avni Kapoor"
     img: "Avni.jpg",
     linkedin: "https://www.linkedin.com/in/avni-kapoor/",
     lastPosition: "",
