@@ -10,10 +10,11 @@ import { ParagraphTitle } from "../Common";
  */
 const CardGrid = (props) => {
   return (
-    <>
+    <div>
       <ParagraphTitle className="!text-blueprint-black !font-bold mb-2">
         {props.gridName}
       </ParagraphTitle>
+
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
         {props.cardList.map((card, index) => (
           <CardItem
@@ -21,10 +22,11 @@ const CardGrid = (props) => {
             img={card.img}
             title={card.title}
             linkedin={card.linkedin}
+            lastPosition={card.lastPosition}
           />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
