@@ -21,7 +21,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex w-screen justify-center">
+    <nav className="flex justify-center">
       <div className="flex flex-col justify-between max-lg:flex-grow lg:flex-row lg:w-[80rem] lg:px-20">
         <div className="flex justify-between items-center py-4 px-4">
           <Logo />
