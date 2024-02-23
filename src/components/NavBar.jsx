@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as MenuHamburgerIcon } from "../assets/icons/hamburger.svg";
 import { ReactComponent as MenuXIcon } from "../assets/icons/x.svg";
 import Logo from "./Shared/Logo";
@@ -9,6 +9,7 @@ const NavBar = () => {
   const toggleMenu = () => {
     setIsMenuOpened((isMenuOpened) => !isMenuOpened);
   };
+  const currentPath = useLocation().pathname;
 
   const routes = [
     { name: "Home", path: "/" },
@@ -33,6 +34,7 @@ const NavBar = () => {
         <NavLinks
           visibility={!isMenuOpened && "max-lg:hidden"}
           routes={routes}
+          currentPath={currentPath}
         />
       </div>
     </nav>
@@ -47,16 +49,16 @@ function MenuButton({ isMenuOpened, toggleMenu, visibility }) {
   );
 }
 
-function NavLinks({ routes, visibility }) {
+function NavLinks({ routes, visibility, currentPath }) {
   return (
     <div
-      className={`flex flex-col items-center max-lg:space-y-4 max-lg:pb-4 text-gray-600 font-poppins lg:flex-row lg:space-x-12 ${visibility}`}
+      className={`flex flex-col items-center max-lg:space-y-4 max-lg:pb-4 text-blueprint-black font-poppins lg:flex-row lg:space-x-12 ${visibility}`}
     >
       {routes.map((route, index) => (
         <Link
           key={index}
           to={route.path}
-          className={`hover:text-blue-500 hover:underline hover:font-semibold hover:cursor-pointer ${index === 0 && "lg:hidden"}`}
+          className={`hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${route.path === currentPath && "text-blueprint-blue underline font-semibold"} ${index === 0 && "lg:hidden"}`}
         >
           {route.name}
         </Link>
