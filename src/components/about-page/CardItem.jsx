@@ -1,6 +1,6 @@
 import React from "react";
 import { ParagraphText } from "../Common";
-
+import { ReactComponent as LinkedinIcon } from "../../assets/icons/linkedin.svg";
 /**
  * CardItem component to display an individual card item.
  * @param {Object} props - The props object containing the following properties:
@@ -19,18 +19,17 @@ const CardItem = (props) => {
                 alt=""
             />
        
-            <p className="font-poppins font-bold flex items-center justify-center text-[12px] sm:text-base">
-                {props.title}
-            </p>
+            
 
       <ParagraphText className="!font-bold flex items-center justify-center">
         {props.title}
       </ParagraphText>
 
-      <a href="/">
-        <ParagraphText className="flex items-center justify-center">
-          {props.linkedin}
-        </ParagraphText>
+      <a href={props.linkedin}>
+        <ParagraphText className="!text-blueprint-blue underline flex flex-row ml-5 mb-3 mr-5">
+            <a>LinkedIn </a>
+                <img className="ml-[5%]" src="/svgs/share.svg" alt="" />
+            </ParagraphText>
       </a>
     </div>
   );

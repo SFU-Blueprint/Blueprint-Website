@@ -189,9 +189,6 @@ const AboutPage = () => {
                   <ParagraphText className="flex flex-wrap flex-row font-bold">
                     {items.title}
                   </ParagraphText>
-                  <ParagraphText className="font-poppins text-blueprint-gray-dark">
-                    {items.position}
-                  </ParagraphText>
                 </div>
                 <ParagraphText className="!text-blueprint-blue underline flex flex-row ml-5 mb-3 mr-5">
                   <a>LinkedIn </a>
