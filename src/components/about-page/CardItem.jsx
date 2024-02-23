@@ -13,7 +13,7 @@ const CardItem = (props) => {
     return (
         <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20">
             <img
-                className="h-48 w-48"
+                className="h-48 w-48 object-contain"
                 src={props.img}
                 style={{'minWidth':'12rem'}}
                 alt=""
