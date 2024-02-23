@@ -11,9 +11,9 @@ import { useTranslation } from "react-i18next";
 const ProjectsPage = () => {
   const { t, i18n } = useTranslation();
   // Assuming this is your projects object
-  const projects = t('projects', { returnObjects: true }); 
+  const projects = t("projects", { returnObjects: true });
   const backgroundStyle = {
-    outline: "1px solid red",
+    // outline: "1px solid black",
     position: "absolute",
     overflowX: "hidden",
     zIndex: -1,
@@ -34,13 +34,22 @@ const ProjectsPage = () => {
         <PageHeader className="my-5">Our Projects</PageHeader>
         <SectionHeader>Ongoing</SectionHeader>
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-          {Object.keys(projects).filter(key => key !== 'name' && key !== 'anchors' && key !== 'title' && key !== 'ongoing' && key !== 'moreComingSoon').map((projectKey, index) => (
-            <ProjectCard
-              key={index}
-              project={projectKey}
-              className="your-class-name"
-            />
-          ))}
+          {Object.keys(projects)
+            .filter(
+              (key) =>
+                key !== "name" &&
+                key !== "anchors" &&
+                key !== "title" &&
+                key !== "ongoing" &&
+                key !== "moreComingSoon"
+            )
+            .map((projectKey, index) => (
+              <ProjectCard
+                key={index}
+                project={projectKey}
+                className="your-class-name"
+              />
+            ))}
         </div>
         <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">
           More coming soon!
