@@ -1,21 +1,21 @@
 export const Event1 = [
   {
-    title: "Halloween",
+    title: "Halloween Social",
     img: "/events/halloween.JPEG",
     date: "October 29th 2023",
   },
   {
-    title: "Info",
+    title: "Info Session",
     img: "/events/info.jpg",
     date: "January 19th 2024",
   },
   {
-    title: "Tech",
+    title: "Tech Session",
     img: "/events/tech.jpg",
     date: "November 23rd 2023",
   },
   {
-    title: "Club",
+    title: "Club's Day",
     img: "/events/club.jpeg",
     date: "September 17th 2023",
   },
@@ -23,25 +23,25 @@ export const Event1 = [
 
 export const Event2 = [
   {
-    title: "Halloween",
+    title: "Halloween Social",
     img: "/events/halloween.JPEG",
     date: "October 29th 2023",
   },
   {
-    title: "Info",
+    title: "Info Session",
     img: "/events/info.jpg",
     date: "January 19th 2024",
   },
 
   {
-    title: "Club",
+    title: "Club's Day",
     img: "/events/club.jpeg",
     date: "September 17th 2023",
   },
 ];
 
 export const Event3 = {
-  title: "Tech",
+  title: "Tech Session",
   img: "/events/tech.jpg",
   date: "November 23rd 2023",
 };
