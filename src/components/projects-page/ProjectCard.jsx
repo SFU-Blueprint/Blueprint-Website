@@ -11,9 +11,7 @@ import { useTranslation } from "react-i18next";
 const ProjectCard = ({ project, className }) => {
   const { t, i18n } = useTranslation();
   return (
-    <div
-      className={`${className} shadow-md w-70 min-h-full min-w-[240px] bg-white`}
-    >
+    <div className={`${className} shadow-md w-70 min-w-[240px] bg-white`}>
       <img
         src={t(`projects.${project}.image`)}
         className="w-full"
