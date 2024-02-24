@@ -95,7 +95,7 @@ const NonprofitsPage = () => {
           {t(`nonprofits.CTA2`)}{" "}
           <a
             href="mailto:sfublueprint@gmail.com"
-            className="text-blueprint-blue hover:underline hover:font-bold"
+            className="text-blueprint-blue underline font-bold"
           >
             {t(`email.link`)}
           </a>

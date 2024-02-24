@@ -13,7 +13,7 @@ export const Executives = [
   },
   {
     title: "Rithik Agarwal",
-    img: "blueprint.jpg",
+    img: "Rhitck.jpg",
     linkedin: "https://www.linkedin.com/in/rithik-agarwal-47017618a/",
     lastPosition: "",
   },
@@ -31,7 +31,7 @@ export const Executives = [
   },
   {
     title: "Sylvia Zhang",
-    img: "blueprint.jpg",
+    img: "Sylvia.jpg",
     linkedin: "https://www.linkedin.com/in/sylvia-zhang-siqi/",
     lastPosition: "",
   },
@@ -61,10 +61,10 @@ export const Executives = [
   },
 ];
 
-export const ProjectLeads = [
+export const Members = [
   {
     title: "Sallin Koutev",
-    img: "blueprint.jpg",
+    img: "Sallin.jpg",
     linkedin: "https://www.linkedin.com/in/sallin-koutev-216b0016b/",
     lastPosition: "",
   },
@@ -92,9 +92,6 @@ export const ProjectLeads = [
     linkedin: "https://www.linkedin.com/in/karanpathak/",
     lastPosition: "",
   },
-];
-
-export const Designers = [
   {
     title: "Kate Simone",
     img: "blueprint.jpg",
@@ -143,15 +140,6 @@ export const Designers = [
     linkedin: "https://www.linkedin.com/in/firm-kongthong/",
     lastPosition: "",
   },
-  {
-    title: "Cynthia Cui",
-    img: "blueprint.jpg",
-    linkedin: "",
-    lastPosition: "",
-  },
-];
-
-export const Developers = [
   {
     title: "Duc Dang",
     img: "blueprint.jpg",
@@ -213,3 +201,49 @@ export const Developers = [
     lastPosition: "",
   },
 ];
+
+export const Alumni = [
+  {
+    title: "Andy Zhang",
+    img: "blueprint.jpg",
+    linkedin: "linkedin",
+    lastPosition: "Product Manager",
+  },
+  {
+    title: "Tavleen Sihota",
+    img: "blueprint.jpg",
+    linkedin: "https://www.linkedin.com/in/tavleen-sihota/",
+    lastPosition: "Product Manager",
+  },
+  {
+    title: "Yang Liu",
+    img: "blueprint.jpg",
+    linkedin: "linkedin",
+    lastPosition: "Tech Lead",
+  },
+  {
+    title: "Brian Tsou",
+    img: "blueprint.jpg",
+    linkedin: "https://www.linkedin.com/in/brianthtsou/",
+    lastPosition: "Senior Developer",
+  },
+  {
+    title: "Mudit Mittal",
+    img: "blueprint.jpg",
+    linkedin: "linkedin",
+    lastPosition: "Senior Developer",
+  },
+  {
+    title: "Teeya Li",
+    img: "blueprint.jpg",
+    linkedin: "linkedin",
+    lastPosition: "Junior Developer",
+  },
+  {
+    title: "Kumar Shivam",
+    img: "Shivam.jpg",
+    linkedin: "https://www.linkedin.com/in/kumarshivam0002/",
+    lastPosition: "Tech Lead",
+  },
+];
+

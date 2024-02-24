@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import GearSection from "../components/about-page/Gears/GearSection";
 import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
-import { Alumni } from "../constants/alumni";
+
 import {
   Executives,
-  ProjectLeads,
-  Designers,
-  Developers,
+  Alumni,
+  Members
 } from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
 import Header from"../assets/images/aboutus_header.png";
@@ -166,9 +165,7 @@ const AboutPage = () => {
           Our Team
         </SectionHeader>
         <CardGrid cardList={Executives} gridName="EXECUTIVES"></CardGrid>
-        <CardGrid cardList={ProjectLeads} gridName="PROJECT LEADS"></CardGrid>
-        <CardGrid cardList={Designers} gridName="DESIGNERS"></CardGrid>
-        <CardGrid cardList={Developers} gridName="DEVELOPERS"></CardGrid>
+        <CardGrid cardList={Members} gridName="Members"></CardGrid>
       </div>
 
       {/*Alumni Section*/}
