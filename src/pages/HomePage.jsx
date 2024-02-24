@@ -13,8 +13,7 @@ import { Event1, Event2, Event3 } from "../constants/Event";
 const HomePage = () => {
   const { t, i18n } = useTranslation();
 
-  const projects = t('projects', { returnObjects: true }); //TODO Put key in a separate file
-
+  const projects = t("projects", { returnObjects: true }); //TODO Put key in a separate file
 
   const backgroundStyle = {
     position: "absolute",
@@ -99,13 +98,22 @@ const HomePage = () => {
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-            {Object.keys(projects).filter(key => key !== 'name' && key !== 'anchors' && key !== 'title' && key !== 'ongoing' && key !== 'moreComingSoon').map((projectKey, index) => (
-              <ProjectCard
-                key={index}
-                project={projectKey}
-                className="your-class-name"
-              />
-            ))}
+            {Object.keys(projects)
+              .filter(
+                (key) =>
+                  key !== "name" &&
+                  key !== "anchors" &&
+                  key !== "title" &&
+                  key !== "ongoing" &&
+                  key !== "moreComingSoon"
+              )
+              .map((projectKey, index) => (
+                <ProjectCard
+                  key={index}
+                  project={projectKey}
+                  className="your-class-name"
+                />
+              ))}
           </div>
           <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">
             More coming soon!
@@ -122,11 +130,11 @@ const HomePage = () => {
               <img
                 class="absolute h-48 inset-0 object-cover group-hover:opacity-50"
                 src={items.img}
-                // style={{ "min-width": "12rem" }}
+                style={{ width: "175px" }}
                 alt=""
               />
-              <div class="relative ">
-                <div class="mt-40">
+              <div class="relative">
+                <div class="mt-[150px] ml-[10px]">
                   {/* Hidden content */}
                   <div
                     class="transition-all transform 
@@ -136,6 +144,9 @@ const HomePage = () => {
                   >
                     <div class="pr-20">
                       <p class="text-sm text-start text-black ">{items.date}</p>
+                      <p class="text-sm text-start text-black ">
+                        {items.title}
+                      </p>
                     </div>
                   </div>
                   {/* End of hidden content */}
@@ -178,6 +189,7 @@ const HomePage = () => {
                 >
                   <div class="p-1">
                     <p class="text-sm text-start text-black">{Event3.date}</p>
+                    <p class="text-sm text-start text-black ">{Event3.title}</p>
                   </div>
                 </div>
                 {/* End of hidden content */}
@@ -194,7 +206,7 @@ const HomePage = () => {
                 alt=""
               />
               <div class="relative ">
-                <div class="mt-20">
+                <div class="mt-11">
                   {/* Hidden content */}
                   <div
                     class="transition-all transform 
@@ -204,6 +216,9 @@ const HomePage = () => {
                   >
                     <div class="p-1">
                       <p class="text-sm text-start text-black">{items.date}</p>
+                      <p class="text-sm text-start text-black ">
+                        {items.title}
+                      </p>
                     </div>
                   </div>
                   {/* End of hidden content */}
