@@ -2,16 +2,11 @@ import React, { useState, useEffect, useCallback } from "react";
 import GearSection from "../components/about-page/Gears/GearSection";
 import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
 
-import {
-  Executives,
-  Alumni,
-  Members
-} from "../constants/Team";
+import { Executives, Alumni, Members } from "../constants/Team";
 import CardGrid from "../components/about-page/CardGrid";
-import Header from"../assets/images/aboutus_header.png";
+import Header from "../assets/images/aboutus_header.png";
 import Image_1 from "../assets/images/aboutus_image_one.png";
 import Image_2 from "../assets/images/aboutus_image_two.png";
-
 
 import {
   Annotation,
@@ -57,17 +52,17 @@ const AboutPage = () => {
   return (
     <div className="pb-48">
       {/* About us */}
-      <div className="relative">
+      <div className="relative ">
         <img
-          className="w-full"
+          className="w-full h-[35vh] sm:h-[45vh] object-cover"
           src={Header}
           alt="about us header"
         />
-        <div className="absolute bottom-5 md:my-10">
-          <PageHeader className="!text-blueprint-white font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36">
+        <div className="absolute bottom-6 md:my-10">
+          <PageHeader className="!text-blueprint-white font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36 ">
             About Us
           </PageHeader>
-          <ParagraphTitle className="!text-blueprint-white ml-10 md:ml-16 xl:ml-36">
+          <ParagraphTitle className="!text-blueprint-white my-3 mb-16 ml-10 xl:ml-36">
             TECH-DRIVEN ADVOCATED FOR SOCIAL GOOD
           </ParagraphTitle>
         </div>
@@ -121,12 +116,10 @@ const AboutPage = () => {
           </div>
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
-
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
                 <img src={Image_2} alt="about us image 2" />
               </div>
               <Annotation className="pl-[10%]">
-
                 A design sprint is the best way to get ideas flowing
               </Annotation>
             </div>
@@ -134,11 +127,8 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="mt-12 flex flex-col items-center md:hidden">
-        <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm ">
-
-        </div>
+        <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
         <div className="m-[10%] flex flex-row">
-
           <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm "></div>
           <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit block sm:hidden">
             A design sprint is the best way to get ideas flowing
@@ -180,7 +170,6 @@ const AboutPage = () => {
 
           </ParagraphTitle> */}
           <CardGrid cardList={Alumni} gridName="2023"></CardGrid>
-
         </div>
       </div>
       {/*End of Alumni Section*/}
