@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import {navigateToAnchor} from "../../utils/navigateToAnchor";
 
 /**
  * React component representing a list of links to different anchor points in a page
@@ -7,13 +8,6 @@ import { useTranslation } from "react-i18next";
  */
 const AnchorList = (props) => {
     const { t } = useTranslation();
-
-    // Function to navigate to an anchor point in the same page
-    const navigateToAnchor = (page, section) => {
-        // Construct the URL with the page path and the anchor point
-        const url = `/${page}#${section}`;
-        window.location.href = url;
-    };
 
     // Function to replace dashes with spaces in a string
     const replaceDashesWithSpaces = (str) => str.replace(/-/g, ' ');
