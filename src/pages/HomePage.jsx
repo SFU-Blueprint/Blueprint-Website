@@ -20,7 +20,7 @@ const HomePage = () => {
     zIndex: -1,
     width: "100%",
     height: "100%",
-    backgroundImage: 'url("grid.png")',
+    backgroundImage: '',
     filter: "brightness(95%)",
     backgroundSize: "3vmin",
     backgroundRepeat: "repeat repeat",
