@@ -9,7 +9,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import StudentsPage from "./pages/StudentsPage";
 import NonprofitsPage from "./pages/NonprofitsPage";
 import Footer from "./components/footer/Footer";
-import ScrollToHashElement from "./components/Shared/ScrollToHash";
+import ScrollToHashElement from "./components/shared/ScrollToHash";
 
 function App() {
   return (

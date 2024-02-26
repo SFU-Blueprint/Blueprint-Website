@@ -3,30 +3,43 @@ import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
   Landing,
-  PageHeader,
   SectionHeader,
   ParagraphText,
 } from "../components/Common";
-import ProjectCard from "../components/projects-page/ProjectCard";
+import ProjectCard from "../components/shared/ProjectCard";
 import { Event1, Event2, Event3 } from "../constants/Event";
+import OutlineButton from "../components/shared/OutlineButton";
+
+import LadyTyping from "../assets/images/home/lady_typing.png"
+import Header from "../assets/images/aboutus_header.png";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
 
-  const projects = t("projects", { returnObjects: true }); //TODO Put key in a separate file
+  const projects = t("projects"); //TODO Put key in a separate file
 
   const backgroundStyle = {
     position: "absolute",
     zIndex: -1,
     width: "100%",
     height: "100%",
-    backgroundImage: 'url("grid.png")',
-    filter: "brightness(95%)",
-    backgroundSize: "3vmin",
-    backgroundRepeat: "repeat repeat",
-    maskImage:
-      "radial-gradient(ellipse at right 30% top 50%, black 1%, transparent 50%)",
+    // backgroundImage: 'url("grid.png")',
+    // filter: "brightness(95%)",
+    // backgroundSize: "3vmin",
+    // backgroundRepeat: "repeat repeat",
+    // maskImage:
+    //   "radial-gradient(ellipse at right 30% top 50%, black 1%, transparent 50%)",
   };
+
+  const GetInvolvedSection = ({jsonKey, onClick, children}) => {
+    return (
+      <div className="flex flex-col justify-start h-48 gap-2">
+        <ParagraphTitle>{t(`home.getinvolved.${jsonKey}.title`)}</ParagraphTitle>
+        <ParagraphText>{t(`home.getinvolved.${jsonKey}.content`)}</ParagraphText>
+        <OutlineButton onClick={onClick}>{t(`home.getinvolved.${jsonKey}.button`)}</OutlineButton>
+      </div>
+    )
+  }
 
   return (
     <div className="flex flex-col pt-10 gap-4">
@@ -37,56 +50,33 @@ const HomePage = () => {
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
           {t("home.header.text")}
         </ParagraphText>
-        <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
-          {t("home.header.button")}
-        </button>
+        <OutlineButton>{t("home.header.button")}</OutlineButton>
       </div>
       <div className="mt-60 px-3 md:px-[15%] ">
         <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
         <ParagraphText className="md:w-[500px] mb-3 md:mb-6">
           {t("home.aboutUs.text")}
         </ParagraphText>
-        <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
-          {t("home.aboutUs.button")}
-        </button>
+        <OutlineButton>{t("home.aboutUs.button")}</OutlineButton>
       </div>
 
       <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 px-3 md:px-[15%] ">
         <SectionHeader className="mb-10  ">Get Involved</SectionHeader>
         <div className="flex max-md:flex-col justify-between gap-12 mb-16 ">
-          <div className="flex flex-col justify-start h-48 gap-2">
-            <ParagraphTitle>STUDENTS</ParagraphTitle>
-            <ParagraphText>
-              Contribute to building technology for social good. Make new
-              friends and harness your professional skillsets along the away!
-            </ParagraphText>
-            <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
-              Join us
-            </button>
-          </div>
+          <GetInvolvedSection
+            jsonKey="students"
+            onClick={()=>console.log("Test")}
+          ></GetInvolvedSection>
 
-          <div className="flex flex-col justify-start h-48 gap-2">
-            <ParagraphTitle>NON-PROFITS</ParagraphTitle>
-            <ParagraphText>
-              {" "}
-              Collaborate with us to advance your mission for public welfare.
-              Tackle your challenges with fresh and innovative solutions!
-            </ParagraphText>
-            <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
-              Collaborate with Us
-            </button>
-          </div>
+          <GetInvolvedSection
+            jsonKey="nonprofits"
+            onClick={()=>console.log("Test")}
+          ></GetInvolvedSection>
 
-          <div className="flex flex-col justify-start h-48 gap-2">
-            <ParagraphTitle>SPONSORS</ParagraphTitle>
-            <ParagraphText>
-              Support our operation to become part of the changemakers! Elevate
-              your brand while driving meaningful social impact.
-            </ParagraphText>
-            <button className="text-blueprint-blue border-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl">
-              Sponsor Us
-            </button>
-          </div>
+          <GetInvolvedSection
+            jsonKey="sponsors"
+            onClick={()=>console.log("Test")}
+          ></GetInvolvedSection>
         </div>
       </div>
 
@@ -99,14 +89,6 @@ const HomePage = () => {
           {/* <SectionHeader>Ongoing</SectionHeader> */}
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
             {Object.keys(projects)
-              .filter(
-                (key) =>
-                  key !== "name" &&
-                  key !== "anchors" &&
-                  key !== "title" &&
-                  key !== "ongoing" &&
-                  key !== "moreComingSoon"
-              )
               .map((projectKey, index) => (
                 <ProjectCard
                   key={index}
@@ -115,10 +97,22 @@ const HomePage = () => {
                 />
               ))}
           </div>
-          <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">
-            More coming soon!
-          </ParagraphText>
+          <div className="w-full flex justify-end">
+            <OutlineButton>{t('projectspage.allprojects')}</OutlineButton>
+          </div>
         </div>
+      </div>
+
+      {/*Contact us*/}
+      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 px-3 md:px-[15%] flex flex-col gap-4">
+        <img
+          className="absolute w-[230px] right-0 hidden lg:inline"
+          src={LadyTyping}
+          alt="about us header"
+        />
+        <SectionHeader>Contact Us</SectionHeader>
+        <ParagraphTitle>WE ARE JUST ONE MESSAGE AWAY</ParagraphTitle>
+        <ParagraphText>Students, get your quick question in through our Discord server<br/>For collaborations or sponsorships, shoot us an email at sfublueprint@gmail.com</ParagraphText>
       </div>
 
       {/* Desktop Photos */}
@@ -128,23 +122,23 @@ const HomePage = () => {
           {Event1.map((items, key) => (
             <div className="relative block group" key={key}>
               <img
-                class="absolute h-48 inset-0 object-cover group-hover:opacity-50"
+                className="absolute h-48 inset-0 object-cover group-hover:opacity-50"
                 src={items.img}
                 style={{ width: "175px" }}
                 alt=""
               />
-              <div class="relative">
-                <div class="mt-[150px] ml-[10px]">
+              <div className="relative">
+                <div className="mt-[150px] ml-[10px]">
                   {/* Hidden content */}
                   <div
-                    class="transition-all transform 
-                                translate-y-8 opacity-0 
-                                group-hover:opacity-100 
+                    className="transition-all transform
+                                translate-y-8 opacity-0
+                                group-hover:opacity-100
                                 group-hover:translate-y-0"
                   >
-                    <div class="pr-20">
-                      <p class="text-sm text-start text-black ">{items.date}</p>
-                      <p class="text-sm text-start text-black ">
+                    <div className="pr-20">
+                      <p className="text-sm text-start text-black ">{items.date}</p>
+                      <p className="text-sm text-start text-black ">
                         {items.title}
                       </p>
                     </div>
@@ -173,23 +167,23 @@ const HomePage = () => {
 
           <div className="relative block group">
             <img
-              class="absolute inset-0 object-cover group-hover:opacity-50"
+              className="absolute inset-0 object-cover group-hover:opacity-50"
               src={Event3.img}
               // style={{ "min-width": "12rem" }}
               alt=""
             />
-            <div class="relative ">
-              <div class="mt-10 mb-40">
+            <div className="relative ">
+              <div className="mt-10 mb-40">
                 {/* Hidden content */}
                 <div
-                  class="transition-all transform 
+                  className="transition-all transform
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0"
                 >
-                  <div class="p-1">
-                    <p class="text-sm text-start text-black">{Event3.date}</p>
-                    <p class="text-sm text-start text-black ">{Event3.title}</p>
+                  <div className="p-1">
+                    <p className="text-sm text-start text-black">{Event3.date}</p>
+                    <p className="text-sm text-start text-black ">{Event3.title}</p>
                   </div>
                 </div>
                 {/* End of hidden content */}
@@ -201,22 +195,22 @@ const HomePage = () => {
           {Event2.map((items, key) => (
             <div className="relative block group " key={key}>
               <img
-                class="absolute h-32 w-48 inset-0 object-cover group-hover:opacity-50"
+                className="absolute h-32 w-48 inset-0 object-cover group-hover:opacity-50"
                 src={items.img}
                 alt=""
               />
-              <div class="relative ">
-                <div class="mt-11">
+              <div className="relative ">
+                <div className="mt-11">
                   {/* Hidden content */}
                   <div
-                    class="transition-all transform 
+                    className="transition-all transform
                                 translate-y-8 opacity-0 
                                 group-hover:opacity-100 
                                 group-hover:translate-y-0"
                   >
-                    <div class="p-1">
-                      <p class="text-sm text-start text-black">{items.date}</p>
-                      <p class="text-sm text-start text-black ">
+                    <div className="p-1">
+                      <p className="text-sm text-start text-black">{items.date}</p>
+                      <p className="text-sm text-start text-black ">
                         {items.title}
                       </p>
                     </div>
@@ -237,23 +231,6 @@ const HomePage = () => {
           </a>
         </ParagraphText>
       </div>
-
-      {/* <div className="px-0.5 mt-9 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0 max-md:">
-          <div className="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
-          </div>
-          <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
-          </div>
-          <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
-          </div>
-          <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

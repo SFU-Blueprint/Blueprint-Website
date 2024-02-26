@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ReactComponent as MenuHamburgerIcon } from "../assets/icons/hamburger.svg";
 import { ReactComponent as MenuXIcon } from "../assets/icons/x.svg";
-import Logo from "./Shared/Logo";
+import Logo from "./shared/Logo";
 
 const NavBar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);

@@ -22,7 +22,7 @@ import {
 } from "../components/Common";
 
 import AlumniGrid from "../components/about-page/AlumniGrid";
-import ScrollToHashElement from "../components/Shared/ScrollToHash";
+import ScrollToHashElement from "../components/shared/ScrollToHash";
 
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
@@ -74,7 +74,10 @@ const AboutPage = () => {
       </div>
 
       <div></div>
-      <SectionHeader className="mt-[4%] leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36">
+      <SectionHeader
+        className="mt-[4%] leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36"
+        id="Who-we-are"
+      >
         Building innovative, tech-based solutions for communities and public
         welfare is the mission that brings us together.{" "}
       </SectionHeader>
