@@ -14,7 +14,7 @@ const NavBar = () => {
   const routes = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Projects", path: "/projects" },
+    { name: "Projects", path: "/projectspage" },
     { name: "For Students", path: "/students" },
     { name: "For Nonprofits", path: "/nonprofits" },
     { name: "Sponsor Us", path: "/sponsors" },

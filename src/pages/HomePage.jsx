@@ -11,7 +11,9 @@ import { Event1, Event2, Event3 } from "../constants/Event";
 import OutlineButton from "../components/shared/OutlineButton";
 
 import LadyTyping from "../assets/images/home/lady_typing.png"
-import Header from "../assets/images/aboutus_header.png";
+import HomeBGFull from "../assets/images/home/home_bg_full.png"
+import HomeBGFullLeft from "../assets/images/home/home_bg_left.png"
+import {navigateToAnchor} from "../utils/navigateToAnchor";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -43,39 +45,54 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col pt-10 gap-4">
+      <img
+        className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
+        src={HomeBGFull}
+        alt="about us header"
+      />
+
+      <img
+        className="absolute top-[500px] md:w-[1500px] min-w-[1500px] z-[-2] object-contain"
+        src={HomeBGFullLeft}
+        alt="about us header"
+      />
       <div className="mb-[100px] mx-12 px-3 md:px-[15%] ">
-        <Landing className="!font-semibold md:w-[600px]">
+        <Landing className="!font-semibold md:w-[600px] pt-32">
           {t("home.header.title")}
         </Landing>
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
           {t("home.header.text")}
         </ParagraphText>
-        <OutlineButton>{t("home.header.button")}</OutlineButton>
+        <OutlineButton
+          onClick={()=>navigateToAnchor("students")}
+        >{t("home.header.button")}</OutlineButton>
       </div>
       <div className="mt-60 px-3 md:px-[15%] ">
         <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
         <ParagraphText className="md:w-[500px] mb-3 md:mb-6">
           {t("home.aboutUs.text")}
         </ParagraphText>
-        <OutlineButton>{t("home.aboutUs.button")}</OutlineButton>
+        <OutlineButton
+          onClick={()=>navigateToAnchor("about")}
+        >{t("home.aboutUs.button")}</OutlineButton>
       </div>
 
       <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 px-3 md:px-[15%] ">
-        <SectionHeader className="mb-10  ">Get Involved</SectionHeader>
+        <SectionHeader className="mb-10">Get Involved</SectionHeader>
         <div className="flex max-md:flex-col justify-between gap-12 mb-16 ">
           <GetInvolvedSection
             jsonKey="students"
-            onClick={()=>console.log("Test")}
+            onClick={()=>navigateToAnchor("students")}
           ></GetInvolvedSection>
 
           <GetInvolvedSection
             jsonKey="nonprofits"
-            onClick={()=>console.log("Test")}
+            onClick={()=>navigateToAnchor("nonprofits")}
           ></GetInvolvedSection>
 
           <GetInvolvedSection
             jsonKey="sponsors"
-            onClick={()=>console.log("Test")}
+            onClick={()=>console.log("Page not defined")}
           ></GetInvolvedSection>
         </div>
       </div>
@@ -98,18 +115,22 @@ const HomePage = () => {
               ))}
           </div>
           <div className="w-full flex justify-end">
-            <OutlineButton>{t('projectspage.allprojects')}</OutlineButton>
+            <OutlineButton
+              onClick={()=>navigateToAnchor("projectspage")}
+            >{t('projectspage.allprojects')}</OutlineButton>
           </div>
         </div>
       </div>
 
       {/*Contact us*/}
-      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 px-3 md:px-[15%] flex flex-col gap-4">
-        <img
-          className="absolute w-[230px] right-0 hidden lg:inline"
-          src={LadyTyping}
-          alt="about us header"
-        />
+      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 md:px-[15%] flex flex-col gap-4">
+        <div className="relative w-full">
+          <img
+            className="absolute w-[230px] right-0 hidden lg:inline"
+            src={LadyTyping}
+            alt="about us header"
+          />
+        </div>
         <SectionHeader>Contact Us</SectionHeader>
         <ParagraphTitle>WE ARE JUST ONE MESSAGE AWAY</ParagraphTitle>
         <ParagraphText>Students, get your quick question in through our Discord server<br/>For collaborations or sponsorships, shoot us an email at sfublueprint@gmail.com</ParagraphText>
