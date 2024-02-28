@@ -1,9 +1,8 @@
 import React from "react";
-import ProjectCard from "../components/projects-page/ProjectCard";
+import ProjectCard from "../components/shared/ProjectCard";
 import {
   PageHeader,
   SectionHeader,
-  ParagraphTitle,
   ParagraphText,
 } from "../components/Common";
 import { useTranslation } from "react-i18next";
@@ -35,14 +34,6 @@ const ProjectsPage = () => {
         <SectionHeader>Ongoing</SectionHeader>
         <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
           {Object.keys(projects)
-            .filter(
-              (key) =>
-                key !== "name" &&
-                key !== "anchors" &&
-                key !== "title" &&
-                key !== "ongoing" &&
-                key !== "moreComingSoon"
-            )
             .map((projectKey, index) => (
               <ProjectCard
                 key={index}

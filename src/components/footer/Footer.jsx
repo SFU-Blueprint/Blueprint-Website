@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import AnchorList from "./AnchorList";
 import IconButton from "./IconButton";
-import Logo from "../Shared/Logo";
+import Logo from "../shared/Logo";
 import './Footer.css'
 
 const Footer = () => {

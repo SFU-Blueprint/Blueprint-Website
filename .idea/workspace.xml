@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="142690d7-e5fc-410a-a469-c068126c711b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Shared/ScrollToHash.jsx" afterDir="false" />
+    <list default="true" id="ce647033-0a32-47c7-99dd-2cb78b601b90" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/home/home_bg_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/home/home_bg_person.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/navigateToAnchor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/blueprint.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/blueprint.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/placeholder.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/placeholder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about-page/CardItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about-page/CardItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/home/clockandcar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/home/home_bg_full.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/home/person.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/home/home_bg_left.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/footer/AnchorList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/AnchorList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/Team.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/Team.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/AboutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AboutPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/NonprofitsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NonprofitsPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/ProjectsPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ProjectsPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,51 +27,62 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
-}</component>
-  <component name="ProjectId" id="2c3oGWiaOGYxPEkeMvFh7aZaeFj" />
+  <component name="ProjectId" id="2a9VZ5GjXDkuWPRJyU6bIMstLQJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "general-refactoring",
-    "last_opened_file_path": "/Users/cwr/WebstormProjects/Blueprint/Blueprint-Website",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;home-images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/colwy/WebstormProjects/Blueprint/Blueprint-Website/src/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\colwy\WebstormProjects\Blueprint\Blueprint-Website\src\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/src/components/Shared" />
-      <recent name="$PROJECT_DIR$/src/assets" />
-      <recent name="$PROJECT_DIR$/public/images" />
-      <recent name="$PROJECT_DIR$/src/constants" />
+      <recent name="C:\Users\colwy\WebstormProjects\Blueprint\Blueprint-Website\src\components\Shared" />
+      <recent name="C:\Users\colwy\WebstormProjects\Blueprint\Blueprint-Website\public\gears" />
+      <recent name="C:\Users\colwy\WebstormProjects\Blueprint\Blueprint-Website\src\components\Gears" />
+      <recent name="C:\Users\colwy\WebstormProjects\Blueprint\Blueprint-Website\public" />
+      <recent name="C:\Users\colwy\WebstormProjects\Blueprint\Blueprint-Website\src\assets\gears" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="142690d7-e5fc-410a-a469-c068126c711b" name="Changes" comment="" />
-      <created>1707349527808</created>
+      <changelist id="ce647033-0a32-47c7-99dd-2cb78b601b90" name="Changes" comment="" />
+      <created>1703730834831</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1707349527808</updated>
-      <workItem from="1707349528917" duration="3056000" />
-      <workItem from="1707679050398" duration="4214000" />
-      <workItem from="1707684822210" duration="7454000" />
+      <updated>1703730834831</updated>
+      <workItem from="1703730835909" duration="4406000" />
+      <workItem from="1703739597163" duration="1256000" />
+      <workItem from="1704339302683" duration="3684000" />
+      <workItem from="1704513906024" duration="7000" />
+      <workItem from="1705106957953" duration="2563000" />
+      <workItem from="1705175101169" duration="5780000" />
+      <workItem from="1705218559382" duration="2009000" />
+      <workItem from="1705221809543" duration="20000" />
+      <workItem from="1705221833853" duration="559000" />
+      <workItem from="1705279157587" duration="12218000" />
+      <workItem from="1705296571779" duration="1169000" />
+      <workItem from="1705306107583" duration="115000" />
+      <workItem from="1705519181198" duration="13284000" />
+      <workItem from="1705552064826" duration="15000" />
+      <workItem from="1708910493613" duration="5999000" />
     </task>
     <servers />
   </component>
@@ -85,7 +94,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/about-page-new" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

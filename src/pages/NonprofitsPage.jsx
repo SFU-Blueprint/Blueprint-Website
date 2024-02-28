@@ -23,18 +23,18 @@ const NonprofitsPage = () => {
     <div className="flex flex-col">
       <div className="relative">
         <img
-            className="w-full"
-            src={Header}
-            alt="nonprofits header"
+          className="w-full h-[35vh] sm:h-[45vh] object-cover"
+          src={Header}
+          alt="nonprofits header"
         />
         <div className="absolute bottom-5 md:my-10">
-          <PageHeader className="!text-blueprint-black my-2 md:text-6xl xl:ml-36">
+          <PageHeader className="!text-blueprint-black my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36">
             For Non-Profits
           </PageHeader>
-          <ParagraphTitle className="!text-blueprint-black my-3 xl:ml-36">
+          <ParagraphTitle className="!text-blueprint-black my-3 ml-10 md:ml-16 md:text-6xl xl:ml-36">
             {t("nonprofits.forNonProfits")}
           </ParagraphTitle>
-          <ProposeButton className="my-5 xl:ml-36" />
+          <ProposeButton className="my-5 ml-10 md:ml-16  xl:ml-36" />
         </div>
       </div>
       <div className="w-full px-5 md:px-[120px]">

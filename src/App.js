@@ -9,7 +9,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import StudentsPage from "./pages/StudentsPage";
 import NonprofitsPage from "./pages/NonprofitsPage";
 import Footer from "./components/footer/Footer";
-import ScrollToHashElement from "./components/Shared/ScrollToHash";
+import ScrollToHashElement from "./components/shared/ScrollToHash";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projectspage" element={<ProjectsPage />} />
         <Route path="/students" element={<StudentsPage />} />
         <Route path="/nonprofits" element={<NonprofitsPage />} />
         <Route path="/sponsors" element={<SponsorPage />} />

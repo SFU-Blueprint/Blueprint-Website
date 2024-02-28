@@ -1,5 +1,5 @@
 {
-  "pages": ["home", "about-us", "projects", "students", "nonprofits"],
+  "pages": ["home", "about", "projectspage", "students", "nonprofits"],
   "blueprintPositions": [
     "developer",
     "product-designer",
@@ -13,6 +13,10 @@
     "privacy": "Privacy",
     "cookies": "Cookies"
   },
+  "about": {
+    "name": "About Us",
+    "anchors": ["Who-we-are", "Our-values", "Our-team"]
+  },
   "home": {
     "header": {
       "title": "Tech for Social Good",
@@ -23,18 +27,26 @@
       "title": "About Us",
       "text": "We are a team of students based at Simon Fraser University. Our members serve as product managers, developers, designers and other specialists to collaboratively build tech-based solutions for nonprofit organizations. We value community, innovation, and the social impact of our work.",
       "button": "Meet the Team"
+    },
+    "getinvolved": {
+      "students": {
+        "title": "STUDENTS",
+        "content": "Contribute to building technology for social good. Make new friends and harness your professional skillsets along the away!",
+        "button": "Join us →"
+      },
+      "nonprofits": {
+        "title": "NON-PROFITS",
+        "content": "Collaborate with us to advance your mission for public welfare. Tackle your challenges with fresh and innovative solutions!",
+        "button": "Collaborate with us →"
+      },
+      "sponsors": {
+        "title": "SPONSORS",
+        "content": "Support our operation to become part of the changemakers! Elevate your brand while driving meaningful social impact.",
+        "button": "Sponsor Us →"
+      }
     }
   },
-  "about": {
-    "name": "About Us",
-    "anchors": ["Who-we-are", "Our-values", "Our-team"]
-  },
   "projects": {
-    "name": "Projects",
-    "anchors": ["Past", "Ongoing"],
-    "title": "Our Projects",
-    "ongoing": "Ongoing",
-    "moreComingSoon": "More Coming Soon!",
     "Mosaic": {
       "name": "Mosaic",
       "description": "Aiding New Comers to Canada",
@@ -53,6 +65,13 @@
       "tags": ["Innovation", "Website"],
       "image": "Blueprint.png"
     }
+  },
+  "projectspage": {
+    "name": "Projects",
+    "anchors": ["Past", "Ongoing"],
+    "title": "Our Projects",
+    "ongoing": "Ongoing",
+    "allprojects": "See all projects →"
   },
   "students": {
     "name": "For Students",
