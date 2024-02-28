@@ -196,11 +196,11 @@ function RolesCard({ children, className }) {
     <div
       className={`${className} flex flex-col w-full gap-1 border-black shadow-lg`}
     >
-      <ParagraphTitle className="mx-[8%] mt-[8%] mb-[3%]">
+      <ParagraphTitle className="mx-[8%] mt-[6%] mb-[3%]">
         {" "}
         {title}
       </ParagraphTitle>
-      <div className="text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal mx-[10%] mb-[10%] flex justify-between">
+      <div className="text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal mx-[10%] mb-[5%] flex justify-between">
         <ParagraphText className="w-4/5 md:w-3/5">
           {arrayToUnorderedList(desc)}
         </ParagraphText>
