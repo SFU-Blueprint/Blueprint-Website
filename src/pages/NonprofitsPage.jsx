@@ -134,7 +134,7 @@ function ContentCard({ children, className }) {
   const title = children;
   console.log(title);
   return (
-    <div className={`${className} flex flex-col w-full md:w-[420px] gap-3`}>
+    <div className={`${className} flex flex-col w-full md:w-[1000px] gap-3`}>
       <ParagraphTitle>{t(`nonprofits.${title}.name`)}</ParagraphTitle>
       <ParagraphText>{t(`nonprofits.${title}.description`)}</ParagraphText>
     </div>

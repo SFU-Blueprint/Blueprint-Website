@@ -25,12 +25,14 @@ const HomePage = () => {
     zIndex: -1,
     width: "100%",
     height: "100%",
-    // backgroundImage: 'url("grid.png")',
-    // filter: "brightness(95%)",
-    // backgroundSize: "3vmin",
-    // backgroundRepeat: "repeat repeat",
-    // maskImage:
-    //   "radial-gradient(ellipse at right 30% top 50%, black 1%, transparent 50%)",
+
+    backgroundImage: '',
+    filter: "brightness(95%)",
+    backgroundSize: "3vmin",
+    backgroundRepeat: "repeat repeat",
+    maskImage:
+      "radial-gradient(ellipse at right 30% top 50%, black 1%, transparent 50%)",
+
   };
 
   const GetInvolvedSection = ({jsonKey, onClick, children}) => {
