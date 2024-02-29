@@ -8,16 +8,15 @@ import { useTranslation } from "react-i18next";
  * @returns {JSX.Element} JSX representation of the ProjectCard component.
  */
 
-const ProjectCard = ({ project, className }) => {
+const ProjectCard = ({ project, className, onClick }) => {
   const { t, i18n } = useTranslation();
   return (
-    <div className={`${className} shadow-md w-70 min-w-[240px] bg-white`}>
-      <img
+    <div className={`${className} shadow-md w-70 min-w-[240px] bg-white`} onClick={onClick}>
+       <img
         src={t(`projects.${project}.image`)}
         className="w-full"
         alt={t(`projects.${project}.name`)}
-      />
-
+        />
       <div className="px-[5%] pb-3 ">
         <div className="flex flex-row place-items-center -translate-y-1/2">
           {t(`projects.${project}.tags`).map((tag, index) => (
