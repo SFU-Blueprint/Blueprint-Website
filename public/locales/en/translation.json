@@ -51,19 +51,25 @@
       "name": "Mosaic",
       "description": "Aiding New Comers to Canada",
       "tags": ["Immigration", "AI / Product"],
-      "image": "Mosaic.png"
+      "image": "Mosaic.png",
+      "nonProfitDescription": "How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in",
+      "projectDescription": "To address 'problem', we did this and that. How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in"
     },
     "Pedals": {
       "name": "Pedals",
       "description": "Physio Therapy Outside the Clinic",
       "tags": ["Community", "Full Stack"],
-      "image": "Pedals.png"
+      "image": "Pedals.png",
+      "nonProfitDescription": "How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in",
+      "projectDescription": "To address 'problem', we did this and that. How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in"
     },
     "Blueprint-Website": {
       "name": "Blueprint Website",
       "description": "Volunteer Hour Tracking Platform",
       "tags": ["Innovation", "Website"],
-      "image": "Blueprint.png"
+      "image": "Blueprint.png",
+      "nonProfitDescription": "How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in",
+      "projectDescription": "To address 'problem', we did this and that. How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in"
     }
   },
   "projectspage": {

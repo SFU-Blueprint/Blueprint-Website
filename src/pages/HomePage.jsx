@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
@@ -9,6 +9,7 @@ import {
 import ProjectCard from "../components/shared/ProjectCard";
 import { Event1, Event2, Event3 } from "../constants/Event";
 import OutlineButton from "../components/shared/OutlineButton";
+import ProjectModal from "../components/shared/ProjectModal";
 
 import LadyTyping from "../assets/images/home/lady_typing.png";
 import HomeBGFull from "../assets/images/home/home_bg_full.png";
@@ -17,6 +18,15 @@ import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
+// Other state and variables
+const [selectedProject, setSelectedProject] = useState(null);
+const [showPopup, setShowPopup] = useState(false);
+
+const handleProjectClick = (projectKey) => {
+  const projectDetails = projects[projectKey];
+  setSelectedProject(projectDetails); 
+  setShowPopup(true);
+};
 
   const projects = t("projects"); //TODO Put key in a separate file
 
@@ -112,13 +122,22 @@ const HomePage = () => {
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-            {Object.keys(projects).map((projectKey, index) => (
-              <ProjectCard
+
+            {Object.keys(projects)
+              .map((projectKey, index) => (
+                <ProjectCard
                 key={index}
                 project={projectKey}
                 className="your-class-name"
+                onClick={() => handleProjectClick(projectKey)}
               />
-            ))}
+              ))}
+            <ProjectModal
+              isOpen={showPopup}
+              onClose={() => setShowPopup(false)}
+              project={selectedProject || {}}
+            />
+
           </div>
           <div className="w-full flex justify-end">
             <OutlineButton onClick={() => navigateToAnchor("projectspage")}>
