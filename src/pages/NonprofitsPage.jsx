@@ -83,7 +83,7 @@ const NonprofitsPage = () => {
           </ContentCard>
         </div>
       </div>
-      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full my-9 md:mb-20">
+      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full mt-10">
         <SectionHeader id="Proposal" className="text-center my-3 md:my-6">
           Send your ideas to us now
         </SectionHeader>
@@ -99,7 +99,6 @@ const NonprofitsPage = () => {
           >
             {t(`email.link`)}
           </a>
-          .
         </ParagraphText>
       </div>
     </div>
