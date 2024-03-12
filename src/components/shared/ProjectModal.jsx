@@ -16,7 +16,7 @@ function ProjectModal({ isOpen, onClose, project }) {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
-            <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95%] w-full max-w-[80%] overflow-scroll flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] max-w-[80vw] overflow-scroll flex flex-col justify-between">
                 <div>
                     <div className="flex  justify-between items-center mb-6">
                         <h1 className="text-4xl font-bold">{project.name}</h1>
@@ -24,7 +24,7 @@ function ProjectModal({ isOpen, onClose, project }) {
                     </div>
                     <p className="text-lg text-gray-600">March 2024 - July 2024</p>
                     <p className="text-lg mb-4">{project.duration}</p>
-                    <div className="flex gap-4 mb-8">
+                    <div className="block gap-4 mb-8">
                         <OutlineButton>
                             Github
                         </OutlineButton>
