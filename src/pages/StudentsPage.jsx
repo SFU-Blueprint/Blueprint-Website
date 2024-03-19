@@ -238,7 +238,7 @@ function RolesCard({ children, className }) {
             </button>
           </div>
         ) : (
-          <div className="items-center">Applications Closed</div>
+          <div className="text-center">Applications Closed</div>
         )}
       </ParagraphTitle>
     </div>

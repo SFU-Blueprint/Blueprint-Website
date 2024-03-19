@@ -119,7 +119,7 @@ const AboutPage = () => {
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
                 <img src={Image_2} alt="about us image 2" />
               </div>
-              <Annotation className="pl-[10%]">
+              <Annotation className="pl-[10%] hidden sm:block">
                 A design sprint is the best way to get ideas flowing
               </Annotation>
             </div>
@@ -127,9 +127,15 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="mt-12 flex flex-col items-center md:hidden">
-        <div className="block md:hidden w-screen h-60 bg-zinc-300 justify-self-center rounded-sm "></div>
+        <div className="block md:hidden w-screen h-60 justify-self-center rounded-sm ">
+          {" "}
+          <img src={Image_1} alt="about us image 1" />
+        </div>
         <div className="m-[10%] flex flex-row">
-          <div className="block basis-4/6 md:hidden w-64 h-32 bg-zinc-300 rounded-sm "></div>
+          <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">
+            <img src={Image_2} alt="about us image 2" />
+          </div>
+
           <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit block sm:hidden">
             A design sprint is the best way to get ideas flowing
           </Annotation>
