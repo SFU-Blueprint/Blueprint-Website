@@ -55,7 +55,7 @@ export const Executives = [
   },
   {
     title: "Monishka Gautam",
-    img: "blueprint.jpg",
+    img: "Monishka.jpg",
     linkedin: "https://www.linkedin.com/in/monishka-gautam/",
     lastPosition: "",
   },
@@ -246,4 +246,3 @@ export const Alumni = [
     lastPosition: "Tech Lead",
   },
 ];
-
