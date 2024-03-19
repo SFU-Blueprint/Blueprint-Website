@@ -204,6 +204,7 @@ function RolesCard({ children, className }) {
         <ParagraphText className="w-4/5 md:w-3/5">
           {arrayToUnorderedList(desc)}
         </ParagraphText>
+        {/* PC */}
         <ParagraphTitle
           className={`block max-md:hidden text-center ${
             hiring
@@ -212,16 +213,17 @@ function RolesCard({ children, className }) {
           }`}
         >
           {hiring ? (
-            <div className="py-[3%] px-[10%] ml-[25%] border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
+            <div className="py-[3%] px-[10%] border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
               <button className=" text-blueprint-blue font-poppins font-medium">
                 View Details and Apply
               </button>
             </div>
           ) : (
-            "Applications Closed"
+            <div className="text-center">Applications Closed</div>
           )}
         </ParagraphTitle>
       </div>
+      {/* Mobile */}
       <ParagraphTitle
         className={`hidden max-md:block text-center ${
           hiring
@@ -236,7 +238,7 @@ function RolesCard({ children, className }) {
             </button>
           </div>
         ) : (
-          "Applications Closed"
+          <div className="items-center">Applications Closed</div>
         )}
       </ParagraphTitle>
     </div>
