@@ -141,7 +141,7 @@ const StudentsPage = () => {
           <RolesCard children={rolesContent[role]} />
         </div>
       ))}
-      <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%]  flex flex-col items-center justify-center px-[15%] ">
+      <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%] flex flex-col items-center justify-center px-[15%] ">
         <PageHeader>Stay in Touch</PageHeader>
         <ParagraphText className="text-center whitespace-pre-line mb-3 md:mb-6">
           {t("students.stayInTouch")}
@@ -209,7 +209,7 @@ function RolesCard({ children, className }) {
           className={`block max-md:hidden text-center ${
             hiring
               ? "text-blueprint-blue flex justify-center mb-[8%]"
-              : "!text-blueprint-gray-dark mb-[8%] ml-[20%]"
+              : "!text-blueprint-gray-dark mb-[8%]"
           }`}
         >
           {hiring ? (
