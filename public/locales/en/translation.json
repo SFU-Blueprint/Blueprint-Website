@@ -57,7 +57,7 @@
     },
     "Pedals": {
       "name": "Pedals",
-      "description": "Physio Therapy Outside the Clinic",
+      "description": "Empowering Communities Through Bicycles",
       "tags": ["Community", "Full Stack"],
       "image": "Pedals.png",
       "nonProfitDescription": "How does this product impact the people that the non-profit serves? Does the non-profit understand the challenges encountered by the community in",
@@ -82,16 +82,8 @@
   "students": {
     "name": "For Students",
     "anchors": ["Who-we-are", "Our-values", "Our-team"],
-    "openPositions": [
-      "product-manager",
-      "product-designer"
-    ],
-    "phases": [
-      "Begin",
-      "Contribute",
-      "Socialize",
-      "Scheduling"
-    ],
+    "openPositions": ["product-manager", "product-designer"],
+    "phases": ["Begin", "Contribute", "Socialize", "Scheduling"],
     "phasesDesc": [
       "Applying for a Position",
       "Working on a Project",
@@ -130,37 +122,25 @@
 
   "product-manager": {
     "title": "Project Manager (3)",
-    "tags": [
-      "Immigration",
-      "AI/Product"
-    ],
+    "tags": ["Immigration", "AI/Product"],
     "description": "The Project Manager will be responsible for overseeing the successful completion of projects with our NPO partner.",
     "deadline": "Jan 10th, 2024"
   },
   "product-designer": {
     "title": "Product Designer (3)",
-    "tags": [
-      "Health",
-      "Machine Learning"
-    ],
+    "tags": ["Health", "Machine Learning"],
     "description": "Product Designers are responsible for delivering high-quality UI/UX work for the non-profit projects we build.",
     "deadline": "Jan 10th, 2024"
   },
   "project-developer": {
     "title": "Developer (5)",
-    "tags": [
-      "Health",
-      "Machine Learning"
-    ],
+    "tags": ["Health", "Machine Learning"],
     "description": "Developers are responsible for delivering high-quality UI/UX work for the non-profit projects we build.",
     "deadline": "Jan 10th, 2024"
   },
   "tech-lead": {
     "title": "Tech Lead (2)",
-    "tags": [
-      "Health",
-      "Machine Learning"
-    ],
+    "tags": ["Health", "Machine Learning"],
     "description": "Tech Leads are responsible for delivering high-quality UI/UX work for the non-profit projects we build.",
     "deadline": "Jan 10th, 2024"
   },
@@ -253,7 +233,7 @@
     "name": "Discord",
     "link": "https://discord.gg/tmhbeanZhU"
   },
-  "roles":[
+  "roles": [
     "developer",
     "product-designer",
     "project-manager",
@@ -305,5 +285,4 @@
       "hiring": false
     }
   }
-
 }
