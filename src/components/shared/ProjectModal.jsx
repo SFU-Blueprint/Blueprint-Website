@@ -16,7 +16,7 @@ function ProjectModal({ isOpen, onClose, project }) {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
-            <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[70vw] overflow-scroll flex flex-col justify-between">
+            <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[80vw] overflow-scroll flex flex-col justify-between">
                 <div >
                     <div className="flex justify-between items-center mb-6">
                         <h1 className="text-4xl font-bold">{project.name}</h1>
@@ -85,15 +85,17 @@ function ProjectModal({ isOpen, onClose, project }) {
                             </div>
                             <div className="mt-8">
                                 <h2 className="text-2xl font-semibold text-gray-900">DESIGNERS</h2>
-                                <div className="mt-4 grid grid-cols-2 gap-4">
+                                <div className="mt-4 grid gap-4">
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
@@ -102,39 +104,45 @@ function ProjectModal({ isOpen, onClose, project }) {
                             </div>
                             <div className="mt-8">
                                 <h2 className="text-2xl font-semibold text-gray-900">DEVELOPERS</h2>
-                                <div className="mt-4 grid grid-cols-2 gap-4">
+                                <div className="mt-4 grid gap-4">
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
                                     </div>
                                     <div className="flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
                                     </div>
-                                    <div className="flex justify-between items-center">
+                                    <div className="mb-4 flex justify-between items-center">
                                         <p className="text-lg text-gray-800">FirstName LastName</p>
+                                        <p className="text-lg text-gray-600">Role Title (long)</p>
                                         <Link className="text-blue-600 hover:underline" href="#">
                                             LinkedIn
                                         </Link>
