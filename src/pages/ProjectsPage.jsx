@@ -67,11 +67,6 @@ const ProjectsPage = () => {
             />
 
           </div>
-          <div className="w-full flex justify-end">
-            <OutlineButton onClick={() => navigateToAnchor("projectspage")}>
-              {t("projectspage.allprojects")}
-            </OutlineButton>
-          </div>
         </div>
       </div>
         <ParagraphText className="my-[10%] md:my-[8%] text-center !text-xl">

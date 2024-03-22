@@ -16,9 +16,9 @@ function ProjectModal({ isOpen, onClose, project }) {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
-            <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] max-w-[80vw] overflow-scroll flex flex-col justify-between">
-                <div>
-                    <div className="flex  justify-between items-center mb-6">
+            <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[70vw] overflow-scroll flex flex-col justify-between">
+                <div >
+                    <div className="flex justify-between items-center mb-6">
                         <h1 className="text-4xl font-bold">{project.name}</h1>
                         <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>
                     </div>
