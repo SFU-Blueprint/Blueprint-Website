@@ -21,17 +21,17 @@ const NonprofitsPage = () => {
   const backgroundStyle = {
     // outline: "1px solid black",
     position: "absolute",
+    left: 0, // added to override the left padding, which causes horizontal overflow with width = 100%
     overflowX: "hidden",
     zIndex: -1,
     width: "100%",
-    left: 0, // added to override the left padding, which causes horizontal overflow with width = 100%
     height: "100%",
     backgroundImage: 'url("grid.png")',
-    filter: "brightness(200%)",
-    backgroundSize: "2rem",
+    opacity: 0.3,
+    backgroundSize: "3vmin",
     backgroundRepeat: "repeat", // Corrected
     maskImage:
-      "radial-gradient(ellipse at left 20% top 40vh, black 1%, transparent 50%)", // changed to left to follow Figma
+      "radial-gradient(circle at left 10% top 40vh, black 1%, transparent 40%)", // changed to left to follow Figma
   };
 
   return (
