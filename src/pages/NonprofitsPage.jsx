@@ -18,6 +18,20 @@ const NonprofitsPage = () => {
   const { t, i18n } = useTranslation();
   const [activePhase, setActivePhase] = useState(0);
   const phases = t("nonprofits.phases");
+  const backgroundStyle = {
+    // outline: "1px solid black",
+    position: "absolute",
+    overflowX: "hidden",
+    zIndex: -1,
+    width: "100%",
+    height: "100%",
+    backgroundImage: 'url("grid.png")',
+    filter: "brightness(200%)",
+    backgroundSize: "2rem",
+    backgroundRepeat: "repeat", // Corrected
+    maskImage:
+      "radial-gradient(ellipse at right 20% top 40vh, black 1%, transparent 60%)",
+  };
 
   return (
     <div className="flex flex-col">
@@ -60,7 +74,8 @@ const NonprofitsPage = () => {
           <ContentCard>{"technicalFeasibility"}</ContentCard>
         </div>
 
-        <SectionHeader id="Our-process" className="mt-6 md:mt-16 mb-3 md:mb-6">
+        <div style={backgroundStyle}></div>
+        <SectionHeader className="mt-6 md:mt-16 mb-3 md:mb-6">
           Our Process
         </SectionHeader>
         <div className="flex max-md:flex-col md:gap-[108px]">
@@ -83,7 +98,7 @@ const NonprofitsPage = () => {
           </ContentCard>
         </div>
       </div>
-      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full h-[450px] mt-[10%]">
+      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full h-[450px] mt-[3%]">
         <SectionHeader id="Proposal" className="text-center my-3 md:my-6">
           Send your ideas to us now
         </SectionHeader>
