@@ -30,7 +30,6 @@ function ProjectModal({ isOpen, onClose, project }) {
             </OutlineButton>
             {
               project.name !== "Blueprint Website" && (
-
                 <a href={project.page}>
                   <OutlineButton>
                     Case Study
