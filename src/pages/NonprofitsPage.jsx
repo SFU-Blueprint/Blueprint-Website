@@ -27,7 +27,7 @@ const NonprofitsPage = () => {
     width: "100%",
     height: "100%",
     backgroundImage: 'url("grid.png")',
-    opacity: 0.3,
+    opacity: 0.35,
     backgroundSize: "3vmin",
     backgroundRepeat: "repeat", // Corrected
     maskImage:
