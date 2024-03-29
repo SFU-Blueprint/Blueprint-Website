@@ -34,22 +34,25 @@ function ProjectModal({ isOpen, onClose, project }) {
   if (!isOpen || !project) return null;
   const renderTeamSection = (title, teamMembers) => (
     <div className="mt-8">
-      <h2 className="text-3xl font-semibold text-gray-900">{title}</h2> {/* Increased size */}
+      <h2 className="text-3xl font-semibold text-gray-900">{title}</h2>
       <div className="mt-4 space-y-4">
         {teamMembers.map((member, index) => (
-          <div key={index} className="flex justify-between items-center">
-            <p className="flex-1 text-xl text-gray-800 mr-3">{member.title}</p> {/* Increased size */}
-            <p className="flex-1 text-xl text-gray-600">{member.role}</p> {/* Increased size */}
+          <div key={index} className="flex items-center justify-between">
+            {/* Use md:text-xl to increase text size on medium screens and larger */}
+            <p className="flex-1 text-l md:text-xl text-gray-800 mr-3">{member.title}</p>
+            <p className="flex-1 text-l md:text-xl text-gray-600">{member.role}</p>
             {member.linkedin ? (
-              <a href={member.linkedin} className="ml-3 text-xl text-blue-600 hover:underline whitespace-nowrap">LinkedIn</a>
+              <a href={member.linkedin} className="text-l md:text-xl text-blue-600 hover:underline whitespace-nowrap">LinkedIn</a>
             ) : (
-              <span className="ml-3 text-xl opacity-0 whitespace-nowrap">LinkedIn</span> // Placeholder to maintain layout
+              <span className="opacity-0 text-l md:text-xl whitespace-nowrap">LinkedIn</span> // Invisible placeholder
             )}
           </div>
         ))}
       </div>
     </div>
   );
+  
+  
   
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
