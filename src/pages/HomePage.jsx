@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
@@ -18,15 +18,15 @@ import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
-// Other state and variables
-const [selectedProject, setSelectedProject] = useState(null);
-const [showPopup, setShowPopup] = useState(false);
+  // Other state and variables
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
-const handleProjectClick = (projectKey) => {
-  const projectDetails = projects[projectKey];
-  setSelectedProject(projectDetails); 
-  setShowPopup(true);
-};
+  const handleProjectClick = (projectKey) => {
+    const projectDetails = projects[projectKey];
+    setSelectedProject(projectDetails);
+    setShowPopup(true);
+  };
 
   const projects = t("projects"); //TODO Put key in a separate file
 
@@ -69,7 +69,7 @@ const handleProjectClick = (projectKey) => {
       />
 
       <img
-        className="absolute top-[500px] md:w-[1500px] min-w-[100vw] z-[-2] object-contain"
+        className="absolute top-[500px] z-[-2] object-contain"
         src={HomeBGFullLeft}
         alt="about us header"
       />
@@ -122,22 +122,19 @@ const handleProjectClick = (projectKey) => {
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-
-            {Object.keys(projects)
-              .map((projectKey, index) => (
-                <ProjectCard
+            {Object.keys(projects).map((projectKey, index) => (
+              <ProjectCard
                 key={index}
                 project={projectKey}
                 className="your-class-name"
                 onClick={() => handleProjectClick(projectKey)}
               />
-              ))}
+            ))}
             <ProjectModal
               isOpen={showPopup}
               onClose={() => setShowPopup(false)}
               project={selectedProject || {}}
             />
-
           </div>
           <div className="w-full flex justify-end">
             <OutlineButton onClick={() => navigateToAnchor("projectspage")}>
