@@ -43,10 +43,11 @@ export const Executives = [
   },
   {
     title: "Tulika Varma",
-    img: "blueprint.jpg",
+    img: "Tulika.jpg",
     linkedin: "",
     lastPosition: "",
   },
+  
   {
     title: "Ronney Lok",
     img: "Ronney.jpg",
@@ -75,14 +76,8 @@ export const Members = [
     lastPosition: "",
   },
   {
-    title: "Colwyn Ralph",
-    img: "Colwyn.jpg",
-    linkedin: "https://www.linkedin.com/in/colwyn-ralph/",
-    lastPosition: "",
-  },
-  {
     title: "Kian Hoseinkhani",
-    img: "blueprint.jpg",
+    img: "Kian.jpg",
     linkedin: "https://www.linkedin.com/in/kian-hosseinkhani-716a311b6/",
     lastPosition: "",
   },
@@ -94,30 +89,18 @@ export const Members = [
   },
   {
     title: "Kate Simone",
-    img: "blueprint.jpg",
+    img: "Kate.jpg",
     linkedin: "https://www.linkedin.com/in/kate-simone-866335284/",
     lastPosition: "",
   },
   {
     title: "Eugene Zhu",
-    img: "blueprint.jpg",
+    img: "Eugene.jpg",
     linkedin: "https://www.linkedin.com/in/eugenezhu/",
     lastPosition: "",
   },
   {
-    title: "Izaz Zubayer",
-    img: "blueprint.jpg",
-    linkedin: "https://www.linkedin.com/in/izazzubayer/",
-    lastPosition: "",
-  },
-  {
-    title: "Manpreet Singh Sarna",
-    img: "blueprint.jpg",
-    linkedin: "",
-    lastPosition: "",
-  },
-  {
-    title: "Kaset Le",
+    title: "Kasey Le",
     img: "blueprint.jpg",
     linkedin: "https://www.linkedin.com/in/kasey-le-43aa31255/",
     lastPosition: "",
@@ -128,15 +111,10 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/alisonlu3/",
     lastPosition: "",
   },
-  {
-    title: "Jaden L.",
-    img: "blueprint.jpg",
-    linkedin: "https://www.linkedin.com/in/jaden-s-lee/",
-    lastPosition: "",
-  },
+  
   {
     title: "Firm Kong Thong",
-    img: "blueprint.jpg",
+    img: "Firm.jpg",
     linkedin: "https://www.linkedin.com/in/firm-kongthong/",
     lastPosition: "",
   },
@@ -190,24 +168,114 @@ export const Members = [
   },
   {
     title: "Brayden Sue",
-    img: "blueprint.jpg",
+    img: "Brayden.jpg",
     linkedin: "",
     lastPosition: "",
   },
+  
   {
-    title: "Jai Malhi",
+    title: "Gursewak Singh",
+    img: "Gursewak.jpg",
+    linkedin: "https://www.linkedin.com/in/gursewak-singh-310a111a4/",
+    lastPosition: "",
+  },
+  {
+    title: "Meghna Rajamohan",
+    img: "Meghna.jpg",
+    linkedin: "http://www.linkedin.com/in/meghna-rajamohan-a787452a7",
+    lastPosition: "",
+  },
+  {
+    title: "Samuel Miranda",
+    img: "Samuel.jpg",
+    linkedin: "https://www.linkedin.com/in/samuel-antunes-467a0a214",
+    lastPosition: "",
+  },
+  {
+    title: "Hinako Kamiya",
+    img: "Hinako.jpg",
+    linkedin: "https://www.linkedin.com/in/hinako-kamiya/",
+    lastPosition: "",
+  },
+  {
+    title: "Vinh Dang",
     img: "blueprint.jpg",
-    linkedin: "https://www.linkedin.com/in/jaimalhi/",
+    linkedin: "https://www.linkedin.com/in/quang-vinh-dang-788ab0194/",
+    lastPosition: "",
+  },
+  {
+    title: "Ayana Hussain",
+    img: "Ayana.jpg",
+    linkedin: "https://www.linkedin.com/in/ayana-hussain-a3399a227/",
+    lastPosition: "",
+  },{
+    title: "Amy Zhao",
+    img: "Amy.jpg",
+    linkedin: "https://www.linkedin.com/in/amy-zhao-/",
+    lastPosition: "",
+  },{
+    title: "Johnson Luong",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/johnson-luong/",
+    lastPosition: "",
+  },{
+    title: "Derek Huang",
+    img: "Derek.jpg",
+    linkedin: "https://www.linkedin.com/in/derekhuang1/",
+    lastPosition: "",
+  },{
+    title: "Duy Nguyen",
+    img: "Duy.jpg",
+    linkedin: "https://www.linkedin.com/in/duwe-ng/",
+    lastPosition: "",
+  },{
+    title: "Zahila Rehman",
+    img: "Zahila.jpg",
+    linkedin: "https://www.linkedin.com/in/zahila-rehman-9118a4217/",
+    lastPosition: "",
+  },{
+    title: "Fabian Siswanto",
+    img: "Fabian.jpg",
+    linkedin: "https://www.linkedin.com/in/fabiansiswanto/",
+    lastPosition: "",
+  },{
+    title: "Mrinal Goshalia",
+    img: "Mrinal.jpg",
+    linkedin: "https://www.linkedin.com/in/mrinal-goshalia/",
     lastPosition: "",
   },
 ];
 
 export const Alumni = [
   {
+    title: "Jaden L.",
+    img: "blueprint.jpg",
+    linkedin: "https://www.linkedin.com/in/jaden-s-lee/",
+    lastPosition: "",
+  },
+  {
+    title: "Izaz Zubayer",
+    img: "blueprint.jpg",
+    linkedin: "https://www.linkedin.com/in/izazzubayer/",
+    lastPosition: "",
+  },
+  {
+    title: "Colwyn Ralph",
+    img: "Colwyn.jpg",
+    linkedin: "https://www.linkedin.com/in/colwyn-ralph/",
+    lastPosition: "",
+  },
+  {
     title: "Andy Zhang",
     img: "blueprint.jpg",
-    linkedin: "linkedin",
+    linkedin: "",
     lastPosition: "Product Manager",
+  },
+  {
+    title: "Jai Malhi",
+    img: "blueprint.jpg",
+    linkedin: "https://www.linkedin.com/in/jaimalhi/",
+    lastPosition: "",
   },
   {
     title: "Tavleen Sihota",
@@ -218,7 +286,7 @@ export const Alumni = [
   {
     title: "Yang Liu",
     img: "blueprint.jpg",
-    linkedin: "linkedin",
+    linkedin: "",
     lastPosition: "Tech Lead",
   },
   {
@@ -230,13 +298,13 @@ export const Alumni = [
   {
     title: "Mudit Mittal",
     img: "blueprint.jpg",
-    linkedin: "linkedin",
+    linkedin: "",
     lastPosition: "Senior Developer",
   },
   {
     title: "Teeya Li",
     img: "blueprint.jpg",
-    linkedin: "linkedin",
+    linkedin: "",
     lastPosition: "Junior Developer",
   },
   {
@@ -244,5 +312,11 @@ export const Alumni = [
     img: "Shivam.jpg",
     linkedin: "https://www.linkedin.com/in/kumarshivam0002/",
     lastPosition: "Tech Lead",
+  },
+  {
+    title: "Manpreet Singh Sarna",
+    img: "blueprint.jpg",
+    linkedin: "",
+    lastPosition: "",
   },
 ];
