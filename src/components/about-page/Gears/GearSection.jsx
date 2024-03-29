@@ -61,7 +61,7 @@ const GearSection = () => {
           interest. Our success is measured by the positive impact we generate.
         </div>
         <div className="text-field" style={{ top: "238px" }}>
-          Our community foster continuous learning to support academic, social,
+          Our community fosters continuous learning to support academic, social,
           and personal growth. We strive to offer a helping hand and push each
           other to succeed.
         </div>
