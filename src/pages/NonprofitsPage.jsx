@@ -31,7 +31,7 @@ const NonprofitsPage = () => {
     backgroundSize: "3vmin",
     backgroundRepeat: "repeat", // Corrected
     maskImage:
-      "radial-gradient(circle at left 10% top 40vh, black 1%, transparent 40%)", // changed to left to follow Figma
+      "radial-gradient(circle at left 10% top 35%, black 1%, transparent 40%)", // changed to left to follow Figma
   };
 
   return (
