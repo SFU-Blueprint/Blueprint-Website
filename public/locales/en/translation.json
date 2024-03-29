@@ -210,11 +210,11 @@
   },
   "connect": {
     "name": "Connect",
-    "links": ["email", "linkedin", "medium", "github", "discord"]
+    "links": ["email", "linkedin", "instagram", "medium", "github", "discord"]
   },
   "email": {
     "name": "Email",
-    "link": "sfublueprint@gmail.com"
+    "link": "mailto:sfublueprint@gmail.com"
   },
   "instagram": {
     "name": "Instagram",
@@ -222,14 +222,15 @@
   },
   "linkedin": {
     "name": "LinkedIn",
-    "link": "https://www.linkedin.com/company/sfu-blueprint/mycompany/?viewAsMember=true"
+    "link": "https://www.linkedin.com/company/sfu-blueprint/"
   },
   "medium": {
-    "name": "Medium"
+    "name": "Medium",
+    "link": "https://medium.com/@sfublueprint"
   },
   "github": {
     "name": "Github",
-    "link": ""
+    "link": "https://github.com/SFU-Blueprint"
   },
   "discord": {
     "name": "Discord",
