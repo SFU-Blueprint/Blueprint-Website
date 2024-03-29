@@ -21,16 +21,17 @@ const NonprofitsPage = () => {
   const backgroundStyle = {
     // outline: "1px solid black",
     position: "absolute",
+    left: 0, // added to override the left padding, which causes horizontal overflow with width = 100%
     overflowX: "hidden",
     zIndex: -1,
     width: "100%",
     height: "100%",
     backgroundImage: 'url("grid.png")',
-    filter: "brightness(200%)",
-    backgroundSize: "2rem",
+    opacity: 0.35,
+    backgroundSize: "3vmin",
     backgroundRepeat: "repeat", // Corrected
     maskImage:
-      "radial-gradient(ellipse at right 20% top 40vh, black 1%, transparent 60%)",
+      "radial-gradient(circle at left 10% top 40vh, black 1%, transparent 40%)", // changed to left to follow Figma
   };
 
   return (
@@ -123,10 +124,11 @@ const NonprofitsPage = () => {
 function PhaseButton(index, activePhase, setActivePhase, phase) {
   const { t, i18n } = useTranslation();
   return (
+    // added bg-white and flipped the true-false condition for bg-blue to make it non-transparent when not focused
     <button
-      className={`flex flex-col justify-center items-start w-full h-[72px] md:h-[105px] px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
-        index === activePhase && "bg-blueprint-blue"
-      }`}
+      className={`${
+        index !== activePhase && "bg-white"
+      } bg-blueprint-blue flex flex-col justify-center items-start w-full h-[72px] md:h-[105px] px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl `}
       onClick={() => setActivePhase(index)}
     >
       <ParagraphTitle
