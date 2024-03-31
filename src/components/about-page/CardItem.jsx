@@ -11,16 +11,17 @@ import { headshots } from "../../index.js";
  * @returns {JSX.Element} - Returns the JSX for the CardItem component.
  */
 const CardItem = (props) => {
-
   return (
-    <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20">
+    <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20 gap-[12px]">
       {/* Member's Headshot */}
+
       <img
-        className="h-48 w-48 object-cover overflow-hidden"
+        className="h-48 w-48 object-cover rounded-[5px]"
         src={headshots[props.img]}
         style={{ minWidth: "12rem" }}
         alt=""
       />
+
       {/* Member's Name */}
       <ParagraphText className="!font-bold flex  justify-center">
         {props.title}
