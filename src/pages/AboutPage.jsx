@@ -104,9 +104,6 @@ const AboutPage = () => {
                 </a>
               </span>
             </ParagraphText>
-            <ParagraphText className="underline font-bold mt-[10%]">
-              See all Blueprint chapters here
-            </ParagraphText>
           </div>
         </div>
         {/* Desc 2 */}
