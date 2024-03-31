@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import OutlineButton from "./OutlineButton";
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "../Common";
 import { ParagraphTitle, ParagraphText } from "../Common"
 import { Link } from 'react-router-dom';
 import { Blueprint, Mosaic, Pedals } from "../../constants/Team";
+import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
 
 function ProjectModal({ isOpen, onClose, project }) {
   const { t, i18n } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('overview');
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1200);
+
+  if (isOpen) document.body.style.overflow = 'hidden';
+  else document.body.style.overflow = 'unset';
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 767);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (isOpen) document.body.style.overflow = 'hidden';
   else document.body.style.overflow = 'unset';
@@ -38,7 +52,6 @@ function ProjectModal({ isOpen, onClose, project }) {
       <div className="mt-4 space-y-4">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex items-center justify-between">
-            {/* Use md:text-xl to increase text size on medium screens and larger */}
             <p className="flex-1 text-l md:text-xl text-gray-800 mr-3">{member.title}</p>
             <p className="flex-1 text-l md:text-xl text-gray-600">{member.role}</p>
             {member.linkedin ? (
@@ -81,7 +94,7 @@ function ProjectModal({ isOpen, onClose, project }) {
           
             <div className="flex gap-4 border-t pt-4"></div>
             {selectedTab === 'overview' && (
-              <div id='overview'>
+              <div className={`${isSmallScreen ? '' : 'flex'} gap-4`} id='overview'>
 
                 <div className="mb-8">
                   <ParagraphTitle className="text-[1.25rem] ">
@@ -93,6 +106,7 @@ function ProjectModal({ isOpen, onClose, project }) {
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.projectDescription}</p>
                 </div>
+                <img src={PlaceholderImage} alt="Placeholder" />
                 <div className="mb-8">
                   <p className="text-lg italic mt-4">{project.additionalNote}</p>
                 </div>
