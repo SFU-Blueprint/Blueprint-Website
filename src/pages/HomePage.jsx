@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
@@ -18,15 +18,15 @@ import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
-// Other state and variables
-const [selectedProject, setSelectedProject] = useState(null);
-const [showPopup, setShowPopup] = useState(false);
+  // Other state and variables
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
-const handleProjectClick = (projectKey) => {
-  const projectDetails = projects[projectKey];
-  setSelectedProject(projectDetails); 
-  setShowPopup(true);
-};
+  const handleProjectClick = (projectKey) => {
+    const projectDetails = projects[projectKey];
+    setSelectedProject(projectDetails);
+    setShowPopup(true);
+  };
 
   const projects = t("projects"); //TODO Put key in a separate file
 
@@ -122,22 +122,19 @@ const handleProjectClick = (projectKey) => {
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-
-            {Object.keys(projects)
-              .map((projectKey, index) => (
-                <ProjectCard
+            {Object.keys(projects).map((projectKey, index) => (
+              <ProjectCard
                 key={index}
                 project={projectKey}
                 className="your-class-name"
                 onClick={() => handleProjectClick(projectKey)}
               />
-              ))}
+            ))}
             <ProjectModal
               isOpen={showPopup}
               onClose={() => setShowPopup(false)}
               project={selectedProject || {}}
             />
-
           </div>
           <div className="w-full flex justify-end">
             <OutlineButton onClick={() => navigateToAnchor("projectspage")}>
@@ -178,7 +175,7 @@ const handleProjectClick = (projectKey) => {
                 // style={{ width: "250px" }}
                 alt=""
               />
-              <ParagraphText className="">{items.title}</ParagraphText>
+              <ParagraphText className="mt-[12px]">{items.title}</ParagraphText>
             </div>
           ))}
         </div>
@@ -194,72 +191,28 @@ const handleProjectClick = (projectKey) => {
       </div>
 
       {/* Mobile photos */}
-      <div className="block md:hidden flex flex-col align-center content-center justify-center justify-items-center items-center">
+      <div className="block md:hidden flex flex-col m-5">
         <div>
-          <ParagraphTitle>STAY UPDATED WITH OUR EVENTS</ParagraphTitle>
-
-          <div className="relative block group">
-            <img
-              className="absolute inset-0 object-cover group-hover:opacity-50"
-              src={Event3.img}
-              // style={{ "min-width": "12rem" }}
-              alt=""
-            />
-            <div className="relative ">
-              <div className="mt-10 mb-40">
-                {/* Hidden content */}
-                <div
-                  className="transition-all transform
-                                translate-y-8 opacity-0 
-                                group-hover:opacity-100 
-                                group-hover:translate-y-0"
-                >
-                  <div className="p-1">
-                    {/* <p className="text-sm text-start text-black">
-                      {Event3.date}
-                    </p> */}
-                    <p className="text-sm text-start text-black ">
-                      {Event3.title}
-                    </p>
-                  </div>
-                </div>
-                {/* End of hidden content */}
-              </div>
-            </div>
-          </div>
+          <ParagraphTitle className="">
+            STAY UPDATED WITH OUR EVENTS
+          </ParagraphTitle>
         </div>
-        <div className="w-full flex justify-between space-between content-between px-7 my-5">
-          {Event2.map((items, key) => (
-            <div className="relative block group " key={key}>
+        <div className="grid grid-cols-2 mt-5">
+          {Event1.map((items, key) => (
+            <div className="flex flex-col justify-center ">
               <img
-                className="absolute h-32 w-48 inset-0 object-cover group-hover:opacity-50"
+                className="h-48 w-[150px] sm:w-[200px] md:w-[240px] inset-0 object-cover"
                 src={items.img}
+                // style={{ width: "250px" }}
                 alt=""
               />
-              <div className="relative ">
-                <div className="mt-11">
-                  {/* Hidden content */}
-                  <div
-                    className="transition-all transform
-                                translate-y-8 opacity-0 
-                                group-hover:opacity-100 
-                                group-hover:translate-y-0"
-                  >
-                    <div className="p-1">
-                      {/* <p className="text-sm text-start text-black">
-                        {items.date}
-                      </p> */}
-                      <p className="text-sm text-start text-black ">
-                        {items.title}
-                      </p>
-                    </div>
-                  </div>
-                  {/* End of hidden content */}
-                </div>
-              </div>
+              <ParagraphText className="mt-[12px] mb-[40px]">
+                {items.title}
+              </ParagraphText>
             </div>
           ))}
         </div>
+
         <ParagraphText className="mt-5">
           Follow us on{" "}
           <a
