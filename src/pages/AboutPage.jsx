@@ -93,7 +93,7 @@ const AboutPage = () => {
           <div>
             <ParagraphText className="w-4/5 md:w-4/5">
               Blueprint is a multinational community with chapters run by
-              students from different universities. As the third established
+              students from different universities. As the fifth established
               chapter in Canada, our team is based at{" "}
               <span>
                 <a
@@ -103,9 +103,6 @@ const AboutPage = () => {
                   Simon Fraser University.
                 </a>
               </span>
-            </ParagraphText>
-            <ParagraphText className="underline font-bold mt-[10%]">
-              See all Blueprint chapters here
             </ParagraphText>
           </div>
         </div>

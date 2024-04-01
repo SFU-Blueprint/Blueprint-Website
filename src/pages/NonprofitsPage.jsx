@@ -18,6 +18,21 @@ const NonprofitsPage = () => {
   const { t, i18n } = useTranslation();
   const [activePhase, setActivePhase] = useState(0);
   const phases = t("nonprofits.phases");
+  const backgroundStyle = {
+    // outline: "1px solid black",
+    position: "absolute",
+    left: 0, // added to override the left padding, which causes horizontal overflow with width = 100%
+    overflowX: "hidden",
+    zIndex: -1,
+    width: "100%",
+    height: "100%",
+    backgroundImage: 'url("grid.png")',
+    opacity: 0.35,
+    backgroundSize: "3vmin",
+    backgroundRepeat: "repeat", // Corrected
+    maskImage:
+      "radial-gradient(circle at left 10% top 35%, black 1%, transparent 40%)", // changed to left to follow Figma
+  };
 
   return (
     <div className="flex flex-col">
@@ -60,7 +75,8 @@ const NonprofitsPage = () => {
           <ContentCard>{"technicalFeasibility"}</ContentCard>
         </div>
 
-        <SectionHeader id="Our-process" className="mt-6 md:mt-16 mb-3 md:mb-6">
+        <div style={backgroundStyle}></div>
+        <SectionHeader className="mt-6 md:mt-16 mb-3 md:mb-6">
           Our Process
         </SectionHeader>
         <div className="flex max-md:flex-col md:gap-[108px]">
@@ -83,7 +99,7 @@ const NonprofitsPage = () => {
           </ContentCard>
         </div>
       </div>
-      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full h-[450px] mt-[10%]">
+      <div className="flex flex-col bg-blueprint-gray-light items-center justify-center w-full h-[450px] mt-[3%]">
         <SectionHeader id="Proposal" className="text-center my-3 md:my-6">
           Send your ideas to us now
         </SectionHeader>
@@ -108,10 +124,11 @@ const NonprofitsPage = () => {
 function PhaseButton(index, activePhase, setActivePhase, phase) {
   const { t, i18n } = useTranslation();
   return (
+    // added bg-white and flipped the true-false condition for bg-blue to make it non-transparent when not focused
     <button
-      className={`flex flex-col justify-center items-start w-full h-[72px] md:h-[105px] px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl ${
-        index === activePhase && "bg-blueprint-blue"
-      }`}
+      className={`${
+        index !== activePhase && "bg-white"
+      } bg-blueprint-blue flex flex-col justify-center items-start w-full h-[72px] md:h-[105px] px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl `}
       onClick={() => setActivePhase(index)}
     >
       <ParagraphTitle

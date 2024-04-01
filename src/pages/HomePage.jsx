@@ -6,6 +6,7 @@ import {
   SectionHeader,
   ParagraphText,
 } from "../components/Common";
+import Notification from "../components/Notification";
 import ProjectCard from "../components/shared/ProjectCard";
 import { Event1, Event2, Event3 } from "../constants/Event";
 import OutlineButton from "../components/shared/OutlineButton";
@@ -62,6 +63,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col pt-10 gap-4">
+      <Notification message="Add notification message here" />
       <img
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
         src={HomeBGFull}
@@ -69,7 +71,7 @@ const HomePage = () => {
       />
 
       <img
-        className="absolute top-[500px] md:w-[1500px] min-w-[100vw] z-[-2] object-contain"
+        className="absolute top-[500px] z-[-2] object-contain"
         src={HomeBGFullLeft}
         alt="about us header"
       />
@@ -94,7 +96,7 @@ const HomePage = () => {
         </OutlineButton>
       </div>
 
-      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 px-3 md:px-[15%] ">
+      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 md:px-[15%] ">
         <SectionHeader className="mb-10">Get Involved</SectionHeader>
         <div className="flex max-md:flex-col justify-between gap-12 mb-16 ">
           <GetInvolvedSection
@@ -191,6 +193,7 @@ const HomePage = () => {
       </div>
 
       {/* Mobile photos */}
+
       <div className="block md:hidden flex flex-col m-5">
         <div>
           <ParagraphTitle className="">
