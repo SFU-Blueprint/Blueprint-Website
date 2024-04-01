@@ -123,10 +123,9 @@ const AboutPage = () => {
           </div>
         </div>
       </div>
-      <div className="mt-12 flex flex-col items-center md:hidden">
-        <div className="block md:hidden w-screen h-60 justify-self-center rounded-sm ">
-          {" "}
-          <img src={Image_1} alt="about us image 1" />
+      <div className="mt-12 flex flex-col justify-center items-center md:hidden">
+        <div className="block md:hidden w-full h-60 rounded-sm">
+          <img className="w-full object-cover" src={Image_1} alt="about us image 1" />
         </div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">
@@ -156,7 +155,7 @@ const AboutPage = () => {
         {/*Start of Team section   */}
         <SectionHeader
           id="Our-team"
-          className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4"
+          className="font-anek font-[550] text-4xl flex items-center justify-center md:text-5xl mb-4 pt-14"
         >
           Our Team
         </SectionHeader>
