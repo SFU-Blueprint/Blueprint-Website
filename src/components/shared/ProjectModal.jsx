@@ -17,7 +17,7 @@ function ProjectModal({ isOpen, onClose, project }) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 767);
+      setIsSmallScreen(window.innerWidth <= 1000);
     };
 
     window.addEventListener('resize', handleResize);
@@ -106,7 +106,9 @@ function ProjectModal({ isOpen, onClose, project }) {
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.projectDescription}</p>
                 </div>
-                <img src={PlaceholderImage} alt="Placeholder" />
+
+                <img className={`max-h-[300px] ${isSmallScreen ? '' : 'mt-20'}`} src={PlaceholderImage} alt="Placeholder" />
+                
                 <div className="mb-8">
                   <p className="text-lg italic mt-4">{project.additionalNote}</p>
                 </div>
