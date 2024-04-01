@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
@@ -6,6 +6,7 @@ import {
   SectionHeader,
   ParagraphText,
 } from "../components/Common";
+import Notification from "../components/Notification";
 import ProjectCard from "../components/shared/ProjectCard";
 import { Event1, Event2, Event3 } from "../constants/Event";
 import OutlineButton from "../components/shared/OutlineButton";
@@ -18,15 +19,15 @@ import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
-// Other state and variables
-const [selectedProject, setSelectedProject] = useState(null);
-const [showPopup, setShowPopup] = useState(false);
+  // Other state and variables
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
-const handleProjectClick = (projectKey) => {
-  const projectDetails = projects[projectKey];
-  setSelectedProject(projectDetails); 
-  setShowPopup(true);
-};
+  const handleProjectClick = (projectKey) => {
+    const projectDetails = projects[projectKey];
+    setSelectedProject(projectDetails);
+    setShowPopup(true);
+  };
 
   const projects = t("projects"); //TODO Put key in a separate file
 
@@ -62,6 +63,7 @@ const handleProjectClick = (projectKey) => {
 
   return (
     <div className="flex flex-col pt-10 gap-4">
+      <Notification message="Add notification message here" />
       <img
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
         src={HomeBGFull}
@@ -94,7 +96,7 @@ const handleProjectClick = (projectKey) => {
         </OutlineButton>
       </div>
 
-      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 px-3 md:px-[15%] ">
+      <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 md:px-[15%] ">
         <SectionHeader className="mb-10">Get Involved</SectionHeader>
         <div className="flex max-md:flex-col justify-between gap-12 mb-16 ">
           <GetInvolvedSection
@@ -122,22 +124,19 @@ const handleProjectClick = (projectKey) => {
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
           <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
-
-            {Object.keys(projects)
-              .map((projectKey, index) => (
-                <ProjectCard
+            {Object.keys(projects).map((projectKey, index) => (
+              <ProjectCard
                 key={index}
                 project={projectKey}
                 className="your-class-name"
                 onClick={() => handleProjectClick(projectKey)}
               />
-              ))}
+            ))}
             <ProjectModal
               isOpen={showPopup}
               onClose={() => setShowPopup(false)}
               project={selectedProject || {}}
             />
-
           </div>
           <div className="w-full flex justify-end">
             <OutlineButton onClick={() => navigateToAnchor("projectspage")}>
@@ -194,7 +193,7 @@ const handleProjectClick = (projectKey) => {
       </div>
 
       {/* Mobile photos */}
-      <div className="block md:hidden flex flex-col align-center content-center justify-center justify-items-center items-center">
+      <div className="md:hidden flex flex-col align-center content-center justify-center justify-items-center items-center">
         <div>
           <ParagraphTitle>STAY UPDATED WITH OUR EVENTS</ParagraphTitle>
 
