@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import OutlineButton from "./OutlineButton";
 import { useTranslation } from "react-i18next";
 import { PageHeader } from "../Common";
 import { ParagraphTitle, ParagraphText } from "../Common"
 import { Link } from 'react-router-dom';
 import { Blueprint, Mosaic, Pedals } from "../../constants/Team";
+import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
 
 function ProjectModal({ isOpen, onClose, project }) {
   const { t, i18n } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('overview');
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1200);
+
+  if (isOpen) document.body.style.overflow = 'hidden';
+  else document.body.style.overflow = 'unset';
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 767);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   if (isOpen) document.body.style.overflow = 'hidden';
   else document.body.style.overflow = 'unset';
@@ -38,7 +52,6 @@ function ProjectModal({ isOpen, onClose, project }) {
       <div className="mt-4 space-y-4">
         {teamMembers.map((member, index) => (
           <div key={index} className="flex items-center justify-between">
-            {/* Use md:text-xl to increase text size on medium screens and larger */}
             <p className="flex-1 text-l md:text-xl text-gray-800 mr-3">{member.title}</p>
             <p className="flex-1 text-l md:text-xl text-gray-600">{member.role}</p>
             {member.linkedin ? (
@@ -56,31 +69,32 @@ function ProjectModal({ isOpen, onClose, project }) {
   
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
-      <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[80vw] overflow-scroll flex flex-col justify-between">
+      <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[85vw] md-w-[80vw] overflow-scroll flex flex-col justify-between">
         <div >
           <div className="flex justify-between items-center mb-6">
-            <h1 className="text-4xl font-bold">{project.name}</h1>
+            <h1 className="text-4xl font-bold mr-3">{project.name}</h1>
+            <div className="flex ml-auto items-center gap-4 mr-6">
+                <OutlineButton>
+                Github
+                </OutlineButton>
+                {
+                project.name !== "Blueprint Website" && (
+                    <a href={project.page}>
+                    <OutlineButton>
+                        Case Study
+                    </OutlineButton>
+                    </a>
+                )
+                }
+          </div>
             <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>
           </div>
           <p className="text-lg text-gray-600">March 2024 - July 2024</p>
           <p className="text-lg mb-4">{project.duration}</p>
-          <div className="block gap-4 mb-8">
-            <OutlineButton>
-              Github
-            </OutlineButton>
-            {
-              project.name !== "Blueprint Website" && (
-                <a href={project.page}>
-                  <OutlineButton>
-                    Case Study
-                  </OutlineButton>
-                </a>
-              )
-            }
-          </div>
+          
             <div className="flex gap-4 border-t pt-4"></div>
             {selectedTab === 'overview' && (
-              <div id='overview'>
+              <div className={`${isSmallScreen ? '' : 'flex'} gap-4`} id='overview'>
 
                 <div className="mb-8">
                   <ParagraphTitle className="text-[1.25rem] ">
@@ -92,6 +106,7 @@ function ProjectModal({ isOpen, onClose, project }) {
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.projectDescription}</p>
                 </div>
+                <img src={PlaceholderImage} alt="Placeholder" />
                 <div className="mb-8">
                   <p className="text-lg italic mt-4">{project.additionalNote}</p>
                 </div>
