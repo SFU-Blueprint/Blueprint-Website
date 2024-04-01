@@ -16,7 +16,7 @@ const MobileGearSection = () => {
       </div>
       <div className="mobile-value-title">PERPETUAL GROWTH</div>
       <div className="mobile-value-body">
-        Our community foster continuous learning to support academic, social,
+        Our community fosters continuous learning to support academic, social,
         and personal growth. We strive to offer a helping hand and push each
         other to succeed.
       </div>

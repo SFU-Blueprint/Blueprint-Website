@@ -71,7 +71,7 @@ const HomePage = () => {
       />
 
       <img
-        className="absolute top-[500px] md:w-[1500px] min-w-[100vw] z-[-2] object-contain"
+        className="absolute top-[500px] z-[-2] object-contain"
         src={HomeBGFullLeft}
         alt="about us header"
       />
