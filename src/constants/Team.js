@@ -330,12 +330,7 @@ export const Executives = [
     linkedin: "https://www.linkedin.com/in/ronneylok/",
     lastPosition: "",
   },
-  {
-    title: "Monishka Gautam",
-    img: "Monishka.jpg",
-    linkedin: "https://www.linkedin.com/in/monishka-gautam/",
-    lastPosition: "",
-  },
+  
 ];
 
 export const Members = [
@@ -502,6 +497,11 @@ export const Members = [
     title: "Duy Nguyen",
     img: "Duy.jpg",
     linkedin: "https://www.linkedin.com/in/duwe-ng/",
+    lastPosition: "",
+  },{
+    title: "Monishka Gautam",
+    img: "Monishka.jpg",
+    linkedin: "https://www.linkedin.com/in/monishka-gautam/",
     lastPosition: "",
   },{
     title: "Zahila Rehman",

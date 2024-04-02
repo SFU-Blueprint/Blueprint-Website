@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
@@ -17,12 +17,15 @@ import HomeBGFull from "../assets/images/home/home_bg_full.png";
 import HomeBGFullLeft from "../assets/images/home/home_bg_left.png";
 import { navigateToAnchor } from "../utils/navigateToAnchor";
 
+import { Anouncment, Show } from "../constants/Notification";
+
 const HomePage = () => {
   const { t, i18n } = useTranslation();
   // Other state and variables
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-  const [showNotification, setShowNotification] = useState(true);
+  const [showNotification, setShowNotification] = useState(Show);
+
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
