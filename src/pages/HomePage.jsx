@@ -158,10 +158,19 @@ const HomePage = () => {
         <SectionHeader>Contact Us</SectionHeader>
         <ParagraphTitle>WE ARE JUST ONE MESSAGE AWAY</ParagraphTitle>
         <ParagraphText>
-          Students, get your quick question in through our Discord server
+          Students, get your quick question in through our &nbsp;
+            <a
+              href={t("discord.link")}
+              className="font-bold underline">
+                Discord server
+            </a>
           <br />
-          For collaborations or sponsorships, shoot us an email at
-          sfublueprint@gmail.com
+          For collaborations or sponsorships, shoot us an email at &nbsp;
+            <a
+              href={t("discord.link")}
+              className="font-bold underline">
+                sfublueprint@gmail.com
+            </a>
         </ParagraphText>
       </div>
 
@@ -185,7 +194,7 @@ const HomePage = () => {
           Follow us on{" "}
           <a
             href="https://www.instagram.com/sfublueprint/"
-            className="underline"
+            className="hover:text-blueprint-blue hover:font-semibold hover:cursor-pointer underline"
           >
             Instagram
           </a>
@@ -221,7 +230,7 @@ const HomePage = () => {
           Follow us on{" "}
           <a
             href="https://www.instagram.com/sfublueprint/"
-            className="underline"
+            className="hover:text-blueprint-blue hover:font-semibold hover:cursor-pointer underline"
           >
             Instagram
           </a>
