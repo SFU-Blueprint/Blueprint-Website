@@ -170,9 +170,9 @@ const HomePage = () => {
         <ParagraphTitle>STAY UPDATED WITH OUR EVENTS</ParagraphTitle>
         <div className="flex max-md:flex-col justify-between mt-8 ">
           {Event1.map((items, key) => (
-            <div className="flex flex-col">
+            <div className="flex flex-col px-5">
               <img
-                className="h-48 w-[150px] sm:w-[200px] md:w-[240px] inset-0 object-cover"
+                className="h-48 w-[150px] md:w-[200px] lg:w-[250px] inset-0 object-cover"
                 src={items.img}
                 // style={{ width: "250px" }}
                 alt=""
@@ -194,15 +194,16 @@ const HomePage = () => {
 
       {/* Mobile photos */}
 
-      <div className="block md:hidden flex flex-col m-5">
-        <div>
-          <ParagraphTitle className="">
-            STAY UPDATED WITH OUR EVENTS
-          </ParagraphTitle>
-        </div>
-        <div className="grid grid-cols-2 mt-5">
+      <div>
+        <ParagraphTitle className="mx-5 mt-5">
+          STAY UPDATED WITH OUR EVENTS
+        </ParagraphTitle>
+      </div>
+      <div className="block md:hidden flex flex-col items-center">
+        <div className="grid grid-cols-2 items-center justify-center">
+
           {Event1.map((items, key) => (
-            <div className="flex flex-col justify-center ">
+            <div className="flex flex-col px-5 pt-1 ">
               <img
                 className="h-48 w-[150px] sm:w-[200px] md:w-[240px] inset-0 object-cover"
                 src={items.img}
@@ -216,7 +217,7 @@ const HomePage = () => {
           ))}
         </div>
 
-        <ParagraphText className="mt-5">
+        <ParagraphText className="my-2">
           Follow us on{" "}
           <a
             href="https://www.instagram.com/sfublueprint/"
