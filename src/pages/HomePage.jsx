@@ -17,6 +17,8 @@ import HomeBGFull from "../assets/images/home/home_bg_full.png";
 import HomeBGFullLeft from "../assets/images/home/home_bg_left.png";
 import { navigateToAnchor } from "../utils/navigateToAnchor";
 
+import { Anouncment, Show } from "../constants/Notification";
+
 const HomePage = () => {
   const { t, i18n } = useTranslation();
   // Other state and variables
@@ -63,7 +65,8 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col pt-10 gap-4">
-      <Notification message="Add notification message here" />
+      {Show !== false && <Notification message={Anouncment} />}
+      
       <img
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
         src={HomeBGFull}
