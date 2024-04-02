@@ -11,6 +11,7 @@ function ProjectModal({ isOpen, onClose, project }) {
   const { t, i18n } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('overview');
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1200);
+  
 
   if (isOpen) document.body.style.overflow = 'hidden';
   else document.body.style.overflow = 'unset';
