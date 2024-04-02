@@ -75,7 +75,7 @@ const NonprofitsPage = () => {
           <ContentCard>{"technicalFeasibility"}</ContentCard>
         </div>
 
-        <div style={backgroundStyle}></div>
+        <div id="Our-process" style={backgroundStyle}></div>
         <SectionHeader className="mt-6 md:mt-16 mb-3 md:mb-6">
           Our Process
         </SectionHeader>

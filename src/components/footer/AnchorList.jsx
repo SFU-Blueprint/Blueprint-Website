@@ -21,7 +21,7 @@ const AnchorList = (props) => {
                 <div
                     className="text-sm text-hover w-fit"
                     key={anchor}
-                    onClick={(e) => navigateToAnchor(props.page, anchor)}
+                    onClick={(e) => navigateToAnchor(t(`anchors.${anchor}`))}
                 >
                     {/* Render the anchor with dashes replaced by spaces */}
                     {replaceDashesWithSpaces(anchor)}
