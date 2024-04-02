@@ -4,7 +4,9 @@ import { useTranslation } from "react-i18next";
 import { PageHeader } from "../Common";
 import { ParagraphTitle, ParagraphText } from "../Common"
 import { Link } from 'react-router-dom';
-import { Blueprint, Mosaic, Pedals } from "../../constants/Team";
+import { Blueprint } from "../../constants/Team/Blueprint";
+import { Mosaic } from "../../constants/Team/Mosaic";
+import { Pedals } from "../../constants/Team/Pedals";
 import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
 
 function ProjectModal({ isOpen, onClose, project }) {
