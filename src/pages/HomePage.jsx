@@ -24,9 +24,8 @@ const HomePage = () => {
   // Other state and variables
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-  const [show, setShow] = useState(Show);
+  const [showNotification, setShowNotification] = useState(Show);
 
-  
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
@@ -68,8 +67,12 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col pt-10 gap-4">
-      {show !== false && <Notification message={Anouncment} />}
-      
+      {showNotification && (
+        <Notification
+          message="Add notification message here"
+          onClose={() => setShowNotification(false)}
+        />
+      )}
       <img
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
         src={HomeBGFull}
@@ -207,7 +210,6 @@ const HomePage = () => {
       </div>
       <div className="block md:hidden flex flex-col items-center">
         <div className="grid grid-cols-2 items-center justify-center">
-
           {Event1.map((items, key) => (
             <div className="flex flex-col px-5 pt-1 ">
               <img
