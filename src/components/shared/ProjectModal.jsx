@@ -17,7 +17,7 @@ function ProjectModal({ isOpen, onClose, project }) {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 1000);
+      setIsSmallScreen(window.innerWidth <= 700);
     };
 
     window.addEventListener('resize', handleResize);
@@ -71,9 +71,14 @@ function ProjectModal({ isOpen, onClose, project }) {
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
       <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[85vw] md-w-[80vw] overflow-scroll flex flex-col justify-between">
         <div >
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-4xl font-bold mr-3">{project.name}</h1>
-            <div className="flex ml-auto items-center gap-4 mr-6">
+          <div className={`${isSmallScreen ? '' : 'flex'} justify-between items-center mb-6`}>
+            <div className='flex justify-between'>
+            <h1 className={`font-bold mr-3 text-4xl`}>{project.name}</h1>
+            {isSmallScreen && <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>}
+            </div>
+            
+            <div className={`flex mt-5 ml-auto items-center mr-6 gap-4 `}>
+
                 <OutlineButton>
                 Github
                 </OutlineButton>
@@ -87,7 +92,7 @@ function ProjectModal({ isOpen, onClose, project }) {
                 )
                 }
           </div>
-            <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>
+            {!isSmallScreen && <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>}
           </div>
           <p className="text-lg text-gray-600">March 2024 - July 2024</p>
           <p className="text-lg mb-4">{project.duration}</p>
