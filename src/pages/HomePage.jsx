@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
   ParagraphTitle,
@@ -24,6 +24,9 @@ const HomePage = () => {
   // Other state and variables
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [show, setShow] = useState(Show);
+
+  
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
@@ -65,7 +68,7 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col pt-10 gap-4">
-      {Show !== false && <Notification message={Anouncment} />}
+      {show !== false && <Notification message={Anouncment} />}
       
       <img
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
