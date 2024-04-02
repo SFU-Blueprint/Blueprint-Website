@@ -2,7 +2,9 @@ import React, { useState, useEffect, useCallback } from "react";
 import GearSection from "../components/about-page/Gears/GearSection";
 import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
 
-import { Executives, Alumni, Members } from "../constants/Team";
+import { Alumni } from "../constants/Team/Alumni";
+import { Members } from "../constants/Team/Members";
+import { Executives } from "../constants/Team/Execs";
 import CardGrid from "../components/about-page/CardGrid";
 import Header from "../assets/images/aboutus_header.png";
 import Image_1 from "../assets/images/aboutus_image_one.png";
