@@ -121,7 +121,17 @@
       "text": "Workload  will be adjusted during exam periods for members to prioritize their academic studying.\n\nAt the end of the semester, project members will inform the leads whether they will continue on the project for the next semester.\n\nIf a project is completed, we will set up celebration and showcase within our community. Members from the project can apply for roles in new projects afterwards."
     }
   },
-
+  "anchors":{
+    "Past": "/projectspage#Ongoing",
+    "Ongoing": "/projectspage#Ongoing",
+    "Why-choose-us": "/nonprofits#Why-choose-us",
+    "Our-criteria": "/nonprofits#Our-criteria",
+    "Our-process": "/nonprofits#Our-process",
+    "Proposal": "/nonprofits#Proposal",
+    "Who-we-are": "/about#Who-we-are",
+    "Our-values": "/about#Our-values",
+    "Our-team": "/about#Our-team"
+  },
   "product-manager": {
     "title": "Project Manager (3)",
     "tags": ["Immigration", "AI/Product"],

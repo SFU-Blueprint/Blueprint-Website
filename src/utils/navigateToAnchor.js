@@ -1,4 +1,4 @@
-export const navigateToAnchor = (page = "", section = "") => {
-  const url = `/${page}#${section}`;
+export const navigateToAnchor = (section = "") => {
+  const url = `${section}`;
   window.location.href = url;
 }
