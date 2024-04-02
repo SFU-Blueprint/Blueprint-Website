@@ -13,16 +13,16 @@ const Notification = ({ message, onClose }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 right-0 mx-[10%] lg:mx-[20%] mt-24 p-4 rounded-sm bg-blueprint-white shadow-2xl border border-blueprint-gray-light flex justify-between items-center duration-700 transition-opacity ${
+      className={`fixed top-0 left-0 right-0 mx-[10%] lg:mx-[20%] mt-24 p-5 rounded-sm bg-blueprint-white shadow-2xl border border-blueprint-gray-light flex justify-between items-center duration-700 transition-opacity ${
         closed ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div className="w-10 h-10">
+      <div className="w-7 h-7">
         <img src={SpeakerIcon} alt="Speaker Icon" />
       </div>
       <ParagraphText>{message}</ParagraphText>
       <button onClick={handleClose}>
-        <MenuXIcon stroke="gray"/>
+        <MenuXIcon/>
       </button>
     </div>
   );
