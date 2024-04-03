@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import ProjectCard from "../components/shared/ProjectCard";
 import { PageHeader, SectionHeader, ParagraphText } from "../components/Common";
 import { useTranslation } from "react-i18next";
-import { Event1, Event2, Event3 } from "../constants/Event";
-import OutlineButton from "../components/shared/OutlineButton";
+// import { Event1, Event2, Event3 } from "../constants/Event";
+// import OutlineButton from "../components/shared/OutlineButton";
 import ProjectModal from "../components/shared/ProjectModal";
-import { navigateToAnchor } from "../utils/navigateToAnchor";
+// import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 const ProjectsPage = () => {
   const { t, i18n } = useTranslation();

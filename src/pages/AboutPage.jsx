@@ -15,7 +15,6 @@ import {
   SectionHeader,
 } from "../components/Common";
 
-
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
     content: <GearSection></GearSection>,
@@ -60,7 +59,11 @@ const AboutPage = () => {
           src={Header}
           alt="about us header"
           fetchPriority="high"
+          rel="preload"
+          as="image"
+          type="image/webp"
         />
+
         <div className="absolute bottom-6 md:my-10">
           <PageHeader className="!text-blueprint-white font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36 ">
             About Us
@@ -128,7 +131,11 @@ const AboutPage = () => {
       </div>
       <div className="mt-12 flex flex-col justify-center items-center md:hidden">
         <div className="block md:hidden w-full h-60 rounded-sm">
-          <img className="w-full object-cover" src={Image_1} alt="about us image 1" />
+          <img
+            className="w-full object-cover"
+            src={Image_1}
+            alt="about us image 1"
+          />
         </div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">
@@ -170,10 +177,10 @@ const AboutPage = () => {
       <div className="mt-[8%] mx-10 md:mx-16 xl:mx-36">
         <SectionHeader className="flex justify-center ">Alumni</SectionHeader>
         <div className="">
-          {/* <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
+          <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
             2023
 
-          </ParagraphTitle> */}
+          </ParagraphTitle>
           <CardGrid cardList={Alumni} gridName="2023"></CardGrid>
         </div>
       </div>

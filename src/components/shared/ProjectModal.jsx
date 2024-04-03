@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import OutlineButton from "./OutlineButton";
 import { useTranslation } from "react-i18next";
-import { PageHeader } from "../Common";
+// import { PageHeader } from "../Common";
 import { ParagraphTitle, ParagraphText } from "../Common"
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Blueprint } from "../../constants/Team/Blueprint";
 import { Mosaic } from "../../constants/Team/Mosaic";
 import { Pedals } from "../../constants/Team/Pedals";
-import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
+// import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
 
 function ProjectModal({ isOpen, onClose, project }) {
   const { t, i18n } = useTranslation();
