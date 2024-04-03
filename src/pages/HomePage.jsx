@@ -214,12 +214,13 @@ const HomePage = () => {
 
       {/* Mobile photos */}
 
-      <div>
-        <ParagraphTitle className="mx-5 mt-5">
-          STAY UPDATED WITH OUR EVENTS
-        </ParagraphTitle>
-      </div>
+      
       <div className="block md:hidden flex flex-col items-center">
+        <div>
+          <ParagraphTitle className="mx-5 mt-5">
+            STAY UPDATED WITH OUR EVENTS
+          </ParagraphTitle>
+        </div>
         <div className="grid grid-cols-2 items-center justify-center">
           {Event1.map((items, key) => (
             <div className="flex flex-col px-5 pt-1 ">
