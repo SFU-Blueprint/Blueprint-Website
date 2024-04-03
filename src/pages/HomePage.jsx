@@ -77,12 +77,14 @@ const HomePage = () => {
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
         src={HomeBGFull}
         alt="about us header"
+        fetchPriority="high"
       />
 
       <img
         className="absolute top-[500px] z-[-2] object-contain"
         src={HomeBGFullLeft}
         alt="about us header"
+        fetchPriority="high"
       />
       <div className="mb-[100px] mx-12 px-3 md:px-[15%] ">
         <Landing className="!font-semibold md:w-[600px] pt-32">

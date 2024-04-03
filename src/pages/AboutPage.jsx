@@ -6,9 +6,6 @@ import { Alumni } from "../constants/Team/Alumni";
 import { Members } from "../constants/Team/Members";
 import { Executives } from "../constants/Team/Execs";
 import CardGrid from "../components/about-page/CardGrid";
-import Header from "../assets/images/aboutus_header.png";
-import Image_1 from "../assets/images/aboutus_image_one.png";
-import Image_2 from "../assets/images/aboutus_image_two.png";
 
 import {
   Annotation,
@@ -18,13 +15,15 @@ import {
   SectionHeader,
 } from "../components/Common";
 
-import AlumniGrid from "../components/about-page/AlumniGrid";
-import ScrollToHashElement from "../components/shared/ScrollToHash";
 
 const AboutPage = () => {
   const [gearSectionHtml, setGearSectionHtml] = useState({
     content: <GearSection></GearSection>,
   });
+
+  const Header = "images/about/aboutus_header.webp";
+  const Image_1 = "images/about/aboutus_image_one.webp";
+  const Image_2 = "images/about/aboutus_image_two.webp";
 
   //Memoize the resize function (cache it) so we don't recreate the function when the effects use it
   const resize = useCallback(() => {
@@ -57,8 +56,10 @@ const AboutPage = () => {
       <div className="relative ">
         <img
           className="w-full h-[35vh] sm:h-[45vh] object-cover"
+          // src={Header}
           src={Header}
           alt="about us header"
+          fetchPriority="high"
         />
         <div className="absolute bottom-6 md:my-10">
           <PageHeader className="!text-blueprint-white font-bold my-2 ml-10 md:ml-16 md:text-6xl xl:ml-36 ">
