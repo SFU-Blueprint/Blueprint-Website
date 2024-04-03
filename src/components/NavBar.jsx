@@ -44,7 +44,7 @@ const NavBar = () => {
 function MenuButton({ isMenuOpened, toggleMenu, visibility }) {
   return (
     <button className={visibility} onClick={toggleMenu}>
-      { isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon /> }
+      {isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon />}
     </button>
   );
 }
@@ -55,13 +55,20 @@ function NavLinks({ routes, visibility, currentPath }) {
       className={`flex flex-col items-center max-lg:space-y-4 max-lg:pb-4 text-blueprint-black font-poppins lg:flex-row lg:space-x-12 ${visibility}`}
     >
       {routes.map((route, index) => (
-        <Link
-          key={index}
-          to={route.path}
-          className={`hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${route.path === currentPath && "text-blueprint-blue underline font-semibold"} ${index === 0 && "lg:hidden"}`}
-        >
-          {route.name}
-        </Link>
+        <div className="relative">
+          <div className={`invisible font-semibold `}>{route.name}</div>
+          <Link
+            key={index}
+            to={route.path}
+            className={`absolute top-[50%] transform -translate-y-1/2 
+            hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${
+              route.path === currentPath &&
+              "text-blueprint-blue underline font-semibold"
+            } ${index === 0 && "lg:hidden"}`}
+          >
+            {route.name}
+          </Link>
+        </div>
       ))}
     </div>
   );
