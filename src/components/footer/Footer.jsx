@@ -37,12 +37,6 @@ const Footer = () => {
         <Logo colour="white" />
         {/* Render common links */}
         <div>{t("common.blueprint")}</div>
-        <div className="flex gap-4">
-          {/* Render additional common links
-                    <div className="text-hover">{t('common.terms')}</div>
-                    <div className="text-hover">{t('common.privacy')}</div>
-                    <div className="text-hover">{t('common.cookies')}</div> */}
-        </div>
       </div>
     </footer>
   );
