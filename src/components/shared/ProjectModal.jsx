@@ -79,7 +79,7 @@ function ProjectModal({ isOpen, onClose, project }) {
             <h1 className={`font-bold mr-3 text-4xl`}>{project.name}</h1>
             {isSmallScreen && <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>}
             </div>
-            
+            {isSmallScreen && <p className="mt-4 text-lg text-gray-600">March 2024 - July 2024</p>}
             <div className={`flex mt-5 ml-auto items-center mr-6 gap-4 `}>
 
                 <OutlineButton>
@@ -97,7 +97,7 @@ function ProjectModal({ isOpen, onClose, project }) {
           </div>
             {!isSmallScreen && <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>}
           </div>
-          <p className="text-lg text-gray-600">March 2024 - July 2024</p>
+          {!isSmallScreen && <p className="text-lg text-gray-600">March 2024 - July 2024</p>}
           <p className="text-lg mb-4">{project.duration}</p>
           
             <div className="flex gap-4 border-t pt-4"></div>
@@ -105,11 +105,11 @@ function ProjectModal({ isOpen, onClose, project }) {
               <div className={`${isSmallScreen ? '' : 'flex'} gap-4`} id='overview'>
 
                 <div className="mb-8">
-                  <ParagraphTitle className="text-[1.25rem] ">
+                  <ParagraphTitle className={`${isSmallScreen ? 'mb-3 mt-3' : ''} text-[1.25rem] `}>
                     ABOUT THE NON-PROFIT
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.nonProfitDescription}</p>
-                  <ParagraphTitle className="text-[1.25rem] ">
+                  <ParagraphTitle className={`${isSmallScreen ? 'mb-3' : ''} text-[1.25rem] `}>
                     OUR PROJECT
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.projectDescription}</p>
