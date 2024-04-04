@@ -12,7 +12,7 @@ const ProjectCard = ({ project, className, onClick }) => {
   const { t, i18n } = useTranslation();
   return (
     <div
-      className={`${className} shadow-lg w-70 min-w-[240px] bg-white rounded-[5px]`}
+      className={`${className} shadow-lg m-10 bg-white rounded-[5px]`}
       onClick={onClick}
     >
       <img
@@ -21,9 +21,9 @@ const ProjectCard = ({ project, className, onClick }) => {
         alt={t(`projects.${project}.name`)}
       />
       <div className="px-[5%] pb-3 mb-1 ml-[6px] ">
-        <div className="flex flex-row place-items-center -translate-y-1/2 ">
+        <div className="flex flex-row flex-wrap mt-5 lg:mt-0  place-items-center -translate-y-1/2 ">
           {t(`projects.${project}.tags`).map((tag, index) => (
-            <div className="flex bg-blue-500 text-white mr-[2%] px-[3%] h-[20px] md:px-[6%] md:h-[25px] rounded-md shadow-md !md:text-sm whitespace-normal">
+            <div className="flex bg-blue-500 text-white mr-[2%] px-[3%] h-[20px] 2xl:my-[0px] md:px-[6%] md:h-[25px] rounded-md shadow-md !md:text-sm whitespace-normal">
               {" "}
               <ParagraphText
                 key={index}
