@@ -23,7 +23,7 @@ const ProjectCard = ({ project, className, onClick }) => {
       <div className="px-[5%] pb-3 mb-1 ml-[6px] ">
         <div className="flex flex-row place-items-center -translate-y-1/2 ">
           {t(`projects.${project}.tags`).map((tag, index) => (
-            <div className="flex bg-blue-500 text-white mr-[2%] px-[6%] h-[25px] rounded-md shadow-md !md:text-sm whitespace-normal">
+            <div className="flex bg-blue-500 text-white mr-[2%] px-[3%] h-[20px] md:px-[6%] md:h-[25px] rounded-md shadow-md !md:text-sm whitespace-normal">
               {" "}
               <ParagraphText
                 key={index}
