@@ -115,7 +115,7 @@ function ProjectModal({ isOpen, onClose, project }) {
                   <p className="text-lg mb-4">{project.projectDescription}</p>
                 </div>
 
-                <img className={`max-h-[350px] ${isSmallScreen ? '' : 'mt-20'}`} src={project.image} alt="Placeholder" />
+                <img className={`max-h-[350px] ${isSmallScreen ? '' : 'mt-20'}`} src={project.popupimage} alt="Placeholder" />
                 
                 <div className="mb-8">
                   <p className="text-lg italic mt-4">{project.additionalNote}</p>
