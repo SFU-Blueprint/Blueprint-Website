@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { ParagraphTitle, ParagraphText } from "../Common";
 import { useTranslation } from "react-i18next";
 
@@ -10,14 +10,17 @@ import { useTranslation } from "react-i18next";
 
 const ProjectCard = ({ project, className, onClick }) => {
   const { t, i18n } = useTranslation();
+
   return (
     <div
-      className={`${className} shadow-lg m-10 bg-white rounded-[5px]`}
+      className={`${className} shadow-lg w-70 min-w-[240px] bg-white rounded-[6px] hover:shadow-sm hover:scale-105 hover-drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.1))`}
       onClick={onClick}
+      style={{ filter: 'drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.1))',
+      }}
     >
       <img
         src={t(`projects.${project}.image`)}
-        className="w-full object-contain h-auto"
+        className="w-full object-contain h-auto rounded-[6px]"
         alt={t(`projects.${project}.name`)}
       />
       <div className="px-[5%] pb-3 mb-1 ml-[6px] ">
@@ -35,7 +38,7 @@ const ProjectCard = ({ project, className, onClick }) => {
           ))}
         </div>
         <div className="flex flex-nowrap">
-          <ParagraphTitle className="text-[1.25rem] !text-black">
+          <ParagraphTitle className={`text-[1.25rem] !text-black shrink`}>
             {t(`projects.${project}.name`)}{" "}
           </ParagraphTitle>
           <ParagraphTitle className="!text-black ml-1">→</ParagraphTitle>
