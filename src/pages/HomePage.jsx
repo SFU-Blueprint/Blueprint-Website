@@ -107,7 +107,7 @@ const HomePage = () => {
 
       <div className="px-16 py-12 mt-16 w-full max-md:px-5 max-md:mt-10 bg-zinc-100 md:px-[15%] ">
         <SectionHeader className="mb-10">Get Involved</SectionHeader>
-        <div className="flex max-md:flex-col justify-between gap-12 mb-16 ">
+        <div className="flex max-md:flex-col justify-between gap-12">
           <GetInvolvedSection
             jsonKey="students"
             onClick={() => navigateToAnchor("students")}
@@ -118,11 +118,15 @@ const HomePage = () => {
             onClick={() => navigateToAnchor("nonprofits")}
           ></GetInvolvedSection>
 
-          <GetInvolvedSection
-            jsonKey="sponsors"
-            onClick={() => console.log("Page not defined")}
-          ></GetInvolvedSection>
+         <div className="flex flex-col justify-start h-48 gap-2">
+          <ParagraphTitle>
+            SPONSORS
+          </ParagraphTitle>
+          <ParagraphText>
+           Support our operation to become part of the changemakers! Elevate your brand while driving meaningful social impact.
+          </ParagraphText>
         </div>
+       </div>
       </div>
 
       <div>

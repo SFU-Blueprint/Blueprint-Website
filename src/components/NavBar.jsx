@@ -43,8 +43,8 @@ const NavBar = () => {
          visibility={!isNavLinkClicked && !isMenuOpened && "max-lg:hidden"}
          routes={routes}
          isNavLinkClicked = {isNavLinkClicked}
-         toggleLink={toggleLink}
          toggleMenu={toggleMenu}
+         toggleLink={toggleLink}
          currentPath={currentPath}
         />
 
@@ -53,7 +53,7 @@ const NavBar = () => {
   );
 };
 
-function MenuButton({ isMenuOpened, toggleMenu, visibility, toggleLink }) {
+function MenuButton({ isMenuOpened, visibility, toggleLink, toggleMenu}) {
   return (
     <button className={visibility} onClick={() => { toggleLink(); toggleMenu(); }}>
       { isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon /> }
