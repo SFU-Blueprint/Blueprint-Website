@@ -12,9 +12,9 @@ import { Event1, Event2, Event3 } from "../constants/Event";
 import OutlineButton from "../components/shared/OutlineButton";
 import ProjectModal from "../components/shared/ProjectModal";
 
-import LadyTyping from "../assets/images/home/lady_typing.png";
-import HomeBGFull from "../assets/images/home/home_bg_full.png";
-import HomeBGFullLeft from "../assets/images/home/home_bg_left.png";
+// import LadyTyping from "../assets/images/home/lady_typing.png";
+// import HomeBGFull from "../assets/images/home/home_bg_full.png";
+// import HomeBGFullLeft from "../assets/images/home/home_bg_left.png";
 import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 import { Anouncment, Show } from "../constants/Notification";
@@ -26,6 +26,9 @@ const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showNotification, setShowNotification] = useState(Show);
 
+  const LadyTyping = "images/home/lady_typing.webp";
+  const HomeBGFull = "images/home/home_bg_full.webp";
+  const HomeBGFullLeft = "images/home/home_bg_left.webp";
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
