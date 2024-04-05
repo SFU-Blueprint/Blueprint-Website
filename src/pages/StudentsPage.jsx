@@ -9,12 +9,12 @@ import {
   ParagraphTitle,
   SectionHeader,
 } from "../components/Common";
-import Header from "../assets/images/studentPage_header.png";
 
 const StudentsPage = () => {
   const { t } = useTranslation();
   const phases = t("students.phases");
   const openPositions = t("students.openPositions");
+  const Header = "images/student/studentPage_header.webp";
 
   const [activePhase, setActivePhase] = useState(0);
   const phasesDesc = t("students.phasesDesc");
