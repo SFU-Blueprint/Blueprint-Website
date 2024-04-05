@@ -6,7 +6,6 @@ import {
   SectionHeader,
   ParagraphText,
 } from "../components/Common";
-import Header from "../assets/images/nonprofits_header.png";
 
 const reroute = () => {
   window.open(
@@ -18,6 +17,9 @@ const NonprofitsPage = () => {
   const { t, i18n } = useTranslation();
   const [activePhase, setActivePhase] = useState(0);
   const phases = t("nonprofits.phases");
+
+  const Header =  "images/non-profit/nonprofits_header.webp";
+
   const backgroundStyle = {
     // outline: "1px solid black",
     position: "absolute",

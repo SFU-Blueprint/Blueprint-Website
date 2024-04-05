@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { ReactComponent as MenuXIcon } from "../assets/icons/x_gray.svg";
-import SpeakerIcon from "../assets/images/home/speaker.png";
+// import SpeakerIcon from "../assets/images/home/speaker.png";
 import { ParagraphText } from "./Common";
 
 const Notification = ({ message, onClose }) => {
   const [closed, setClosed] = useState(false);
+  const SpeakerIcon = "images/home/speaker.webp";
 
   const handleClose = () => {
     setClosed(true);
