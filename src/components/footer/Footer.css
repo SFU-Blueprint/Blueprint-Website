@@ -19,19 +19,6 @@
         @apply cursor-pointer;
         text-decoration: underline;
     }
-
-    .text-mobile{
-        display: none;
-    }
-
-    .elements-container{
-        @apply flex justify-between items-center;
-        font-size: x-small;
-    }
-
-    .additional-links {
-        @apply flex gap-4;
-    }
 }
 
 /* Media query for screens smaller than the breakpoint */
@@ -56,20 +43,6 @@
         @apply cursor-pointer;
         transform: scale(1.2);
     }
-
-    .text-mobile{
-        display: block; /* Hide by default */
-    }
-
-    .elements-container{
-        @apply flex justify-between items-center;
-        font-size: x-small;
-    }
-
-    .additional-links {
-        @apply flex gap-2;
-    }
-
 }
 
 .text-hover:hover{
