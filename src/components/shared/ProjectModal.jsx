@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import OutlineButton from "./OutlineButton";
 import { useTranslation } from "react-i18next";
-import { PageHeader } from "../Common";
+// import { PageHeader } from "../Common";
 import { ParagraphTitle, ParagraphText } from "../Common"
-import { Link } from 'react-router-dom';
-import { Blueprint, Mosaic, Pedals } from "../../constants/Team";
-import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
+// import { Link } from 'react-router-dom';
+import { Blueprint } from "../../constants/Team/Blueprint";
+import { Mosaic } from "../../constants/Team/Mosaic";
+import { Pedals } from "../../constants/Team/Pedals";
+// import PlaceholderImage from "../../assets/images/projects/aiForHealth.png";
 
 function ProjectModal({ isOpen, onClose, project }) {
   const { t, i18n } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('overview');
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1200);
+  
 
   if (isOpen) document.body.style.overflow = 'hidden';
   else document.body.style.overflow = 'unset';
 
   useEffect(() => {
     const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 1000);
+      setIsSmallScreen(window.innerWidth <= 700);
     };
 
     window.addEventListener('resize', handleResize);
@@ -71,9 +74,14 @@ function ProjectModal({ isOpen, onClose, project }) {
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto h-full w-full flex justify-center items-center">
       <div className="bg-white p-8 rounded-sm shadow-md mx-auto h-[95vh] w-[85vw] md-w-[80vw] overflow-scroll flex flex-col justify-between">
         <div >
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-4xl font-bold mr-3">{project.name}</h1>
-            <div className="flex ml-auto items-center gap-4 mr-6">
+          <div className={`${isSmallScreen ? '' : 'flex'} justify-between items-center mb-6`}>
+            <div className='flex justify-between'>
+            <h1 className={`font-bold mr-3 text-4xl`}>{project.name}</h1>
+            {isSmallScreen && <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>}
+            </div>
+            {isSmallScreen && <p className="mt-4 text-lg text-gray-600">March 2024 - July 2024</p>}
+            <div className={`flex mt-5 ml-auto items-center mr-6 gap-4 `}>
+
                 <OutlineButton>
                 Github
                 </OutlineButton>
@@ -87,9 +95,9 @@ function ProjectModal({ isOpen, onClose, project }) {
                 )
                 }
           </div>
-            <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>
+            {!isSmallScreen && <button onClick={onClose} className="text-lg font-semibold cursor-pointer">✕</button>}
           </div>
-          <p className="text-lg text-gray-600">March 2024 - July 2024</p>
+          {!isSmallScreen && <p className="text-lg text-gray-600">March 2024 - July 2024</p>}
           <p className="text-lg mb-4">{project.duration}</p>
           
             <div className="flex gap-4 border-t pt-4"></div>
@@ -97,17 +105,17 @@ function ProjectModal({ isOpen, onClose, project }) {
               <div className={`${isSmallScreen ? '' : 'flex'} gap-4`} id='overview'>
 
                 <div className="mb-8">
-                  <ParagraphTitle className="text-[1.25rem] ">
+                  <ParagraphTitle className={`${isSmallScreen ? 'mb-3 mt-3' : ''} text-[1.25rem] `}>
                     ABOUT THE NON-PROFIT
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.nonProfitDescription}</p>
-                  <ParagraphTitle className="text-[1.25rem] ">
+                  <ParagraphTitle className={`${isSmallScreen ? 'mb-3' : ''} text-[1.25rem] `}>
                     OUR PROJECT
                   </ParagraphTitle>
                   <p className="text-lg mb-4">{project.projectDescription}</p>
                 </div>
 
-                <img className={`max-h-[350px] ${isSmallScreen ? '' : 'mt-20'}`} src={project.image} alt="Placeholder" />
+                <img className={`max-h-[350px] ${isSmallScreen ? '' : 'mt-20'}`} src={project.popupimage} alt="Placeholder" />
                 
                 <div className="mb-8">
                   <p className="text-lg italic mt-4">{project.additionalNote}</p>

@@ -54,7 +54,6 @@ const Annotation = ({ ...props }) => {
   );
 };
 
-
 const Landing = ({ ...props }) => {
   return (
     <p
@@ -64,4 +63,12 @@ const Landing = ({ ...props }) => {
   );
 };
 
-export { PageHeader, SectionHeader, ParagraphTitle, ParagraphText, ButtonText, Annotation, Landing };
+export {
+  PageHeader,
+  SectionHeader,
+  ParagraphTitle,
+  ParagraphText,
+  ButtonText,
+  Annotation,
+  Landing,
+};
