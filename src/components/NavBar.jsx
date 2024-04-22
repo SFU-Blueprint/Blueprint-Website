@@ -69,15 +69,28 @@ function NavLinks({ routes, visibility, currentPath, toggleLink, toggleMenu}) {
     <div
       className={`flex flex-col items-center max-lg:space-y-4 max-lg:pb-4 text-blueprint-black font-poppins lg:flex-row lg:space-x-12 ${visibility}`}
     >
+      {/* additional div to contain the invisible and visible text */}
+      {/* position is relative for the absolute positon of child element to follow parent, not the whole page */}
       {routes.map((route, index) => (
-        <Link
-          key={index}
-          to={route.path}
-          onClick={() => { toggleLink(); toggleMenu(); }}
-          className={`hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${route.path === currentPath && "text-blueprint-blue underline font-semibold"} ${index === 0 && "lg:hidden"}`}
-        >
-          {route.name}
-        </Link>
+        <div className="relative">
+          {/* the first div is hidden, and to simulate the space occupied by bold text */}
+          <div
+            className={`invisible font-semibold  ${index === 0 && "lg:hidden"}`}
+          >
+            {route.name}
+          </div>
+          {/* the second tag (link) is visible, and absolute position its top edge to the 1/2 of the container, 
+          then translate upwards by its 1/2 of height to be centered vertically */}
+            <Link
+            key={index}
+            to={route.path}
+            onClick={() => { toggleLink(); toggleMenu(); }}
+            className={`hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${route.path === currentPath && "text-blueprint-blue underline font-semibold"} ${index === 0 && "lg:hidden"}`}
+            >
+            {route.name}
+          </Link>
+        </div>
+
       ))}
     </div>
   );

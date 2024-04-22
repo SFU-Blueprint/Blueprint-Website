@@ -12,9 +12,9 @@ import { Event1, Event2, Event3 } from "../constants/Event";
 import OutlineButton from "../components/shared/OutlineButton";
 import ProjectModal from "../components/shared/ProjectModal";
 
-import LadyTyping from "../assets/images/home/lady_typing.png";
-import HomeBGFull from "../assets/images/home/home_bg_full.png";
-import HomeBGFullLeft from "../assets/images/home/home_bg_left.png";
+// import LadyTyping from "../assets/images/home/lady_typing.png";
+// import HomeBGFull from "../assets/images/home/home_bg_full.png";
+// import HomeBGFullLeft from "../assets/images/home/home_bg_left.png";
 import { navigateToAnchor } from "../utils/navigateToAnchor";
 
 import { Anouncment, Show } from "../constants/Notification";
@@ -26,7 +26,10 @@ const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showNotification, setShowNotification] = useState(Show);
 
-
+  const LadyTyping = "images/home/lady_typing.webp";
+  const HomeBGFull = "images/home/home_bg_full.webp";
+  const HomeBGFullLeft = "images/home/home_bg_left.webp";
+  
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
     setSelectedProject(projectDetails);
@@ -77,12 +80,14 @@ const HomePage = () => {
         className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
         src={HomeBGFull}
         alt="about us header"
+        fetchPriority="high"
       />
 
       <img
         className="absolute top-[500px] z-[-2] object-contain"
         src={HomeBGFullLeft}
         alt="about us header"
+        fetchPriority="high"
       />
       <div className="mb-[100px] mx-12 px-3 md:px-[15%] ">
         <Landing className="!font-semibold md:w-[600px] pt-32">
@@ -131,12 +136,12 @@ const HomePage = () => {
 
       <div>
         <div style={backgroundStyle}></div>
-        <div className="flex flex-col px-3 md:px-[15%] pt-10 gap-4">
+        <div className="flex flex-col px-3 md:px-[15%] pt-10">
           <SectionHeader className="md:self-center mb-5">
             Our Projects
           </SectionHeader>
           {/* <SectionHeader>Ongoing</SectionHeader> */}
-          <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6">
+          <div className="flex flex-col self-center lg:grid lg:grid-cols-3 ">
             {Object.keys(projects).map((projectKey, index) => (
               <ProjectCard
                 key={index}
@@ -172,18 +177,14 @@ const HomePage = () => {
         <ParagraphTitle>WE ARE JUST ONE MESSAGE AWAY</ParagraphTitle>
         <ParagraphText>
           Students, get your quick question in through our &nbsp;
-            <a
-              href={t("discord.link")}
-              className="font-bold underline">
-                Discord server
-            </a>
+          <a href={t("discord.link")} className="font-bold underline">
+            Discord server
+          </a>
           <br />
           For collaborations or sponsorships, shoot us an email at &nbsp;
-            <a
-              href={t("discord.link")}
-              className="font-bold underline">
-                sfublueprint@gmail.com
-            </a>
+          <a href={t("discord.link")} className="font-bold underline">
+            sfublueprint@gmail.com
+          </a>
         </ParagraphText>
       </div>
 
@@ -216,12 +217,12 @@ const HomePage = () => {
 
       {/* Mobile photos */}
 
-      <div>
-        <ParagraphTitle className="mx-5 mt-5">
-          STAY UPDATED WITH OUR EVENTS
-        </ParagraphTitle>
-      </div>
       <div className="block md:hidden flex flex-col items-center">
+        <div>
+          <ParagraphTitle className="mx-5 mt-5">
+            STAY UPDATED WITH OUR EVENTS
+          </ParagraphTitle>
+        </div>
         <div className="grid grid-cols-2 items-center justify-center">
           {Event1.map((items, key) => (
             <div className="flex flex-col px-5 pt-1 ">
