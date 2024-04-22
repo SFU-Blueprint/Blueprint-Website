@@ -39,7 +39,7 @@ const StudentsPage = () => {
           alt="student header"
         />
         <div className="absolute bottom-5 md:my-10">
-          <PageHeader className="!text-blueprint-black sm:!text-blueprint-white ml-10 md:ml-16 md:text-6xl xl:ml-36">
+          <PageHeader id="Begin" className="!text-blueprint-black sm:!text-blueprint-white ml-10 md:ml-16 md:text-6xl xl:ml-36">
             Get Involved
           </PageHeader>
           <ParagraphTitle className="!text-blueprint-black sm:!text-blueprint-white mt-[6px] mb-[12px] ml-10 md:ml-16 md:text-6xl xl:ml-36">
@@ -92,7 +92,7 @@ const StudentsPage = () => {
         hiring and opportunity posting.
       </ParagraphText>
 
-      <SectionHeader className="my-[36px] ml-[6%]">
+      <SectionHeader id="Our-Semester" className="my-[36px] ml-[6%]">
         A Typical Semester
       </SectionHeader>
       {/* <SectionHeader className="mt-16 mb-5">Our Process</SectionHeader> */}
@@ -135,7 +135,7 @@ const StudentsPage = () => {
           {content[phasesDesc[activePhase]]}
         </ContentCard>
       </div>
-      <SectionHeader className="mt-[10%] mb-[2%] ml-[6%]">Roles</SectionHeader>
+      <SectionHeader id="Apply" className="mt-[10%] mb-[2%] ml-[6%]">Roles</SectionHeader>
       {roles.map((role) => (
         <div className="px-[3%] md:px-[5%]">
           <RolesCard children={rolesContent[role]} />

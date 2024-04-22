@@ -86,7 +86,7 @@
   },
   "students": {
     "name": "For Students",
-    "anchors": ["Who-we-are", "Our-values", "Our-team"],
+    "anchors": ["Begin","Our-Semester", "Apply"],
     "openPositions": ["product-manager", "product-designer"],
     "phases": ["Begin", "Contribute", "Socialize", "Scheduling"],
     "phasesDesc": [
@@ -133,7 +133,13 @@
     "Proposal": "/nonprofits#Proposal",
     "Who-we-are": "/about#Who-we-are",
     "Our-values": "/about#Our-values",
-    "Our-team": "/about#Our-team"
+    "Our-team": "/about#Our-team",
+    "Begin": "/students#Begin",
+    "Apply": "/students#Apply",
+    "Our-Semester": "/students#Our-Semester"
+
+
+
   },
   "product-manager": {
     "title": "Project Manager (3)",
