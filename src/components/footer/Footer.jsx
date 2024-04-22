@@ -7,6 +7,7 @@ import "./Footer.css";
 
 const Footer = () => {
   const { t } = useTranslation();
+
   return (
     <footer className="inset-x-0 bottom-0 h-fit p-14 bg-blueprint-blue text-white">
       {/* Render page links */}
