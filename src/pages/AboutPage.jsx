@@ -130,12 +130,9 @@ const AboutPage = () => {
         </div>
       </div>
       <div className="mt-12 flex flex-col justify-center items-center md:hidden">
-        <div className="block md:hidden w-full h-60 rounded-sm">
-          <img
-            className="w-full object-cover"
-            src={Image_1}
-            alt="about us image 1"
-          />
+        <div className="block md:hidden w-50 h-60 ml-[10%] mr-[10%] rounded-sm">
+          <img className="" src={Image_1} alt="about us image 1" />
+
         </div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">

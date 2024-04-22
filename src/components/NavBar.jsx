@@ -6,9 +6,15 @@ import Logo from "./shared/Logo";
 
 const NavBar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [isNavLinkClicked, setIsLinkClicked] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpened((isMenuOpened) => !isMenuOpened);
   };
+
+  const toggleLink = () => {
+    setIsLinkClicked((isNavLinkClicked) => !isNavLinkClicked );
+  };
+
   const currentPath = useLocation().pathname;
 
   const routes = [
@@ -20,6 +26,7 @@ const NavBar = () => {
     { name: "Sponsor Us", path: "/sponsors" },
   ];
 
+  console.log(isNavLinkClicked);
   return (
     <nav className="flex justify-center">
       <div className="flex flex-col justify-between max-lg:flex-grow lg:flex-row lg:w-[80rem] lg:px-20">
@@ -29,27 +36,35 @@ const NavBar = () => {
             visibility="lg:hidden"
             isMenuOpened={isMenuOpened}
             toggleMenu={toggleMenu}
+            toggleLink={toggleLink}
           />
         </div>
         <NavLinks
-          visibility={!isMenuOpened && "max-lg:hidden"}
-          routes={routes}
-          currentPath={currentPath}
+         visibility={!isNavLinkClicked && !isMenuOpened && "max-lg:hidden"}
+         routes={routes}
+         isNavLinkClicked = {isNavLinkClicked}
+         toggleMenu={toggleMenu}
+         toggleLink={toggleLink}
+         currentPath={currentPath}
         />
+
       </div>
     </nav>
   );
 };
 
-function MenuButton({ isMenuOpened, toggleMenu, visibility }) {
+function MenuButton({ isMenuOpened, visibility, toggleLink, toggleMenu}) {
   return (
-    <button className={visibility} onClick={toggleMenu}>
-      {isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon />}
+    <button className={visibility} onClick={() => { toggleLink(); toggleMenu(); }}>
+      { isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon /> }
     </button>
+    
   );
+  
 }
 
-function NavLinks({ routes, visibility, currentPath }) {
+function NavLinks({ routes, visibility, currentPath, toggleLink, toggleMenu}) {
+
   return (
     <div
       className={`flex flex-col items-center max-lg:space-y-4 max-lg:pb-4 text-blueprint-black font-poppins lg:flex-row lg:space-x-12 ${visibility}`}
@@ -66,18 +81,16 @@ function NavLinks({ routes, visibility, currentPath }) {
           </div>
           {/* the second tag (link) is visible, and absolute position its top edge to the 1/2 of the container, 
           then translate upwards by its 1/2 of height to be centered vertically */}
-          <Link
+            <Link
             key={index}
             to={route.path}
-            className={`absolute top-[50%] transform -translate-y-1/2 
-            hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${
-              route.path === currentPath &&
-              "text-blueprint-blue underline font-semibold"
-            } ${index === 0 && "lg:hidden"}`}
-          >
+            onClick={() => { toggleLink(); toggleMenu(); }}
+            className={`hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${route.path === currentPath && "text-blueprint-blue underline font-semibold"} ${index === 0 && "lg:hidden"}`}
+            >
             {route.name}
           </Link>
         </div>
+
       ))}
     </div>
   );
