@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-// import Footer from "../components/Footer";
-// import { PROJECT_KEYS } from "../constants/projects";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -10,17 +8,19 @@ import {
   SectionHeader,
 } from "../components/Common";
 
+import { Roles } from "../constants/Hiring";
+
 const StudentsPage = () => {
   const { t } = useTranslation();
   const phases = t("students.phases");
-  const openPositions = t("students.openPositions");
   const Header = "images/student/studentPage_header.webp";
 
   const [activePhase, setActivePhase] = useState(0);
+  const [roles, setRoles] = useState(Roles);
+  const [hiringRoles, setHiringRoles] = useState(Roles.filter(role => role.Hiring));
   const phasesDesc = t("students.phasesDesc");
   const content = t("content");
-  const roles = t("roles");
-  const rolesContent = t("rolesContent");
+
 
   const navigateToAnchor = (page, section) => {
     // Construct the URL with the page path and the anchor point
@@ -76,15 +76,17 @@ const StudentsPage = () => {
       </SectionHeader>
       <div className="mb-[24px] px-[5%]">
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-16">
-          {openPositions.map((position, index) => (
-            <PositionCard
-              key={index}
-              title={t(position + ".title")}
-              tags={t(position + ".tags")}
-              description={t(position + ".description")}
-              deadline={t(position + ".deadline")}
-            />
-          ))}
+          {hiringRoles.length > 0 ? (
+            hiringRoles.map((role, index) => (
+              <PositionCard key={index} role={role} />
+            ))
+          ) : (
+            <div className="text-center my-[10%]">
+              <ParagraphText className="text-blue-500 font-medium">
+                [ Currently, there are no open positions. Please check back later. ]
+              </ParagraphText>
+            </div>
+          )}
         </div>
       </div>
       <ParagraphText className="mt-[24px] mx-[24px] flex flex-row justify-center">
@@ -136,9 +138,9 @@ const StudentsPage = () => {
         </ContentCard>
       </div>
       <SectionHeader id="Apply" className="mt-[10%] mb-[2%] ml-[6%]">Roles</SectionHeader>
-      {roles.map((role) => (
-        <div className="px-[3%] md:px-[5%]">
-          <RolesCard children={rolesContent[role]} />
+      {roles.map((role, index) => (
+        <div key={index} className="px-[3%] md:px-[5%]">
+          <RolesCard role={role} />
         </div>
       ))}
       <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%] flex flex-col items-center justify-center px-[15%] ">
@@ -157,23 +159,34 @@ const StudentsPage = () => {
   );
 };
 
-const PositionCard = (props) => {
+const PositionCard = ({role}) => {
+  const { Role, Description = [], Link, Deadline } = role; // Set a default empty array if Description is undefined
+  const [showMore, setShowMore] = useState(false);
+
+  // Ensure Description has content before attempting to display it
+  const hasDescription = Description && Description.length > 0;
+
   return (
     <div className="shadow-md">
       <div className="py-[10%] px-[5%]">
         <ParagraphTitle className="text-blue-500font-medium font-poppins text-2xl font-medium uppercase">
-          {props.title}
+          {Role}
         </ParagraphTitle>
         <ParagraphText className="mt-[4%] mb-[6%] ">
-          {props.description} <span className="text-blue-500">Read More</span>
+          {showMore ? Description.join(" ") : Description[0]}
+            {Description.length > 1 && (
+              <a href="#" className="text-blue-500" onClick={(e) => {e.preventDefault(); setShowMore(!showMore);}}>
+                {showMore ? " Show Less" : " Read More"}
+              </a>
+            )}
         </ParagraphText>
         <ParagraphText className="font-semibold mb-[7%] ">
-          Application Deadline: {props.deadline}
+          Application Deadline: {Deadline}
         </ParagraphText>
         <div className="py-[3%] border-blueprint-blue w-3/5 rounded-sm border-2 flex justify-center items-center">
-          <button className="px-[3%] text-blueprint-blue font-poppins font-medium">
+          <a href={Link} className="px-[3%] text-blueprint-blue font-poppins font-medium">
             View Details and Apply
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -190,33 +203,33 @@ function ContentCard({ children, className }) {
   );
 }
 
-function RolesCard({ children, className }) {
-  const { title, desc, hiring } = children;
+function RolesCard({ role, className }) {
+  const { Role, Description, Hiring, Link } = role;
   return (
     <div
       className={`${className} flex flex-col w-full gap-1 border-black shadow-lg`}
     >
       <ParagraphTitle className="mx-[8%] mt-[6%] mb-[3%]">
         {" "}
-        {title}
+        {Role}
       </ParagraphTitle>
       <div className="text-blueprint-black font-poppins text-[0.75rem] md:text-[1rem] leading-normal mx-[10%] mb-[5%] flex justify-between">
         <ParagraphText className="w-4/5 md:w-3/5">
-          {arrayToUnorderedList(desc)}
+          {arrayToUnorderedList(Description)}
         </ParagraphText>
         {/* PC */}
         <ParagraphTitle
           className={`block max-md:hidden text-center ${
-            hiring
+            Hiring
               ? "text-blueprint-blue flex justify-center mb-[8%]"
               : "!text-blueprint-gray-dark mb-[8%]"
           }`}
         >
-          {hiring ? (
+          {Hiring ? (
             <div className="py-[3%] px-[10%] border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
-              <button className=" text-blueprint-blue font-poppins font-medium">
+              <a href={Link} className=" text-blueprint-blue font-poppins font-medium">
                 View Details and Apply
-              </button>
+              </a>
             </div>
           ) : (
             <div className="text-center">Applications Closed</div>
@@ -226,12 +239,12 @@ function RolesCard({ children, className }) {
       {/* Mobile */}
       <ParagraphTitle
         className={`hidden max-md:block text-center ${
-          hiring
+          Hiring
             ? "text-blueprint-blue flex flex-row justify-center items-center mb-[8%]"
             : "!text-blueprint-gray-dark mb-[8%]"
         }`}
       >
-        {hiring ? (
+        {Hiring ? (
           <div className="py-[3%] border-blueprint-blue mx-[20%] rounded-sm border-2">
             <button className="px-[3%] text-blueprint-blue font-poppins font-medium">
               View Details and Apply
