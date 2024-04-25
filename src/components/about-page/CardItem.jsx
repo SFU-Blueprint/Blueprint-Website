@@ -1,6 +1,7 @@
 import React from "react";
 import { ParagraphText } from "../Common";
 import { headshots } from "../../index.js";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 /**
  * CardItem component to display an individual card item.
@@ -16,12 +17,27 @@ const CardItem = (props) => {
       <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20 gap-[12px]">
         {/* Member's Headshot */}
   
-        <img
+        {/* <img
+          placeholder={headshots["blueprint.jpg"]}
           className="h-48 w-48 object-cover rounded-[5px]"
           src={headshots[props.img]}
           style={{ minWidth: "12rem" }}
           alt=""
-        />
+          loading="lazy"
+        /> */}
+
+        <LazyLoadImage
+          alt="headshot"
+          style={{ minWidth: "12rem" }}
+          className="h-48 w-48 object-cover rounded-[5px]"
+          height={props.img.height}
+          src={headshots[props.img]} 
+          placeholderSrc={headshots["blueprint.jpg"]}
+          width={props.img.width} 
+          
+          loading="lazy"
+          />
+         
   
         {/* Member's Name */}
         <ParagraphText className="!font-bold flex  justify-center">
