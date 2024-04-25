@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { ParagraphText } from "../Common";
 import { headshots } from "../../index.js";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -13,7 +13,14 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
  * @returns {JSX.Element} - Returns the JSX for the CardItem component.
  */
 const CardItem = (props) => {
+
+  
+
+
   if (props.img) { // If there is an image provided, render the card with the image
+
+    
+
     return (
       <div className="flex flex-col h-fit w-fit m-6 mb-5 sm:mb-20 gap-[12px]">
         {/* Member's Headshot */}
@@ -27,7 +34,7 @@ const CardItem = (props) => {
           src={headshots[props.img]} 
           placeholderSrc={headshots["blueprint.jpg"]}
           width={props.img.width} 
-          effect="blur"
+          // effect="blur"
           
           />
          
