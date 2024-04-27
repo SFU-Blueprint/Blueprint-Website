@@ -23,7 +23,6 @@ const NavBar = () => {
     { name: "Projects", path: "/projectspage" },
     { name: "For Students", path: "/students" },
     { name: "For Nonprofits", path: "/nonprofits" },
-    { name: "Sponsor Us", path: "/sponsors" },
   ];
 
   console.log(isNavLinkClicked);
