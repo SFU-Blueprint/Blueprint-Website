@@ -204,8 +204,8 @@ const HomePage = () => {
             </div>
           ))}
         </div>
-        <ParagraphText className="mt-10">
-          Follow us on{" "}
+        <ParagraphText className="mt-10 flex justify-center">
+          Follow us on&nbsp;
           <a
             href="https://www.instagram.com/sfublueprint/"
             className="hover:text-blueprint-blue hover:font-semibold hover:cursor-pointer underline"
