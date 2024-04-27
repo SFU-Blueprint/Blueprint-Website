@@ -28,7 +28,7 @@ const NavBar = () => {
 
   console.log(isNavLinkClicked);
   return (
-    <nav className="flex justify-center">
+    <nav className="flex justify-center bg-blueprint-offwhite">
       <div className="flex flex-col justify-between max-lg:flex-grow lg:flex-row lg:w-[80rem] lg:px-20">
         <div className="flex justify-between items-center py-4 px-4">
           <Logo />
