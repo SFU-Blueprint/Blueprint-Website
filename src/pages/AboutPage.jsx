@@ -6,6 +6,7 @@ import { Alumni } from "../constants/Team/Alumni";
 import { Members } from "../constants/Team/Members";
 import { Executives } from "../constants/Team/Execs";
 import CardGrid from "../components/about-page/CardGrid";
+import AlumniCard from "../components/about-page/AlumniCard";
 
 import {
   Annotation,
@@ -177,7 +178,7 @@ const AboutPage = () => {
           {/* <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
             2023
           </ParagraphTitle> */}
-          <CardGrid cardList={Alumni} gridName="2023"></CardGrid>
+          <AlumniCard cardList={Alumni} gridName="2023"></AlumniCard >
         </div>
       </div>
       {/*End of Alumni Section*/}
