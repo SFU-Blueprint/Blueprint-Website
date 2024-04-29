@@ -36,7 +36,7 @@ const CardItem = (props) => {
   
         {/* Member's LinkedIn profile */}
         {/* Copied the same style from alumni cards in Aboutpage.jsx */}
-        <ParagraphText className="!text-blueprint-blue underline flex ml-5 mb-3 mr-5 justify-center">
+        <ParagraphText className="text-black flex ml-5 mb-3 mr-5 justify-center">
           {props.linkedin && (
             <a
               href={props.linkedin}
@@ -44,7 +44,6 @@ const CardItem = (props) => {
               className="flex items-center"
             >
               LinkedIn
-              <img className="ml-[5%]" src="/svgs/share.svg" alt="" />
             </a>
           )}
         </ParagraphText>
