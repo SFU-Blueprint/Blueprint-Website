@@ -23,21 +23,26 @@ const NavBar = () => {
     { name: "Projects", path: "/projectspage" },
     { name: "For Students", path: "/students" },
     { name: "For Nonprofits", path: "/nonprofits" },
-    { name: "Sponsor Us", path: "/sponsors" },
   ];
 
   console.log(isNavLinkClicked);
   return (
-    <nav className="flex justify-center">
+    <nav className="flex justify-center bg-blueprint-offwhite">
       <div className="flex flex-col justify-between max-lg:flex-grow lg:flex-row lg:w-[80rem] lg:px-20">
-        <div className="flex justify-between items-center py-4 px-4">
-          <Logo />
-          <MenuButton
-            visibility="lg:hidden"
-            isMenuOpened={isMenuOpened}
-            toggleMenu={toggleMenu}
-            toggleLink={toggleLink}
-          />
+        <div className="flex justify-between items-center py-4 px-4 sm:px-0 sm:mx-4">
+          <div className="ml-2">
+            <Logo />
+          </div>
+
+          <div className="mr-2">
+            <MenuButton
+              visibility="lg:hidden"
+              isMenuOpened={isMenuOpened}
+              toggleMenu={toggleMenu}
+              toggleLink={toggleLink}
+            />
+          </div>
+
         </div>
         <NavLinks
          visibility={!isNavLinkClicked && !isMenuOpened && "max-lg:hidden"}

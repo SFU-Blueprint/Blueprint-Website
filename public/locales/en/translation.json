@@ -15,7 +15,7 @@
   },
   "about": {
     "name": "About Us",
-    "anchors": ["Who-we-are", "Our-values", "Our-team"]
+    "anchors": ["Who-we-are", "Our-values", "Our-team", "Blog"]
   },
   "home": {
     "header": {
@@ -136,10 +136,8 @@
     "Our-team": "/about#Our-team",
     "Begin": "/students#Begin",
     "Apply": "/students#Apply",
-    "Our-Semester": "/students#Our-Semester"
-
-
-
+    "Our-Semester": "/students#Our-Semester",
+    "Blog": "https://medium.com/@sfublueprint"
   },
   "product-manager": {
     "title": "Project Manager (3)",
@@ -229,7 +227,7 @@
   },
   "connect": {
     "name": "Connect",
-    "links": ["email", "linkedin", "instagram", "medium", "github", "discord"]
+    "links": ["email", "linkedin", "instagram", "github", "discord"]
   },
   "email": {
     "name": "Email",

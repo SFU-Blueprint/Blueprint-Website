@@ -4,7 +4,6 @@ import {Suspense} from "react";
 import NavBar from "./components/NavBar";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import SponsorPage from "./pages/SponsorPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import StudentsPage from "./pages/StudentsPage";
 import NonprofitsPage from "./pages/NonprofitsPage";
@@ -23,7 +22,6 @@ function App() {
         <Route path="/projectspage" element={<ProjectsPage />} />
         <Route path="/students" element={<StudentsPage />} />
         <Route path="/nonprofits" element={<NonprofitsPage />} />
-        <Route path="/sponsors" element={<SponsorPage />} />
       </Routes>
       </main>
       <Footer></Footer>
