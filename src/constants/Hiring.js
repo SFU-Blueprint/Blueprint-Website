@@ -29,7 +29,7 @@ export const Roles = [
         Deadline:"May 18, 2024"
     },
     {
-        Role: "VP of PM",
+        Role: "VP PM",
         Description: [
             "Build out the product community within Blueprint, establish product management artifacts and processes, and provide mentorship to team product managers.",
             "Assists with developer recruitment, and organize developer bootcamp.",
