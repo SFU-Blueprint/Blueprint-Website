@@ -18,12 +18,18 @@ const AlumniCard = (props) => {
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
         {props.cardList.map((card) => (
-			<div className="flex flex-col text-start items-start w-40 h-20 shadow-md hover:border-2">
-				<ParagraphText className="!font-bold  justify-center mt-3 mx-3">
-				  {card.title}
-				</ParagraphText>
+			<div className="flex flex-col justify-between p-3 text-start md:w-[80%] md:h-28 shadow-[0px_0px_50px_0px_rgba(0,0,0,0.2)]">
+				<div>
+					<ParagraphText className="!font-bold">
+					  {card.title}
+					</ParagraphText>
 
-					<ParagraphText className="!text-blueprint-blue underline mx-3 mb-3">
+					<ParagraphText className="">
+					  {card.position}
+					</ParagraphText>
+				</div>
+
+				<ParagraphText className="!text-blueprint-blue underline">
 					<a
 						href={card.linkedin}
 						target="_blank"
