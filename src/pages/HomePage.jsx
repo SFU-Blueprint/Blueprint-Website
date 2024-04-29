@@ -29,7 +29,7 @@ const HomePage = () => {
   const LadyTyping = "images/home/lady_typing.webp";
   const HomeBGFull = "images/home/home_bg_full.webp";
   const HomeBGFullLeft = "images/home/home_bg_left.webp";
-  
+
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
     setSelectedProject(projectDetails);
@@ -123,15 +123,14 @@ const HomePage = () => {
             onClick={() => navigateToAnchor("nonprofits")}
           ></GetInvolvedSection>
 
-         <div className="flex flex-col justify-start h-48 gap-2">
-          <ParagraphTitle>
-            SPONSORS
-          </ParagraphTitle>
-          <ParagraphText>
-           Support our operation to become part of the changemakers! Elevate your brand while driving meaningful social impact.
-          </ParagraphText>
+          <div className="flex flex-col justify-start h-48 gap-2">
+            <ParagraphTitle>SPONSORS</ParagraphTitle>
+            <ParagraphText>
+              Support our operation to become part of the changemakers! Elevate
+              your brand while driving meaningful social impact.
+            </ParagraphText>
+          </div>
         </div>
-       </div>
       </div>
 
       <div>
@@ -146,7 +145,7 @@ const HomePage = () => {
               <ProjectCard
                 key={index}
                 project={projectKey}
-                className="your-class-name"
+                className="your-class-name m-3"
                 onClick={() => handleProjectClick(projectKey)}
               />
             ))}
