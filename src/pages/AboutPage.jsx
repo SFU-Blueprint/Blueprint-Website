@@ -175,10 +175,9 @@ const AboutPage = () => {
       <div className="mt-[8%] mx-10 md:mx-16 xl:mx-36">
         <SectionHeader className="flex justify-center ">Alumni</SectionHeader>
         <div className="">
-          {/* <ParagraphTitle className="ml-[5%] md:ml-[0%] !text-blueprint-black">
-            2023
-          </ParagraphTitle> */}
+
           <AlumniCard cardList={Alumni} gridName="2023"></AlumniCard >
+
         </div>
       </div>
       {/*End of Alumni Section*/}
