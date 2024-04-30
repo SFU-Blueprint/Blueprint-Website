@@ -17,7 +17,7 @@ export const Mosaic = [
       img: "Zahila.jpg",
       linkedin: "https://www.linkedin.com/in/zahila-rehman-9118a4217/",
       lastPosition: "Lead",
-      role:"Product Manager"
+      role:"Project Manager"
     },
     {
       title: "Derek Huang",
@@ -52,7 +52,7 @@ export const Mosaic = [
       img: "Kian.jpg",
       linkedin: "https://www.linkedin.com/in/kian-hosseinkhani-716a311b6/",
       lastPosition: "Lead",
-      role:"Product Manager"
+      role:"Project Manager"
     },{
       title: "Peiman Zhiani",
       img: "Peiman.jpg",
