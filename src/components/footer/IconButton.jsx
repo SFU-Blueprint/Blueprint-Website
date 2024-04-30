@@ -48,7 +48,9 @@ const IconButton = ({ id }) => {
 
     return <>{
         <div className="icon-hover flex items-center gap-2" onClick={(e) => reroute(id)}>
-            {iconComponent}
+            <div className="flex justify-center lg:w-1/5">
+                {iconComponent}
+            </div>
             <div className="icon-name">{t(`${id}.name`)}</div>
         </div>
     }</>;
