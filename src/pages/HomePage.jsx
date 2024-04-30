@@ -25,10 +25,20 @@ const HomePage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [showNotification, setShowNotification] = useState(Show);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1000);
 
   const LadyTyping = "images/home/lady_typing.webp";
   const HomeBGFull = "images/home/home_bg_full.webp";
   const HomeBGFullLeft = "images/home/home_bg_left.webp";
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 700);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
@@ -69,28 +79,30 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col pt-10 gap-4">
+    <div className="flex flex-col pt-10 gap-4 ">
       {showNotification && (
         <Notification
           message="Add notification message here"
           onClose={() => setShowNotification(false)}
         />
       )}
-      <img
-        className="absolute right-0 w-[600px] min-w-[600px] z-[-1]"
-        src={HomeBGFull}
-        alt="about us header"
-        fetchPriority="high"
-      />
+      <div> 
+        <img
+          className={`${isSmallScreen ? ' mt-64  top-80 ' : ''} min-w-[600px] absolute w-[600px]  z-[-1] right-0`}
+          src={HomeBGFull}
+          alt="about us header"
+          fetchPriority="high"
+        />
+      </div>
 
       <img
-        className="absolute top-[500px] z-[-2] object-contain"
+        className={`${isSmallScreen ? 'top-[150px]' : 'top-[500px]'} absolute  z-[-2] object-contain`}
         src={HomeBGFullLeft}
         alt="about us header"
         fetchPriority="high"
       />
-      <div className="mb-[100px] mx-12 px-3 md:px-[15%] ">
-        <Landing className="!font-semibold md:w-[600px] pt-32">
+      <div className="mb-[100px] mx-12 px-3 md:px-[15%] overflow-x-none">
+        <Landing className="!font-semibold md:w-[600px] mt-64">
           {t("home.header.title")}
         </Landing>
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
@@ -100,7 +112,8 @@ const HomePage = () => {
           {t("home.header.button")}
         </OutlineButton>
       </div>
-      <div className="mt-60 px-3 md:px-[15%] ">
+      <div style={{ paddingTop: isSmallScreen ? '750px' : '0' }} className={`${isSmallScreen ? '' : 'mt-60'} px-3 md:px-[15%]`}>
+
         <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
         <ParagraphText className="md:w-[500px] mb-3 md:mb-6">
           {t("home.aboutUs.text")}
