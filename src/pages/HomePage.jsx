@@ -25,6 +25,7 @@ const HomePage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [showNotification, setShowNotification] = useState(Show);
+
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 1000);
 
   const LadyTyping = "images/home/lady_typing.webp";
@@ -92,18 +93,20 @@ const HomePage = () => {
           src={HomeBGFull}
           alt="about us header"
           fetchPriority="high"
-          style={{ top: isSmallScreen ? '300px' : '', bottom: isSmallScreen ? '' : '' }}
+          style={{ 
+            top: isSmallScreen ? '300px' : ''
+          }}
         />
       </div>
 
       <img
-        className={`${isSmallScreen ? 'top-[150px]' : 'top-[500px]'} absolute  z-[-2] object-contain`}
+        className={`${isSmallScreen ? 'top-[150px]' : 'top-[500px]'} absolute z-[-2] object-contain`}
         src={HomeBGFullLeft}
         alt="about us header"
         fetchPriority="high"
       />
       <div className="mb-[100px] mx-12 px-3 md:px-[15%] overflow-x-none">
-        <Landing className="!font-semibold md:w-[600px] mt-52">
+        <Landing className={`${isSmallScreen ? 'mt-52' : 'mt-32'} !font-semibold md:w-[600px]`}>
           {t("home.header.title")}
         </Landing>
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
@@ -113,7 +116,7 @@ const HomePage = () => {
           {t("home.header.button")}
         </OutlineButton>
       </div>
-      <div style={{ paddingTop: isSmallScreen ? '750px' : '0' }} className={`${isSmallScreen ? 'mt-36' : ''} px-3 md:px-[15%]`}>
+      <div style={{ paddingTop: isSmallScreen ? '750px' : '0' }} className={`${isSmallScreen ? 'mt-36' : 'mt-64'} px-3 md:px-[15%] mt-40`}>
 
         <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
         <ParagraphText className="md:w-[500px] mb-3 md:mb-6">
