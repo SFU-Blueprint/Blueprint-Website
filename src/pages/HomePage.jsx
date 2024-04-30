@@ -123,13 +123,6 @@ const HomePage = () => {
             onClick={() => navigateToAnchor("nonprofits")}
           ></GetInvolvedSection>
 
-          <div className="flex flex-col justify-start h-48 gap-2">
-            <ParagraphTitle>SPONSORS</ParagraphTitle>
-            <ParagraphText>
-              Support our operation to become part of the changemakers! Elevate
-              your brand while driving meaningful social impact.
-            </ParagraphText>
-          </div>
         </div>
       </div>
 
