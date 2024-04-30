@@ -88,10 +88,11 @@ const HomePage = () => {
       )}
       <div> 
         <img
-          className={`${isSmallScreen ? ' mt-64  top-80 ' : ''} min-w-[600px] absolute w-[600px]  z-[-1] right-0`}
+          className={`${isSmallScreen ? ' mt-80 block' : ''} min-w-[600px] absolute w-[600px]  z-[-1] right-0`}
           src={HomeBGFull}
           alt="about us header"
           fetchPriority="high"
+          style={{ top: isSmallScreen ? '300px' : '', bottom: isSmallScreen ? '' : '' }}
         />
       </div>
 
@@ -102,7 +103,7 @@ const HomePage = () => {
         fetchPriority="high"
       />
       <div className="mb-[100px] mx-12 px-3 md:px-[15%] overflow-x-none">
-        <Landing className="!font-semibold md:w-[600px] mt-64">
+        <Landing className="!font-semibold md:w-[600px] mt-52">
           {t("home.header.title")}
         </Landing>
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
@@ -112,7 +113,7 @@ const HomePage = () => {
           {t("home.header.button")}
         </OutlineButton>
       </div>
-      <div style={{ paddingTop: isSmallScreen ? '750px' : '0' }} className={`${isSmallScreen ? '' : 'mt-60'} px-3 md:px-[15%]`}>
+      <div style={{ paddingTop: isSmallScreen ? '750px' : '0' }} className={`${isSmallScreen ? 'mt-36' : ''} px-3 md:px-[15%]`}>
 
         <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
         <ParagraphText className="md:w-[500px] mb-3 md:mb-6">
