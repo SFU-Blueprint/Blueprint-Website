@@ -89,7 +89,7 @@ const NonprofitsPage = () => {
                 <ContentCard
                   className={`${
                     index !== activePhase && "hidden"
-                  } md:hidden w-full py-6 max-md:ml-6`}
+                  } md:hidden w-full py-6 px-4`}
                 >
                   {t(phases[activePhase])}
                 </ContentCard>
