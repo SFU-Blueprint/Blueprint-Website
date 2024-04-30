@@ -80,7 +80,7 @@ function NavLinks({ routes, visibility, currentPath, toggleLink, toggleMenu}) {
         <div className="relative">
           {/* the first div is hidden, and to simulate the space occupied by bold text */}
           <div
-            className={`invisible font-semibold  ${index === 0 && "lg:hidden"}`}
+            className={`invisible font-semibold  ${index !== 0 && "lg:hidden"}`}
           >
             {route.name}
           </div>
