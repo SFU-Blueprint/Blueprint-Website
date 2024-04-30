@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -144,7 +144,7 @@ const StudentsPage = () => {
         </div>
       ))}
       <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%] flex flex-col items-center justify-center px-[15%] ">
-        <PageHeader>Stay in Touch</PageHeader>
+        <SectionHeader className="text-center mb-3 md:mb-6">Stay in Touch</SectionHeader>
         <ParagraphText className="text-center whitespace-pre-line mb-3 md:mb-6">
           {t("students.stayInTouch")}
         </ParagraphText>
