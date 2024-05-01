@@ -183,5 +183,10 @@ export const Members = [
       img: "Mrinal.jpg",
       linkedin: "https://www.linkedin.com/in/mrinal-goshalia/",
       lastPosition: "",
+    }, {
+      title: "Jai Malhi",
+      img: "blueprint.jpg",
+      linkedin: "https://www.linkedin.com/in/jaimalhi/",
+  
     },
 ];
