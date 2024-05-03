@@ -89,7 +89,7 @@ const HomePage = () => {
       )}
       <div> 
         <img
-          className={`${isSmallScreen ? ' mt-80 block' : ''} min-w-[600px] absolute w-[600px]  z-[-1] right-0`}
+          className={`${isSmallScreen ? ' mt-96 block min-w-[400px] w-[400px]' : 'min-w-[600px] w-[600px]'} absolute  z-[-1] right-0`}
           src={HomeBGFull}
           alt="about us header"
           fetchPriority="high"
@@ -106,7 +106,7 @@ const HomePage = () => {
         fetchPriority="high"
       />
       <div className="mb-[100px] mx-12 px-3 md:px-[15%] overflow-x-none">
-        <Landing className={`${isSmallScreen ? 'mt-52' : 'mt-32'} !font-semibold md:w-[600px]`}>
+        <Landing className={`${isSmallScreen ? 'mt-56' : 'mt-32'} !font-semibold md:w-[600px]`}>
           {t("home.header.title")}
         </Landing>
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
@@ -116,7 +116,7 @@ const HomePage = () => {
           {t("home.header.button")}
         </OutlineButton>
       </div>
-      <div style={{ paddingTop: isSmallScreen ? '750px' : '0' }} className={`${isSmallScreen ? 'mt-36' : 'mt-64'} px-3 md:px-[15%] mt-40`}>
+      <div style={{ paddingTop: isSmallScreen ? '500px' : '0' }} className={`${isSmallScreen ? 'mt-36' : 'mt-64'} px-3 md:px-[15%] mt-40`}>
 
         <SectionHeader>{t("home.aboutUs.title")}</SectionHeader>
         <ParagraphText className="md:w-[500px] mb-3 md:mb-6">
