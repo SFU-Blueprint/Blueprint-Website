@@ -226,8 +226,8 @@ function RolesCard({ role, className }) {
           }`}
         >
           {Hiring ? (
-            <div className="py-[3%] px-[10%] border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
-              <a href={Link} className=" text-blueprint-blue font-poppins font-medium">
+            <div className="py-5 border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
+              <a href={Link} className=" px-20 text-blueprint-blue font-poppins text-sm">
                 View Details and Apply
               </a>
             </div>
