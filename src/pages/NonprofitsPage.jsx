@@ -130,7 +130,7 @@ function PhaseButton(index, activePhase, setActivePhase, phase) {
     <button
       className={`${
         index !== activePhase && "bg-white"
-      } bg-blueprint-blue flex flex-col justify-center items-start w-full h-[72px] md:h-[105px] px-[10%] rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl `}
+      } bg-blueprint-blue flex flex-col justify-center items-start w-full h-[72px] sm:h-[100px] md:h-[135px] lg:h-[120px] px-[10%] md:w-[250px] lg:w-full rounded-sm shadow-md text-left transition duration-300 ease-in-out transform hover:shadow-2xl `}
       onClick={() => setActivePhase(index)}
     >
       <ParagraphTitle
