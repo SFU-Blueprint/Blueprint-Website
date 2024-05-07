@@ -149,7 +149,7 @@ const StudentsPage = () => {
           {t("students.stayInTouch")}
         </ParagraphText>
         <PositionsButton
-          className="border-blueprint-blue text-blueprint-blue font-semibold rounded-sm mt-[4%]"
+          className="border-blueprint-blue text-blueprint-blue font-semibold rounded-sm mt-[4%] hover:text-black"
           onClick={ToDiscord}
         >
           Join the Discord
@@ -271,7 +271,7 @@ function arrayToUnorderedList(array) {
 function PositionsButton({ className, onClick, children }) {
   return (
     <button
-      className={`${className} border-blueprint-blue text-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:text-black-100`}
+      className={`${className} border-blueprint-blue text-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:text-black hover:border-black`}
       onClick={onClick}
     >
       {children}
