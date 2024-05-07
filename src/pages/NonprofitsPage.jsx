@@ -163,7 +163,7 @@ function ProposeButton({ className }) {
   const { t, i18n } = useTranslation();
   return (
     <button
-      className={`${className} text-blueprint-black border-blueprint-black flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+      className={`${className} text-blueprint-black border-blueprint-black flex justify-center items-center max-w-[70%] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
       onClick={() => reroute()}
     >
       Propose a Project
