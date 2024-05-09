@@ -149,7 +149,7 @@ const StudentsPage = () => {
           {t("students.stayInTouch")}
         </ParagraphText>
         <PositionsButton
-          className="!border-blueprint-blue !text-blueprint-blue font-semibold rounded-sm mt-[4%]"
+          className="border-blueprint-blue text-blueprint-blue font-semibold rounded-sm mt-[4%] hover:text-black"
           onClick={ToDiscord}
         >
           Join the Discord
@@ -226,8 +226,8 @@ function RolesCard({ role, className }) {
           }`}
         >
           {Hiring ? (
-            <div className="py-[3%] px-[10%] border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
-              <a href={Link} className=" text-blueprint-blue font-poppins font-medium">
+            <div className="h-10 w-500 px-20 border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
+              <a href={Link} className="text-blueprint-blue font-poppins text-sm">
                 View Details and Apply
               </a>
             </div>
@@ -271,7 +271,7 @@ function arrayToUnorderedList(array) {
 function PositionsButton({ className, onClick, children }) {
   return (
     <button
-      className={`${className} border-gray-800 text-gray-800 flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}
+      className={`${className} border-blueprint-blue text-blueprint-blue flex justify-center items-center w-[200px] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:text-black hover:border-black`}
       onClick={onClick}
     >
       {children}
