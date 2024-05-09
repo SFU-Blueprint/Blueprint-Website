@@ -3,6 +3,7 @@ import ProjectCard from "../components/shared/ProjectCard";
 import { PageHeader, SectionHeader, ParagraphText } from "../components/Common";
 import { useTranslation } from "react-i18next";
 import ProjectModal from "../components/shared/ProjectModal";
+import { Projects } from "../constants/projects";
 
 
 const ProjectsPage = () => {
@@ -10,6 +11,7 @@ const ProjectsPage = () => {
   // Other state and variables
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [projects, setProjects] = useState(Projects);
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects[projectKey];
@@ -17,7 +19,6 @@ const ProjectsPage = () => {
     setShowPopup(true);
   };
 
-  const projects = t("projects"); //TODO Put key in a separate file
 
   const backgroundStyle = {
     // outline: "1px solid black",
