@@ -59,7 +59,7 @@ const AboutPage = () => {
           // src={Header}
           src={Header}
           alt="about us header"
-          fetchPriority="high"
+          fetchpriority="high"
           rel="preload"
           as="image"
           type="image/webp"
