@@ -32,7 +32,7 @@ const CardItem = (props) => {
           className="h-48 w-48 object-cover rounded-[5px]"
           height={props.img.height}
           src={headshots[props.img]} 
-          placeholderSrc={headshots["blueprint.jpg"]}
+          placeholderSrc={headshots["blueprint.webp"]}
           width={props.img.width} 
           // effect="blur"
           

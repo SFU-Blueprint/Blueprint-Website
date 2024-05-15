@@ -16,7 +16,7 @@ function importAll(r) {
 
 // Using require.context to import all the images
 const headshots = importAll(
-  require.context("../src/assets/team-headshots", true, /\.(png|jpg|svg)$/)
+  require.context("../public/images/about/team-headshots", true, /\.(webp)$/)
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

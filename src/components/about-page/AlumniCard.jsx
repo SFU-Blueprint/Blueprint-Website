@@ -17,8 +17,8 @@ const AlumniCard = (props) => {
       </ParagraphTitle>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
-        {props.cardList.map((card) => (
-			<div className="flex flex-col justify-between p-3 text-start md:w-[80%] md:h-28 shadow-[0px_0px_50px_0px_rgba(0,0,0,0.2)]">
+        {props.cardList.map((card, index) => (
+			<div key = {index} className="flex flex-col justify-between p-3 text-start md:w-[80%] md:h-28 shadow-[0px_0px_50px_0px_rgba(0,0,0,0.2)]">
 				<div>
 					<ParagraphText className="!font-bold">
 					  {card.title}
