@@ -12,7 +12,7 @@ const NavBar = () => {
   };
 
   const toggleLink = () => {
-    setIsLinkClicked((isNavLinkClicked) => !isNavLinkClicked );
+    setIsLinkClicked((isNavLinkClicked) => !isNavLinkClicked);
   };
 
   const currentPath = useLocation().pathname;
@@ -42,34 +42,35 @@ const NavBar = () => {
               toggleLink={toggleLink}
             />
           </div>
-
         </div>
         <NavLinks
-         visibility={!isNavLinkClicked && !isMenuOpened && "max-lg:hidden"}
-         routes={routes}
-         isNavLinkClicked = {isNavLinkClicked}
-         toggleMenu={toggleMenu}
-         toggleLink={toggleLink}
-         currentPath={currentPath}
+          visibility={!isNavLinkClicked && !isMenuOpened && "max-lg:hidden"}
+          routes={routes}
+          isNavLinkClicked={isNavLinkClicked}
+          toggleMenu={toggleMenu}
+          toggleLink={toggleLink}
+          currentPath={currentPath}
         />
-
       </div>
     </nav>
   );
 };
 
-function MenuButton({ isMenuOpened, visibility, toggleLink, toggleMenu}) {
+function MenuButton({ isMenuOpened, visibility, toggleLink, toggleMenu }) {
   return (
-    <button className={visibility} onClick={() => { toggleLink(); toggleMenu(); }}>
-      { isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon /> }
+    <button
+      className={visibility}
+      onClick={() => {
+        toggleLink();
+        toggleMenu();
+      }}
+    >
+      {isMenuOpened ? <MenuXIcon /> : <MenuHamburgerIcon />}
     </button>
-    
   );
-  
 }
 
-function NavLinks({ routes, visibility, currentPath, toggleLink, toggleMenu}) {
-
+function NavLinks({ routes, visibility, currentPath, toggleLink, toggleMenu }) {
   return (
     <div
       className={`flex flex-col items-center max-lg:space-y-4 max-lg:pb-4 text-blueprint-black font-poppins lg:flex-row lg:space-x-12 ${visibility}`}
@@ -80,22 +81,31 @@ function NavLinks({ routes, visibility, currentPath, toggleLink, toggleMenu}) {
         <div className="relative">
           {/* the first div is hidden, and to simulate the space occupied by bold text */}
           <div
-            className={`invisible font-semibold  ${index !== 0 && "lg:hidden"}`}
+            className={`text-blueprint-blue font-semibold  invisible ${
+              index === 0 && "lg:hidden"
+            }`}
           >
             {route.name}
           </div>
           {/* the second tag (link) is visible, and absolute position its top edge to the 1/2 of the container, 
           then translate upwards by its 1/2 of height to be centered vertically */}
-            <Link
+          <Link
             key={index}
             to={route.path}
-            onClick={() => { toggleLink(); toggleMenu(); }}
-            className={`hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${route.path === currentPath && "text-blueprint-blue underline font-semibold"} ${index === 0 && "lg:hidden"}`}
-            >
+            onClick={() => {
+              toggleLink();
+              toggleMenu();
+            }}
+            className={` hover:text-blueprint-blue hover:underline hover:font-semibold hover:cursor-pointer ${
+              route.path === currentPath &&
+              "text-blueprint-blue underline font-semibold"
+            } ${
+              index === 0 && "lg:hidden"
+            } transform -translate-y-1/2 absolute top-1/2`}
+          >
             {route.name}
           </Link>
         </div>
-
       ))}
     </div>
   );
