@@ -9,7 +9,9 @@ import { useTranslation } from "react-i18next";
  */
 
 const ProjectCard = ({ project, className, onClick }) => {
-  const { t, i18n } = useTranslation();
+  if (!project || !project.tags) {
+    return null; 
+  }
 
   return (
     <div
@@ -19,19 +21,15 @@ const ProjectCard = ({ project, className, onClick }) => {
       }}
     >
       <img
-        src={t(`projects.${project}.image`)}
+        src={project.image}
         className="w-full object-contain h-auto rounded-[6px]"
-        alt={t(`projects.${project}.name`)}
+        alt={project.name}
       />
       <div className="px-[5%] pb-3 mb-1 ml-[6px] ">
         <div className="flex flex-row flex-wrap mt-5 lg:mt-0  place-items-center -translate-y-1/2 ">
-          {t(`projects.${project}.tags`).map((tag, index) => (
-            <div className="flex bg-blue-500 text-white mr-[2%] px-[3%] h-[20px] 2xl:my-[0px] md:px-[6%] md:h-[25px] rounded-md shadow-md !md:text-sm whitespace-normal">
-              {" "}
-              <ParagraphText
-                key={index}
-                className="text-white whitespace-nowrap self-center"
-              >
+          {project.tags.map((tag, index) => ( // Map directly over the tags array in the project object
+            <div key={index} className="flex bg-blue-500 text-white mr-[2%] px-[3%] h-[20px] 2xl:my-[0px] md:px-[6%] md:h-[25px] rounded-md shadow-md !md:text-sm whitespace-normal">
+              <ParagraphText className="text-white whitespace-nowrap self-center">
                 {tag}
               </ParagraphText>
             </div>
@@ -39,13 +37,13 @@ const ProjectCard = ({ project, className, onClick }) => {
         </div>
         <div className="flex flex-nowrap">
           <ParagraphTitle className={`text-[1.25rem] !text-black shrink`}>
-            {t(`projects.${project}.name`)}{" "}
+            {project.name}{" "}
           </ParagraphTitle>
           <ParagraphTitle className="!text-black ml-1">→</ParagraphTitle>
         </div>
 
         <ParagraphText className="md:text-sm ">
-          {t(`projects.${project}.description`)}
+          {project.description}
         </ParagraphText>
       </div>
     </div>

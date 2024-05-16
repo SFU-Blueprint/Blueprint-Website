@@ -1,3 +1,12 @@
+/*
+    This file contains the data for the Alumni section on About Us Page.
+    EXAMPLE:
+    {
+        title: "Full Name of the Alumni", // The full name of the alumni.
+        linkedin: "https://www.linkedin.com/in/alumni-linkedin-id/", // URL to the LinkedIn profile of the alumni.
+    },
+*/
+
 export const Alumni = [
   {
     title: "Jaden L.",
