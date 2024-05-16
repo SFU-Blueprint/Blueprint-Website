@@ -1,3 +1,15 @@
+/*
+    This file contains data for the Blueprint team members who worked on the Blueprint website.
+    EXAMPLE:
+    {
+        title: "Full Name", // Full name of the team member.
+        img: "filename.jpg", // Filename of the team member's image stored in assets.
+        linkedin: "https://www.linkedin.com/in/linkedin-id/", // URL to the LinkedIn profile of the team member.
+        lastPosition: "Position Title", // The last position held by the team member in the project.
+        role: "Current Role or Designation", // Current role or designation of the team member within the team.
+    },
+*/
+
 export const Blueprint = [
     {
       title: "Amy Zhao",
