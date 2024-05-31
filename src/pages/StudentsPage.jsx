@@ -17,10 +17,11 @@ const StudentsPage = () => {
 
   const [activePhase, setActivePhase] = useState(0);
   const [roles, setRoles] = useState(Roles);
-  const [hiringRoles, setHiringRoles] = useState(Roles.filter(role => role.Hiring));
+  const [hiringRoles, setHiringRoles] = useState(
+    Roles.filter((role) => role.Hiring)
+  );
   const phasesDesc = t("students.phasesDesc");
   const content = t("content");
-
 
   const navigateToAnchor = (page, section) => {
     // Construct the URL with the page path and the anchor point
@@ -39,7 +40,10 @@ const StudentsPage = () => {
           alt="student header"
         />
         <div className="absolute bottom-5 md:my-10">
-          <PageHeader id="Begin" className="!text-blueprint-black sm:!text-blueprint-white ml-10 md:ml-16 md:text-6xl xl:ml-36">
+          <PageHeader
+            id="Begin"
+            className="!text-blueprint-black sm:!text-blueprint-white ml-10 md:ml-16 md:text-6xl xl:ml-36"
+          >
             Get Involved
           </PageHeader>
           <ParagraphTitle className="!text-blueprint-black sm:!text-blueprint-white mt-[6px] mb-[12px] ml-10 md:ml-16 md:text-6xl xl:ml-36">
@@ -83,7 +87,8 @@ const StudentsPage = () => {
           ) : (
             <div className="text-center my-[10%]">
               <ParagraphText className="text-blue-500 font-medium">
-                [ Currently, there are no open positions. Please check back later. ]
+                [ Currently, there are no open positions. Please check back
+                later. ]
               </ParagraphText>
             </div>
           )}
@@ -137,14 +142,18 @@ const StudentsPage = () => {
           {content[phasesDesc[activePhase]]}
         </ContentCard>
       </div>
-      <SectionHeader id="Apply" className="mt-[10%] mb-[2%] ml-[6%]">Roles</SectionHeader>
+      <SectionHeader id="Apply" className="mt-[10%] mb-[2%] ml-[6%]">
+        Roles
+      </SectionHeader>
       {roles.map((role, index) => (
         <div key={index} className="px-[3%] md:px-[5%]">
           <RolesCard role={role} />
         </div>
       ))}
       <div className="bg-blueprint-gray-light w-full h-[450px] mt-[10%] flex flex-col items-center justify-center px-[15%] ">
-        <SectionHeader className="text-center mb-3 md:mb-6">Stay in Touch</SectionHeader>
+        <SectionHeader className="text-center mb-3 md:mb-6">
+          Stay in Touch
+        </SectionHeader>
         <ParagraphText className="text-center whitespace-pre-line mb-3 md:mb-6">
           {t("students.stayInTouch")}
         </ParagraphText>
@@ -159,7 +168,7 @@ const StudentsPage = () => {
   );
 };
 
-const PositionCard = ({role}) => {
+const PositionCard = ({ role }) => {
   const { Role, Description = [], Link, Deadline } = role; // Set a default empty array if Description is undefined
   const [showMore, setShowMore] = useState(false);
 
@@ -174,17 +183,27 @@ const PositionCard = ({role}) => {
         </ParagraphTitle>
         <ParagraphText className="mt-[4%] mb-[6%] ">
           {showMore ? Description.join(" ") : Description[0]}
-            {Description.length > 1 && (
-              <a href="#" className="text-blue-500" onClick={(e) => {e.preventDefault(); setShowMore(!showMore);}}>
-                {showMore ? " Show Less" : " Read More"}
-              </a>
-            )}
+          {Description.length > 1 && (
+            <a
+              href="#"
+              className="text-blue-500"
+              onClick={(e) => {
+                e.preventDefault();
+                setShowMore(!showMore);
+              }}
+            >
+              {showMore ? " Show Less" : " Read More"}
+            </a>
+          )}
         </ParagraphText>
         <ParagraphText className="font-semibold mb-[7%] ">
           Application Deadline: {Deadline}
         </ParagraphText>
         <div className="py-[3%] border-blueprint-blue w-3/5 rounded-sm border-2 flex justify-center items-center">
-          <a href={Link} className="px-[3%] text-blueprint-blue font-poppins font-medium">
+          <a
+            href={Link}
+            className="px-[3%] text-blueprint-blue font-poppins font-medium"
+          >
             View Details and Apply
           </a>
         </div>
@@ -227,7 +246,10 @@ function RolesCard({ role, className }) {
         >
           {Hiring ? (
             <div className="h-10 w-500 px-20 border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
-              <a href={Link} className="text-blueprint-blue font-poppins text-sm">
+              <a
+                href={Link}
+                className="text-blueprint-blue font-poppins text-sm"
+              >
                 View Details and Apply
               </a>
             </div>
@@ -246,7 +268,10 @@ function RolesCard({ role, className }) {
       >
         {Hiring ? (
           <div className="py-[3%] border-blueprint-blue mx-[20%] rounded-sm border-2">
-            <a href={Link} className="px-[3%] text-blueprint-blue font-poppins font-medium">
+            <a
+              href={Link}
+              className="px-[3%] text-blueprint-blue font-poppins font-medium"
+            >
               View Details and Apply
             </a>
           </div>
