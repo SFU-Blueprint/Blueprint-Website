@@ -13,7 +13,7 @@ export const Executives = [
     },
     {
       title: "Rithik Agarwal",
-      img: "Rhitck.webp",
+      img: "Rithik.webp",
       linkedin: "https://www.linkedin.com/in/rithik-agarwal-47017618a/",
       lastPosition: "",
     },
