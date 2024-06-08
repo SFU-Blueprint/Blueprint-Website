@@ -112,10 +112,10 @@ const NonprofitsPage = () => {
         <ParagraphText className="text-center mb-3 md:mb-6">
           {t(`nonprofits.CTA2`)}{" "}
           <a
-            href="mailto:sfublueprint@gmail.com"
+            href={t(`email.link`)}
             className="text-blueprint-blue underline font-bold"
           >
-            {t(`email.link`)}
+            sfublueprint@gmail.com
           </a>
         </ParagraphText>
       </div>
