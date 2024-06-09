@@ -41,7 +41,7 @@ export const Projects = [
     },
     {
       "name": "Blueprint Website",
-      "description": "Volunteer Hour Tracking Platform",
+      "description": "Taking SFU Blueprint LIVE",
       "tags": ["Innovation", "Website"],
       "image": "Blueprint.png",
       "popupimage": "blueprint-popup.svg",
