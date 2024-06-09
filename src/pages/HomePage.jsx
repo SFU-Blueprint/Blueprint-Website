@@ -114,12 +114,12 @@ const HomePage = () => {
         <div style={backgroundStyle}></div>
         <div className="flex flex-col px-3 md:px-[15%] pt-10">
           <SectionHeader className="md:self-center mb-5">Our Projects</SectionHeader>
-          <div className="flex flex-col self-center lg:grid lg:grid-cols-3">
+          <div className="flex flex-col self-center lg:grid lg:grid-cols-3 mb-3">
             {projects.map((project, index) => (
               <ProjectCard
                 key={index}
                 project={project}
-                className="your-class-name m-3"
+                className="your-class-name my-3 mx-5"
                 onClick={() => handleProjectClick(project)}
               />
             ))}
