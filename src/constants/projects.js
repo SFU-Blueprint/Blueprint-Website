@@ -43,7 +43,7 @@ export const Projects = [
       "name": "Blueprint Website",
       "description": "Taking SFU Blueprint LIVE",
       "tags": ["Innovation", "Website"],
-      "image": "Blueprint.png",
+      "image": "logo_icon_blue.svg",
       "popupimage": "blueprint-popup.svg",
       "nonProfitDescription": "The primary purpose of our website is to provide a platform to display the types of services and opportunities that we offer for both NPOs and students.  We aim to address the main questions that students have about Blueprint, whilst also conveying key messages about our culture, values and the essence of why we do what we do at SFU Blueprint.",
       "projectDescription": "To address the issue of accessibility and information dissemination, the SFU Blueprint team opted to develop a website utilizing React, Tailwind CSS, and Vercel. This strategic choice was made to ensure a responsive website that effectively communicates information about our projects to a diverse audience, including experienced individuals, students, and older users within the nonprofit community.",
