@@ -1,9 +1,72 @@
 export const ReelYouth = [
-	{
-	  title: "Ronney Lok",
-	  img: "Ronney.jpg",
-	  linkedin: "https://www.linkedin.com/in/ronneylok/",
-	  lastPosition: "Developer",
-	  role:"Senior Developer"
-	},
-]
+  {
+    title: "Johnson Luong",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/johnson-luong/",
+    lastPosition: "Lead",
+    role: "Tech Lead",
+  },
+  {
+    title: "Lauryn Yau",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/laurynyau/",
+    lastPosition: "Developer",
+    role: "Designer",
+  },
+  {
+    title: "Eugene Zhu",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/eugenezhu/",
+    lastPosition: "Developer",
+    role: "Designer",
+  },
+  {
+    title: "Joshua Li",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/joshuajli/",
+    lastPosition: "Developer",
+    role: "Senior Developer",
+  },
+  {
+    title: "Jerry Deng",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/jerrydngzh/",
+    lastPosition: "Developer",
+    role: "Senior Developer",
+  },
+  {
+    title: "Harpreet Dubb",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/harpreet-dubb/",
+    lastPosition: "Developer",
+    role: "Junior Developer",
+  },
+  {
+    title: "Tulika Varma",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/tulika-varma-962165278/",
+    lastPosition: "Developer",
+    role: "Junior Developer",
+  },
+  {
+    title: "Teddy Malhan",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/teddymalhan/",
+    lastPosition: "Developer",
+    role: "Junior Developer",
+  },
+  {
+    title: "Jimmy Hui",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/jimmy--hui/",
+    lastPosition: "Developer",
+    role: "Junior Developer",
+  },
+  {
+    title: "Bryan Dang",
+    img: "Johnson.jpg",
+    linkedin: "https://www.linkedin.com/in/bryanjhdang/",
+    lastPosition: "Developer",
+    role: "Junior Developer",
+  },
+];
