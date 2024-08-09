@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import ProjectCard from "../components/shared/ProjectCard";
-import { PageHeader, SectionHeader, ParagraphText } from "../components/Common";
-import { useTranslation } from "react-i18next";
+import { SectionHeader, ParagraphText } from "../components/Common";
+// import { useTranslation } from "react-i18next";
 import ProjectModal from "../components/shared/ProjectModal";
 import { Projects } from "../constants/projects";
 
 const ProjectsPage = () => {
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
   // Other state and variables
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);

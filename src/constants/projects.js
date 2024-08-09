@@ -15,6 +15,7 @@
 import { Mosaic } from "./Team/Mosaic";
 import { Pedals } from "./Team/Pedals";
 import { Blueprint } from "./Team/Blueprint";
+import { ReelYouth } from "./Team/ReelYouth";
 
 export const Projects = [
     {
@@ -48,5 +49,17 @@ export const Projects = [
       "nonProfitDescription": "The primary purpose of our website is to provide a platform to display the types of services and opportunities that we offer for both NPOs and students.  We aim to address the main questions that students have about Blueprint, whilst also conveying key messages about our culture, values and the essence of why we do what we do at SFU Blueprint.",
       "projectDescription": "To address the issue of accessibility and information dissemination, the SFU Blueprint team opted to develop a website utilizing React, Tailwind CSS, and Vercel. This strategic choice was made to ensure a responsive website that effectively communicates information about our projects to a diverse audience, including experienced individuals, students, and older users within the nonprofit community.",
       "team": Blueprint,
+    },
+	{
+      "name": "Reel Youth",
+      "description": "Helping Reel Youth build website",
+      "tags": ["Community", "Website"],
+      "image": "Reelyouth.png",
+      "popupimage": "Reelyouth-popup.png",
+      "nonProfitDescription": "Reel Youth is a media empowerment project supporting youth, adults and organization to create and distribute films reflecting their vision for positive change. Reel Youth aims to build momentum for change, particularly in areas like conservation and community development",
+      "projectDescription": "To address the issue of information and accessibility to the public, SFU Blueprint team provide a tech solution by developing a website for Reel Youth. This allows the Reel Youth to build a more diverse audience and a central place to distribute information amongs the community.",
+      "page": "https://reelyouth.ca",
+      "team": ReelYouth,
     }
+
 ];
