@@ -22,6 +22,7 @@ const CardGrid = (props) => {
             img={card.img}
             title={card.title}
             linkedin={card.linkedin}
+            position={card.position}
             lastPosition={card.lastPosition}
           />
         ))}

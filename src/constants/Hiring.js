@@ -23,7 +23,7 @@ export const Roles = [
       "Assists with developer recruitment, and organize developer bootcamp.",
       "Help evaluate the technical feasibility of potential NPO projects, and regularly provide advice and guidance to the project leads through 1-1s and meetings.",
     ],
-    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Hiring: false, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/okZAC8zdR9YqyF9a6",
     Deadline: "May 18, 2024",
   },
@@ -45,7 +45,7 @@ export const Roles = [
       "Assists with preliminary scoping of new projects providing a design perspective in collaboration with VP Scoping as necessary.",
       "Work to improve design processes and ceremonies (ie. run critiques more efficiently and effectively, improve cross-functional processes, creating Figma assets to speed up workflow for designers, etc.)",
     ],
-    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Hiring: false, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/6sioYVubJPfxdN8BA",
     Deadline: "May 18, 2024",
   },
@@ -67,8 +67,8 @@ export const Roles = [
       "Depending on the scope of the project, each team can have 5-8 developers.",
       "They work closely with the project lead, the product manager, and designers to deliver top quality code!",
     ],
-    Hiring: false, //WARNING: Setting this to true will display the Link and Deadline fields.
-    Link: "",
+    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Link: "https://forms.gle/TKUnLnhHzn4gPBrx5",
     Deadline: "",
   },
   {
