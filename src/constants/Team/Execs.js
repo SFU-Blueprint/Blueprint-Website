@@ -49,6 +49,13 @@ export const Executives = [
     lastPosition: "",
   },
   {
+    title: "Harpreet Dubb",
+    img: "Harpreet.webp",
+    linkedin: "https://www.linkedin.com/in/harpreet-dubb/",
+    position: "VP PM",
+    lastPosition: "",
+  },
+  {
     title: "Kevin Chen",
     img: "Kevin.webp",
     linkedin: "https://www.linkedin.com/in/kaifengkevinchen/",
@@ -67,13 +74,6 @@ export const Executives = [
     img: "Justin.webp",
     linkedin: "https://www.linkedin.com/in/justin-yu-138450220/",
     position: "VP Design",
-    lastPosition: "",
-  },
-  {
-    title: "Harpreet Dubb",
-    img: "Harpreet.webp",
-    linkedin: "https://www.linkedin.com/in/harpreet-dubb/",
-    position: "VP PM",
     lastPosition: "",
   },
 ];
