@@ -7,12 +7,34 @@
     },
 */
 
-export const Alumni = [
+export const Alumni2023 = [
+  {
+    title: "Andy Zhang",
+    linkedin: "https://www.linkedin.com/in/andy-zhang-sfu/",
+  },
+  {
+    title: "Brian Tsou",
+    linkedin: "https://www.linkedin.com/in/brianthtsou/",
+  },
+  {
+    title: "Mudit Mittal",
+    linkedin: "https://www.linkedin.com/in/mmittal/",
+  },
+  {
+    title: "Teeya Li",
+    linkedin: "",
+  },
+  {
+    title: "Kumar Shivam",
+    linkedin: "https://www.linkedin.com/in/kumarshivam0002/",
+  },
+];
+
+export const Alumni2024 = [
   {
     title: "Enoch Muwanguzi",
-   
+
     linkedin: "https://www.linkedin.com/in/enoch-muwanguzi-42491425b/",
-   
   },
   {
     title: "Kian Hoseinkhani",
@@ -51,14 +73,11 @@ export const Alumni = [
   },
   {
     title: "Rithik Agarwal",
-    img: "Rithik.webp",
     linkedin: "https://www.linkedin.com/in/rithik-agarwal-47017618a/",
-    lastPosition: "",
   },
 
   {
     title: "Bhavya Singh",
-
     linkedin: "https://www.linkedin.com/in/bhavya-singh19/",
   },
   {
@@ -74,10 +93,7 @@ export const Alumni = [
     title: "Colwyn Ralph",
     linkedin: "https://www.linkedin.com/in/colwyn-ralph/",
   },
-  {
-    title: "Andy Zhang",
-    linkedin: "",
-  },
+  
 
   {
     title: "Tavleen Sihota",
@@ -86,22 +102,6 @@ export const Alumni = [
   {
     title: "Yang Liu",
     linkedin: "",
-  },
-  {
-    title: "Brian Tsou",
-    linkedin: "https://www.linkedin.com/in/brianthtsou/",
-  },
-  {
-    title: "Mudit Mittal",
-    linkedin: "",
-  },
-  {
-    title: "Teeya Li",
-    linkedin: "",
-  },
-  {
-    title: "Kumar Shivam",
-    linkedin: "https://www.linkedin.com/in/kumarshivam0002/",
   },
   {
     title: "Manpreet Singh Sarna",

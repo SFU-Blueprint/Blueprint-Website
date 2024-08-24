@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import GearSection from "../components/about-page/Gears/GearSection";
 import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
 
-import { Alumni } from "../constants/Team/Alumni";
+import { Alumni2023, Alumni2024} from "../constants/Team/Alumni";
 import { Members } from "../constants/Team/Members";
 import { Executives } from "../constants/Team/Execs";
 import CardGrid from "../components/about-page/CardGrid";
@@ -133,7 +133,6 @@ const AboutPage = () => {
       <div className="mt-12 flex flex-col justify-center items-center md:hidden">
         <div className="block md:hidden w-50 h-60 ml-[10%] mr-[10%] rounded-sm">
           <img className="" src={Image_1} alt="about us image 1" />
-
         </div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">
@@ -174,10 +173,9 @@ const AboutPage = () => {
       {/*Alumni Section*/}
       <div className="mt-[8%] mx-10 md:mx-16 xl:mx-36">
         <SectionHeader className="flex justify-center ">Alumni</SectionHeader>
-        <div className="">
-
-          <AlumniCard cardList={Alumni} gridName="2023"></AlumniCard >
-
+        <div className="flex flex-col gap-8">
+          <AlumniCard cardList={Alumni2024} gridName="2024"></AlumniCard>
+          <AlumniCard cardList={Alumni2023} gridName="2023"></AlumniCard>
         </div>
       </div>
       {/*End of Alumni Section*/}

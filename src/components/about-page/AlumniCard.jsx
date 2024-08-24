@@ -12,13 +12,13 @@ import { ParagraphText } from "../Common";
 const AlumniCard = (props) => {
   return (
     <div>
-      <ParagraphTitle className="!text-blueprint-black !font-bold mb-2">
+      <ParagraphTitle className="!text-blueprint-black !font-bold mb-5">
         {props.gridName}
       </ParagraphTitle>
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10 justify-items-center">
         {props.cardList.map((card, index) => (
-			<div key = {index} className="flex flex-col justify-between p-3 text-start md:w-[80%] md:h-28 shadow-[0px_0px_50px_0px_rgba(0,0,0,0.2)]">
+			<div key = {index} className="rounded-[3px] flex flex-col justify-between p-3 text-start md:w-[80%] md:h-28 shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]">
 				<div>
 					<ParagraphText className="!font-bold">
 					  {card.title}
