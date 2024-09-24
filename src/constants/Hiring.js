@@ -17,6 +17,28 @@
 
 export const Roles = [
   {
+    Role: "VP COMMUNICATIONS",
+    Description: [
+      "Coordinate development and creation of innovative marketing strategies to promote Blueprint events and initiatives, ensuring clarity and accuracy of information presented.",
+      "Collaborate with social media coordinators to engage Blueprint’s online community through channels such as Discord, Instagram, Facebook, and LinkedIn.",
+      "Manage Blueprint’s online brand and team image through consistent application of Blueprint’s visual identity and branding guidelines, in collaboration with VP Design.",
+    ],
+    Hiring: true,
+    Link: "https://forms.gle/ZsSocbzYRExXDwtf6",
+    Deadline: "October 4, 2024",
+  },
+  {
+    Role: "Social Media Coordinators",
+    Description: [
+      "Develop and manage engaging social media posts and strategies.",
+      "Create, curate, and manage content across all social media platforms.",
+      "Monitor, engage, and respond to social media interactions in a timely and professional manner.",
+    ],
+    Hiring: true,
+    Link: "https://forms.gle/ApQMzdbisZhhM1eW8",
+    Deadline: "October 4, 2024",
+  },
+  {
     Role: "VP ENGINEERING",
     Description: [
       "Conduct architecture design reviews, provide code standards, write technical documentation.",
@@ -67,7 +89,7 @@ export const Roles = [
       "Depending on the scope of the project, each team can have 5-8 developers.",
       "They work closely with the project lead, the product manager, and designers to deliver top quality code!",
     ],
-    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Hiring: false, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/TKUnLnhHzn4gPBrx5",
     Deadline: "",
   },
