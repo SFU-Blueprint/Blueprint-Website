@@ -11,8 +11,7 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/caitlinsyho/",
     lastPosition: "",
   },
-  
-  
+
   {
     title: "Kate Simone",
     img: "Kate.webp",
@@ -25,16 +24,13 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/eugenezhu/",
     lastPosition: "",
   },
-  
-  
-  
+
   {
     title: "Duc Dang",
     img: "blueprint.webp",
     linkedin: "https://www.linkedin.com/in/ddang2001/",
     lastPosition: "",
   },
-  
 
   {
     title: "Supriya Dua",
@@ -48,7 +44,7 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/peiman-zhiani/",
     lastPosition: "",
   },
-  
+
   {
     title: "Abishek Deshpande",
     img: "blueprint.webp",
@@ -57,7 +53,7 @@ export const Members = [
   },
   {
     title: "Jeffrey Wong",
-    img: "blueprint.webp",
+    img: "Jeffrey.webp",
     linkedin: "https://www.linkedin.com/in/wong-jeffrey/",
     lastPosition: "",
   },
@@ -81,7 +77,7 @@ export const Members = [
   },
   {
     title: "Iris Au-Yeung",
-    img: "Iris.webp",
+    img: "blueprint.webp",
     linkedin: "https://www.linkedin.com/in/irisau-yeung/",
     lastPosition: "",
   },
@@ -172,7 +168,7 @@ export const Members = [
   },
   {
     title: "Jai Malhi",
-    img: "blueprint.webp",
+    img: "Jai.webp",
     linkedin: "https://www.linkedin.com/in/jaimalhi/",
   },
 ];
