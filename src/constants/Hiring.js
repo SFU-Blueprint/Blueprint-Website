@@ -23,7 +23,7 @@ export const Roles = [
       "Collaborate with social media coordinators to engage Blueprint’s online community through channels such as Discord, Instagram, Facebook, and LinkedIn.",
       "Manage Blueprint’s online brand and team image through consistent application of Blueprint’s visual identity and branding guidelines, in collaboration with VP Design.",
     ],
-    Hiring: true,
+    Hiring: false,
     Link: "https://forms.gle/ZsSocbzYRExXDwtf6",
     Deadline: "October 4, 2024",
   },
@@ -36,7 +36,7 @@ export const Roles = [
     ],
     Hiring: true,
     Link: "https://forms.gle/ApQMzdbisZhhM1eW8",
-    Deadline: "October 4, 2024",
+    Deadline: "October 31, 2024",
   },
   {
     Role: "VP ENGINEERING",
