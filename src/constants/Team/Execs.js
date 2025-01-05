@@ -28,9 +28,9 @@ export const Executives = [
     lastPosition: "",
   },
   {
-    title: "Long Pham",
-    img: "Long.webp",
-    linkedin: "https://www.linkedin.com/in/longpham999/",
+    title: "Hinako Kamiya",
+    img: "Hinako.webp",
+    linkedin: "https://www.linkedin.com/in/hinako-kamiya/",
     position: "VP Communications",
     lastPosition: "",
   },
