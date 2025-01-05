@@ -1,11 +1,5 @@
 export const Members = [
   {
-    title: "Sallin Koutev",
-    img: "Sallin.webp",
-    linkedin: "https://www.linkedin.com/in/sallin-koutev-216b0016b/",
-    lastPosition: "",
-  },
-  {
     title: "Caitlin Syho",
     img: "Caitlin.webp",
     linkedin: "https://www.linkedin.com/in/caitlinsyho/",
@@ -29,26 +23,6 @@ export const Members = [
     title: "Duc Dang",
     img: "blueprint.webp",
     linkedin: "https://www.linkedin.com/in/ddang2001/",
-    lastPosition: "",
-  },
-
-  {
-    title: "Supriya Dua",
-    img: "Supriya.webp",
-    linkedin: "https://www.linkedin.com/in/supriya-dua-a8a576204/",
-    lastPosition: "",
-  },
-  {
-    title: "Peiman Zhiani",
-    img: "Peiman.webp",
-    linkedin: "https://www.linkedin.com/in/peiman-zhiani/",
-    lastPosition: "",
-  },
-
-  {
-    title: "Abishek Deshpande",
-    img: "blueprint.webp",
-    linkedin: "https://www.linkedin.com/in/abhishek-deshpande-a01132179/",
     lastPosition: "",
   },
   {
@@ -87,7 +61,7 @@ export const Members = [
     img: "Gursewak.webp",
     linkedin: "https://www.linkedin.com/in/gursewak-singh-310a111a4/",
     lastPosition: "",
-  },
+  },  
   {
     title: "Meghna Rajamohan",
     img: "Meghna.webp",
@@ -98,12 +72,6 @@ export const Members = [
     title: "Samuel Miranda",
     img: "Samuel.webp",
     linkedin: "https://www.linkedin.com/in/samuel-antunes-467a0a214",
-    lastPosition: "",
-  },
-  {
-    title: "Hinako Kamiya",
-    img: "Hinako.webp",
-    linkedin: "https://www.linkedin.com/in/hinako-kamiya/",
     lastPosition: "",
   },
   {
@@ -137,24 +105,6 @@ export const Members = [
     lastPosition: "",
   },
   {
-    title: "Duy Nguyen",
-    img: "Duy.webp",
-    linkedin: "https://www.linkedin.com/in/duwe-ng/",
-    lastPosition: "",
-  },
-  {
-    title: "Monishka Gautam",
-    img: "Monishka.webp",
-    linkedin: "https://www.linkedin.com/in/monishka-gautam/",
-    lastPosition: "",
-  },
-  {
-    title: "Zahila Rehman",
-    img: "Zahila.webp",
-    linkedin: "https://www.linkedin.com/in/zahila-rehman-9118a4217/",
-    lastPosition: "",
-  },
-  {
     title: "Fabian Siswanto",
     img: "Fabian.webp",
     linkedin: "https://www.linkedin.com/in/fabiansiswanto/",
@@ -170,5 +120,48 @@ export const Members = [
     title: "Jai Malhi",
     img: "Jai.webp",
     linkedin: "https://www.linkedin.com/in/jaimalhi/",
+    lastPosition: "",
+  },
+  {
+    title: "Teddy Malhan",
+    img: "Teddy.webp",
+    linkedin: "https://www.linkedin.com/in/teddymalhan/",
+    lastPosition: "",
+  },
+  {
+    title: "Lauryn Yau",
+    img: "blueprint.webp",
+    linkedin: "https://www.linkedin.com/in/laurynyau/",
+    lastPosition: "",
+  },
+  {
+    title: "Joshua li",
+    img: "blueprint.webp",
+    linkedin: "https://www.linkedin.com/in/joshuajli/",
+    lastPosition: "",
+  },
+  {
+    title: "Jerry Deng",
+    img: "blueprint.webp",
+    linkedin: "https://www.linkedin.com/in/jerrydngzh/",
+    lastPosition: "",
+  },
+  {
+    title: "Jimmy Hui",
+    img: "Jimmy.webp",
+    linkedin: "https://www.linkedin.com/in/jimmy--hui/",
+    lastPosition: "",
+  },
+  {
+    title: "Bryan Dang",
+    img: "blueprint.webp",
+    linkedin: "https://www.linkedin.com/in/bryanjhdang/",
+    lastPosition: "",
+  },
+  {
+    title: "Lauren Yip",
+    img: "blueprint.webp",
+    linkedin: "https://www.linkedin.com/in/lauren-yip/",
+    lastPosition: "",
   },
 ];

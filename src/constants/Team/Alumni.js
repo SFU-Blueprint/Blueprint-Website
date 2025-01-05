@@ -107,4 +107,40 @@ export const Alumni2024 = [
     title: "Manpreet Singh Sarna",
     linkedin: "",
   },
+  {
+    title: "Duy Nguyen",
+
+    linkedin: "https://www.linkedin.com/in/duwe-ng/",
+  },
+  {
+    title: "Zahila Rehman",
+
+    linkedin: "https://www.linkedin.com/in/zahila-rehman-9118a4217/",
+  },
+  {
+    title: "Peiman Zhiani",
+
+    linkedin: "https://www.linkedin.com/in/peiman-zhiani/",
+  },
+  {
+    title: "Supriya Dua",
+
+    linkedin: "https://www.linkedin.com/in/supriya-dua-a8a576204/",
+  },
+  {
+    title: "Sallin Koutev",
+
+    linkedin: "https://www.linkedin.com/in/sallin-koutev-216b0016b/",
+  },
+  {
+    title: "Long Pham",
+
+    linkedin: "https://www.linkedin.com/in/longpham999/",
+  },
+  {
+    title: "Monishka Gautam",
+
+    linkedin: "https://www.linkedin.com/in/monishka-gautam/",
+
+  },
 ];
