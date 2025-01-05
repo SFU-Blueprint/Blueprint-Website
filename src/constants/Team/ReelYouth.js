@@ -7,6 +7,13 @@ export const ReelYouth = [
     role: "Tech Lead",
   },
   {
+    title: "Hinako Kamiya",
+    img: "Hinako.jpg",
+    linkedin: "https://www.linkedin.com/in/hinako-kamiya/",
+    lastPosition: "Lead",
+    role: "Product Manager",
+  },
+  {
     title: "Lauryn Yau",
     img: "Johnson.jpg",
     linkedin: "https://www.linkedin.com/in/laurynyau/",
