@@ -143,4 +143,44 @@ export const Alumni2024 = [
     linkedin: "https://www.linkedin.com/in/monishka-gautam/",
 
   },
+  {
+    title: "Kevin Chen",
+
+    linkedin: "https://www.linkedin.com/in/kaifengkevinchen/",
+  },
+  {
+    title: "Lauren Yip",
+
+    linkedin: "https://www.linkedin.com/in/lauren-yip/",
+  },
+  {
+    title: "Jai Malhi",
+
+    linkedin: "https://www.linkedin.com/in/jaimalhi/",
+  },
+  {
+    title: "Brayden Sue",
+
+    linkedin: "",
+  },
+  {
+    title: "Gursewak Singh",
+
+    linkedin: "https://www.linkedin.com/in/gursewak-singh-310a111a4/",
+  },  
+  {
+    title: "Meghna Rajamohan",
+
+    linkedin: "http://www.linkedin.com/in/meghna-rajamohan-a787452a7",
+  },
+  {
+    title: "Samuel Miranda",
+
+    linkedin: "https://www.linkedin.com/in/samuel-antunes-467a0a214",
+  },
+  {
+    title: "Amy Zhao",
+
+    linkedin: "https://www.linkedin.com/in/amy-zhao-/",
+  },
 ];

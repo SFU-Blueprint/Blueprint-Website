@@ -32,12 +32,6 @@ export const Members = [
     lastPosition: "",
   },
   {
-    title: "Brayden Sue",
-    img: "Brayden.webp",
-    linkedin: "",
-    lastPosition: "",
-  },
-  {
     title: "Tulika Varma",
     img: "Tulika.webp",
     linkedin: "",
@@ -55,25 +49,6 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/irisau-yeung/",
     lastPosition: "",
   },
-
-  {
-    title: "Gursewak Singh",
-    img: "Gursewak.webp",
-    linkedin: "https://www.linkedin.com/in/gursewak-singh-310a111a4/",
-    lastPosition: "",
-  },  
-  {
-    title: "Meghna Rajamohan",
-    img: "Meghna.webp",
-    linkedin: "http://www.linkedin.com/in/meghna-rajamohan-a787452a7",
-    lastPosition: "",
-  },
-  {
-    title: "Samuel Miranda",
-    img: "Samuel.webp",
-    linkedin: "https://www.linkedin.com/in/samuel-antunes-467a0a214",
-    lastPosition: "",
-  },
   {
     title: "Vinh Dang",
     img: "Quang.webp",
@@ -84,12 +59,6 @@ export const Members = [
     title: "Ayana Hussain",
     img: "Ayana.webp",
     linkedin: "https://www.linkedin.com/in/ayana-hussain-a3399a227/",
-    lastPosition: "",
-  },
-  {
-    title: "Amy Zhao",
-    img: "Amy.webp",
-    linkedin: "https://www.linkedin.com/in/amy-zhao-/",
     lastPosition: "",
   },
   {
@@ -114,12 +83,6 @@ export const Members = [
     title: "Mrinal Goshalia",
     img: "Mrinal.webp",
     linkedin: "https://www.linkedin.com/in/mrinal-goshalia/",
-    lastPosition: "",
-  },
-  {
-    title: "Jai Malhi",
-    img: "Jai.webp",
-    linkedin: "https://www.linkedin.com/in/jaimalhi/",
     lastPosition: "",
   },
   {
@@ -159,9 +122,27 @@ export const Members = [
     lastPosition: "",
   },
   {
-    title: "Lauren Yip",
-    img: "blueprint.webp",
-    linkedin: "https://www.linkedin.com/in/lauren-yip/",
+    title: "Tayaba Abbasi",
+    img: "Tayaba.webp",
+    linkedin: "https://www.linkedin.com/in/tayaba-abbasi-8626a9194/",
+    lastPosition: "",
+  },
+  {
+    title: "Zariyan Mansoor",
+    img: "Zariyan.webp",
+    linkedin: "https://www.linkedin.com/in/zariyanmansoor/",
+    lastPosition: "",
+  },
+  {
+    title: "Sariha Uchida",
+    img: "Sariha.webp",
+    linkedin: "https://www.linkedin.com/in/sariha-uchida-0b6014266/",
+    lastPosition: "",
+  },
+  {
+    title: "Olivia Steed",
+    img: "Olivia.webp",
+    linkedin: "https://www.linkedin.com/in/olivia-steed-9426201b8/",
     lastPosition: "",
   },
 ];
