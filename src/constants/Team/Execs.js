@@ -56,13 +56,6 @@ export const Executives = [
     lastPosition: "",
   },
   {
-    title: "Kevin Chen",
-    img: "Kevin.webp",
-    linkedin: "https://www.linkedin.com/in/kaifengkevinchen/",
-    position: "VP PM",
-    lastPosition: "",
-  },
-  {
     title: "Fatma Omer ",
     img: "Fatma.webp",
     linkedin: "https://www.linkedin.com/in/fatmabinteomer/",

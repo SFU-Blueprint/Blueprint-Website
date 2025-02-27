@@ -17,42 +17,6 @@
 
 export const Roles = [
   {
-    Role: "Social Media Coordinator (x2)",
-    Description: [
-      "Manage social media outlets such as LinkedIn, Medium, and Instagram.",
-      "Deliver announcements, updates, and information to the community.",
-      "Ideate creative approaches to communicate with Blueprint audiences.",
-      "Collaborate with the VP of Communications, graphic designer, and content specialist in generating content.",
-    ],
-    Hiring: true,
-    Link: "https://forms.gle/chcCPhMqFr31kFxn6",
-    Deadline: "January 31, 2025",
-  },
-  {
-    Role: "Graphic Designer (x2)",
-    Description: [
-      "Work closely with the VP of Communications and the Social Media Coordinator to ideate and implement marketing strategy.",
-      "Build and support Blueprint's external brand through creating graphic assets to promote different Blueprint events and initiatives.",
-      "Use Figma and/or other design tools to create graphic designs and illustrations.",
-    ],
-    Hiring: true,
-    Link: "https://forms.gle/dDXGYnqAzebPjxVg9",
-    Deadline: "January 31, 2025",
-  },
-  {
-    Role: "Technical Content Specialist (x1)",
-    Description: [
-      "Create meaningful content for LinkedIn, Medium and other social outlets.",
-      "Regularly meet with VP of Communications and social media team to brainstorm and create creative content.",
-      "Edit and proofread content.",
-      "Check for clarity, accuracy, and consistency.",
-      "Remain up to date on current technology news.",
-    ],
-    Hiring: true,
-    Link: "https://forms.gle/KKN4eT5zCiKkVVyz5",
-    Deadline: "January 31, 2025",
-  },
-  {
     Role: "VP COMMUNICATIONS",
     Description: [
       "Coordinate development and creation of innovative marketing strategies to promote Blueprint events and initiatives, ensuring clarity and accuracy of information presented.",
