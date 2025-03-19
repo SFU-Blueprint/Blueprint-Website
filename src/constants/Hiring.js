@@ -17,6 +17,54 @@
 
 export const Roles = [
   {
+    Role: "Social Media Coordinator (x2)",
+    Description: [
+      "Manage social media outlets such as LinkedIn, Medium, and Instagram.",
+      "Deliver announcements, updates, and information to the community.",
+      "Ideate creative approaches to communicate with Blueprint audiences.",
+      "Collaborate with the VP of Communications, graphic designer, and content specialist in generating content.",
+    ],
+    Hiring: false,
+    Link: "https://forms.gle/chcCPhMqFr31kFxn6",
+    Deadline: "January 31, 2025",
+  },
+  {
+    Role: "Event Coordinator",
+    Description: [
+      "Event planning and logistics.",
+      "Ensure all tasks for the events follow the established timeline, and make necessary adjustments as needed to stay on track.",
+      "Working and collaborating with the external and logistics director to ensure events is on track for Blueprint’s values and goals.",
+      "Collaborating with VP Communications to create interesting promotional material for events",
+    ],
+    Hiring: true,
+    Link: "https://forms.gle/NpZk8kxxDr2hbEqB7",
+    Deadline: "March 28, 2025",
+  },
+  {
+    Role: "Graphic Designer (x2)",
+    Description: [
+      "Work closely with the VP of Communications and the Social Media Coordinator to ideate and implement marketing strategy.",
+      "Build and support Blueprint's external brand through creating graphic assets to promote different Blueprint events and initiatives.",
+      "Use Figma and/or other design tools to create graphic designs and illustrations.",
+    ],
+    Hiring: false,
+    Link: "https://forms.gle/dDXGYnqAzebPjxVg9",
+    Deadline: "January 31, 2025",
+  },
+  {
+    Role: "Technical Content Specialist (x1)",
+    Description: [
+      "Create meaningful content for LinkedIn, Medium and other social outlets.",
+      "Regularly meet with VP of Communications and social media team to brainstorm and create creative content.",
+      "Edit and proofread content.",
+      "Check for clarity, accuracy, and consistency.",
+      "Remain up to date on current technology news.",
+    ],
+    Hiring: false,
+    Link: "https://forms.gle/KKN4eT5zCiKkVVyz5",
+    Deadline: "January 31, 2025",
+  },
+  {
     Role: "VP COMMUNICATIONS",
     Description: [
       "Coordinate development and creation of innovative marketing strategies to promote Blueprint events and initiatives, ensuring clarity and accuracy of information presented.",
@@ -27,7 +75,7 @@ export const Roles = [
     Link: "https://forms.gle/ZsSocbzYRExXDwtf6",
     Deadline: "October 4, 2024",
   },
-  {
+  { 
     Role: "VP ENGINEERING",
     Description: [
       "Conduct architecture design reviews, provide code standards, write technical documentation.",
@@ -38,16 +86,30 @@ export const Roles = [
     Link: "https://forms.gle/okZAC8zdR9YqyF9a6",
     Deadline: "May 18, 2024",
   },
+  { 
+    Role: "External Director",
+    Description: [
+      "Team coordination with fellow executives to support and enhance Blueprint’s externally facing image, ensuring that all outreach efforts align with our overall strategy.",
+      "Outreach and relationship-building with external organizations and clubs.",
+      "Coordinate with the VP Logistics and the events coordinators to plan, manage, and execute events that reflect Blueprint’s values and goals.",
+      "Collaborate with VP Communications to create promotional material for externally facing events and programs.",
+    ],
+    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Link: "https://forms.gle/NfXY4kCPS7HYmtDN8",
+    Deadline: "March 28, 2025",
+  },
   {
     Role: "VP PM",
     Description: [
       "Build out the product community within Blueprint, establish product management artifacts and processes, and provide mentorship to team product managers.",
-      "Assists with developer recruitment, and organize developer bootcamp.",
-      "Help evaluate the technical feasibility of potential NPO projects, and regularly provide advice and guidance to the project leads through 1-1s and meetings.",
+      "Involved in evaluating the feasibility of potential projects and leading the projects selection process.",
+      "Regularly provide advice and guidance to the product managers through 1-1s and meetings.",
+      "Represent the product team in Blueprint-wide meetings and initiatives. ",
+      "Example of position: Medium Article",
     ],
-    Hiring: false, //WARNING: Setting this to true will display the Link and Deadline fields.
-    Link: "https://forms.gle/86qcQmL5cYC6U65g7",
-    Deadline: "May 18, 2024",
+    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Link: "https://forms.gle/pfHxMCBH5Jc95K16A",
+    Deadline: "March 28, 2025",
   },
   {
     Role: "VP DESIGN",
@@ -59,6 +121,20 @@ export const Roles = [
     Hiring: false, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/6sioYVubJPfxdN8BA",
     Deadline: "May 18, 2024",
+  },
+  {
+    Role: "VP Scoping",
+    Description: [
+      "Identify and assess nonprofit partners through outreach efforts and Blueprint’s external applications.",
+      "Evaluate project proposals based on organizational need, community impact, technical feasibility, and project scope.",
+      "Manage relationships with nonprofits, guiding them through the scoping process and helping refine their ideas into well-defined technical solutions.",
+      "Organize and lead scoping discussions with scoping pods (developer, designer, product manager) and the VP Trifecta to evaluate project viability.",
+      "Document and present project proposals with clear justifications for approval or rejection.",
+      "Coordinate with internal teams to ensure proper resource allocation and feasibility assessments.",
+    ],
+    Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
+    Link: "https://forms.gle/kz7nVZ2eKzpL7FqS9",
+    Deadline: "March 28, 2025",
   },
   {
     Role: "VP TALENT",
