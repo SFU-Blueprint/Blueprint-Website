@@ -7,11 +7,7 @@ import {
   ParagraphText,
 } from "../components/Common";
 
-const reroute = () => {
-  window.open(
-    "https://docs.google.com/forms/d/e/1FAIpQLSe14iQaH4mQ0ILUZ99Ck-_KQdDOCBuFQlYh_fLBoQDQC8L9Bw/viewform"
-  );
-};
+
 
 const NonprofitsPage = () => {
   const { t, i18n } = useTranslation();
@@ -161,6 +157,10 @@ function ContentCard({ children, className }) {
 
 function ProposeButton({ className }) {
   const { t, i18n } = useTranslation();
+  const reroute = () => {
+    const applyingLink = t("nonprofits.applyingLink");
+    window.open(applyingLink);
+  };
   return (
     <button
       className={`${className} text-blueprint-black border-blueprint-black flex justify-center items-center max-w-[70%] p-4 rounded-md border-2 font-poppins font-bold tracking-tight hover:shadow-2xl`}

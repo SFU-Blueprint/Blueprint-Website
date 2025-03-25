@@ -13,6 +13,7 @@ module.exports = {
           },
           white: "#FFFFFF",
           offwhite: "#FCFCFC",
+          deepblue: "#0D579F"
         },
       },
       fontFamily: {

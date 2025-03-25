@@ -88,10 +88,15 @@ const HomePage = () => {
         <Landing className={`${isSmallScreen ? "mt-56" : "mt-32"} !font-semibold md:w-[600px]`}>
           {t("home.header.title")}
         </Landing>
+        <div className = "flex flex-col">
         <ParagraphText className="md:w-[400px] mb-3 md:mb-6">
           {t("home.header.text")}
         </ParagraphText>
-        <OutlineButton onClick={() => navigateToAnchor("students")}>{t("home.header.button")}</OutlineButton>
+        <div className = "flex md:flex-row flex-col gap-5 w-[60%] max-w-[200px] md:max-w-fit">
+        <OutlineButton className = "md:min-w-[160px] round-sm   bg-blueprint-blue text-white hover:bg-blueprint-deepblue py-5 " onClick={() => navigateToAnchor("nonprofits")}>{t("home.header.button1")}</OutlineButton>
+        <OutlineButton className = "md:min-w-[160px] round-sm   bg-white text-blueprint-blue hover:border-blueprint-deepblue hover:text-[#0D579F] hover:bg-blueprint-white py-5" onClick={() => navigateToAnchor("students")}>{t("home.header.button2")}</OutlineButton>
+        </div>
+        </div>
       </div>
       <div
         style={{ paddingTop: isSmallScreen ? "500px" : "0" }}
