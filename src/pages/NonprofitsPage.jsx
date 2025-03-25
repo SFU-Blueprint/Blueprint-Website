@@ -9,7 +9,7 @@ import {
 
 const reroute = () => {
   window.open(
-    "https://docs.google.com/forms/d/e/1FAIpQLSe14iQaH4mQ0ILUZ99Ck-_KQdDOCBuFQlYh_fLBoQDQC8L9Bw/viewform"
+    "https://forms.gle/KPLbsqiruj33EfMDA"
   );
 };
 
