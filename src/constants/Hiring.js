@@ -38,7 +38,7 @@ export const Roles = [
     ],
     Hiring: true,
     Link: "https://forms.gle/NpZk8kxxDr2hbEqB7",
-    Deadline: "March 28, 2025",
+    Deadline: "April 11, 2025",
   },
   {
     Role: "Graphic Designer (x2)",
@@ -96,7 +96,7 @@ export const Roles = [
     ],
     Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/NfXY4kCPS7HYmtDN8",
-    Deadline: "March 28, 2025",
+    Deadline: "April 11, 2025",
   },
   {
     Role: "VP PM",
@@ -109,7 +109,7 @@ export const Roles = [
     ],
     Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/pfHxMCBH5Jc95K16A",
-    Deadline: "March 28, 2025",
+    Deadline: "April 11, 2025",
   },
   {
     Role: "VP DESIGN",
@@ -134,7 +134,7 @@ export const Roles = [
     ],
     Hiring: true, //WARNING: Setting this to true will display the Link and Deadline fields.
     Link: "https://forms.gle/kz7nVZ2eKzpL7FqS9",
-    Deadline: "March 28, 2025",
+    Deadline: "April 11, 2025",
   },
   {
     Role: "VP TALENT",
