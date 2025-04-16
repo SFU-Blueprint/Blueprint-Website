@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -16,17 +16,41 @@ const StudentsPage = () => {
   const Header = "images/student/studentPage_header.webp";
 
   const [activePhase, setActivePhase] = useState(0);
-  const [roles, setRoles] = useState(Roles);
-  const [hiringRoles, setHiringRoles] = useState(
-    Roles.filter((role) => role.Hiring)
-  );
+  const [roles, setRoles] = useState([]);
+  const [hiringRoles, setHiringRoles] = useState([]);
   const phasesDesc = t("students.phasesDesc");
   const content = t("content");
+
+  // Check deadline against current date to determine hiring status
+  useEffect(() => {
+    const currentDate = new Date();
+    
+    const processedRoles = Roles.map(role => {
+      // A role is considered hiring if it has a valid link and a deadline in the future
+      const hasDeadline = role.Deadline && role.Deadline.trim() !== "";
+      const hasValidLink = role.Link && role.Link.trim() !== "";
+      const deadlineDate = hasDeadline ? new Date(role.Deadline) : null;
+      // Set deadline to end of day (11:59:59 PM)
+      if (deadlineDate) {
+        deadlineDate.setHours(23, 59, 59, 999);
+      }
+      const isOpen = hasDeadline && deadlineDate >= currentDate && hasValidLink;
+      
+      return {
+        ...role,
+        isHiring: isOpen
+      };
+    });
+    
+    setRoles(processedRoles);
+    setHiringRoles(processedRoles.filter(role => role.isHiring));
+  }, []);
 
   const navigateToAnchor = (page, section) => {
     // Construct the URL with the page path and the anchor point
     window.location.href = `/${page}#${section}`;
   };
+  
   function ToDiscord() {
     window.open(t("discord.link"), "_blank");
   }
@@ -102,7 +126,6 @@ const StudentsPage = () => {
       <SectionHeader id="Our-Semester" className="my-[36px] ml-[6%]">
         A Typical Semester
       </SectionHeader>
-      {/* <SectionHeader className="mt-16 mb-5">Our Process</SectionHeader> */}
       <div className="flex max-md:flex-col gap-24 mx-[12px] ml-[6%]">
         <div className="flex flex-col w-full md:w-[420px] gap-2">
           {phases.map((phase, index) => (
@@ -223,7 +246,7 @@ function ContentCard({ children, className }) {
 }
 
 function RolesCard({ role, className }) {
-  const { Role, Description, Hiring, Link } = role;
+  const { Role, Description, isHiring, Link } = role;
   return (
     <div
       className={`${className} flex flex-col w-full gap-1 border-black shadow-lg`}
@@ -239,12 +262,12 @@ function RolesCard({ role, className }) {
         {/* PC */}
         <ParagraphTitle
           className={`block max-md:hidden text-center ${
-            Hiring
+            isHiring
               ? "text-blueprint-blue flex justify-center mb-[8%]"
               : "!text-blueprint-gray-dark mb-[8%]"
           }`}
         >
-          {Hiring ? (
+          {isHiring ? (
             <div className="h-10 w-500 px-20 border-blueprint-blue rounded-sm border-2 flex justify-center items-center">
               <a
                 href={Link}
@@ -261,12 +284,12 @@ function RolesCard({ role, className }) {
       {/* Mobile */}
       <ParagraphTitle
         className={`hidden max-md:block text-center ${
-          Hiring
+          isHiring
             ? "text-blueprint-blue flex flex-row justify-center items-center mb-[8%]"
             : "!text-blueprint-gray-dark mb-[8%]"
         }`}
       >
-        {Hiring ? (
+        {isHiring ? (
           <div className="py-[3%] border-blueprint-blue mx-[20%] rounded-sm border-2">
             <a
               href={Link}
