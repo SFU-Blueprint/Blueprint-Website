@@ -62,11 +62,4 @@ export const Executives = [
     position: "VP Talent",
     lastPosition: "",
   },
-  {
-    title: "Justin Yu ",
-    img: "Justin.webp",
-    linkedin: "https://www.linkedin.com/in/justin-yu-138450220/",
-    position: "VP Design",
-    lastPosition: "",
-  },
 ];
