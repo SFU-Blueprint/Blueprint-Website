@@ -180,7 +180,30 @@ export const Alumni2024 = [
   },
   {
     title: "Amy Zhao",
-
     linkedin: "https://www.linkedin.com/in/amy-zhao-/",
   },
+  {
+    title: "Jerry Deng",
+    linkedin: "https://www.linkedin.com/in/jerrydngzh/",
+  },
+  {
+    title: "Olivia Steed",
+    linkedin: "https://www.linkedin.com/in/olivia-steed-9426201b8/",
+  },
+  {
+    title: "Teddy Malhan",
+    linkedin: "https://www.linkedin.com/in/teddymalhan/",
+  },
+  {
+    title: "Jerry Deng",
+    linkedin: "https://www.linkedin.com/in/jerrydngzh/",
+  },
+  {
+    title: "Justin Yu",
+    linkedin: "https://www.linkedin.com/in/justin-yu-138450220/",
+  },
+  {
+    title: "Tulika Verma",
+    linkedin: "https://www.linkedin.com/in/tulika-varma-962165278/"
+  }
 ];

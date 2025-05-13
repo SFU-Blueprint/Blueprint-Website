@@ -86,12 +86,6 @@ export const Members = [
     lastPosition: "",
   },
   {
-    title: "Teddy Malhan",
-    img: "Teddy.webp",
-    linkedin: "https://www.linkedin.com/in/teddymalhan/",
-    lastPosition: "",
-  },
-  {
     title: "Lauryn Yau",
     img: "blueprint.webp",
     linkedin: "https://www.linkedin.com/in/laurynyau/",
@@ -104,21 +98,9 @@ export const Members = [
     lastPosition: "",
   },
   {
-    title: "Jerry Deng",
-    img: "blueprint.webp",
-    linkedin: "https://www.linkedin.com/in/jerrydngzh/",
-    lastPosition: "",
-  },
-  {
     title: "Jimmy Hui",
     img: "Jimmy.webp",
     linkedin: "https://www.linkedin.com/in/jimmy--hui/",
-    lastPosition: "",
-  },
-  {
-    title: "Bryan Dang",
-    img: "blueprint.webp",
-    linkedin: "https://www.linkedin.com/in/bryanjhdang/",
     lastPosition: "",
   },
   {
@@ -138,11 +120,5 @@ export const Members = [
     img: "Sariha.webp",
     linkedin: "https://www.linkedin.com/in/sariha-uchida-0b6014266/",
     lastPosition: "",
-  },
-  {
-    title: "Olivia Steed",
-    img: "Olivia.webp",
-    linkedin: "https://www.linkedin.com/in/olivia-steed-9426201b8/",
-    lastPosition: "",
-  },
+  }
 ];
