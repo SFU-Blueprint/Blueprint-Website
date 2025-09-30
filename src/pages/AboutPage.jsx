@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import GearSection from "../components/about-page/Gears/GearSection";
 import MobileGearSection from "../components/about-page/Gears/MobileGearSection";
 
-import { Alumni2023, Alumni2024} from "../constants/Team/Alumni";
+import { Alumni2023, Alumni2024, Alumni2025} from "../constants/Team/Alumni";
 import { Members } from "../constants/Team/Members";
 import { Executives } from "../constants/Team/Execs";
 import CardGrid from "../components/about-page/CardGrid";
@@ -21,7 +21,7 @@ const AboutPage = () => {
     content: <GearSection></GearSection>,
   });
 
-  const Header = "images/about/aboutus_header.webp";
+  const Header = "images/about/aboutus.webp";
   const Image_1 = "images/about/aboutus_image_one.webp";
   const Image_2 = "images/about/aboutus_image_two.webp";
 
@@ -55,7 +55,7 @@ const AboutPage = () => {
       {/* About us */}
       <div className="relative ">
         <img
-          className="w-full h-[35vh] sm:h-[45vh] object-cover"
+          className="w-full h-auto object-contain"
           // src={Header}
           src={Header}
           alt="about us header"
@@ -174,6 +174,7 @@ const AboutPage = () => {
       <div className="mt-[8%] mx-10 md:mx-16 xl:mx-36">
         <SectionHeader className="flex justify-center ">Alumni</SectionHeader>
         <div className="flex flex-col gap-8">
+          <AlumniCard cardList={Alumni2025} gridName="2025"></AlumniCard>
           <AlumniCard cardList={Alumni2024} gridName="2024"></AlumniCard>
           <AlumniCard cardList={Alumni2023} gridName="2023"></AlumniCard>
         </div>
