@@ -1,17 +1,6 @@
 export const Members = [
-  {
-    title: "Caitlin Syho",
-    img: "Caitlin.webp",
-    linkedin: "https://www.linkedin.com/in/caitlinsyho/",
-    lastPosition: "",
-  },
+  
 
-  {
-    title: "Kate Simone",
-    img: "Kate.webp",
-    linkedin: "https://www.linkedin.com/in/kate-simone-866335284/",
-    lastPosition: "",
-  },
   {
     title: "Eugene Zhu",
     img: "Eugene.webp",
@@ -19,46 +8,14 @@ export const Members = [
     lastPosition: "",
   },
 
-  {
-    title: "Duc Dang",
-    img: "blueprint.webp",
-    linkedin: "https://www.linkedin.com/in/ddang2001/",
-    lastPosition: "",
-  },
-  {
-    title: "Jeffrey Wong",
-    img: "Jeffrey.webp",
-    linkedin: "https://www.linkedin.com/in/wong-jeffrey/",
-    lastPosition: "",
-  },
-  {
-    title: "Tulika Varma",
-    img: "Tulika.webp",
-    linkedin: "",
-    lastPosition: "",
-  },
-  {
-    title: "Kousha Amouzesh",
-    img: "Kousha.webp",
-    linkedin: "https://www.linkedin.com/in/kousha-amouzesh/",
-    lastPosition: "",
-  },
+  
+  
+  
+  
   {
     title: "Iris Au-Yeung",
-    img: "blueprint.webp",
+    img: "iris-mosaic.webp",
     linkedin: "https://www.linkedin.com/in/irisau-yeung/",
-    lastPosition: "",
-  },
-  {
-    title: "Vinh Dang",
-    img: "Quang.webp",
-    linkedin: "https://www.linkedin.com/in/quang-vinh-dang-788ab0194/",
-    lastPosition: "",
-  },
-  {
-    title: "Ayana Hussain",
-    img: "Ayana.webp",
-    linkedin: "https://www.linkedin.com/in/ayana-hussain-a3399a227/",
     lastPosition: "",
   },
   {
@@ -79,21 +36,16 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/fabiansiswanto/",
     lastPosition: "",
   },
-  {
-    title: "Mrinal Goshalia",
-    img: "Mrinal.webp",
-    linkedin: "https://www.linkedin.com/in/mrinal-goshalia/",
-    lastPosition: "",
-  },
+  
   {
     title: "Lauryn Yau",
-    img: "blueprint.webp",
+    img: "lauryn-reelyouth.webp",
     linkedin: "https://www.linkedin.com/in/laurynyau/",
     lastPosition: "",
   },
   {
     title: "Joshua li",
-    img: "blueprint.webp",
+    img: "joshua-reelyouth.webp",
     linkedin: "https://www.linkedin.com/in/joshuajli/",
     lastPosition: "",
   },
@@ -103,18 +55,8 @@ export const Members = [
     linkedin: "https://www.linkedin.com/in/jimmy--hui/",
     lastPosition: "",
   },
-  {
-    title: "Tayaba Abbasi",
-    img: "Tayaba.webp",
-    linkedin: "https://www.linkedin.com/in/tayaba-abbasi-8626a9194/",
-    lastPosition: "",
-  },
-  {
-    title: "Zariyan Mansoor",
-    img: "Zariyan.webp",
-    linkedin: "https://www.linkedin.com/in/zariyanmansoor/",
-    lastPosition: "",
-  },
+  
+  
   {
     title: "Sariha Uchida",
     img: "Sariha.webp",

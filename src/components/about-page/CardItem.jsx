@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import { ParagraphText } from "../Common";
 import { headshots } from "../../index.js";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -12,7 +12,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
  * @param {string} props.linkedin - The URL for the LinkedIn profile.
  * @returns {JSX.Element} - Returns the JSX for the CardItem component.
  */
-const CardItem = (props) => {
+const CardItem = React.memo((props) => {
   if (props.img) {
     // If there is an image provided, render the card with the image
 
@@ -28,7 +28,7 @@ const CardItem = (props) => {
           src={headshots[props.img]}
           placeholderSrc={headshots["blueprint.webp"]}
           width={props.img.width}
-          // effect="blur"
+          effect="blur"
         />
 
         {/* Member's Name */}
@@ -56,6 +56,7 @@ const CardItem = (props) => {
             <a
               href={props.linkedin}
               target="_blank"
+              rel="noreferrer"
               className="flex items-center"
             >
               LinkedIn
@@ -65,6 +66,6 @@ const CardItem = (props) => {
       </div>
     );
   }
-};
+});
 
 export default CardItem;

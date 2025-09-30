@@ -47,6 +47,10 @@ export const Alumni2024 = [
     linkedin: "https://www.linkedin.com/in/firm-kongthong/",
   },
   {
+    title: "Mrinal Goshalia",
+    linkedin: "https://www.linkedin.com/in/mrinal-goshalia/",
+  },
+  {
     title: "Abishek Deshpande",
 
     linkedin: "https://www.linkedin.com/in/abhishek-deshpande-a01132179/",
@@ -205,5 +209,56 @@ export const Alumni2024 = [
   {
     title: "Tulika Verma",
     linkedin: "https://www.linkedin.com/in/tulika-varma-962165278/"
+  }
+];
+
+export const Alumni2025 = [
+  {
+    title: "Tyler D'silva",
+    linkedin: "https://www.linkedin.com/in/tylerdsilva/",
+  },
+  {
+    title: "Arthur Zhang",
+    linkedin: "https://www.linkedin.com/in/arthur0z/",
+  },
+  {
+    title: "Harpreet Dubb",
+    linkedin: "https://www.linkedin.com/in/harpreet-dubb/",
+  },
+  {
+    title: "Caitlin Syho",
+    linkedin: "https://www.linkedin.com/in/caitlinsyho/",
+  },
+  {
+    title: "Duc Dang",
+    linkedin: "https://www.linkedin.com/in/ddang2001/",
+  },
+  {
+    title: "Jeffrey Wong",
+    linkedin: "https://www.linkedin.com/in/wong-jeffrey/",
+  },
+  {
+    title: "Kousha Amouzesh",
+    linkedin: "https://www.linkedin.com/in/kousha-amouzesh/",
+  },
+  {
+    title: "Ayana Hussain",
+    linkedin: "https://www.linkedin.com/in/ayana-hussain-a3399a227/",
+  },
+  {
+    title: "Vinh Dang",
+    linkedin: "https://www.linkedin.com/in/quang-vinh-dang-788ab0194/",
+  },
+  {
+    title: "Mrinal Goshalia",
+    linkedin: "https://www.linkedin.com/in/mrinal-goshalia/",
+  },
+  {
+    title: "Tayaba Abbasi",
+    linkedin: "https://www.linkedin.com/in/tayaba-abbasi-8626a9194/",
+  },
+  {
+    title: "Zariyan Mansoor",
+    linkedin: "https://www.linkedin.com/in/zariyanmansoor/",
   }
 ];
