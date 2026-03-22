@@ -13,14 +13,14 @@ import OutlineButton from "../components/shared/OutlineButton";
 import ProjectModal from "../components/shared/ProjectModal";
 import { Projects } from "../constants/projects";
 import { navigateToAnchor } from "../utils/navigateToAnchor";
-import { Anouncment, Show } from "../constants/Notification";
+import { Show } from "../constants/Notification";
 
 const HomePage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [showNotification, setShowNotification] = useState(Show);
-  const [projects, setProjects] = useState(Projects);
+  const [projects] = useState(Projects);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 700);
 
   const LadyTyping = "images/home/lady_typing.webp";

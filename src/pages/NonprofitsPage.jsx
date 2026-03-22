@@ -10,7 +10,7 @@ import {
 
 
 const NonprofitsPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [activePhase, setActivePhase] = useState(0);
   const phases = t("nonprofits.phases");
 
@@ -120,7 +120,7 @@ const NonprofitsPage = () => {
 };
 
 function PhaseButton(index, activePhase, setActivePhase, phase) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     // added bg-white and flipped the true-false condition for bg-blue to make it non-transparent when not focused
     <button
@@ -144,7 +144,7 @@ function PhaseButton(index, activePhase, setActivePhase, phase) {
 }
 
 function ContentCard({ children, className }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const title = children;
   console.log(title);
   return (
@@ -156,7 +156,7 @@ function ContentCard({ children, className }) {
 }
 
 function ProposeButton({ className }) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const reroute = () => {
     const applyingLink = t("nonprofits.applyingLink");
     window.open(applyingLink);
