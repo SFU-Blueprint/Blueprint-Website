@@ -13,7 +13,7 @@ module.exports = {
           },
           white: "#FFFFFF",
           offwhite: "#FCFCFC",
-          deepblue: "#0D579F"
+          deepblue: "#0D579F",
         },
       },
       fontFamily: {
@@ -25,7 +25,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    // Disable dark mode
     themes: [],
   },
 };

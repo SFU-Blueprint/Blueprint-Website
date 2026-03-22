@@ -10,7 +10,7 @@ const ProjectsPage = () => {
   // Other state and variables
   const [selectedProject, setSelectedProject] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
-  const [projects, setProjects] = useState(Projects);
+  const [projects] = useState(Projects);
 
   const handleProjectClick = (projectKey) => {
     const projectDetails = projects.find((project) => project.name === projectKey);

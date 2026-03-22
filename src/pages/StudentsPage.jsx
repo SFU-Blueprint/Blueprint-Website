@@ -192,11 +192,8 @@ const StudentsPage = () => {
 };
 
 const PositionCard = ({ role }) => {
-  const { Role, Description = [], Link, Deadline } = role; // Set a default empty array if Description is undefined
+  const { Role, Description = [], Link, Deadline } = role;
   const [showMore, setShowMore] = useState(false);
-
-  // Ensure Description has content before attempting to display it
-  const hasDescription = Description && Description.length > 0;
 
   return (
     <div className="shadow-md">
@@ -207,16 +204,13 @@ const PositionCard = ({ role }) => {
         <ParagraphText className="mt-[4%] mb-[6%] ">
           {showMore ? Description.join(" ") : Description[0]}
           {Description.length > 1 && (
-            <a
-              href="#"
-              className="text-blue-500"
-              onClick={(e) => {
-                e.preventDefault();
-                setShowMore(!showMore);
-              }}
+            <button
+              type="button"
+              className="text-blue-500 bg-transparent border-none cursor-pointer p-0 font-inherit"
+              onClick={() => setShowMore(!showMore)}
             >
               {showMore ? " Show Less" : " Read More"}
-            </a>
+            </button>
           )}
         </ParagraphText>
         <ParagraphText className="font-semibold mb-[7%] ">

@@ -24,6 +24,8 @@ const AboutPage = () => {
   const Header = "images/about/aboutus.webp";
   const Image_1 = "images/about/aboutus_image_one.webp";
   const Image_2 = "images/about/aboutus_image_two.webp";
+  const Image_3 = "images/about/Tyler.webp";
+  const Image_4 = "images/about/founding_team.webp";
 
   //Memoize the resize function (cache it) so we don't recreate the function when the effects use it
   const resize = useCallback(() => {
@@ -116,12 +118,12 @@ const AboutPage = () => {
         {/* Desc 2 */}
         <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40x] md:w-4/5 md:justify-start">
           <div className="hidden md:block ml-[10%] w-96 h-53 bg-zinc-300 rounded-sm">
-            <img src={Image_1} alt="about us image 1" />
+            <img src={Image_1} alt="about us collaborating" />
           </div>
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
-                <img src={Image_2} alt="about us image 2" />
+                <img src={Image_2} alt="about us figma board" />
               </div>
               <Annotation className="pl-[10%] hidden sm:block">
                 A design sprint is the best way to get ideas flowing
@@ -132,11 +134,11 @@ const AboutPage = () => {
       </div>
       <div className="mt-12 flex flex-col justify-center items-center md:hidden">
         <div className="block md:hidden w-50 h-60 ml-[10%] mr-[10%] rounded-sm">
-          <img className="" src={Image_1} alt="about us image 1" />
+          <img className="" src={Image_1} alt="about us collaborating" />
         </div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">
-            <img src={Image_2} alt="about us image 2" />
+            <img src={Image_2} alt="about us figma board" />
           </div>
 
           <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit block sm:hidden">
@@ -146,6 +148,62 @@ const AboutPage = () => {
       </div>
       {/* End of Description */}
 
+      <SectionHeader
+        className="mt-[10%] leading-relaxed mr-10 ml-10 md:gap-36 md:leading-10 md:text-5xl md:ml-16 xl:ml-36"
+        id="Foun"
+      >
+        Founding Story{" "}
+      </SectionHeader>
+       <div className="md:mt-[4%] md:flex md:flex-row">
+        {/* Desc 1 */}
+        <div className="flex flex-col ml-[20%] md:w-4/5 md:ml-[11%] md:flex-col mt-[12px]  md:justify-between ">
+          
+          <ParagraphTitle className="mt-5 md:mt-10 mb-2 md:text-2xl">
+            {" "}
+            The Spark
+          </ParagraphTitle>
+          <ParagraphText className="w-4/5 md:w-4/5">
+          Founder Tyler D'Silva started SFU Blueprint with a simple idea: to bring students together to build technology for social good. Starting a new chapter at SFU meant navigating slow institutional processes, limited resources, and great uncertainty. Friends questioned whether it was worth continuing, but that friction became invaluable as it pushed the team to think differently about how they'd build something meaningful.
+          </ParagraphText>
+
+           <ParagraphTitle className="mt-5 md:mt-10 mb-2 md:text-2xl">
+            {" "}
+            Finding Your People
+          </ParagraphTitle>
+          <ParagraphText className="w-4/5 md:w-4/5 mt-5">
+          Tyler ended up connecting with computer science faculty advisors at SFU who believed in what we were building and backed the venture. With zero funding and no dedicated space, he turned to Reddit and Discord to find volunteers who shared the mission. The unconventional approach resonated with many, and led to the foundation of the first SFU Blueprint team in early 2023.
+          </ParagraphText>
+          <ParagraphText className="w-4/5 md:w-4/5 mt-5">
+          Today, SFU Blueprint is one of the fastest-growing teams at SFU, with over 40 members and strong partnerships with major non-profits. The organization has formalized into Blueprint Tech for Good Society, a non-profit that carries the mission beyond any one person or project. Those early obstacles didn't derail the vision. They shaped how it was built.
+          </ParagraphText>
+
+        </div>
+        {/* Desc 2 */}
+        <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40px] md:w-4/5 md:justify-start gap-[10vh]">
+          {/* Image 3 Container */}
+          <div className="md:block hidden md:ml-[10%] w-full max-w-sm h-auto bg-white rounded-md">
+            <img className="w-full h-auto rounded-md object-cover" src={Image_3} alt="about us tyler" />
+          </div>
+
+          {/* Image 4 Container */}
+          <div className="md:block hidden md:ml-[10%] w-full max-w-sm h-auto bg-white rounded-md">
+            <img className="w-full h-auto rounded-md object-cover" src={Image_4} alt="about us founding team" />
+          </div>
+        </div>
+      </div>
+
+      <div className="md:hidden items-center flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40px] md:w-4/5 md:justify-start gap-[10vh]">
+        {/* Image 3 Container */}
+        <div className="block w-full max-w-xs h-auto bg-white rounded-md">
+          <img className="w-full h-auto rounded-md object-cover" src={Image_3} alt="about us tyler" />
+        </div>
+
+        {/* Image 4 Container */}
+        <div className="block w-full max-w-xs h-auto bg-white rounded-md">
+          <img className="w-full h-auto rounded-md object-cover" src={Image_4} alt="about us founding team" />
+        </div>
+      </div>
+      
       <div className="mx-10 md:mx-16 xl:mx-36">
         {/*Gear Section*/}
         <div className="mt-36">
