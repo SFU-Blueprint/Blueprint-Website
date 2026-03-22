@@ -13,7 +13,7 @@ module.exports = {
           },
           white: "#FFFFFF",
           offwhite: "#FCFCFC",
-          deepblue: "#0D579F"
+          deepblue: "#0D579F",
         },
       },
       fontFamily: {
@@ -25,18 +25,6 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: [
-      {
-        blueprint: {
-          "primary": "#0177E8",
-          "secondary": "#0D579F",
-          "accent": "#0177E8",
-          "neutral": "#292A3B",
-          "base-100": "#FFFFFF",
-          "base-200": "#F3F3F3",
-          "base-300": "#B8B8B8",
-        },
-      },
-    ],
+    themes: [],
   },
 };
