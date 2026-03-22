@@ -3,6 +3,7 @@ name: Vercel Preview Deployment
 env:
   VERCEL_ORG_ID: CDphQCXc33D2dwCku9GlZQkR
   VERCEL_PROJECT_ID: prj_KpHnmNUlp52wGNiEYAAvoUXoQrm9
+  CI: false
 
 on:
   push:
