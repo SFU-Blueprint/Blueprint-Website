@@ -1,6 +1,5 @@
 import React from 'react';
 import { ParagraphTitle, ParagraphText } from "../Common";
-import { useTranslation } from "react-i18next";
 
 /**
  * ProjectCard component to display a card representing a project.

@@ -33,6 +33,7 @@ const AlumniCard = (props) => {
 					<a
 						href={card.linkedin}
 						target="_blank"
+						rel="noreferrer"
 						className="flex items-center"
 						>
 						LinkedIn

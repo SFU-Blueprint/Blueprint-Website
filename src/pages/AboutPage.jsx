@@ -118,12 +118,12 @@ const AboutPage = () => {
         {/* Desc 2 */}
         <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40x] md:w-4/5 md:justify-start">
           <div className="hidden md:block ml-[10%] w-96 h-53 bg-zinc-300 rounded-sm">
-            <img src={Image_1} alt="about us image 1" />
+            <img src={Image_1} alt="about us collaborating" />
           </div>
           <div className="flex flex-row md:justify-between md:mt-12 md:items-start md:gap-36 md:inline-flex">
             <div className="md:justify-start md:items-start inline-flex">
               <div className="hidden md:block w-96 h-40 bg-zinc-300 rounded-sm">
-                <img src={Image_2} alt="about us image 2" />
+                <img src={Image_2} alt="about us figma board" />
               </div>
               <Annotation className="pl-[10%] hidden sm:block">
                 A design sprint is the best way to get ideas flowing
@@ -134,11 +134,11 @@ const AboutPage = () => {
       </div>
       <div className="mt-12 flex flex-col justify-center items-center md:hidden">
         <div className="block md:hidden w-50 h-60 ml-[10%] mr-[10%] rounded-sm">
-          <img className="" src={Image_1} alt="about us image 1" />
+          <img className="" src={Image_1} alt="about us collaborating" />
         </div>
         <div className="m-[10%] flex flex-row">
           <div className="block basis-4/6 md:hidden w-64 h-32 rounded-sm ">
-            <img src={Image_2} alt="about us image 2" />
+            <img src={Image_2} alt="about us figma board" />
           </div>
 
           <Annotation className="basis-2/6 font-sketch pl-[10%] h-fit block sm:hidden">
@@ -182,12 +182,12 @@ const AboutPage = () => {
         <div className="ml-[20%] flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40px] md:w-4/5 md:justify-start gap-[10vh]">
           {/* Image 3 Container */}
           <div className="md:block hidden md:ml-[10%] w-full max-w-sm h-auto bg-white rounded-md">
-            <img className="w-full h-auto rounded-md object-cover" src={Image_3} alt="about us image 3" />
+            <img className="w-full h-auto rounded-md object-cover" src={Image_3} alt="about us tyler" />
           </div>
 
           {/* Image 4 Container */}
           <div className="md:block hidden md:ml-[10%] w-full max-w-sm h-auto bg-white rounded-md">
-            <img className="w-full h-auto rounded-md object-cover" src={Image_4} alt="about us image 4" />
+            <img className="w-full h-auto rounded-md object-cover" src={Image_4} alt="about us founding team" />
           </div>
         </div>
       </div>
@@ -195,12 +195,12 @@ const AboutPage = () => {
       <div className="md:hidden items-center flex flex-col mt-[24px] md:ml-[11%] md:mr-[8%] md:mt-[40px] md:w-4/5 md:justify-start gap-[10vh]">
         {/* Image 3 Container */}
         <div className="block w-full max-w-xs h-auto bg-white rounded-md">
-          <img className="w-full h-auto rounded-md object-cover" src={Image_3} alt="about us image 3" />
+          <img className="w-full h-auto rounded-md object-cover" src={Image_3} alt="about us tyler" />
         </div>
 
         {/* Image 4 Container */}
         <div className="block w-full max-w-xs h-auto bg-white rounded-md">
-          <img className="w-full h-auto rounded-md object-cover" src={Image_4} alt="about us image 4" />
+          <img className="w-full h-auto rounded-md object-cover" src={Image_4} alt="about us founding team" />
         </div>
       </div>
       
